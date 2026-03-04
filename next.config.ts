@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Christchurch AI — christchurch-ai.com
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "caelanhuntress.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

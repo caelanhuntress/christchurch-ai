@@ -275,6 +275,51 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Meet the Host */}
+        <section className="px-6 py-20 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Your Host</div>
+            <h2 className="text-3xl font-bold mb-10">Meet the Host</h2>
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-shrink-0">
+                <Image
+                  src="https://caelanhuntress.com/wp-content/uploads/2022/07/caelan-huntress-banner-7b.png"
+                  alt="Caelan Huntress — AI Trainer and Public Speaker"
+                  width={220}
+                  height={220}
+                  className="rounded-2xl"
+                  style={{ objectFit: "cover", objectPosition: "top" }}
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-1">Caelan Huntress</h3>
+                <div className="text-sm mb-4" style={{ color: "var(--accent)" }}>AI Trainer · Public Speaker · Founder, AI Coaching Academy</div>
+                <div className="space-y-3 text-sm leading-relaxed mb-6" style={{ color: "var(--text-muted)" }}>
+                  <p>Caelan started his career as an acrobat in the circus. Now he teaches ambitious professionals how to become great AI operators — combining the skills of a theatrical performer and technical geek to make education genuinely engaging.</p>
+                  <p>Classically educated at St John's College in Santa Fe (Great Books programme), he sees the fast-moving world of technology through the lens of the humanities. After a decade as a digital nomad, he now calls Christchurch home.</p>
+                  <p>He is the founder of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>, author of <em>Marketing Yourself</em>, and the organiser of the Christchurch AI Meetup.</p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    { label: "Website", href: "https://caelanhuntress.com" },
+                    { label: "AI Coaching Academy", href: "https://ai-coaching.academy" },
+                    { label: "LinkedIn", href: "https://www.linkedin.com/in/caelanhuntress" },
+                    { label: "X / Twitter", href: "https://twitter.com/caelanhuntress" },
+                    { label: "YouTube", href: "https://www.youtube.com/c/CaelanHuntress" },
+                    { label: "Instagram", href: "https://instagram.com/caelanhuntress" },
+                  ].map((link) => (
+                    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-full text-xs border transition-all hover:border-green-600 hover:text-white"
+                      style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Blog teaser */}
         <section className="px-6 py-12 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
           <div className="max-w-4xl mx-auto flex items-center justify-between">
