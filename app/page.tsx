@@ -10,7 +10,7 @@ const EVENTS = [
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/313637828/",
-    image: "/images/event-april-2026.png",
+    image: "/images/event-march-2026.jpg",
     talks: [
       {
         speaker: "Open Floor — Show & Tell",
