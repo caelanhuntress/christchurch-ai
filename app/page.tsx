@@ -129,7 +129,7 @@ export default function Home() {
 
         {/* Nav */}
         <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-          style={{ borderColor: "var(--border)", background: "rgba(6,13,6,0.9)" }}>
+          style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.95)" }}>
           <div className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</div>
           <div className="flex items-center gap-6 text-sm" style={{ color: "var(--text-muted)" }}>
             <a href="#events" className="hover:text-white transition-colors">Events</a>
@@ -137,7 +137,7 @@ export default function Home() {
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
             <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
               className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:opacity-90"
-              style={{ background: "var(--accent)", color: "#060d06" }}>
+              style={{ background: "var(--accent)", color: "#ffffff" }}>
               Join Free →
             </a>
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
-              style={{ background: "var(--accent)", color: "#060d06" }}>
+              style={{ background: "var(--accent)", color: "#ffffff" }}>
               Join the Community — Free
             </a>
             <a href="#events" className="px-8 py-4 rounded-full font-semibold text-base border transition-all hover:bg-white/5"
@@ -205,7 +205,7 @@ export default function Home() {
                     style={{ objectFit: "cover" }}
                     priority={idx === 0}
                   />
-                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(6,13,6,0.8) 0%, transparent 60%)" }} />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(15,23,42,0.75) 0%, transparent 60%)" }} />
                   <div className="absolute bottom-0 left-0 p-6">
                     <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "var(--accent)" }}>
                       {event.month} 2026
@@ -254,7 +254,7 @@ export default function Home() {
 
                   <a href={event.meetupUrl} target="_blank" rel="noopener noreferrer"
                     className="inline-block px-6 py-3 rounded-full font-semibold text-sm transition-all hover:opacity-90"
-                    style={{ background: "var(--accent)", color: "#060d06" }}>
+                    style={{ background: "var(--accent)", color: "#ffffff" }}>
                     RSVP on Meetup — Free
                   </a>
                 </div>
@@ -372,7 +372,7 @@ export default function Home() {
           </p>
           <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
             className="inline-block px-10 py-4 rounded-full font-semibold text-lg transition-all hover:opacity-90"
-            style={{ background: "var(--accent)", color: "#060d06" }}>
+            style={{ background: "var(--accent)", color: "#ffffff" }}>
             Join on Meetup — Free
           </a>
           <p className="mt-4 text-xs" style={{ color: "var(--text-muted)" }}>
