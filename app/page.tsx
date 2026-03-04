@@ -313,7 +313,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-shrink-0">
                 <Image
-                  src="https://caelanhuntress.com/wp-content/uploads/2022/07/caelan-huntress-banner-7b.png"
+                  src="/images/caelan-huntress.png"
                   alt="Caelan Huntress — AI Trainer and Public Speaker"
                   width={220}
                   height={220}
@@ -336,8 +336,7 @@ export default function Home() {
                     { label: "LinkedIn", href: "https://www.linkedin.com/in/caelanhuntress" },
                     { label: "X / Twitter", href: "https://twitter.com/caelanhuntress" },
                     { label: "YouTube", href: "https://www.youtube.com/c/CaelanHuntress" },
-                    { label: "Instagram", href: "https://instagram.com/caelanhuntress" },
-                  ].map((link) => (
+                                  ].map((link) => (
                     <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer"
                       className="px-4 py-2 rounded-full text-xs border transition-all hover:border-green-600 hover:text-white"
                       style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
