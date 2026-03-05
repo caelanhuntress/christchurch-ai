@@ -47,7 +47,6 @@ export default function MarchEventPage() {
             <span style={{ color: "var(--foreground)" }}>March 2026</span>
           </div>
 
-          {/* Header */}
           <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
             First Monday Meetup · March 2026
           </div>
@@ -57,10 +56,23 @@ export default function MarchEventPage() {
           <p className="text-lg mb-6" style={{ color: "var(--text-muted)" }}>
             Monday, 2 March 2026 · EPIC Innovation Centre, Christchurch
           </p>
-          <div className="flex flex-wrap gap-3 mb-10 text-sm" style={{ color: "var(--text-muted)" }}>
-            <span>🎤 <strong>Caelan Huntress</strong> — AI Image Generation</span>
+          <div className="flex flex-wrap gap-3 mb-6 text-sm" style={{ color: "var(--text-muted)" }}>
+            <span>🎨 <strong>Caelan Huntress</strong> — AI Image Generation</span>
             <span>·</span>
             <span>🎬 <strong>Arthur Machado</strong> — AI Video Generation</span>
+          </div>
+
+          {/* Sponsor / backlinks row */}
+          <div className="rounded-xl border px-5 py-4 mb-10 text-sm" style={{ borderColor: "var(--border)", background: "var(--muted)", color: "var(--text-muted)" }}>
+            Sponsored by the{" "}
+            <a href={`https://ai-coaching.academy/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+              className="underline hover:text-black transition-colors font-medium">AI Coaching Academy</a>
+            {" "}— Christchurch's home for{" "}
+            <a href={`https://caelanhuntress.com/training/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+              className="underline hover:text-black transition-colors">AI training in New Zealand</a>.
+            {" "}Hosted by{" "}
+            <a href={`https://caelanhuntress.com/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+              className="underline hover:text-black transition-colors">Caelan Huntress, AI trainer and public speaker</a>.
           </div>
 
           {/* Featured Image */}
@@ -75,38 +87,96 @@ export default function MarchEventPage() {
           </div>
 
           {/* Summary */}
-          <div className="prose max-w-none mb-12">
-            <h2 className="text-2xl font-bold mb-4">Event Summary</h2>
-            <div className="space-y-4 leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              <p>
-                The March 2026 First Monday Meetup at EPIC Innovation brought together Christchurch's AI community to explore one of the most culturally charged frontiers in artificial intelligence: <strong className="text-black">image and video generation</strong>. Sponsored by the AI Coaching Academy, the evening drew a packed room of developers, creatives, and curious professionals.
-              </p>
-              <p>
-                Host <strong className="text-black">Caelan Huntress</strong> opened with a compelling parallel to photography's disruptive arrival in the 19th century — when painters felt threatened by a machine that could capture reality at the click of a button. Today, AI image generation is producing the same friction. "Visual art is no longer limited by skill or craft," Huntress argued. "Anyone with an idea can make an image in any style with AI. We are all artists now."
-              </p>
-              <p>
-                The talk featured a live demonstration of <strong className="text-black">parallel prompting</strong> — sending the same prompt simultaneously to ChatGPT, Gemini, and Copilot to compare outputs in real time. The audience collectively chose "a cowboy in Swan Lake" as the test subject, revealing fascinating differences in how each model interprets creative briefs — and where their guardrails kick in (Wolverine and John Wick were off-limits across the board).
-              </p>
-              <p>
-                Huntress also introduced the concept of AI accelerating the five-step creative process — collect, sort, craft, polish, publish — arguing that humans remain essential at the beginning and end: identifying which ideas are worth pursuing, and knowing when something is finished. "It's our creative taste that sets us apart from the machines."
-              </p>
-              <p>
-                He shared striking market data: in 2024, an estimated <strong className="text-black">34 million AI images were created every day</strong>, and according to PhotoRoom, 71% of images shared on social media are now AI-generated. Jensen Huang's vision of a world where "every single pixel will be generated" rather than rendered felt less like science fiction and more like an imminent reality.
-              </p>
-              <p>
-                <strong className="text-black">Arthur Machado</strong> followed with a deep dive into AI video generation tools, demonstrating how still images created earlier in the evening could be brought to life — completing the pipeline from text prompt to animated video in a single meetup.
-              </p>
-              <p>
-                The evening closed with an open Q&A exploring the ethics of style transfer (is Ghibli-fying your selfie disrespecting Hayao Miyazaki?), the nature of copyright in a generated world, and what it means to have creative taste as the primary human differentiator in an AI-saturated creative landscape.
-              </p>
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Event Summary</h2>
+
+            {/* Talk 1 — Caelan */}
+            <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+              <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 1</div>
+              <h3 className="text-xl font-bold mb-3">AI Image Generation — Caelan Huntress</h3>
+              <div className="space-y-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                <p>
+                  Host{" "}
+                  <a href={`https://caelanhuntress.com/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+                    className="underline hover:text-black transition-colors font-medium">Caelan Huntress</a>
+                  {" "}opened with a compelling parallel to photography's disruptive arrival in the 19th century — when painters felt threatened by a machine that could capture reality at the click of a button. Today, AI image generation is producing the same cultural friction. "Visual art is no longer limited by skill or craft," he argued. "Anyone with an idea can make an image in any style with AI. We are all artists now."
+                </p>
+                <p>
+                  The talk featured a live demonstration of <strong className="text-black">parallel prompting</strong> — sending the same prompt simultaneously to ChatGPT, Gemini, and Copilot to compare outputs in real time. The audience collectively chose "a cowboy in Swan Lake" as the test subject, revealing fascinating differences in how each model interprets creative briefs — and where their guardrails kick in (Wolverine and John Wick were off-limits across the board).
+                </p>
+                <p>
+                  Caelan introduced the concept of AI accelerating the five-step creative process — collect, sort, craft, polish, publish — arguing that humans remain essential at the beginning and end: identifying which ideas are worth pursuing, and knowing when something is finished. "It's our creative taste that sets us apart from the machines."
+                </p>
+                <p>
+                  He shared striking market data: in 2024, an estimated <strong className="text-black">34 million AI images were created every day</strong>, and according to PhotoRoom, 71% of images shared on social media are now AI-generated. Jensen Huang's vision of a world where "every single pixel will be generated" rather than rendered felt less like science fiction and more like an imminent reality.
+                </p>
+                <p>
+                  Caelan also introduced{" "}
+                  <a href={`https://openclaws.nz/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+                    className="underline hover:text-black transition-colors">OpenClaw — a personal AI assistant for New Zealand businesses</a>
+                  {" "}— open-source software that runs on dedicated hardware and acts as a 24/7 digital worker. He demonstrated how Puck (his own OpenClaw agent) built{" "}
+                  <a href={`https://openclaws.nz/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+                    className="underline hover:text-black transition-colors">openclaws.nz</a>
+                  {" "}in 40 minutes, and offered{" "}
+                  <a href={`https://openclaws.nz/directory/agents?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+                    className="underline hover:text-black transition-colors">OpenClaw installations for Christchurch businesses</a>
+                  {" "}at a flat rate.
+                </p>
+                <p>
+                  If you want to go deeper on using AI for your business, the{" "}
+                  <a href={`https://ai-coaching.academy/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+                    className="underline hover:text-black transition-colors">AI Coaching Academy</a>
+                  {" "}offers structured{" "}
+                  <a href={`https://genaitraining.co.nz/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer"
+                    className="underline hover:text-black transition-colors">generative AI training in New Zealand</a>
+                  {" "}for ambitious professionals.
+                </p>
+              </div>
             </div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4">Key Takeaways</h2>
-            <ul className="space-y-2" style={{ color: "var(--text-muted)" }}>
-              <li>🎨 <strong className="text-black">Parallel prompting</strong> — submit the same prompt to multiple AI tools simultaneously to compare results and find the best output</li>
+            {/* Talk 2 — Arthur */}
+            <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+              <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 2</div>
+              <h3 className="text-xl font-bold mb-3">AI Video Generation — Arthur Machado</h3>
+
+              {/* Cheat sheet image */}
+              <div className="relative w-full rounded-xl overflow-hidden mb-5" style={{ aspectRatio: "16/9" }}>
+                <Image
+                  src="/images/odd-image-to-video-cheat-sheet.png"
+                  alt="Image to Video AI Cheat Sheet — Arthur Machado / ODD"
+                  fill
+                  style={{ objectFit: "contain", background: "#f8fafc" }}
+                />
+              </div>
+              <p className="text-xs mb-5" style={{ color: "var(--text-muted)" }}>
+                Arthur's Image-to-Video cheat sheet — a handy reference for AI video workflows.
+              </p>
+
+              <div className="space-y-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                <p>
+                  Arthur Machado is an{" "}
+                  <a href="https://odd.global?utm_source=chch-ai&utm_medium=post&utm_campaign=0326" target="_blank" rel="noopener noreferrer"
+                    className="underline hover:text-black transition-colors font-medium">AI filmmaker in New Zealand</a>
+                  {" "}who works at the intersection of cinematic storytelling and generative AI. At the March meetup he took the baton from Caelan's image generation session and showed how still images created moments earlier could be brought to life — completing the full text-to-image-to-video pipeline in a single evening.
+                </p>
+                <p>
+                  Arthur demonstrated the leading AI video generation tools — including Sora, Runway, and Kling — and walked through the practical differences between them: which excel at smooth motion, which handle camera moves well, and which are best suited to turning a single generated image into a short cinematic clip.
+                </p>
+                <p>
+                  His Image-to-Video cheat sheet (above) distils the key workflow into a practical reference: how to prepare source images for animation, what motion prompts work reliably, and how to chain tools together to extend and refine clips. The cheat sheet was shared with all attendees.
+                </p>
+                <p>
+                  The evening closed with an open Q&A on the ethics of style transfer, the nature of copyright in a generated world, and what it means for creative professionals to have AI tools that can produce polished video from a single sentence.
+                </p>
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways</h2>
+            <ul className="space-y-2 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              <li>🎨 <strong className="text-black">Parallel prompting</strong> — submit the same prompt to multiple AI tools simultaneously to compare results</li>
               <li>🎭 <strong className="text-black">Creative taste is the human edge</strong> — AI can generate thousands of ideas and revisions, but humans know which ones matter</li>
               <li>📸 <strong className="text-black">The photography parallel</strong> — every disruptive image technology expands creative participation rather than replacing artists</li>
-              <li>🎬 <strong className="text-black">Text → Image → Video</strong> — the full multimodal pipeline is now accessible to anyone at a meetup</li>
+              <li>🎬 <strong className="text-black">Text → Image → Video</strong> — the full multimodal pipeline is now accessible to anyone, demonstrated live at a Christchurch meetup</li>
               <li>📊 <strong className="text-black">34 million AI images per day</strong> in 2024 — the multimodal market was valued at $2.3 billion and growing fast</li>
             </ul>
           </div>
@@ -126,7 +196,7 @@ export default function MarchEventPage() {
             </div>
           </div>
 
-          {/* Download slides button */}
+          {/* Download slides */}
           <div className="mb-16 text-center">
             <a
               href="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-0326.pdf"
@@ -153,7 +223,7 @@ export default function MarchEventPage() {
             <div className="flex items-center gap-6">
               <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">Meetup</a>
               <Link href="/past-events" className="hover:text-black transition-colors">Past Events</Link>
-              <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">AI Coaching Academy</a>
+              <a href={`https://ai-coaching.academy/?utm_source=chch-ai&utm_medium=post&utm_campaign=0326`} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">AI Coaching Academy</a>
             </div>
           </div>
         </footer>
