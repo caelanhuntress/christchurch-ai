@@ -134,6 +134,7 @@ export default function Home() {
           <div className="flex items-center gap-6 text-sm" style={{ color: "var(--text-muted)" }}>
             <a href="#events" className="hover:text-white transition-colors">Events</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
+            <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
             <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
               className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:opacity-90"
@@ -387,6 +388,8 @@ export default function Home() {
             <div><span style={{ color: "var(--accent)" }} className="font-semibold">Christchurch AI</span> · Monthly meetups at EPIC Innovation, Canterbury, New Zealand</div>
             <div className="flex items-center gap-6">
               <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Meetup</a>
+              <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
+            <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
               <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
               <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">AI Coaching Academy</a>
               <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">OpenClaws</a>
