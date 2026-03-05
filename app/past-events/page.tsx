@@ -3,12 +3,12 @@ import Image from "next/image";
 
 const PAST_EVENTS = [
   {
-    slug: "ai-reasoning-context-engineering-dec-2025",
-    title: "AI Reasoning & Context Engineering",
-    date: "Monday, 1 December 2025",
-    speakers: ["Andy Masters", "Caelan Huntress"],
-    image: "/images/past-event-dec-2025.jpg",
-    description: "Andy Masters on tiny recursive reasoning models and the festive Christmas tree packing Kaggle challenge — with live audience participation. Plus Caelan Huntress on context engineering and the PILLARS framework.",
+    slug: "ai-image-video-generation-march-2026",
+    title: "AI Multimedia: Image Generation & Video Generation",
+    date: "Monday, 2 March 2026",
+    speakers: ["Caelan Huntress", "Arthur Machado"],
+    image: "/images/past-event-march-2026.jpg",
+    description: "A hands-on exploration of AI image and video generation — from Ghibli-style transformations to live demos with Sora, Gemini, and ChatGPT.",
   },
   {
     slug: "ai-data-testing-coaching-feb-2026",
@@ -19,12 +19,12 @@ const PAST_EVENTS = [
     description: "Hamish Watson on why good AI requires good data, plus Caelan Huntress on building a genuine coaching relationship with AI — including personality profiles and the coaching container.",
   },
   {
-    slug: "ai-image-video-generation-march-2026",
-    title: "AI Multimedia: Image Generation & Video Generation",
-    date: "Monday, 3 March 2026",
-    speakers: ["Caelan Huntress", "Arthur Machado"],
-    image: "/images/past-event-march-2026.jpg",
-    description: "A hands-on exploration of AI image and video generation — from Ghibli-style transformations to live demos with Sora, Gemini, and ChatGPT.",
+    slug: "ai-reasoning-context-engineering-dec-2025",
+    title: "AI Reasoning & Context Engineering",
+    date: "Monday, 1 December 2025",
+    speakers: ["Andy Masters", "Caelan Huntress"],
+    image: "/images/past-event-dec-2025.jpg",
+    description: "Andy Masters on tiny recursive reasoning models and the festive Christmas tree packing Kaggle challenge — with live audience participation. Plus Caelan Huntress on context engineering and the PILLARS framework.",
   },
 ];
 
