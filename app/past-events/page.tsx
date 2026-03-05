@@ -3,6 +3,14 @@ import Image from "next/image";
 
 const PAST_EVENTS = [
   {
+    slug: "ai-reasoning-context-engineering-dec-2025",
+    title: "AI Reasoning & Context Engineering",
+    date: "Monday, 1 December 2025",
+    speakers: ["Andy Masters", "Caelan Huntress"],
+    image: "/images/past-event-dec-2025.jpg",
+    description: "Andy Masters on tiny recursive reasoning models and the festive Christmas tree packing Kaggle challenge — with live audience participation. Plus Caelan Huntress on context engineering and the PILLARS framework.",
+  },
+  {
     slug: "ai-data-testing-coaching-feb-2026",
     title: "AI & Data Testing + Create a Coaching Relationship with AI",
     date: "Monday, 2 February 2026",
