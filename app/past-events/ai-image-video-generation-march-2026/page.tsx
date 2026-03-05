@@ -88,12 +88,12 @@ export default function MarchEventPage() {
 
           {/* Summary */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Event Summary</h2>
+            <h2 className="text-2xl font-bold mb-6">Christchurch AI Meetup Recap — March 2026</h2>
 
             {/* Talk 1 — Caelan */}
             <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 1</div>
-              <h3 className="text-xl font-bold mb-3">AI Image Generation — Caelan Huntress</h3>
+              <h3 className="text-xl font-bold mb-3">AI Image Generation in 2026: Anyone Can Be an Artist — Caelan Huntress</h3>
               <div className="space-y-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   Host{" "}
@@ -137,7 +137,7 @@ export default function MarchEventPage() {
             {/* Talk 2 — Arthur */}
             <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 2</div>
-              <h3 className="text-xl font-bold mb-3">AI Video Generation — Arthur Machado</h3>
+              <h3 className="text-xl font-bold mb-3">AI Video Generation Tools for New Zealand Filmmakers — Arthur Machado</h3>
 
               {/* Cheat sheet image */}
               <div className="relative w-full rounded-xl overflow-hidden mb-5" style={{ aspectRatio: "16/9" }}>
@@ -171,7 +171,7 @@ export default function MarchEventPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways for AI Creatives in New Zealand</h2>
             <ul className="space-y-2 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
               <li>🎨 <strong className="text-black">Parallel prompting</strong> — submit the same prompt to multiple AI tools simultaneously to compare results</li>
               <li>🎭 <strong className="text-black">Creative taste is the human edge</strong> — AI can generate thousands of ideas and revisions, but humans know which ones matter</li>
@@ -183,7 +183,7 @@ export default function MarchEventPage() {
 
           {/* YouTube embed */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Watch the Recording</h2>
+            <h2 className="text-2xl font-bold mb-4">Watch the Full Christchurch AI Meetup Recording</h2>
             <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingBottom: "56.25%" }}>
               <iframe
                 src="https://www.youtube.com/embed/QWd19BDeuJE"
@@ -207,6 +207,18 @@ export default function MarchEventPage() {
             >
               ⬇ DOWNLOAD THE SLIDES
             </a>
+          </div>
+
+
+          {/* Internal links / related */}
+          <div className="rounded-2xl border p-6 mb-10" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <h2 className="text-lg font-bold mb-4">More from Christchurch AI</h2>
+            <ul className="space-y-2 text-sm" style={{ color: "var(--text-muted)" }}>
+              <li>→ <a href="/past-events/ai-data-testing-coaching-feb-2026" className="underline hover:text-black transition-colors">February 2026: AI & Data Testing + Coaching with AI — Hamish Watson & Caelan Huntress</a></li>
+              <li>→ <a href="/past-events/ai-reasoning-context-engineering-dec-2025" className="underline hover:text-black transition-colors">December 2025: AI Reasoning & Context Engineering — Andy Masters</a></li>
+              <li>→ <a href="/blog/ai-events-christchurch" className="underline hover:text-black transition-colors">Your guide to AI events in Christchurch — what to expect at each meetup</a></li>
+              <li>→ <a href="/#events" className="underline hover:text-black transition-colors">Upcoming Christchurch AI meetups — RSVP free on Meetup</a></li>
+            </ul>
           </div>
 
           {/* Back link */}

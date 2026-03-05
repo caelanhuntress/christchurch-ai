@@ -61,6 +61,20 @@ export default function FebEventPage() {
             <span>🎤 <strong>Caelan Huntress</strong> — Create a Coaching Relationship with AI</span>
           </div>
 
+
+          {/* Sponsor / backlinks row */}
+          <div className="rounded-xl border px-5 py-4 mb-10 text-sm" style={{ borderColor: "var(--border)", background: "var(--muted)", color: "var(--text-muted)" }}>
+            Sponsored by the{" "}
+            <a href="https://ai-coaching.academy/?utm_source=chch-ai&utm_medium=post&utm_campaign=0226" target="_blank" rel="noopener noreferrer"
+              className="underline hover:text-black transition-colors font-medium">AI Coaching Academy</a>
+            {" "}— New Zealand&apos;s home for{" "}
+            <a href="https://caelanhuntress.com/training/?utm_source=chch-ai&utm_medium=post&utm_campaign=0226" target="_blank" rel="noopener noreferrer"
+              className="underline hover:text-black transition-colors">AI training and upskilling</a>.
+            {" "}Hosted by{" "}
+            <a href="https://caelanhuntress.com/?utm_source=chch-ai&utm_medium=post&utm_campaign=0226" target="_blank" rel="noopener noreferrer"
+              className="underline hover:text-black transition-colors">Caelan Huntress, AI trainer and public speaker in Christchurch</a>.
+          </div>
+
           {/* Featured Image */}
           <div className="relative w-full rounded-2xl overflow-hidden mb-10" style={{ height: "360px" }}>
             <Image
@@ -74,12 +88,12 @@ export default function FebEventPage() {
 
           {/* Summary */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Event Summary</h2>
+            <h2 className="text-2xl font-bold mb-6">AI Meetup Recap: Christchurch, February 2026</h2>
 
             {/* Talk 1 */}
             <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 1</div>
-              <h3 className="text-xl font-bold mb-3">AI & Data Testing — Hamish Watson</h3>
+              <h3 className="text-xl font-bold mb-3">AI & Data Testing in New Zealand — Hamish Watson</h3>
               <div className="space-y-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   Hamish Watson — dual Microsoft MVP (Data Platform and AI), technologist, and community educator — opened the evening with a compelling argument: <strong className="text-black">you can't have good AI without good data</strong>. The relationship is intrinsic and non-negotiable.
@@ -102,7 +116,7 @@ export default function FebEventPage() {
             {/* Talk 2 */}
             <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 2</div>
-              <h3 className="text-xl font-bold mb-3">Create a Coaching Relationship with AI — Caelan Huntress</h3>
+              <h3 className="text-xl font-bold mb-3">How to Create a Coaching Relationship with AI — Caelan Huntress</h3>
               <div className="space-y-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   <em>Note: The live meetup livestream did not capture Caelan's presentation. The recording below is an expanded replay of the same material, covering additional depth and practical exercises.</em>
@@ -125,7 +139,7 @@ export default function FebEventPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways for AI Practitioners in Christchurch</h2>
             <ul className="space-y-2 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
               <li>🗄️ <strong className="text-black">Data quality is the foundation of AI quality</strong> — garbage in, garbage out has never been more true</li>
               <li>⚡ <strong className="text-black">Weeks → minutes</strong> — AI has compressed data cleaning and testing timelines by orders of magnitude</li>
@@ -137,7 +151,7 @@ export default function FebEventPage() {
 
           {/* Recording — Hamish's talk */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-2">Watch the Recording</h2>
+            <h2 className="text-2xl font-bold mb-2">Watch the Full Christchurch AI Meetup Recording</h2>
             <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>
               Hamish Watson — AI & Data Testing (live from EPIC Innovation)
             </p>
@@ -185,6 +199,26 @@ export default function FebEventPage() {
             >
               ⬇ DOWNLOAD THE SLIDES
             </a>
+          </div>
+
+
+          {/* Internal links / related */}
+          <div className="rounded-2xl border p-6 mb-10" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <h2 className="text-lg font-bold mb-4">More from Christchurch AI</h2>
+            <ul className="space-y-2 text-sm" style={{ color: "var(--text-muted)" }}>
+              <li>→ <a href="/past-events/ai-image-video-generation-march-2026" className="underline hover:text-black transition-colors">March 2026: AI Image & Video Generation with Caelan Huntress & Arthur Machado</a></li>
+              <li>→ <a href="/past-events/ai-reasoning-context-engineering-dec-2025" className="underline hover:text-black transition-colors">December 2025: AI Reasoning & Context Engineering with Andy Masters</a></li>
+              <li>→ <a href="/blog/ai-events-christchurch" className="underline hover:text-black transition-colors">All AI events in Christchurch — what to expect at the First Monday Meetup</a></li>
+              <li>→ <a href="/#events" className="underline hover:text-black transition-colors">Upcoming Christchurch AI meetups — RSVP free</a></li>
+            </ul>
+            <div className="mt-4 pt-4 border-t text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+              Want to level up your AI skills beyond the meetup? Explore{" "}
+              <a href="https://ai-coaching.academy/?utm_source=chch-ai&utm_medium=post&utm_campaign=0226" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">AI coaching and training programmes in New Zealand</a>
+              {" "}or browse{" "}
+              <a href="https://genaitraining.co.nz/?utm_source=chch-ai&utm_medium=post&utm_campaign=0226" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">generative AI workshops for NZ businesses</a>.
+              {" "}Running OpenClaw? Visit{" "}
+              <a href="https://openclaws.nz/?utm_source=chch-ai&utm_medium=post&utm_campaign=0226" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">openclaws.nz — personal AI assistants for New Zealand</a>.
+            </div>
           </div>
 
           {/* Back link */}

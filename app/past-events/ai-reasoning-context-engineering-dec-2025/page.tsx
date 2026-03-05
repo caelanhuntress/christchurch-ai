@@ -72,11 +72,11 @@ export default function DecEventPage() {
           </div>
 
           <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Event Summary</h2>
+            <h2 className="text-2xl font-bold mb-6">Christchurch AI Meetup Recap — December 2025</h2>
 
             <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 1</div>
-              <h3 className="text-xl font-bold mb-3">Hierarchical Reasoning Models & the Christmas Tree Packing Challenge — Andy Masters</h3>
+              <h3 className="text-xl font-bold mb-3">Hierarchical Reasoning Models: Small AI That Beats the Giants — Andy Masters</h3>
               <div className="space-y-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   Andy Masters — Lead Solutions Architect at Caitlyn AI — delivered one of the most technically adventurous talks in the meetup's history, weaving together cutting-edge AI research and a festive Kaggle competition: the <strong className="text-black">Santa 2025 Christmas Tree Packing Challenge</strong>.
@@ -101,7 +101,7 @@ export default function DecEventPage() {
 
             <div className="rounded-2xl border p-6 mb-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Talk 2</div>
-              <h3 className="text-xl font-bold mb-3">Context Engineering — Caelan Huntress</h3>
+              <h3 className="text-xl font-bold mb-3">Context Engineering: The AI Skill That Actually Matters — Caelan Huntress</h3>
               <div className="space-y-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   Caelan Huntress — Head of Learning & Enablement at Agentic Intelligence, AI educator and public speaker — closed the evening with a talk on <strong className="text-black">context engineering</strong>: the practice of deliberately shaping the information environment you give an AI to dramatically improve its outputs.
@@ -118,7 +118,7 @@ export default function DecEventPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways for the NZ AI Community</h2>
             <ul className="space-y-2 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
               <li>🎄 <strong className="text-black">Vibe coding works for serious engineering</strong> — Andy built a full genetic algorithm optimiser and interactive web app without writing a single line of code</li>
               <li>🤏 <strong className="text-black">Tiny models can beat giants</strong> — a 7M parameter recursive reasoning model outperforms Gemini on abstract logic by reasoning in native token space, not English</li>
@@ -129,7 +129,7 @@ export default function DecEventPage() {
           </div>
 
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Watch the Recording</h2>
+            <h2 className="text-2xl font-bold mb-4">Watch the Full AI Meetup Recording</h2>
             <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingBottom: "56.25%" }}>
               <iframe
                 src="https://www.youtube.com/embed/PG7Pq8F55vM"
