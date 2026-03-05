@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Christchurch AI — Artificial Intelligence Community",
@@ -30,6 +31,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-NZ">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6KY137HZWN"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6KY137HZWN');
+          `}
+        </Script>
+      </head>
       <body>{children}</body>
     </html>
   );
