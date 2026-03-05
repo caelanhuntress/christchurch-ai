@@ -3,6 +3,14 @@ import Image from "next/image";
 
 const PAST_EVENTS = [
   {
+    slug: "ai-data-testing-coaching-feb-2026",
+    title: "AI & Data Testing + Create a Coaching Relationship with AI",
+    date: "Monday, 2 February 2026",
+    speakers: ["Hamish Watson", "Caelan Huntress"],
+    image: "/images/past-event-feb-2026.jpg",
+    description: "Hamish Watson on why good AI requires good data, plus Caelan Huntress on building a genuine coaching relationship with AI — including personality profiles and the coaching container.",
+  },
+  {
     slug: "ai-image-video-generation-march-2026",
     title: "AI Multimedia: Image Generation & Video Generation",
     date: "Monday, 3 March 2026",
