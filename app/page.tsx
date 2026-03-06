@@ -134,6 +134,7 @@ export default function Home() {
           <div className="flex items-center gap-6 text-sm" style={{ color: "var(--text-muted)" }}>
             <a href="#events" className="hover:text-white transition-colors">Events</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#speak" className="hover:text-white transition-colors">Speak</a>
             <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
             <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
@@ -347,6 +348,63 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Call For Speakers */}
+        <section id="speak" className="px-6 py-20 border-t" style={{ borderColor: "var(--border)" }}>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Get Involved</div>
+            <h2 className="text-3xl font-bold mb-4">Call For Speakers</h2>
+            <p className="text-base leading-relaxed mb-8" style={{ color: "var(--text-muted)" }}>
+              We're always looking for people doing interesting things with AI to share their work with the
+              Christchurch community. Whether you're building something, researching something, or have hard-won
+              lessons to share — we'd love to hear from you.
+            </p>
+            <div className="grid md:grid-cols-3 gap-5 mb-10">
+              {[
+                {
+                  emoji: "🛠️",
+                  title: "Builders & Makers",
+                  desc: "Show us what you're building — demos welcome, polish not required.",
+                },
+                {
+                  emoji: "🔬",
+                  title: "Researchers",
+                  desc: "Share findings, frameworks, or work-in-progress. Academic and industry both welcome.",
+                },
+                {
+                  emoji: "💼",
+                  title: "Practitioners",
+                  desc: "Real-world AI in your industry — what's working, what's not, what you've learned.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="rounded-2xl border p-5"
+                  style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                  <div className="text-2xl mb-3">{item.emoji}</div>
+                  <div className="font-semibold mb-2 text-sm">{item.title}</div>
+                  <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{item.desc}</div>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-2xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+              <div className="text-sm font-semibold mb-3">Talk format</div>
+              <ul className="text-sm space-y-2" style={{ color: "var(--text-muted)" }}>
+                <li>⏱ <strong className="text-white">20–30 minutes</strong> including Q&A</li>
+                <li>📍 <strong className="text-white">In person</strong> at EPIC Innovation Centre, Christchurch</li>
+                <li>🎯 Audience ranges from complete beginners to senior engineers — aim for accessible</li>
+                <li>💡 Slides optional — demos, walkthroughs, and live tools all work great</li>
+              </ul>
+            </div>
+            <a
+              href="https://sessionize.com/christchurch-ai-techweek-conference/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
+              style={{ background: "var(--accent)", color: "#060d06" }}
+            >
+              Submit a Talk on Sessionize →
+            </a>
           </div>
         </section>
 
