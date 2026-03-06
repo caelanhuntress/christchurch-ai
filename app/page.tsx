@@ -352,8 +352,19 @@ export default function Home() {
         </section>
 
         {/* Call For Speakers */}
-        <section id="speak" className="px-6 py-20 border-t" style={{ borderColor: "var(--border)" }}>
-          <div className="max-w-3xl mx-auto">
+        <section id="speak" className="border-t" style={{ borderColor: "var(--border)" }}>
+          {/* Featured image */}
+          <div className="w-full overflow-hidden" style={{ maxHeight: "380px" }}>
+            <Image
+              src="/images/chchai-tw26-bg.png"
+              alt="Christchurch AI TechWeek 2026 — Call For Speakers"
+              width={1600}
+              height={600}
+              className="w-full object-cover object-center"
+              style={{ maxHeight: "380px" }}
+            />
+          </div>
+          <div className="px-6 py-20 max-w-3xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Get Involved</div>
             <h2 className="text-3xl font-bold mb-4">Call For Speakers</h2>
             <p className="text-base leading-relaxed mb-8" style={{ color: "var(--text-muted)" }}>
@@ -390,7 +401,7 @@ export default function Home() {
             <div className="rounded-2xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-sm font-semibold mb-3">Talk format</div>
               <ul className="text-sm space-y-2" style={{ color: "var(--text-muted)" }}>
-                <li>⏱ <strong className="text-white">20–30 minutes</strong> including Q&A</li>
+                <li>⏱ <strong className="text-white">25–45 minutes</strong> including Q&A</li>
                 <li>📍 <strong className="text-white">In person</strong> at EPIC Innovation Centre, Christchurch</li>
                 <li>🎯 Audience ranges from complete beginners to senior engineers — aim for accessible</li>
                 <li>💡 Slides optional — demos, walkthroughs, and live tools all work great</li>
