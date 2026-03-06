@@ -340,7 +340,7 @@ export default function Home() {
                     { label: "YouTube", href: "https://www.youtube.com/c/CaelanHuntress" },
                                   ].map((link) => (
                     <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-full text-xs border transition-all hover:border-green-600 hover:text-white"
+                      className="px-4 py-2 rounded-full text-xs border transition-all hover:border-blue-500 hover:text-white"
                       style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
                       {link.label}
                     </a>
@@ -412,7 +412,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
-              style={{ background: "var(--accent)", color: "#060d06" }}
+              style={{ background: "var(--accent)", color: "#ffffff" }}
             >
               Submit a Talk on Sessionize →
             </a>

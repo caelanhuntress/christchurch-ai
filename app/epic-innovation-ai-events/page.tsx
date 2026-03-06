@@ -22,10 +22,10 @@ export default function Page() {
     <div className="min-h-screen" style={{ background: "var(--background)" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-        style={{ borderColor: "var(--border)", background: "rgba(6,13,6,0.9)" }}>
+        style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}>
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</Link>
         <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
-          className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#060d06" }}>
+          className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#ffffff" }}>
           Join Free →
         </a>
       </nav>
@@ -120,7 +120,7 @@ export default function Page() {
           </Link>
           <a href="https://sessionize.com/christchurch-ai-techweek-conference/" target="_blank" rel="noopener noreferrer"
             className="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:opacity-90"
-            style={{ background: "var(--accent)", color: "#060d06" }}>
+            style={{ background: "var(--accent)", color: "#ffffff" }}>
             Apply to Speak →
           </a>
         </div>
@@ -132,7 +132,7 @@ export default function Page() {
           </p>
           <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
             className="inline-block px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
-            style={{ background: "var(--accent)", color: "#060d06" }}>
+            style={{ background: "var(--accent)", color: "#ffffff" }}>
             RSVP on Meetup — Free
           </a>
         </div>

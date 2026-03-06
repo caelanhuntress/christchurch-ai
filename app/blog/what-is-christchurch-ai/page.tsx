@@ -22,10 +22,10 @@ export default function Post() {
     <div className="min-h-screen" style={{ background: "var(--background)" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-        style={{ borderColor: "var(--border)", background: "rgba(6,13,6,0.9)" }}>
+        style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}>
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</Link>
         <Link href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
-          className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#060d06" }}>
+          className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#ffffff" }}>
           Join Free
         </Link>
       </nav>
@@ -59,7 +59,7 @@ export default function Post() {
             <div className="font-bold text-white text-lg mb-2">Next Meetup: Monday 4 May 2026</div>
             <p className="text-sm mb-4">AI Governance and AI Literacy Frameworks at EPIC Innovation Centre</p>
             <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
-              className="inline-block px-6 py-3 rounded-full font-semibold" style={{ background: "var(--accent)", color: "#060d06" }}>
+              className="inline-block px-6 py-3 rounded-full font-semibold" style={{ background: "var(--accent)", color: "#ffffff" }}>
               RSVP on Meetup — Free
             </a>
           </div>

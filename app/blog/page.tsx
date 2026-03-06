@@ -44,13 +44,13 @@ export default function BlogIndex() {
   return (
     <div className="min-h-screen" style={{ background: "var(--background)" }}>
       <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-        style={{ borderColor: "var(--border)", background: "rgba(6,13,6,0.9)" }}>
+        style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}>
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>
           Christchurch AI
         </Link>
         <Link href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
           className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:opacity-90"
-          style={{ background: "var(--accent)", color: "#060d06" }}>
+          style={{ background: "var(--accent)", color: "#ffffff" }}>
           Join Free →
         </Link>
       </nav>
@@ -67,10 +67,10 @@ export default function BlogIndex() {
         <div className="space-y-8">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}
-              className="block rounded-2xl border p-6 transition-all hover:border-green-700"
+              className="block rounded-2xl border p-6 transition-all hover:border-blue-600"
               style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs mb-2" style={{ color: "var(--text-muted)" }}>{post.date}</div>
-              <h2 className="text-xl font-bold mb-2 hover:text-green-400 transition-colors">{post.title}</h2>
+              <h2 className="text-xl font-bold mb-2 hover:text-blue-400 transition-colors">{post.title}</h2>
               <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{post.excerpt}</p>
             </Link>
           ))}
