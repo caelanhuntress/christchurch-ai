@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "context-engineering-ai",
+    title: "Context Engineering: Why It Matters More Than Prompting",
+    date: "March 2026",
+    excerpt: "Context engineering is the AI skill separating average users from power operators. What it is, why it beats prompting alone, and how to start today.",
+  },
+  {
     slug: "techweek-2026-christchurch",
     title: "TechWeek 2026 Christchurch — AI Conference at EPIC Innovation",
     date: "March 2026",
