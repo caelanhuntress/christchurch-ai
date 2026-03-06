@@ -447,7 +447,6 @@ export default function Home() {
             <div className="flex items-center gap-6">
               <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Meetup</a>
               <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
-            <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
               <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
               <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">AI Coaching Academy</a>
               <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">OpenClaws</a>
