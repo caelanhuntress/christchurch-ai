@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "ai-speaker-christchurch",
+    title: "How to Speak at an AI Event in Christchurch",
+    date: "March 2026",
+    excerpt: "Want to share your AI work with Canterbury's tech community? Here's how to apply to speak at the Christchurch AI meetup and TechWeek 2026.",
+  },
+  {
     slug: "what-is-christchurch-ai",
     title: "What Is Christchurch AI? Canterbury's Monthly AI Meetup Explained",
     date: "March 2026",
