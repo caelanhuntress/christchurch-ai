@@ -13,8 +13,8 @@ const schema = {
   "@type": "Event",
   "name": "OpenClaw User Group Christchurch — March 2026",
   "description": "The first OpenClaw User Group in Christchurch. Share experiences, get tips, and connect with other OpenClaw users in Canterbury.",
-  "startDate": "2026-03-24T17:30:00+13:00",
-  "endDate": "2026-03-24T19:30:00+13:00",
+  "startDate": "2026-03-24T12:00:00+13:00",
+  "endDate": "2026-03-24T13:00:00+13:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "isAccessibleForFree": true,
@@ -64,7 +64,7 @@ export default function OpenClawUserGroup() {
         <div className="flex flex-col gap-2 mb-8 text-sm" style={{ color: "var(--text-muted)" }}>
           <div className="flex items-center gap-2">
             <span>📅</span>
-            <span><strong className="text-white">Monday 24 March 2026</strong> — 5:30 PM to 7:30 PM NZST</span>
+            <span><strong className="text-white">Tuesday 24 March 2026</strong> — 12:00 PM to 1:00 PM NZST</span>
           </div>
           <div className="flex items-center gap-2">
             <span>📍</span>
