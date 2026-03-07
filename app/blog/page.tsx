@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "agentcamp-christchurch-2026",
+    title: "AgentCamp Christchurch 2026 — What We Learned",
+    date: "7 March 2026",
+    excerpt: "100 attendees, 12 speakers, 6 Microsoft MVPs — a recap of AgentCamp Christchurch and what it means for Canterbury's AI scene.",
+  },
+  {
     slug: "context-engineering-ai",
     title: "Context Engineering: Why It Matters More Than Prompting",
     date: "March 2026",
