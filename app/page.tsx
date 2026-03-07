@@ -10,6 +10,7 @@ const EVENTS = [
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/313637828/",
+    pageUrl: "/openclaw-user-group-march-2026",
     image: "/images/event-march-2026.jpg",
     talks: [
       {
@@ -27,6 +28,7 @@ const EVENTS = [
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/313137130/",
+    pageUrl: "/vibe-coding-april-2026",
     image: "/images/event-april-2026.jpg",
     talks: [
       {
@@ -49,6 +51,7 @@ const EVENTS = [
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://meetup.com/christchurch-ai",
+    pageUrl: "/ai-governance-may-2026",
     image: "/images/event-may-2026.jpg",
     talks: [
       {
@@ -254,11 +257,20 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <a href={event.meetupUrl} target="_blank" rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 rounded-full font-semibold text-sm transition-all hover:opacity-90"
-                    style={{ background: "var(--accent)", color: "#ffffff" }}>
-                    RSVP on Meetup — Free
-                  </a>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <a href={event.meetupUrl} target="_blank" rel="noopener noreferrer"
+                      className="inline-block px-6 py-3 rounded-full font-semibold text-sm transition-all hover:opacity-90"
+                      style={{ background: "var(--accent)", color: "#ffffff" }}>
+                      RSVP on Meetup — Free
+                    </a>
+                    {event.pageUrl && (
+                      <Link href={event.pageUrl}
+                        className="inline-block px-6 py-3 rounded-full font-semibold text-sm border transition-all hover:opacity-90"
+                        style={{ borderColor: "var(--accent)", color: "var(--accent)" }}>
+                        Event Details →
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
