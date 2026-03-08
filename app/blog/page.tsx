@@ -15,6 +15,12 @@ const posts = [
     excerpt: "AI governance isn't just a policy document. What effective governance looks like in practice for NZ organisations — and the three failures we see most.",
   },
   {
+    slug: "openclaw-user-group-christchurch",
+    title: "OpenClaw User Group Christchurch: What It Is and What to Expect",
+    date: "March 2026",
+    excerpt: "The first OpenClaw User Group in Christchurch meets March 24 at EPIC Innovation. What OpenClaw is, who it's for, and what you'll get from an hour with other Canterbury users.",
+  },
+  {
     slug: "what-is-vibe-coding",
     title: "What Is Vibe Coding? Building Software by Conversation",
     date: "8 March 2026",
