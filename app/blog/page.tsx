@@ -9,22 +9,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    slug: "what-is-vibe-coding",
-    title: "What Is Vibe Coding? Building Software by Conversation",
-    date: "March 2026",
-    excerpt: "Vibe coding lets you build software by describing what you want — no programming knowledge required. What it is, what you can build, and how to see it live in Christchurch.",
-  },
-  {
     slug: "ai-governance-nz-organisations",
     title: "AI Governance in NZ: What It Actually Means for Your Organisation",
-    date: "March 2026",
-    excerpt: "AI governance isn't just a policy document. A practical take on the three most common governance failures in NZ organisations — and a starting framework that works.",
+    date: "8 March 2026",
+    excerpt: "AI governance isn't just a policy document. What effective governance looks like in practice for NZ organisations — and the three failures we see most.",
+  },
+  {
+    slug: "what-is-vibe-coding",
+    title: "What Is Vibe Coding? Building Software by Conversation",
+    date: "8 March 2026",
+    excerpt: "Vibe coding means building software by describing what you want in plain language. No syntax, no debugging — just clear thinking and AI. A practical intro ahead of our April 6 meetup.",
   },
   {
     slug: "agentcamp-christchurch-2026",
     title: "AgentCamp Christchurch 2026 — What We Learned",
-    date: "March 2026",
-    excerpt: "100 people. 12 speakers. 6 Microsoft MVPs. One sold-out Saturday. Here's what AgentCamp Christchurch 2026 revealed about the state of AI agents in New Zealand.",
+    date: "7 March 2026",
+    excerpt: "100 attendees, 12 speakers, 6 Microsoft MVPs — a recap of AgentCamp Christchurch and what it means for Canterbury's AI scene.",
   },
   {
     slug: "context-engineering-ai",
