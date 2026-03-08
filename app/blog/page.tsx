@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "what-is-vibe-coding",
+    title: "What Is Vibe Coding? Building Software by Conversation",
+    date: "8 March 2026",
+    excerpt: "Vibe coding means building software by describing what you want in plain language. No syntax, no debugging — just clear thinking and AI. A practical intro ahead of our April 6 meetup.",
+  },
+  {
     slug: "agentcamp-christchurch-2026",
     title: "AgentCamp Christchurch 2026 — What We Learned",
     date: "7 March 2026",
