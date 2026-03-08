@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "ai-governance-nz-organisations",
+    title: "AI Governance in NZ: What It Actually Means for Your Organisation",
+    date: "8 March 2026",
+    excerpt: "AI governance isn't just a policy document. What effective governance looks like in practice for NZ organisations — and the three failures we see most.",
+  },
+  {
     slug: "what-is-vibe-coding",
     title: "What Is Vibe Coding? Building Software by Conversation",
     date: "8 March 2026",
