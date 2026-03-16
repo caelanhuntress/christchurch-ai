@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 const EVENTS = [
   {
@@ -140,9 +141,14 @@ export default function Home() {
             <a href="#speak" className="hover:text-white transition-colors">Speak</a>
             <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-            <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
+            <ThemeToggle />
+            <a
+              href="https://meetup.com/christchurch-ai"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:opacity-90"
-              style={{ background: "var(--accent)", color: "#ffffff" }}>
+              style={{ background: "var(--accent)", color: "#ffffff" }}
+            >
               Join Free →
             </a>
           </div>

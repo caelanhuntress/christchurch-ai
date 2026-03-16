@@ -1,12 +1,31 @@
 @import "tailwindcss";
 
 :root {
+  /* Dark mode as default variables (overridden by body classes) */
   --background: #14080E;
   --foreground: #f5f0f3;
   --accent: #004AAD;
   --muted: #1e0f18;
   --border: #2e1a26;
   --text-muted: #908088;
+}
+
+body.theme-dark {
+  --background: #14080E;
+  --foreground: #f5f0f3;
+  --accent: #004AAD;
+  --muted: #1e0f18;
+  --border: #2e1a26;
+  --text-muted: #908088;
+}
+
+body.theme-light {
+  --background: #f5f5f7;
+  --foreground: #111827;
+  --accent: #004AAD;
+  --muted: #e5e7eb;
+  --border: #d1d5db;
+  --text-muted: #4b5563;
 }
 
 * {
