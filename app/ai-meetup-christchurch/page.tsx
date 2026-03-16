@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AI Meetup Christchurch — Monthly Events at EPIC Innovation",
-  description: "Join the Christchurch AI meetup — free monthly events on the First Monday of every month at EPIC Innovation Centre. Speakers, demos, networking.",
+  description: "Join the Christchurch AI meetup — free monthly events at EPIC Innovation Centre. Speakers, demos, networking.",
   keywords: ["AI meetup Christchurch", "artificial intelligence meetup NZ", "tech meetup Christchurch", "AI networking Christchurch", "monthly AI events Canterbury"],
   alternates: { canonical: "https://christchurch-ai.com/ai-meetup-christchurch" },
 };
@@ -12,7 +12,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "EventSeries",
   "name": "Christchurch AI Meetup",
-  "description": "Free monthly AI meetup at EPIC Innovation Centre, Christchurch. First Monday of every month.",
+  "description": "Free monthly AI meetup at EPIC Innovation Centre, Christchurch.",
   "url": "https://christchurch-ai.com/ai-meetup-christchurch",
   "location": {
     "@type": "Place",
@@ -52,7 +52,7 @@ export default function Page() {
           or just trying to figure out what it means for your industry.
         </p>
         <p className="text-lg leading-relaxed mb-12" style={{ color: "var(--text-muted)" }}>
-          We meet on the <strong className="text-white">First Monday of every month</strong> at
+          We meet for <strong className="text-white">monthly AI meetups</strong> at
           EPIC Innovation Centre. It's free. It's friendly. And the conversations are real.
         </p>
 
@@ -144,5 +144,8 @@ export default function Page() {
         {" "}· Monthly meetups at EPIC Innovation, Canterbury, New Zealand
       </footer>
     </div>
+  );
+}
+   </div>
   );
 }

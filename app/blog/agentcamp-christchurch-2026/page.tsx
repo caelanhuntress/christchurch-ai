@@ -124,8 +124,8 @@ export default function Post() {
 
           <p>
             If you were at AgentCamp and want to stay connected with Canterbury's broader AI community, the{" "}
-            <Link href="/" className="text-white underline">Christchurch AI monthly meetup</Link> runs on the
-            <strong className="text-white"> First Monday of every month</strong> at EPIC Innovation Centre.
+            <Link href="/" className="text-white underline">Christchurch AI monthly meetup</Link> runs at
+            <strong className="text-white">EPIC Innovation Centre</strong> as a regular monthly event.
             Our next event is <strong className="text-white">Monday 4 May 2026</strong>.
           </p>
 

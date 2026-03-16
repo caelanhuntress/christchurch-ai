@@ -36,7 +36,7 @@ export default function Post() {
         <div className="space-y-6 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <p>If you have heard about the <strong className="text-white">Christchurch Artificial Intelligence</strong> meetup and wondered what it actually is, this is your guide.</p>
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Short Version</h2>
-          <p>Christchurch AI is a <strong className="text-white">free monthly meetup</strong> for anyone interested in artificial intelligence. We meet on the <strong className="text-white">First Monday of every month</strong> at <strong className="text-white">EPIC Innovation Centre</strong> in Christchurch's CBD. Each event features two speakers, drinks, and time to connect with the people building and thinking about AI in Canterbury.</p>
+          <p>Christchurch AI is a <strong className="text-white">free monthly meetup</strong> for anyone interested in artificial intelligence. We meet at <strong className="text-white">EPIC Innovation Centre</strong> in Christchurch's CBD for regular monthly events. Each event features two speakers, drinks, and time to connect with the people building and thinking about AI in Canterbury.</p>
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Comes?</h2>
           <ul className="list-disc list-inside space-y-2 ml-2">
             <li><strong className="text-white">Business leaders</strong> exploring practical AI adoption</li>

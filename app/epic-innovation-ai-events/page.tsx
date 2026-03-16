@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AI Events at EPIC Innovation Centre Christchurch",
-  description: "EPIC Innovation Centre in Christchurch hosts the monthly Christchurch AI meetup — free events for the Canterbury tech and AI community. First Monday every month.",
+  description: "EPIC Innovation Centre in Christchurch hosts the monthly Christchurch AI meetup — free events for the Canterbury tech and AI community.",
   keywords: ["EPIC Innovation Centre AI events", "EPIC Innovation Christchurch events", "AI events EPIC Christchurch", "Canterbury tech events EPIC", "Christchurch innovation hub AI"],
   alternates: { canonical: "https://christchurch-ai.com/epic-innovation-ai-events" },
 };
@@ -37,8 +37,8 @@ export default function Page() {
         <h1 className="text-4xl font-bold mb-6 leading-tight">AI Events at EPIC Innovation Centre</h1>
         <p className="text-lg leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
           <strong className="text-white">EPIC Innovation Centre</strong> is home to Christchurch's most active
-          AI community event — the <strong className="text-white">Christchurch AI meetup</strong>, held on
-          the First Monday of every month.
+          AI community event — the <strong className="text-white">Christchurch AI meetup</strong>, held as
+          a regular monthly event.
         </p>
         <p className="text-lg leading-relaxed mb-12" style={{ color: "var(--text-muted)" }}>
           If you're looking for AI events in Christchurch, this is the regular one. Free to attend,
@@ -63,7 +63,7 @@ export default function Page() {
           <div className="space-y-4 text-sm" style={{ color: "var(--text-muted)" }}>
             <div className="flex gap-3 items-start">
               <span>📅</span>
-              <div><span className="font-semibold text-white">When: </span>First Monday of every month, 5:30–8:00 PM</div>
+              <div><span className="font-semibold text-white">When: </span>Monthly meetups, typically 5:30–8:00 PM</div>
             </div>
             <div className="flex gap-3 items-start">
               <span>📍</span>
@@ -142,6 +142,9 @@ export default function Page() {
         <Link href="/" style={{ color: "var(--accent)" }} className="font-semibold">Christchurch AI</Link>
         {" "}· Monthly meetups at EPIC Innovation, Canterbury, New Zealand
       </footer>
+    </div>
+  );
+}
     </div>
   );
 }

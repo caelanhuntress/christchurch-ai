@@ -36,11 +36,11 @@ export default function Post() {
         <div className="space-y-6 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <p>Canterbury's AI community is more active than most people realise. If you are looking for places to learn, connect, and stay current with artificial intelligence in Christchurch, here is a guide to what is happening locally.</p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Christchurch AI — First Monday Meetup</h2>
-          <p>The flagship event for AI in Canterbury. <strong className="text-white">Christchurch Artificial Intelligence</strong> meets on the First Monday of every month at EPIC Innovation Centre. It is free, open to everyone, and consistently draws a mixed crowd of developers, business leaders, researchers, and curious beginners.</p>
+          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Christchurch AI — Monthly Meetup</h2>
+          <p>The flagship event for AI in Canterbury. <strong className="text-white">Christchurch Artificial Intelligence</strong> hosts monthly meetups at EPIC Innovation Centre. It is free, open to everyone, and consistently draws a mixed crowd of developers, business leaders, researchers, and curious beginners.</p>
           <p>Each event features two speakers and genuine networking time. Topics range from practical AI tools and LLMs to governance, ethics, and the social impact of AI in New Zealand. Sponsored by the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>.</p>
           <p><strong className="text-white">Where:</strong> EPIC Innovation Centre, 78-100 Manchester St, Christchurch<br />
-          <strong className="text-white">When:</strong> First Monday of each month, 5:30 PM<br />
+          <strong className="text-white">When:</strong> Monthly meetups, typically 5:30 PM<br />
           <strong className="text-white">Cost:</strong> Free<br />
           <strong className="text-white">RSVP:</strong> <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">meetup.com/christchurch-ai</a></p>
 
@@ -78,4 +78,11 @@ export default function Post() {
       </footer>
     </div>
   );
+}
+;
+}
+</div>
+  );
+}
+;
 }

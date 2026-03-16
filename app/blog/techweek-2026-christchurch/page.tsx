@@ -139,7 +139,7 @@ export default function Post() {
             Meetup group as they are confirmed. The best way to stay updated is to join the community.
           </p>
           <p>
-            In the meantime, our regular <strong className="text-white">monthly meetups continue on the First Monday of each month</strong> —
+            In the meantime, our regular <strong className="text-white">monthly meetups</strong> continue at EPIC Innovation Centre —
             so if you want to get a feel for the community before TechWeek, come along. We would love to see you.
           </p>
 

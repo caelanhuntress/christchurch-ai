@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "AI Multimedia: Image Generation & Video Generation | Christchurch AI — March 2026",
-  description: "A hands-on exploration of AI image and video generation at the March 2026 Christchurch AI First Monday Meetup. Featuring Caelan Huntress on image generation and Arthur Machado on AI video tools.",
+  description: "A hands-on exploration of AI image and video generation at the March 2026 Christchurch AI monthly meetup. Featuring Caelan Huntress on image generation and Arthur Machado on AI video tools.",
 };
 
 export default function MarchEventPage() {
@@ -48,7 +48,7 @@ export default function MarchEventPage() {
           </div>
 
           <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
-            First Monday Meetup · March 2026
+            Christchurch AI Meetup · March 2026
           </div>
           <h1 className="text-4xl font-bold mb-4 leading-tight">
             AI Multimedia: Image Generation & Video Generation

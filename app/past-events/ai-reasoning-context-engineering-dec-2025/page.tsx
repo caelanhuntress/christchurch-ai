@@ -47,7 +47,7 @@ export default function DecEventPage() {
           </div>
 
           <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
-            First Monday Meetup · December 2025
+            Christchurch AI Meetup · December 2025
           </div>
           <h1 className="text-4xl font-bold mb-4 leading-tight">
             AI Reasoning & Context Engineering

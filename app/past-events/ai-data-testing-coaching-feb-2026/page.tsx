@@ -47,7 +47,7 @@ export default function FebEventPage() {
           </div>
 
           <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
-            First Monday Meetup · February 2026
+            Christchurch AI Meetup · February 2026
           </div>
           <h1 className="text-4xl font-bold mb-4 leading-tight">
             AI & Data Testing + Create a Coaching Relationship with AI
@@ -208,7 +208,7 @@ export default function FebEventPage() {
             <ul className="space-y-2 text-sm" style={{ color: "var(--text-muted)" }}>
               <li>→ <a href="/past-events/ai-image-video-generation-march-2026" className="underline hover:text-black transition-colors">March 2026: AI Image & Video Generation with Caelan Huntress & Arthur Machado</a></li>
               <li>→ <a href="/past-events/ai-reasoning-context-engineering-dec-2025" className="underline hover:text-black transition-colors">December 2025: AI Reasoning & Context Engineering with Andy Masters</a></li>
-              <li>→ <a href="/blog/ai-events-christchurch" className="underline hover:text-black transition-colors">All AI events in Christchurch — what to expect at the First Monday Meetup</a></li>
+              <li>→ <a href="/blog/ai-events-christchurch" className="underline hover:text-black transition-colors">All AI events in Christchurch — what to expect at the monthly meetup</a></li>
               <li>→ <a href="/#events" className="underline hover:text-black transition-colors">Upcoming Christchurch AI meetups — RSVP free</a></li>
             </ul>
             <div className="mt-4 pt-4 border-t text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>

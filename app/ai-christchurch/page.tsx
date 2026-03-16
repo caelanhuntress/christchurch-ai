@@ -42,8 +42,7 @@ export default function Page() {
 
         <h2 className="text-2xl font-bold mb-4">The Monthly Meetup</h2>
         <p className="mb-6 leading-relaxed" style={{ color: "var(--text-muted)" }}>
-          The <strong className="text-white">Christchurch Artificial Intelligence</strong> meetup runs on the
-          First Monday of every month at <strong className="text-white">EPIC Innovation Centre</strong> in the CBD.
+          The <strong className="text-white">Christchurch Artificial Intelligence</strong> meetup runs monthly at <strong className="text-white">EPIC Innovation Centre</strong> in the CBD.
           Two speakers, drinks, and real conversation — free to attend, every month.
         </p>
         <p className="mb-10 leading-relaxed" style={{ color: "var(--text-muted)" }}>
@@ -105,7 +104,7 @@ export default function Page() {
         <div className="mt-16 rounded-2xl border p-8 text-center" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
           <div className="text-xl font-bold text-white mb-3">Join the community</div>
           <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>
-            Free to attend. First Monday of every month. EPIC Innovation Centre, Christchurch.
+            Free to attend. Monthly meetups at EPIC Innovation Centre, Christchurch.
           </p>
           <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
             className="inline-block px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"

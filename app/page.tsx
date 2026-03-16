@@ -79,7 +79,7 @@ export default function Home() {
     "@type": "Organization",
     "name": "Christchurch Artificial Intelligence",
     "url": "https://christchurch-ai.com",
-    "description": "Christchurch's monthly AI meetup community. We meet on the First Monday of every month at EPIC Innovation Centre.",
+    "description": "Christchurch's monthly AI meetup community. We host regular meetups at EPIC Innovation Centre.",
     "location": { "@type": "Place", "name": "EPIC Innovation Centre, Christchurch, New Zealand" },
     "sameAs": ["https://meetup.com/christchurch-ai"],
     "sponsor": { "@type": "Organization", "name": "AI Coaching Academy", "url": "https://ai-coaching.academy" },
@@ -152,7 +152,7 @@ export default function Home() {
         <section className="px-6 py-24 text-center max-w-4xl mx-auto">
           <div className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-6 border"
             style={{ borderColor: "var(--border)", color: "var(--accent)", background: "rgba(74,222,128,0.05)" }}>
-            First Monday of every month · Christchurch, NZ
+            Monthly meetups · Christchurch, NZ
           </div>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
             Artificial Intelligence<br />
@@ -160,7 +160,7 @@ export default function Home() {
           </h1>
           <p className="text-lg mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: "var(--text-muted)" }}>
             Canterbury's monthly gathering for people building with, thinking about, and curious about AI.
-            Speakers, demos, drinks, and real conversations — at EPIC Innovation, every First Monday.
+            Speakers, demos, drinks, and real conversations — at EPIC Innovation, every month.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
@@ -284,7 +284,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-6">Christchurch's AI Community</h2>
             <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
               <p>The <strong className="text-white">Christchurch Artificial Intelligence</strong> meetup brings together developers, business leaders, researchers, and curious minds to explore what is happening in AI — practically, ethically, and locally.</p>
-              <p>We meet on the <strong className="text-white">First Monday of every month</strong> at <strong className="text-white">EPIC Innovation Centre</strong>. Each event features two speakers, drinks, and time to connect with the people building the future of AI in Canterbury and beyond.</p>
+              <p>We host <strong className="text-white">monthly meetups</strong> at <strong className="text-white">EPIC Innovation Centre</strong>. Each event features two speakers, drinks, and time to connect with the people building the future of AI in Canterbury and beyond.</p>
               <p>Topics range from AI governance and machine learning to practical tools, business automation, and the social impact of artificial intelligence in New Zealand. No jargon required.</p>
             </div>
             <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -478,5 +478,8 @@ export default function Home() {
         </footer>
       </div>
     </>
+  );
+}
+ </>
   );
 }

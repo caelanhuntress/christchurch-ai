@@ -162,8 +162,8 @@ export default function VibeCodingApril2026() {
 
           <div className="mt-12 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              <strong className="text-white">Christchurch AI</strong> meets on the First Monday of
-              every month at EPIC Innovation Centre. <Link href="/" className="text-white underline">See all upcoming events →</Link>
+              <strong className="text-white">Christchurch AI</strong> hosts monthly meetups at
+              EPIC Innovation Centre. <Link href="/" className="text-white underline">See all upcoming events →</Link>
             </p>
           </div>
 

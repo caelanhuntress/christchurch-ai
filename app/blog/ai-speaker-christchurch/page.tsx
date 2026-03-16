@@ -48,7 +48,7 @@ export default function Post() {
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">Why Speak at Christchurch AI?</h2>
           <p>
-            The Christchurch AI meetup runs on the <strong className="text-white">First Monday of every month</strong> at
+            The Christchurch AI meetup runs as a <strong className="text-white">monthly event</strong> at
             EPIC Innovation Centre. Our audience is a mix of business leaders, developers, researchers, and curious
             beginners — people who are actively using AI or trying to figure out how to.
           </p>

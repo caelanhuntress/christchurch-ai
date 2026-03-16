@@ -142,7 +142,7 @@ export default function OpenClawUserGroup() {
             <p className="font-semibold text-white mb-2">Hosted by Christchurch AI</p>
             <p className="text-sm">
               The Christchurch AI monthly meetup runs on the{" "}
-              <strong className="text-white">First Monday of every month</strong> at EPIC Innovation Centre.
+              <strong className="text-white">Monthly meetups</strong> at EPIC Innovation Centre.
               Our next regular meetup is <strong className="text-white">Monday 4 May 2026</strong>.
             </p>
             <p className="text-sm mt-2">
