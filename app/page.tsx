@@ -122,12 +122,26 @@ export default function Home() {
     "url": "https://meetup.com/christchurch-ai",
   };
 
+  const featuredWorkshopSchema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "AI Roadmap Workshop",
+    "description": "A practical TechWeek26 workshop led by Caelan Huntress to help professionals identify high-value AI opportunities and leave with a clear implementation plan.",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "organizer": { "@type": "Person", "name": "Caelan Huntress", "url": "https://caelanhuntress.com" },
+    "performer": { "@type": "Person", "name": "Caelan Huntress", "url": "https://caelanhuntress.com" },
+    "isAccessibleForFree": false,
+    "url": "https://events.humanitix.com/ai-roadmap-workshop-0526",
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(marchSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aprilSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(maySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredWorkshopSchema) }} />
 
       <div className="min-h-screen" style={{ background: "var(--background)" }}>
 
@@ -449,6 +463,59 @@ export default function Home() {
               style={{ borderColor: "var(--border)", color: "var(--foreground)" }}>
               View Blog →
             </Link>
+          </div>
+        </section>
+
+        {/* Featured Workshop */}
+        <section className="px-6 py-20 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Featured Workshop</div>
+            <div className="rounded-3xl border p-8 md:p-10" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+                <div className="max-w-2xl">
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 border"
+                    style={{ borderColor: "var(--border)", color: "var(--accent)", background: "rgba(74,222,128,0.05)" }}>
+                    TechWeek26 · Humanitix Event
+                  </div>
+                  <h2 className="text-3xl font-bold mb-4">AI Roadmap Workshop</h2>
+                  <p className="text-base leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>
+                    Curious about AI but not sure where to start? This hands-on workshop helps professionals turn AI curiosity into a practical plan — mapping workflows, identifying high-value opportunities, and prioritising experiments you can begin immediately.
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-4 mb-6 text-sm">
+                    {[
+                      "Map your workflow and spot AI leverage points",
+                      "Prioritise quick wins and strategic opportunities",
+                      "Leave with a practical AI roadmap",
+                      "Ideal for business owners, managers, and knowledge workers",
+                    ].map((item) => (
+                      <div key={item} className="rounded-2xl border px-4 py-3"
+                        style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--muted)" }}>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                    Led by <a href="https://caelanhuntress.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Caelan Huntress</a>, founder of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>.
+                  </p>
+                </div>
+                <div className="lg:w-[320px] rounded-2xl border p-6 flex-shrink-0" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                  <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Book Your Spot</div>
+                  <div className="space-y-3 text-sm mb-6" style={{ color: "var(--text-muted)" }}>
+                    <p>Part of New Zealand&apos;s national festival of technology and innovation.</p>
+                    <p>Built for people who want a practical AI workshop, not just another tool demo.</p>
+                  </div>
+                  <a
+                    href="https://events.humanitix.com/ai-roadmap-workshop-0526"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block w-full text-center px-6 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
+                    style={{ background: "var(--accent)", color: "#ffffff" }}
+                  >
+                    View on Humanitix →
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
