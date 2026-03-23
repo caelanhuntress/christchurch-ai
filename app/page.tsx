@@ -113,7 +113,7 @@ export default function Home() {
   const maySchema = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Christchurch AI Meetup — May 2026: AI Governance & AI Literacy Frameworks",
+    "name": "Christchurch AI Meetup — May 2026: The AI Tension — Implementation vs Existential Risk",
     "startDate": "2026-05-04T17:30:00+12:00",
     "endDate": "2026-05-04T20:00:00+12:00",
     "location": { "@type": "Place", "name": "EPIC Innovation Centre", "address": { "@type": "PostalAddress", "streetAddress": "78-100 Manchester St", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
