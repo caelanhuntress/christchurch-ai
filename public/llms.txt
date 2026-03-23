@@ -1,0 +1,59 @@
+# Christchurch AI
+
+> Christchurch's monthly artificial intelligence community and meetup.
+
+Christchurch AI is a community for people in Canterbury who are building with, thinking about, and curious about artificial intelligence. It brings together business leaders, developers, researchers, founders, educators, and curious beginners for practical conversations about AI in New Zealand.
+
+## About
+
+Christchurch AI meets on the **first Monday of every month** at **EPIC Innovation Centre** in Christchurch, New Zealand.
+
+Each event typically includes:
+- talks from local and visiting speakers
+- practical demos and tools
+- networking and discussion
+- conversation about AI in business, education, research, and society
+
+The community is hosted by **Caelan Huntress**, AI trainer, speaker, and founder of the **AI Coaching Academy**.
+
+## Key Pages
+
+- [Home](https://christchurch-ai.com/)
+- [About / Main Meetup Page](https://christchurch-ai.com/)
+- [AI Meetup Christchurch](https://christchurch-ai.com/ai-meetup-christchurch)
+- [AI Christchurch](https://christchurch-ai.com/ai-christchurch)
+- [Past Events](https://christchurch-ai.com/past-events)
+- [Blog](https://christchurch-ai.com/blog)
+
+## Example Blog Posts
+
+- [What is Christchurch AI?](https://christchurch-ai.com/blog/what-is-christchurch-ai)
+- [AI Speaker Christchurch](https://christchurch-ai.com/blog/ai-speaker-christchurch)
+- [AI Events Christchurch](https://christchurch-ai.com/blog/ai-events-christchurch)
+- [OpenClaw User Group Christchurch](https://christchurch-ai.com/blog/openclaw-user-group-christchurch)
+- [AgentCamp Christchurch 2026](https://christchurch-ai.com/blog/agentcamp-christchurch-2026)
+
+## Topics Covered
+
+- AI for business
+- LLMs and practical tools
+- AI governance and ethics
+- startups and product development
+- education and research
+- local Christchurch and Canterbury AI ecosystem news
+
+## Related Sites
+
+- [Caelan Huntress](https://caelanhuntress.com/) — AI trainer and speaker
+- [AI Coaching Academy](https://ai-coaching.academy/) — AI training community
+- [Join the AI Coaching Academy](https://join.ai-coaching.academy/) — membership and programme information
+- [GenAI Training NZ](https://genaitraining.co.nz/) — corporate AI workshops
+- [OpenClaws NZ](https://openclaws.nz/) — personal AI assistant installation in New Zealand
+
+## Location
+
+Christchurch, New Zealand
+
+## Purpose
+
+This site exists to help people discover Christchurch AI, understand the local AI meetup community, browse event-related pages and articles, and learn how to participate in AI conversations in Canterbury.
