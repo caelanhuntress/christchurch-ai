@@ -57,7 +57,7 @@ export default function Post() {
           <p>The meetup is organised by <strong className="text-white">Caelan Huntress</strong> of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>, which sponsors drinks at every event, keeping it free for everyone. The group connects with the <strong className="text-white">AI Forum NZ</strong> and <strong className="text-white">Canterbury Tech</strong> networks.</p>
           <div className="mt-12 rounded-2xl border p-6 text-center" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
             <div className="font-bold text-white text-lg mb-2">Next Meetup: Monday 4 May 2026</div>
-            <p className="text-sm mb-4">AI Governance and AI Literacy Frameworks at EPIC Innovation Centre</p>
+            <p className="text-sm mb-4">The AI Tension — Implementation vs Existential Risk at EPIC Innovation Centre</p>
             <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
               className="inline-block px-6 py-3 rounded-full font-semibold" style={{ background: "var(--accent)", color: "#ffffff" }}>
               RSVP on Meetup — Free

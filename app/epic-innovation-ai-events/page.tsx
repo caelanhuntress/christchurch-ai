@@ -95,8 +95,8 @@ export default function Page() {
               title: "Beyond Prompting: Multi-Dimensional AI Literacy and New Operating Models for the AI Era",
             },
             {
-              speaker: "Todd Bowman",
-              title: "Best Practices for AI Governance Implementation",
+              speaker: "Hazel Shanks",
+              title: "The Doom Thesis — Why 'If Anyone Builds It, Everyone Dies'",
             },
           ].map((talk) => (
             <div key={talk.speaker} className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>

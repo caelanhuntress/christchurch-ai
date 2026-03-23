@@ -2,9 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Governance & AI Literacy — May 4, 2026 | Christchurch AI",
-  description: "Christchurch AI meetup May 2026: Dr Elsamari Botha on multi-dimensional AI literacy and Todd Bowman on AI governance implementation. EPIC Innovation Centre.",
-  keywords: ["AI governance Christchurch", "AI literacy NZ", "Christchurch AI meetup May 2026", "AI governance implementation NZ", "Dr Elsamari Botha"],
+  title: "The AI Tension — Implementation vs Existential Risk | Christchurch AI",
+  description: "Christchurch AI meetup May 2026: Dr Elsamari Botha on multi-dimensional AI literacy and Hazel Shanks on The Doom Thesis. EPIC Innovation Centre.",
+  keywords: ["AI governance Christchurch", "AI literacy NZ", "Christchurch AI meetup May 2026", "Hazel Shanks", "Dr Elsamari Botha", "existential risk AI"],
+  openGraph: {
+    title: "The AI Tension — Implementation vs Existential Risk",
+    description: "Dr Elsamari Botha and Hazel Shanks at Christchurch AI — Monday 4 May 2026 at EPIC Innovation Centre.",
+    images: ["https://christchurch-ai.com/chchai-0526-2.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The AI Tension — Implementation vs Existential Risk",
+    description: "Christchurch AI meetup — Dr Elsamari Botha and Hazel Shanks, Monday 4 May 2026.",
+    images: ["https://christchurch-ai.com/chchai-0526-2.png"],
+  },
   alternates: { canonical: "https://christchurch-ai.com/ai-governance-may-2026" },
 };
 
@@ -138,11 +149,11 @@ export default function AIGovernanceMay2026() {
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Should Come</h2>
           <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>Business leaders responsible for AI strategy and policy</li>
-            <li>HR, legal, and compliance professionals working on AI governance</li>
+            <li>Business leaders responsible for AI strategy and implementation</li>
+            <li>People interested in AI governance, safety, and existential risk</li>
             <li>Educators and trainers building AI literacy programmes</li>
-            <li>Anyone thinking seriously about responsible AI deployment in their organisation</li>
-            <li>The curious — governance and literacy affect every AI user</li>
+            <li>Anyone curious about what’s at stake as AI capabilities continue to accelerate</li>
+            <li>The curious — implementation and risk affect every serious AI user</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">Format</h2>

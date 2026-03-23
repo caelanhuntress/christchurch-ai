@@ -126,9 +126,9 @@ export default function AIGovernanceBlog() {
           </p>
 
           <div className="mt-10 p-6 rounded-lg border" style={{ borderColor: "var(--accent)", background: "rgba(0,74,173,0.08)" }}>
-            <p className="font-bold text-white mb-2">AI Governance & AI Literacy Frameworks</p>
+            <p className="font-bold text-white mb-2">The AI Tension — Implementation vs Existential Risk</p>
             <p className="text-sm mb-1">Monday 4 May 2026 — 5:30 PM, EPIC Innovation Centre</p>
-            <p className="text-sm mb-4">Dr Elsamari Botha + Todd Bowman — Free to attend</p>
+            <p className="text-sm mb-4">Dr Elsamari Botha + Hazel Shanks — Free to attend</p>
             <Link href="/ai-governance-may-2026"
               className="inline-block px-6 py-3 rounded-full font-semibold text-sm text-white"
               style={{ background: "var(--accent)" }}>
