@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": "AI Governance & AI Literacy Frameworks — Christchurch AI May 2026",
-  "description": "Dr Elsamari Botha on multi-dimensional AI literacy and Todd Bowman on AI governance implementation at the Christchurch AI monthly meetup.",
+  "name": "The AI Tension — Implementation vs Existential Risk",
+  "description": "Dr Elsamari Botha on multi-dimensional AI literacy frameworks and Hazel Shanks on The Doom Thesis at the Christchurch AI monthly meetup.",
   "startDate": "2026-05-04T17:30:00+12:00",
   "endDate": "2026-05-04T20:00:00+12:00",
   "eventStatus": "https://schema.org/EventScheduled",
@@ -47,7 +47,7 @@ const schema = {
   },
   "performer": [
     { "@type": "Person", "name": "Dr Elsamari Botha" },
-    { "@type": "Person", "name": "Todd Bowman" }
+    { "@type": "Person", "name": "Hazel Shanks" }
   ],
   "url": "https://christchurch-ai.com/ai-governance-may-2026"
 };
@@ -73,7 +73,7 @@ export default function AIGovernanceMay2026() {
         </div>
 
         <h1 className="text-4xl font-bold mb-4 leading-tight">
-          AI Governance &<br />AI Literacy Frameworks
+          The AI Tension —<br />Implementation vs Existential Risk
         </h1>
 
         <div className="flex flex-col gap-2 mb-10 text-sm" style={{ color: "var(--text-muted)" }}>
@@ -99,11 +99,13 @@ export default function AIGovernanceMay2026() {
 
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
 
+          <img src="/chchai-0526-2.png" alt="Christchurch AI May 2026 featured speakers Dr Elsamari Botha and Hazel Shanks" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+
           <p>
-            As AI becomes embedded in more organisations, two questions are becoming urgent:
-            how do we govern AI responsibly, and what does it actually mean to be AI-literate in 2026?
-            This month's Christchurch AI meetup brings two researchers and practitioners who are
-            working on exactly these questions.
+            Artificial intelligence is advancing rapidly, and with it comes a growing tension:
+            how should we build it — and what happens if we get it wrong?
+            This month’s Christchurch AI meetup brings together two perspectives that rarely share the same stage:
+            practical implementation frameworks, and the existential risk case for taking AI danger seriously.
           </p>
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-6">The Talks</h2>
@@ -114,17 +116,16 @@ export default function AIGovernanceMay2026() {
             <h3 className="text-xl font-bold text-white mb-2">
               Beyond Prompting: Multi-Dimensional AI Literacy and New Operating Models for the AI Era
             </h3>
-            <p className="text-sm font-semibold text-white mb-3">Dr Elsamari Botha — AI Literacy Researcher & Framework Designer</p>
+            <p className="text-sm font-semibold text-white mb-3">Dr Elsamari Botha — Beyond Prompting: Multi-Dimensional AI Literacy and New Operating Models for the AI Era</p>
             <p>
-              Most conversations about AI literacy focus on prompting — getting better outputs from AI tools.
-              Dr Botha argues this is too narrow. Genuine AI literacy spans multiple dimensions:
-              understanding how AI systems work, their limitations and failure modes, their social and
-              ethical implications, and how to redesign workflows and operating models around AI
-              rather than just layering it on top of existing ones.
+              AI is already being deployed across industries — but implementation is not just technical.
+              It’s organisational, ethical, and strategic. The integration of AI into organizations represents
+              more than a technological upgrade; it demands a transformation in how we work, decide, and deliver value.
             </p>
             <p className="mt-3">
-              This talk draws on Dr Botha's research into AI literacy frameworks and what it actually
-              takes for individuals and organisations to operate effectively in an AI-saturated environment.
+              In this session, Dr Elsamari will define what multi-dimensional AI literacy really means beyond prompting,
+              present frameworks for building AI capability across organisations, explore new operating models for the AI era,
+              and discuss the skills employees need to thrive in AI-enabled contexts.
             </p>
           </div>
 
@@ -132,18 +133,17 @@ export default function AIGovernanceMay2026() {
           <div className="border rounded-lg p-6" style={{ borderColor: "var(--border)" }}>
             <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>Talk 2</div>
             <h3 className="text-xl font-bold text-white mb-2">
-              Best Practices for AI Governance Implementation
+              The Doom Thesis — Why “If Anyone Builds It, Everyone Dies”
             </h3>
-            <p className="text-sm font-semibold text-white mb-3">Todd Bowman — AI Governance & Responsible Deployment Specialist</p>
+            <p className="text-sm font-semibold text-white mb-3">Hazel Shanks — The Doom Thesis</p>
             <p>
-              AI governance isn't just a policy document. Effective governance requires understanding
-              what decisions AI systems are actually making, who's accountable for those decisions,
-              and how to build oversight mechanisms that work in practice rather than on paper.
+              What if the biggest risk isn’t misuse — but success?
+              Hazel introduces the Doom Thesis: the general argument for existential risk from advanced AI.
             </p>
             <p className="mt-3">
-              Todd will share practical frameworks for AI governance implementation — what good looks like,
-              where organisations typically go wrong, and how to build governance structures that enable
-              responsible AI adoption rather than blocking it.
+              Together, we will explore the plans to build superintelligence at AI labs, the core argument behind the doomer perspective,
+              whether current governance approaches are enough, what it would actually mean to pause or restrict AI development,
+              and whether the Yudkowsky book is worth reading.
             </p>
           </div>
 
