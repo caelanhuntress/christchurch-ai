@@ -4,24 +4,6 @@ import ThemeToggle from "./ThemeToggle";
 
 const EVENTS = [
   {
-    month: "March",
-    date: "Tuesday, 24 March 2026",
-    time: "12:00 – 1:00 PM NZST",
-    title: "OpenClaw User Group — Casual Lunchtime Meetup",
-    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
-    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
-    meetupUrl: "https://www.meetup.com/christchurch-ai/events/313637828/",
-    pageUrl: "/openclaw-user-group-march-2026",
-    image: "/images/event-march-2026.jpg",
-    talks: [
-      {
-        speaker: "Open Floor — Show & Tell",
-        title: "Are you using OpenClaw?",
-        bio: "A casual lunchtime gathering for OpenClaw users to share best practices, ideas, and resources. 5–10 minute Show & Tell slots welcome. Bring a bag lunch.",
-      },
-    ],
-  },
-  {
     month: "April",
     date: "Monday, 6 April 2026",
     time: "5:30 – 8:00 PM NZST",
@@ -86,18 +68,6 @@ export default function Home() {
     "sponsor": { "@type": "Organization", "name": "AI Coaching Academy", "url": "https://ai-coaching.academy" },
   };
 
-  const marchSchema = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "OpenClaw User Group — Casual Lunchtime Meetup",
-    "startDate": "2026-03-24T12:00:00+13:00",
-    "endDate": "2026-03-24T13:00:00+13:00",
-    "location": { "@type": "Place", "name": "EPIC Innovation Centre", "address": { "@type": "PostalAddress", "streetAddress": "78-100 Manchester St", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
-    "organizer": { "@type": "Organization", "name": "Christchurch Artificial Intelligence", "url": "https://christchurch-ai.com" },
-    "isAccessibleForFree": true,
-    "url": "https://www.meetup.com/christchurch-ai/events/313637828/",
-  };
-
   const aprilSchema = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -138,7 +108,6 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(marchSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aprilSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(maySchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredWorkshopSchema) }} />
