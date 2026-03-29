@@ -228,6 +228,11 @@ const faq = [
     answer:
       "Professionals, founders, operators, managers, community builders, nonprofit teams, consultants, and curious learners who want to engage with AI in a grounded, practical, community-minded way.",
   },
+  {
+    question: "Where do I go to continue building my AI Literacy?",
+    answer:
+      "Join the Christchurch Artificial Intelligence Meetup Group to be notified of future events. Join the AI Coaching Academy for practical games and activities to build your AI literacy, and to join a community of ambitious professionals practicing the tools of the future.",
+  },
 ] as const;
 
 export const metadata: Metadata = {
@@ -760,7 +765,13 @@ export default function EpicAIConferencePage() {
                 <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
                   <h3 className="text-lg font-semibold mb-2" style={{ color: "#000000" }}>{item.question}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                    {item.answer}
+                    {item.question === "Where do I go to continue building my AI Literacy?" ? (
+                      <>
+                        Join the <a href="https://www.meetup.com/christchurch-ai/" target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>Christchurch Artificial Intelligence Meetup Group</a>, to be notified of future events. Join the <a href="https://ai-coaching.academy/" target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>AI Coaching Academy</a> for practical games and activities to build your AI literacy, and to join a community of ambitious professionals practicing the tools of the future.
+                      </>
+                    ) : (
+                      item.answer
+                    )}
                   </p>
                 </div>
               ))}
