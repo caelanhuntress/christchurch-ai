@@ -500,8 +500,8 @@ export default function EpicAIConferencePage() {
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "#ffffff" }}>
                 The spirit of the day is shaped by the themes of this year&apos;s TechWeek festival:
-                <strong style={{ color: "var(--foreground)" }}> innovation, inspiration and impact across Aotearoa</strong>; bringing together
-                <strong style={{ color: "var(--foreground)" }}> ideas, people and opportunities</strong>; and connecting innovators with communities
+                <strong style={{ color: "#ffffff" }}> innovation, inspiration and impact across Aotearoa</strong>; bringing together
+                <strong style={{ color: "#ffffff" }}> ideas, people and opportunities</strong>; and connecting innovators with communities
                 across the motu to help shape New Zealand’s future.
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "#ffffff" }}>
