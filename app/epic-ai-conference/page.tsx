@@ -48,14 +48,14 @@ const dayEvents = [
   },
 ] as const;
 
-const speakers = [
+const amSpeakers = [
   {
     name: "Caelan Huntress",
     role: "Founder, AI Coaching Academy · Organiser, Christchurch AI Meetup Group",
     session: "AM Workshops · 9:00–9:30am",
     talk: "Create Your Own AI Coach to Learn Anything",
     bio:
-      "Caelan Huntress opens the day with a workshop on using conversational AI as a partner for learning, reflection, and growth. Framed around coaching as a meta-skill, the session focuses on asking better questions and shaping AI around the goals that matter to each learner.",
+      "Caelan Huntress opens the day with a workshop on using conversational AI as a partner for learning, reflection, and growth. Framed around coaching as a meta-skill, the session focuses on asking better questions and shaping your AI thinking partner around the goals that matter most to each learner.",
   },
   {
     name: "Hannah Hardy-Jones",
@@ -71,7 +71,7 @@ const speakers = [
     session: "AM Workshops · 10:00–10:30am",
     talk: "Mapping AI Opportunities in Your Organisation",
     bio:
-      "Steve Fox introduces a practical framework for identifying where AI can create value in real workflows. Using a simple scale from manual to fully automated, he guides attendees through breaking work into tasks, assessing where AI fits, and identifying where human oversight still matters.",
+      "Steve Fox introduces a practical framework for identifying where AI can create value in real workflows. Using a simple sliding scale from manual to fully automated, he guides participants through breaking work into tasks, assessing where AI fits, and identifying where human oversight still matters.",
   },
   {
     name: "Lois McClintock",
@@ -79,7 +79,7 @@ const speakers = [
     session: "AM Workshops · 10:30–11:00am",
     talk: "AI for Good: Empowering Nonprofits",
     bio:
-      "Lois McClintock explores how nonprofits can use AI to increase impact, free volunteer time, and improve operations without requiring large budgets or complex systems. Her session includes practical examples across strategy, social media, fundraising, and policy support.",
+      "Lois McClintock explores how nonprofits can use AI to increase impact, free up volunteer time, and improve operations without requiring large budgets or complex systems. Her session includes practical examples across strategy, social media, fundraising, and policy support.",
   },
   {
     name: "Arthur Machado",
@@ -89,37 +89,24 @@ const speakers = [
     bio:
       "Arthur Machado brings a visual storytelling lens to AI image generation, encouraging attendees to think like directors rather than technicians. His workshop focuses on creating stronger prompts and better creative assets, from hero images to product mockups.",
   },
-  {
-    name: "Emma Humphrey",
-    role: "AI Safety ANZ · Speaker in Coffee & Jam and PM Presentations",
-    session: "Coffee & Jam · PM Presentations",
-    talk: "AI Self Defence: Risks and Solutions",
-    bio:
-      "Emma Humphrey appears in both the lunchtime community session and the afternoon programme. In the presentations block she draws on experience from AI implementation in the UK Home Office to examine cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement.",
-  },
-  {
-    name: "Nick Latty",
-    role: "Agentic Intelligence",
-    session: "Coffee & Jam · 12:00–1:15pm",
-    talk: "Coffee & Jam speaker",
-    bio:
-      "Nick Latty joins the Ministry of Awesome lunchtime meetup as part of a founder lineup rooted in Christchurch’s startup ecosystem. His presence helps connect the AI programme to the broader local community of builders, entrepreneurs, and ecosystem supporters.",
-  },
-  {
-    name: "Arindam Bose",
-    role: "Aesculytics Limited",
-    session: "Coffee & Jam · 12:00–1:15pm",
-    talk: "Coffee & Jam speaker",
-    bio:
-      "Arindam Bose is part of the Coffee & Jam lunchtime lineup, contributing to the day’s emphasis on shared learning and cross-sector conversation. The session creates space for attendees to meet founders and innovators beyond their own usual circles.",
-  },
+] as const;
+
+const pmSpeakers = [
   {
     name: "Varsha Das",
     role: "Presentation speaker",
     session: "PM Presentations · 1:30–2:15pm",
     talk: "When Code Gets Cheap, Operational Excellence Wins",
     bio:
-      "Varsha Das examines what happens when AI makes software faster and cheaper to build but leaves reliability, recovery, and trust as the real differentiators. Her talk draws on production incidents and the realities of running AI systems at scale.",
+      "Varsha Das examines what happens when AI makes software faster and cheaper to build, but does not remove the hard part. Drawing on real production incidents and the realities of running AI systems at scale, her talk explores why reliability, recovery, and trust become the real differentiators once code generation is abundant.",
+  },
+  {
+    name: "Emma Humphrey",
+    role: "AI Safety ANZ · Presentation speaker",
+    session: "PM Presentations · 2:30–3:15pm",
+    talk: "AI Self Defence: Risks and Solutions",
+    bio:
+      "Emma Humphrey draws on experience from AI implementation in the UK Home Office to explore cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement. Her session helps attendees move beyond hype into more mature thinking about AI governance and organisational risk.",
   },
   {
     name: "Dr Chandranil Chakraborttii",
@@ -127,39 +114,42 @@ const speakers = [
     session: "PM Presentations · 3:30–4:15pm",
     talk: "Ghost Vectors: Securing AI Privacy Without Sacrificing System Performance",
     bio:
-      "Dr Chandranil Chakraborttii explores privacy risks in vector databases, including how deleted or updated data can leave structural traces behind. His session looks at privacy-by-design approaches that improve both compliance and system performance.",
+      "Dr Chandranil Chakraborttii explores privacy risks in vector databases, including how deleted or updated data can leave behind structural traces. His session looks at privacy-by-design approaches that improve both compliance and system performance in modern AI systems.",
   },
+  {
+    name: "Caelan Huntress",
+    role: "Founder, AI Coaching Academy · Organiser, Christchurch AI Meetup Group",
+    session: "PM Presentations · 4:30–5:00pm",
+    talk: "The Case for a Superabundant Future",
+    bio:
+      "To close the afternoon, Caelan Huntress zooms out from present-day implementation into the larger human story. Drawing on recent writing from Dario Amodei and Peter Diamandis, this talk explores the idea that AI may not just change how we work, but could also reshape what it means to be human — for the better.",
+  },
+] as const;
+
+const panelists = [
   {
     name: "Anya Anderson",
     role: "Founder and CEO, RedSeed",
-    session: "Leadership Panel · 5:30–7:00pm",
-    talk: "Panelist",
     bio:
-      "Anya Anderson leads RedSeed, a corporate training platform focused on creating coaching cultures and high-performing teams. On the panel, she brings a leadership development perspective to the conversation about trust, capability, and organisational change.",
+      "Anya Anderson leads RedSeed, a corporate training platform focused on creating coaching cultures and high-performing teams. She brings a leadership development perspective to the conversation about trust, capability, and organisational change.",
   },
   {
     name: "Julie Ryan",
     role: "CEO, Caitlyn",
-    session: "Leadership Panel · 5:30–7:00pm",
-    talk: "Panelist",
     bio:
       "Julie Ryan leads Caitlyn, an AI-powered knowledge platform that turns agricultural and research-led knowledge into trusted, usable insight. Her perspective helps ground the discussion in practical adoption, trusted information, and sector-specific usefulness.",
   },
   {
     name: "Brad Fraser",
     role: "Head of AI Solutions & CEO, Agentic Intelligence",
-    session: "Leadership Panel · 5:30–7:00pm",
-    talk: "Panelist",
     bio:
-      "Brad Fraser works with organisations moving beyond experimentation into real capability building. His contribution to the panel focuses on adoption, solution design, and what meaningful AI implementation looks like beyond surface-level hype.",
+      "Brad Fraser works with organisations moving beyond experimentation into real capability building. His contribution focuses on adoption, solution design, and what meaningful AI implementation looks like beyond surface-level hype.",
   },
   {
     name: "Tom Sweeney",
     role: "Serial Founder and Director",
-    session: "Leadership Panel · 5:30–7:00pm",
-    talk: "Panelist",
     bio:
-      "Tom Sweeney brings a founder and systems perspective shaped by companies that leverage both human capital and operational systems. His voice adds breadth to the discussion about leadership, performance, and navigating uncertainty with discipline.",
+      "Tom Sweeney brings a founder and systems perspective shaped by companies that leverage both human capital and operational systems to achieve strong business outcomes. His voice adds breadth to the discussion about leadership, performance, and navigating uncertainty with discipline.",
   },
 ] as const;
 
@@ -321,6 +311,36 @@ function SpeakerCard({
           {bio}
         </p>
       </div>
+    </div>
+  );
+}
+
+function PanelistCard({
+  name,
+  role,
+  bio,
+}: {
+  name: string;
+  role: string;
+  bio: string;
+}) {
+  return (
+    <div className="rounded-2xl border p-5 h-full" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+      <div
+        className="aspect-[4/5] w-full rounded-2xl border flex items-center justify-center text-center text-xs uppercase tracking-[0.18em] px-4 mb-4"
+        style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--muted)" }}
+      >
+        Headshot
+        <br />
+        Placeholder
+      </div>
+      <h3 className="text-xl font-bold mb-1">{name}</h3>
+      <p className="text-sm mb-3" style={{ color: "var(--foreground)" }}>
+        {role}
+      </p>
+      <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+        {bio}
+      </p>
     </div>
   );
 }
@@ -538,10 +558,43 @@ export default function EpicAIConferencePage() {
             <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
               These speaker sections are intentionally longer and more editorial, so visitors can understand not just the names on the programme, but the kind of experience, perspective, and conversation each person brings into the room. Image areas are left as placeholders for headshots to be added later.
             </p>
-            <div className="grid gap-5">
-              {speakers.map((speaker) => (
-                <SpeakerCard key={speaker.name} {...speaker} />
-              ))}
+
+            <div className="space-y-12">
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
+                  Morning workshops
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">AM Workshops · 9:00 AM to 11:45 AM</h3>
+                <div className="grid gap-5">
+                  {amSpeakers.map((speaker, index) => (
+                    <SpeakerCard key={`${speaker.name}-${index}`} {...speaker} />
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
+                  Afternoon presentations
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">PM Presentations · 1:30 PM to 5:00 PM</h3>
+                <div className="grid gap-5">
+                  {pmSpeakers.map((speaker, index) => (
+                    <SpeakerCard key={`${speaker.name}-${index}`} {...speaker} />
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+                <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
+                  Evening panel
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">Leadership Panel · 5:30 PM to 7:00 PM</h3>
+                <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+                  {panelists.map((panelist) => (
+                    <PanelistCard key={panelist.name} {...panelist} />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
