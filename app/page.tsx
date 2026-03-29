@@ -376,6 +376,10 @@ export default function Home() {
                   className="rounded-2xl"
                   style={{ objectFit: "cover", objectPosition: "top" }}
                 />
+                <div className="mt-4">
+                  <h3 className="text-2xl font-bold mb-1">Caelan Huntress</h3>
+                  <div className="text-sm" style={{ color: "var(--accent)" }}>AI Trainer · Public Speaker · Founder, AI Coaching Academy</div>
+                </div>
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-1">Caelan Huntress</h3>
