@@ -365,7 +365,7 @@ export default function Home() {
         <section className="px-6 py-20 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
           <div className="max-w-3xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Your Host</div>
-            <h2 className="text-3xl font-bold mb-10">Meet the Host</h2>
+            <h2 className="text-3xl font-bold mb-10">Meet the Organiser of the Christchurch AI Meetup</h2>
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-shrink-0">
                 <Image
