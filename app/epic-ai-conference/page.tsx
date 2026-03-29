@@ -69,6 +69,7 @@ const amSpeakers = [
     session: "AM Workshops · 9:00–9:30am",
     talk: "Create Your Own AI Coach to Learn Anything",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
+    linkedin: "https://nz.linkedin.com/in/caelanhuntress",
     bio:
       "Caelan Huntress opens the day with an interactive workshop on using conversational AI as a partner for learning, reflection, and growth. As LLMs become more conversational, asking better questions shapes your AI thinking partner around the goals you care about and the way you learn best.",
   },
@@ -77,6 +78,7 @@ const amSpeakers = [
     role: "Workshop speaker",
     session: "AM Workshops · 9:30–10:00am",
     talk: "Transform Meetings into Actionable Insights",
+    linkedin: "https://nz.linkedin.com/in/hannah-hardy-jones-63b3b238",
     bio:
       "Hannah Hardy-Jones demonstrates how AI can turn conversation into useful outputs, insights, actions, and communications. Her session treats meetings and spoken exchanges as one of the most valuable and underused resources in any organisation.",
   },
@@ -86,6 +88,7 @@ const amSpeakers = [
     session: "AM Workshops · 10:00–10:30am",
     talk: "Mapping AI Opportunities in Your Organisation",
     image: "/images/epic-ai-conference/headshots/steve-fox.png",
+    linkedin: "https://nz.linkedin.com/in/stevefoxnz",
     bio:
       "Steve Fox introduces a practical framework for identifying where AI can create new value in real workflows. Using a simple sliding scale from manual to fully automated, he guides participants through breaking work into tasks, assessing where AI fits, identifying where human oversight still matters, and estimating the cost and opportunity impact of each change.",
   },
@@ -95,6 +98,7 @@ const amSpeakers = [
     session: "AM Workshops · 10:30–11:00am",
     talk: "AI for Good: Empowering Nonprofits",
     image: "/images/epic-ai-conference/headshots/lois-mcclintock.jpg",
+    linkedin: "https://nz.linkedin.com/in/lois-mcclintock",
     bio:
       "Lois McClintock explores how nonprofits can use AI to increase impact, free up volunteer time, and improve operations without needing large budgets or complex systems. Her session includes practical examples from nonprofit work including strategy, social media, fundraising, and policy support.",
   },
@@ -104,6 +108,7 @@ const amSpeakers = [
     session: "AM Workshops · 11:00–11:30am",
     talk: "Filmmaking Frameworks for High-Impact AI Visuals",
     image: "/images/epic-ai-conference/headshots/arthur-machado.jpg",
+    linkedin: "https://nz.linkedin.com/in/arthurmachado1",
     bio:
       "Arthur Machado shares a practical visual storytelling framework for prompting better creative assets, from hero images to product mockups. His session encourages attendees to think like directors rather than technicians when working with AI-generated visuals.",
   },
@@ -116,6 +121,7 @@ const pmSpeakers = [
     session: "PM Presentations · 1:30–2:15pm",
     talk: "When Code Gets Cheap, Operational Excellence Wins",
     image: "/images/epic-ai-conference/headshots/varsha-das.jpg",
+    linkedin: "https://in.linkedin.com/in/varsha-das-se",
     bio:
       "Varsha Das explores why operational excellence becomes the real differentiator when code generation is abundant. Drawing on real production incidents and the realities of running AI systems at scale, she unpacks the failure modes that appear under real load and the patterns that separate demos from dependable services.",
   },
@@ -125,6 +131,7 @@ const pmSpeakers = [
     session: "PM Presentations · 2:30–3:15pm",
     talk: "AI Self Defence: Risks and Solutions",
     image: "/images/epic-ai-conference/headshots/emma-humphrey.jpg",
+    linkedin: "https://www.linkedin.com/in/emma-humphrey17/",
     bio:
       "Emma Humphrey brings experience from AI implementation in the UK Home Office to explore cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement. Her session helps attendees move beyond hype into more mature thinking about AI governance and risk.",
   },
@@ -134,6 +141,7 @@ const pmSpeakers = [
     session: "PM Presentations · 3:30–4:15pm",
     talk: "Ghost Vectors: Securing AI Privacy Without Sacrificing System Performance",
     image: "/images/epic-ai-conference/headshots/chandranil-chakraborttii.jpg",
+    linkedin: "https://www.linkedin.com/in/chandranil-chakraborttii-a7552ba2/",
     bio:
       "Dr Chandranil Chakraborttii examines how ‘ghost vectors’ can expose supposedly removed information, why conventional deletion methods fail in high-dimensional environments, and what architects can do instead. Attendees gain insight into privacy-by-design approaches that improve both compliance and performance.",
   },
@@ -143,6 +151,7 @@ const pmSpeakers = [
     session: "PM Presentations · 4:30–5:00pm",
     talk: "The Case for a Superabundant Future",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
+    linkedin: "https://nz.linkedin.com/in/caelanhuntress",
     bio:
       "To close the afternoon, Caelan Huntress zooms out from present-day implementation into the larger human story. Drawing on recent writings from Dario Amodei and Peter Diamandis, this talk explores the idea that AI may not just change how we work, but could also change what it means to be human — for the better.",
   },
@@ -153,6 +162,7 @@ const panelists = [
     name: "Anya Anderson",
     role: "Founder and CEO, RedSeed",
     image: "/images/epic-ai-conference/headshots/anya-anderson.jpg",
+    linkedin: "https://nz.linkedin.com/in/anyaanderson",
     bio:
       "Anya Anderson leads RedSeed, a corporate training platform that creates a coaching culture to build high-performing teams. She brings a leadership development perspective to the conversation about trust, capability, and organisational change.",
   },
@@ -160,6 +170,7 @@ const panelists = [
     name: "Julie Ryan",
     role: "CEO, Caitlyn",
     image: "/images/epic-ai-conference/headshots/julie-ryan.jpg",
+    linkedin: "https://www.linkedin.com/in/julie-ryan-03872b15/",
     bio:
       "Julie Ryan leads Caitlyn, an AI-powered knowledge platform that turns agricultural and research-led knowledge into trusted, usable insight. Her perspective helps ground the discussion in practical adoption, trusted information, and sector-specific usefulness.",
   },
@@ -167,6 +178,7 @@ const panelists = [
     name: "Brad Fraser",
     role: "Head of AI Solutions & CEO, Agentic Intelligence",
     image: "/images/epic-ai-conference/headshots/bradley-fraser.jpg",
+    linkedin: "https://www.linkedin.com/in/bradley-fraser-a8135052/",
     bio:
       "Brad Fraser helps organisations move beyond experimentation into real capability building. His contribution focuses on adoption, solution design, and what meaningful AI implementation looks like beyond surface-level hype.",
   },
@@ -174,6 +186,7 @@ const panelists = [
     name: "Tom Sweeney",
     role: "Serial Founder and Director",
     image: "/images/epic-ai-conference/headshots/tom-sweeney.jpg",
+    linkedin: "https://www.linkedin.com/in/tomsweeney/",
     bio:
       "Tom Sweeney brings a founder and systems perspective shaped by companies that leverage systems and human capital to achieve strong business outcomes. His voice adds breadth to the discussion about leadership, performance, and navigating uncertainty with discipline.",
   },
@@ -300,6 +313,7 @@ function SpeakerCard({
   talk,
   bio,
   image,
+  linkedin,
 }: {
   name: string;
   role: string;
@@ -307,6 +321,7 @@ function SpeakerCard({
   talk: string;
   bio: string;
   image?: string;
+  linkedin?: string;
 }) {
   return (
     <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
@@ -340,6 +355,12 @@ function SpeakerCard({
         <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
           {bio}
         </p>
+        {linkedin ? (
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4" style={{ color: "#004aad" }} aria-label={`${name} LinkedIn`}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6.26V17H8.34M7.3 9.8A1.2 1.2 0 1 0 7.3 7.4A1.2 1.2 0 0 0 7.3 9.8M17.74 17V13.53C17.74 11.67 16.74 10.57 15.12 10.57C13.81 10.57 13.22 11.29 12.89 11.79V10.67H10.81C10.84 11.41 10.81 17 10.81 17H12.89V13.46C12.89 13.27 12.9 13.08 12.96 12.95C13.11 12.57 13.45 12.18 14.02 12.18C14.77 12.18 15.07 12.75 15.07 13.58V17H17.74Z"/></svg>
+            <span className="text-sm font-semibold">LinkedIn</span>
+          </a>
+        ) : null}
       </div>
     </div>
   );
@@ -350,11 +371,13 @@ function PanelistCard({
   role,
   bio,
   image,
+  linkedin,
 }: {
   name: string;
   role: string;
   bio: string;
   image?: string;
+  linkedin?: string;
 }) {
   return (
     <div className="rounded-2xl border p-5 h-full" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
@@ -379,6 +402,12 @@ function PanelistCard({
       <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
         {bio}
       </p>
+      {linkedin ? (
+        <a href={linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4" style={{ color: "#004aad" }} aria-label={`${name} LinkedIn`}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6.26V17H8.34M7.3 9.8A1.2 1.2 0 1 0 7.3 7.4A1.2 1.2 0 0 0 7.3 9.8M17.74 17V13.53C17.74 11.67 16.74 10.57 15.12 10.57C13.81 10.57 13.22 11.29 12.89 11.79V10.67H10.81C10.84 11.41 10.81 17 10.81 17H12.89V13.46C12.89 13.27 12.9 13.08 12.96 12.95C13.11 12.57 13.45 12.18 14.02 12.18C14.77 12.18 15.07 12.75 15.07 13.58V17H17.74Z"/></svg>
+          <span className="text-sm font-semibold">LinkedIn</span>
+        </a>
+      ) : null}
     </div>
   );
 }
@@ -659,7 +688,7 @@ export default function EpicAIConferencePage() {
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Evening panel
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#004aad" }}>Leadership Panel · 5:30 PM to 7:00 PM</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#004aad" }}>&quot;Leadership in the Age of AI&quot; Panel · 5:30 PM to 7:00 PM<br />Featuring:</h3>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {panelists.map((panelist) => (
                     <PanelistCard key={panelist.name} {...panelist} />
