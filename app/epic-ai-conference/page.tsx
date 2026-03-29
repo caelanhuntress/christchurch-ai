@@ -536,6 +536,7 @@ export default function EpicAIConferencePage() {
             <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
               From morning skill-building to evening leadership reflection, the programme unfolds as a day-long community gathering at EPIC. Each event stands on its own, but together they create a fuller picture of how AI is being explored and discussed in Christchurch during TechWeekNZ.
             </p>
+            <SectionImage src="/images/epic-ai-conference/chchai-tw26-bg.png" alt="Christchurch AI TechWeek26 background" />
             <div className="grid gap-5">
               {dayEvents.map((event) => (
                 <div
@@ -543,7 +544,6 @@ export default function EpicAIConferencePage() {
                   className="rounded-3xl border overflow-hidden"
                   style={{ borderColor: "var(--border)", background: "#ffffff" }}
                 >
-                  {"image" in event && event.image ? <SectionImage src={event.image} alt={event.title} /> : null}
                   <div className="p-6 md:p-7 grid lg:grid-cols-[180px_1fr_auto] gap-6 items-start">
                     <div>
                       <div className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: "var(--accent)" }}>
@@ -636,7 +636,6 @@ export default function EpicAIConferencePage() {
                   Morning workshops
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#004aad" }}>AM Workshops · 9:00 AM to 11:45 AM</h3>
-                <SectionImage src="/images/epic-ai-conference/chchai-tw26-bg.png" alt="Christchurch AI TechWeek26 background" />
                 <div className="grid gap-5">
                   {amSpeakers.map((speaker, index) => (
                     <SpeakerCard key={`${speaker.name}-${index}`} {...speaker} />
