@@ -292,7 +292,7 @@ function RsvpBlock() {
               href={event.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="block px-5 py-4 rounded-2xl text-sm font-semibold text-center border transition-all hover:text-white hover:bg-[#004aad]"
+              className="block px-5 py-4 rounded-2xl text-sm font-semibold text-center border transition-all hover:!text-white hover:!bg-[#004aad]"
               style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
             >
               {event.label}
@@ -593,10 +593,10 @@ export default function EpicAIConferencePage() {
                           href={event.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block w-full text-center px-5 py-4 rounded-2xl font-semibold text-sm border transition-all hover:text-white hover:bg-[#004aad]"
+                          className="block w-full text-center px-5 py-4 rounded-2xl font-semibold text-sm border transition-all hover:!text-white hover:!bg-[#004aad]"
                           style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
                         >
-                          View event / RSVP
+                          Register
                         </a>
                         <p className="text-xs mt-2 opacity-0 transition-opacity group-hover:opacity-100" style={{ color: '#ca8a04' }}>
                           To attend the whole day, please RSVP to all 4 events individually
