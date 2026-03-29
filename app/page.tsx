@@ -462,13 +462,13 @@ export default function Home() {
               </ul>
             </div>
             <a
-              href="https://sessionize.com/christchurch-ai-techweek-conference/"
+              href="https://airtable.com/appQyJddzvOGyNk4P/pag8cOvHrSNIpE2vd/form"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
               style={{ background: "var(--accent)", color: "#ffffff" }}
             >
-              Submit a Talk on Sessionize →
+              Submit an Expression of Interest →
             </a>
           </div>
         </section>
