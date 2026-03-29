@@ -731,7 +731,11 @@ export default function EpicAIConferencePage() {
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Evening panel
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#004aad" }}>&quot;Leadership in the Age of AI&quot; Panel · 5:30 PM to 7:00 PM<br />Featuring:</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#004aad" }}>
+                  &quot;Leadership in the Age of AI&quot; Panel · 5:30 PM to 7:00 PM
+                  <br />
+                  <span className="text-xs font-semibold uppercase tracking-[0.22em]" style={{ color: "var(--accent)" }}>Featuring:</span>
+                </h3>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {panelists.map((panelist) => (
                     <PanelistCard key={panelist.name} {...panelist} />
