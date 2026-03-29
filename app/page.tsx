@@ -49,6 +49,29 @@ const EVENTS = [
       },
     ],
   },
+  {
+    month: "April",
+    date: "Two Tuesdays each month",
+    time: "12:00 – 1:00 PM NZST",
+    title: "OpenClaw User Group",
+    venue: "EPIC Innovation, 76/106 Manchester Street, Christchurch",
+    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
+    meetupUrl: "https://www.meetup.com/christchurch-ai/",
+    image: "/images/openclaw-user-group.jpg",
+    sessions: [
+      {
+        label: "Session 1",
+        time: "Tue, Apr 7 · 12:00 PM NZST",
+        href: "https://www.meetup.com/christchurch-ai/events/314023251/",
+      },
+      {
+        label: "Session 2",
+        time: "Tue, Apr 21 · 12:00 PM NZST",
+        href: "https://www.meetup.com/christchurch-ai/events/314023274/",
+      },
+    ],
+    description: "A casual OpenClaw lunch meetup for people running the open-source AI agent on their own machine or VPS. Share best practices, ideas, resources, and the occasional show-and-tell at EPIC Innovation.",
+  },
 ];
 
 const PAST_TALKS = [
@@ -213,6 +236,11 @@ export default function Home() {
                   <p className="text-sm mb-5" style={{ color: "var(--text-muted)" }}>
                     {event.date} · {event.time}
                   </p>
+                  {"description" in event && event.description ? (
+                    <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>
+                      {event.description}
+                    </p>
+                  ) : null}
 
                   <div className="flex items-start gap-3 mb-4">
                     <span className="text-lg">📍</span>
@@ -228,22 +256,47 @@ export default function Home() {
                   <div className="flex items-start gap-3 mb-6">
                     <span className="text-lg">🍺</span>
                     <div className="text-xs" style={{ color: "var(--text-muted)" }}>
-                      Drinks & networking 5:30–6:00 PM · Talks 6:00–7:30 PM · Open Q&A until 8:00 PM<br />
-                      Sponsored by <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer"
-                        className="underline hover:text-white transition-colors">AI Coaching Academy</a>
+                      {"sessions" in event && event.sessions ? (
+                        <>
+                          Casual lunch meetup · Bring a bag lunch if you're hungry · OpenClaw show &amp; tell welcome<br />
+                          Sponsored by <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer"
+                            className="underline hover:text-white transition-colors">OpenClaws</a>
+                        </>
+                      ) : (
+                        <>
+                          Drinks & networking 5:30–6:00 PM · Talks 6:00–7:30 PM · Open Q&A until 8:00 PM<br />
+                          Sponsored by <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer"
+                            className="underline hover:text-white transition-colors">AI Coaching Academy</a>
+                        </>
+                      )}
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    {event.talks.map((talk) => (
-                      <div key={talk.speaker} className="rounded-xl border p-4"
-                        style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-                        <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Speaker</div>
-                        <div className="font-bold mb-1">{talk.speaker}</div>
-                        <div className="text-xs leading-relaxed mb-2" style={{ color: "var(--foreground)" }}>{talk.title}</div>
-                        <div className="text-xs" style={{ color: "var(--text-muted)" }}>{talk.bio}</div>
-                      </div>
-                    ))}
+                    {"sessions" in event && event.sessions
+                      ? event.sessions.map((session) => (
+                          <a
+                            key={session.href}
+                            href={session.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-xl border p-4 block transition-all hover:border-blue-500"
+                            style={{ borderColor: "var(--border)", background: "var(--background)" }}
+                          >
+                            <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Upcoming time</div>
+                            <div className="font-bold mb-1">{session.time}</div>
+                            <div className="text-xs" style={{ color: "var(--text-muted)" }}>RSVP on Meetup →</div>
+                          </a>
+                        ))
+                      : event.talks.map((talk) => (
+                          <div key={talk.speaker} className="rounded-xl border p-4"
+                            style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+                            <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Speaker</div>
+                            <div className="font-bold mb-1">{talk.speaker}</div>
+                            <div className="text-xs leading-relaxed mb-2" style={{ color: "var(--foreground)" }}>{talk.title}</div>
+                            <div className="text-xs" style={{ color: "var(--text-muted)" }}>{talk.bio}</div>
+                          </div>
+                        ))}
                   </div>
 
                   <div className="flex items-center gap-3 flex-wrap">
