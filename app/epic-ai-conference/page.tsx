@@ -72,8 +72,6 @@ const amSpeakers = [
     talk: "Create Your Own AI Coach to Learn Anything",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
     linkedin: "https://nz.linkedin.com/in/caelanhuntress",
-    companyName: "AI Coaching Academy",
-    companyUrl: "https://ai-coaching.academy/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "Caelan Huntress opens the day with an interactive workshop on using conversational AI as a partner for learning, reflection, and growth. As LLMs become more conversational, asking better questions shapes your AI thinking partner around the goals you care about and the way you learn best.",
   },
@@ -137,8 +135,6 @@ const pmSpeakers = [
     talk: "AI Self Defence: Risks and Solutions",
     image: "/images/epic-ai-conference/headshots/emma-humphrey.jpg",
     linkedin: "https://www.linkedin.com/in/emma-humphrey17/",
-    companyName: "AI Safety ANZ",
-    companyUrl: "https://www.aisafetyanz.com.au/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "Emma Humphrey brings experience from AI implementation in the UK Home Office to explore cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement. Her session helps attendees move beyond hype into more mature thinking about AI governance and risk.",
   },
@@ -159,8 +155,6 @@ const pmSpeakers = [
     talk: "The Case for a Superabundant Future",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
     linkedin: "https://nz.linkedin.com/in/caelanhuntress",
-    companyName: "AI Coaching Academy",
-    companyUrl: "https://ai-coaching.academy/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "To close the afternoon, Caelan Huntress zooms out from present-day implementation into the larger human story. Drawing on recent writings from Dario Amodei and Peter Diamandis, this talk explores the idea that AI may not just change how we work, but could also change what it means to be human — for the better.",
   },
@@ -337,8 +331,6 @@ function SpeakerCard({
   bio,
   image,
   linkedin,
-  companyName,
-  companyUrl,
 }: {
   name: string;
   role: string;
@@ -347,8 +339,6 @@ function SpeakerCard({
   bio: string;
   image?: string;
   linkedin?: string;
-  companyName?: string;
-  companyUrl?: string;
 }) {
   return (
     <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
@@ -379,11 +369,6 @@ function SpeakerCard({
         <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
           {bio}
         </p>
-        {companyName && companyUrl ? (
-          <p className="text-sm mt-4" style={{ color: "var(--text-muted)" }}>
-            Organisation: <a href={companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>{companyName}</a>
-          </p>
-        ) : null}
         {linkedin ? (
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4" style={{ color: "#004aad" }} aria-label={`${name} LinkedIn`}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6.26V17H8.34M7.3 9.8A1.2 1.2 0 1 0 7.3 7.4A1.2 1.2 0 0 0 7.3 9.8M17.74 17V13.53C17.74 11.67 16.74 10.57 15.12 10.57C13.81 10.57 13.22 11.29 12.89 11.79V10.67H10.81C10.84 11.41 10.81 17 10.81 17H12.89V13.46C12.89 13.27 12.9 13.08 12.96 12.95C13.11 12.57 13.45 12.18 14.02 12.18C14.77 12.18 15.07 12.75 15.07 13.58V17H17.74Z"/></svg>
@@ -430,13 +415,15 @@ function PanelistCard({
       )}
       <h3 className="text-xl font-bold mb-1" style={{ color: "#004aad" }}>{name}</h3>
       <p className="text-sm mb-3" style={{ color: "var(--foreground)" }}>
-        {role}
+        {companyName && companyUrl ? (
+          <>
+            {role.split(`, ${companyName}`)[0]}
+            {role.includes(companyName) ? <>, <a href={companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>{companyName}</a></> : role}
+          </>
+        ) : (
+          role
+        )}
       </p>
-      {companyName && companyUrl ? (
-        <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
-          Company: <a href={companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>{companyName}</a>
-        </p>
-      ) : null}
       <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
         {bio}
       </p>
@@ -619,12 +606,13 @@ export default function EpicAIConferencePage() {
                       <div className="text-2xl font-bold mb-1" style={{ color: "#0f172a" }}>{event.time}</div>
                     </div>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>{event.title}</h3>
-                      {"companyName" in event && event.companyName && event.companyUrl ? (
-                        <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
-                          Organisation: <a href={event.companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>{event.companyName}</a>
-                        </p>
-                      ) : null}
+                      <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>
+                        {"companyName" in event && event.companyName && event.companyUrl ? (
+                          <a href={event.companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad" }}>{event.title}</a>
+                        ) : (
+                          event.title
+                        )}
+                      </h3>
                       <p className="leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
                         {event.description}
                       </p>
