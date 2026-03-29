@@ -307,6 +307,9 @@ function RsvpBlock() {
       <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
         {dayEvents.map((event) => (
           <div key={event.slug} className="group">
+            <div className="text-xs font-semibold uppercase tracking-[0.12em] mb-2 text-center" style={{ color: "#0f172a" }}>
+              {event.time}
+            </div>
             <a
               href={event.href}
               target="_blank"
