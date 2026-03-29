@@ -31,6 +31,8 @@ const dayEvents = [
     time: "12:00 PM – 1:15 PM",
     title: "Ministry of Awesome: Coffee & Jam",
     href: "https://events.humanitix.com/ministry-of-awesome-coffee-and-jam-371",
+    companyName: "Ministry of Awesome",
+    companyUrl: "https://ministryofawesome.com/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     description:
       "Coffee & Jam is Christchurch’s longest-running founder meetup: a lunchtime tradition where the Ōtautahi startup community comes together to connect, learn from founders across different stages, and collaborate on ideas that help startups thrive.",
     details:
@@ -70,6 +72,8 @@ const amSpeakers = [
     talk: "Create Your Own AI Coach to Learn Anything",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
     linkedin: "https://nz.linkedin.com/in/caelanhuntress",
+    companyName: "AI Coaching Academy",
+    companyUrl: "https://ai-coaching.academy/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "Caelan Huntress opens the day with an interactive workshop on using conversational AI as a partner for learning, reflection, and growth. As LLMs become more conversational, asking better questions shapes your AI thinking partner around the goals you care about and the way you learn best.",
   },
@@ -133,6 +137,8 @@ const pmSpeakers = [
     talk: "AI Self Defence: Risks and Solutions",
     image: "/images/epic-ai-conference/headshots/emma-humphrey.jpg",
     linkedin: "https://www.linkedin.com/in/emma-humphrey17/",
+    companyName: "AI Safety ANZ",
+    companyUrl: "https://www.aisafetyanz.com.au/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "Emma Humphrey brings experience from AI implementation in the UK Home Office to explore cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement. Her session helps attendees move beyond hype into more mature thinking about AI governance and risk.",
   },
@@ -153,6 +159,8 @@ const pmSpeakers = [
     talk: "The Case for a Superabundant Future",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
     linkedin: "https://nz.linkedin.com/in/caelanhuntress",
+    companyName: "AI Coaching Academy",
+    companyUrl: "https://ai-coaching.academy/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "To close the afternoon, Caelan Huntress zooms out from present-day implementation into the larger human story. Drawing on recent writings from Dario Amodei and Peter Diamandis, this talk explores the idea that AI may not just change how we work, but could also change what it means to be human — for the better.",
   },
@@ -164,6 +172,8 @@ const panelists = [
     role: "Founder and CEO, RedSeed",
     image: "/images/epic-ai-conference/headshots/anya-anderson.jpg",
     linkedin: "https://nz.linkedin.com/in/anyaanderson",
+    companyName: "RedSeed",
+    companyUrl: "https://www.redseed.com/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "Anya Anderson leads RedSeed, a corporate training platform that creates a coaching culture to build high-performing teams. She brings a leadership development perspective to the conversation about trust, capability, and organisational change.",
   },
@@ -172,6 +182,8 @@ const panelists = [
     role: "CEO, Caitlyn",
     image: "/images/epic-ai-conference/headshots/julie-ryan.jpg",
     linkedin: "https://www.linkedin.com/in/julie-ryan-03872b15/",
+    companyName: "Caitlyn",
+    companyUrl: "https://www.caitlyn.ai/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "Julie Ryan leads Caitlyn, an AI-powered knowledge platform that turns agricultural and research-led knowledge into trusted, usable insight. Her perspective helps ground the discussion in practical adoption, trusted information, and sector-specific usefulness.",
   },
@@ -180,6 +192,8 @@ const panelists = [
     role: "Head of AI Solutions & CEO, Agentic Intelligence",
     image: "/images/epic-ai-conference/headshots/bradley-fraser.jpg",
     linkedin: "https://www.linkedin.com/in/bradley-fraser-a8135052/",
+    companyName: "Agentic Intelligence",
+    companyUrl: "https://www.agenticintelligence.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     bio:
       "Brad Fraser helps organisations move beyond experimentation into real capability building. His contribution focuses on adoption, solution design, and what meaningful AI implementation looks like beyond surface-level hype.",
   },
@@ -315,6 +329,8 @@ function SpeakerCard({
   bio,
   image,
   linkedin,
+  companyName,
+  companyUrl,
 }: {
   name: string;
   role: string;
@@ -323,6 +339,8 @@ function SpeakerCard({
   bio: string;
   image?: string;
   linkedin?: string;
+  companyName?: string;
+  companyUrl?: string;
 }) {
   return (
     <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
@@ -353,6 +371,11 @@ function SpeakerCard({
         <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
           {bio}
         </p>
+        {companyName && companyUrl ? (
+          <p className="text-sm mt-4" style={{ color: "var(--text-muted)" }}>
+            Organisation: <a href={companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>{companyName}</a>
+          </p>
+        ) : null}
         {linkedin ? (
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4" style={{ color: "#004aad" }} aria-label={`${name} LinkedIn`}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6.26V17H8.34M7.3 9.8A1.2 1.2 0 1 0 7.3 7.4A1.2 1.2 0 0 0 7.3 9.8M17.74 17V13.53C17.74 11.67 16.74 10.57 15.12 10.57C13.81 10.57 13.22 11.29 12.89 11.79V10.67H10.81C10.84 11.41 10.81 17 10.81 17H12.89V13.46C12.89 13.27 12.9 13.08 12.96 12.95C13.11 12.57 13.45 12.18 14.02 12.18C14.77 12.18 15.07 12.75 15.07 13.58V17H17.74Z"/></svg>
@@ -370,12 +393,16 @@ function PanelistCard({
   bio,
   image,
   linkedin,
+  companyName,
+  companyUrl,
 }: {
   name: string;
   role: string;
   bio: string;
   image?: string;
   linkedin?: string;
+  companyName?: string;
+  companyUrl?: string;
 }) {
   return (
     <div className="rounded-2xl border p-5 h-full" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
@@ -397,6 +424,11 @@ function PanelistCard({
       <p className="text-sm mb-3" style={{ color: "var(--foreground)" }}>
         {role}
       </p>
+      {companyName && companyUrl ? (
+        <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
+          Company: <a href={companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>{companyName}</a>
+        </p>
+      ) : null}
       <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
         {bio}
       </p>
@@ -458,7 +490,7 @@ export default function EpicAIConferencePage() {
               </h1>
               <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "#334155" }}>
                 The EPIC AI conference is a day of workshops, community conversation, presentations,
-                and leadership dialogue at EPIC Innovation. This event is part of <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=epic-26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>TechWeekNZ</a>,
+                and leadership dialogue at <a href="https://epicinnovation.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>EPIC Innovation</a>. This event is part of <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=epic-26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>TechWeekNZ</a>,
                 Aotearoa New Zealand’s national festival of tech and innovation.
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "#334155" }}>
@@ -580,6 +612,11 @@ export default function EpicAIConferencePage() {
                     </div>
                     <div>
                       <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>{event.title}</h3>
+                      {"companyName" in event && event.companyName && event.companyUrl ? (
+                        <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
+                          Organisation: <a href={event.companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>{event.companyName}</a>
+                        </p>
+                      ) : null}
                       <p className="leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
                         {event.description}
                       </p>
