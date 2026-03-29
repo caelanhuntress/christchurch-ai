@@ -78,6 +78,7 @@ const amSpeakers = [
     role: "Workshop speaker",
     session: "AM Workshops · 9:30–10:00am",
     talk: "Transform Meetings into Actionable Insights",
+    image: "/images/epic-ai-conference/headshots/hannah-hardy-jones.jpg",
     linkedin: "https://nz.linkedin.com/in/hannah-hardy-jones-63b3b238",
     bio:
       "Hannah Hardy-Jones demonstrates how AI can turn conversation into useful outputs, insights, actions, and communications. Her session treats meetings and spoken exchanges as one of the most valuable and underused resources in any organisation.",
@@ -346,9 +347,6 @@ function SpeakerCard({
           {session}
         </div>
         <h3 className="text-2xl font-bold mb-1" style={{ color: "#004aad" }}>{name}</h3>
-        <p className="text-sm mb-3" style={{ color: "var(--foreground)" }}>
-          {role}
-        </p>
         <p className="text-sm font-semibold mb-3" style={{ color: "var(--accent)" }}>
           {talk}
         </p>
@@ -723,7 +721,7 @@ export default function EpicAIConferencePage() {
             <div className="space-y-4">
               {faq.map((item) => (
                 <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
-                  <h3 className="text-lg font-semibold mb-2">{item.question}</h3>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: "#0f172a" }}>{item.question}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                     {item.answer}
                   </p>
@@ -735,10 +733,15 @@ export default function EpicAIConferencePage() {
       </main>
 
       <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "#ffffff" }}>
-        <Link href="/" style={{ color: "var(--accent)" }} className="font-semibold">
-          Christchurch AI
-        </Link>{" "}
-        · TechWeekNZ programme page for EPIC Innovation, Christchurch, New Zealand
+        <div>
+          <Link href="/" style={{ color: "var(--accent)" }} className="font-semibold">
+            Christchurch AI
+          </Link>{" "}
+          · TechWeekNZ programme page for <a href="http://epicinnovation.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">EPIC Innovation</a>, Christchurch, New Zealand
+        </div>
+        <div className="mt-2">
+          Website design vibecoded by <a href="https://caelanhuntress.com/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">Caelan Huntress</a> and his <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">OpenClaw</a>
+        </div>
       </footer>
     </div>
   );
