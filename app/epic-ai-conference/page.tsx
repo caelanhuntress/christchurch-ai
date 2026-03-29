@@ -429,18 +429,18 @@ export default function EpicAIConferencePage() {
                 <br />
                 an all-day TechWeek26 event in Christchurch
               </h1>
-              <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "var(--text-muted)" }}>
+              <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "#334155" }}>
                 The EPIC AI conference is a day of workshops, community conversation, presentations,
                 and leadership dialogue at EPIC Innovation. This event is part of <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=epic-26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>TechWeekNZ</a>,
                 Aotearoa New Zealand’s national festival of tech and innovation.
               </p>
-              <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "var(--text-muted)" }}>
+              <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "#334155" }}>
                 The spirit of the day is shaped by the themes of this year&apos;s TechWeek festival:
                 <strong style={{ color: "var(--foreground)" }}> innovation, inspiration and impact across Aotearoa</strong>; bringing together
                 <strong style={{ color: "var(--foreground)" }}> ideas, people and opportunities</strong>; and connecting innovators with communities
                 across the motu to help shape New Zealand’s future.
               </p>
-              <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "var(--text-muted)" }}>
+              <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "#334155" }}>
                 Throughout the day, the emphasis is on local capability, shared learning, practical experimentation,
                 thoughtful discussion, and the wider Christchurch AI community. This will collect and share insights about how AI is being explored, applied, and led in Aotearoa.
               </p>
@@ -484,7 +484,7 @@ export default function EpicAIConferencePage() {
                   />
                   <div>
                     <p className="text-sm leading-relaxed italic" style={{ color: "var(--text-muted)" }}>
-                      “kelly-Anne findlayLearnt so much about how much AI has advanced in the last 12 months. Also how to use it more efficiently for some tasks. Great presenters, and fantastic that it was interactive by using it in the course. Easy to go back and see what we learnt to reference it and show other staff members.”
+                      “Learnt so much about how much AI has advanced in the last 12 months. Also how to use it more efficiently for some tasks. Great presenters, and fantastic that it was interactive by using it in the course. Easy to go back and see what we learnt to reference it and show other staff members.”
                     </p>
                     <p className="text-sm font-semibold mt-3" style={{ color: "var(--foreground)" }}>
                       – Kelly-Anne Findlay
