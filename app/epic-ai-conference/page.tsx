@@ -355,6 +355,7 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="relative aspect-[16/6] w-full overflow-hidden rounded-3xl border mb-6" style={{ borderColor: "var(--border)" }}>
       <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10" />
     </div>
   );
 }
@@ -433,7 +434,7 @@ export default function EpicAIConferencePage() {
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 TechWeek26
               </div>
-              <h2 className="text-2xl font-bold mb-4">The Art of the Possible</h2>
+              <h2 className="text-2xl font-bold mb-4" style={{ color: "#0f172a" }}>The Art of the Possible</h2>
               <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>The future isn’t something that happens to us — it’s something we create.</p>
                 <p>Techweek26 turns imagination into execution: ideas you can trust, actions you can take, and outcomes that make a difference.</p>
@@ -468,7 +469,7 @@ export default function EpicAIConferencePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Thursday, 21 May, 2026 @ EPIC Innovation, 100 Manchester St, Christchurch
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-5">A celebration of Christchurch’s AI community at TechWeek26</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-5" style={{ color: "#0f172a" }}>A celebration of Christchurch’s AI community at TechWeek26</h2>
             <div className="space-y-4 text-base leading-relaxed max-w-4xl" style={{ color: "var(--text-muted)" }}>
               <p>
                 The EPIC AI Conference brings together different parts of the local ecosystem in one place: educators, founders, nonprofit voices, infrastructure thinkers, AI safety practitioners, startup builders, and leaders responsible for real teams and real decisions.
@@ -499,7 +500,7 @@ export default function EpicAIConferencePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Full Programme
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">The shape of the day</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#0f172a" }}>Full-day AI conference in Christchurch</h2>
             <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
               From morning skill-building to evening leadership reflection, the programme unfolds as a day-long community gathering at EPIC. Each event stands on its own, but together they create a fuller picture of how AI is being explored and discussed in Christchurch during TechWeekNZ.
             </p>
@@ -551,7 +552,7 @@ export default function EpicAIConferencePage() {
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 Themes through the day
               </div>
-              <h2 className="text-3xl font-bold mb-5">How the programme maps to TechWeek values</h2>
+              <h2 className="text-3xl font-bold mb-5" style={{ color: "#0f172a" }}>How the programme maps to TechWeek values</h2>
               <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   <strong style={{ color: "var(--foreground)" }}>Digital foundations and skills</strong> show up most clearly in the morning workshops, where attendees build practical confidence and test real applications of AI.
@@ -569,7 +570,7 @@ export default function EpicAIConferencePage() {
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 Community emphasis
               </div>
-              <h2 className="text-3xl font-bold mb-5">Christchurch, not just content</h2>
+              <h2 className="text-3xl font-bold mb-5" style={{ color: "#0f172a" }}>Christchurch, not just content</h2>
               <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   The day is rooted in Christchurch’s local innovation network: Christchurch AI as organiser, EPIC as venue, Ministry of Awesome at lunchtime, and a programme that makes room for founders, advisors, operators, and community-minded practitioners.
@@ -587,7 +588,7 @@ export default function EpicAIConferencePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Speakers & Panelists
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Profiles across the day</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#0f172a" }}>Profiles across the day</h2>
             <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
               These speaker sections are intentionally longer and more editorial, so visitors can understand not just the names on the programme, but the kind of experience, perspective, and conversation each person brings into the room. Image areas are left as placeholders for headshots to be added later.
             </p>
@@ -597,8 +598,8 @@ export default function EpicAIConferencePage() {
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Morning workshops
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6">AM Workshops · 9:00 AM to 11:45 AM</h3>
-                <SectionImage src="/images/epic-ai-conference/epic-ai-am.png" alt="EPIC AI Conference AM Workshops" />
+                <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#0f172a" }}>AM Workshops · 9:00 AM to 11:45 AM</h3>
+                <SectionImage src="/images/epic-ai-conference/chchai-tw26-bg.png" alt="Christchurch AI TechWeek26 background" />
                 <div className="grid gap-5">
                   {amSpeakers.map((speaker, index) => (
                     <SpeakerCard key={`${speaker.name}-${index}`} {...speaker} />
@@ -610,8 +611,7 @@ export default function EpicAIConferencePage() {
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Afternoon presentations
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6">PM Presentations · 1:30 PM to 5:00 PM</h3>
-                <SectionImage src="/images/epic-ai-conference/epic-ai-pm.png" alt="EPIC AI Conference PM Presentations" />
+                <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#0f172a" }}>PM Presentations · 1:30 PM to 5:00 PM</h3>
                 <div className="grid gap-5">
                   {pmSpeakers.map((speaker, index) => (
                     <SpeakerCard key={`${speaker.name}-${index}`} {...speaker} />
@@ -623,8 +623,7 @@ export default function EpicAIConferencePage() {
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Evening panel
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6">Leadership Panel · 5:30 PM to 7:00 PM</h3>
-                <SectionImage src="/images/epic-ai-conference/epic-ai-panel.png" alt="EPIC AI Conference Leadership Panel" />
+                <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#0f172a" }}>Leadership Panel · 5:30 PM to 7:00 PM</h3>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {panelists.map((panelist) => (
                     <PanelistCard key={panelist.name} {...panelist} />
@@ -641,7 +640,7 @@ export default function EpicAIConferencePage() {
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 Registration
               </div>
-              <h2 className="text-3xl font-bold mb-4">Event links for the full day</h2>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: "#0f172a" }}>Event links for the full day</h2>
               <p className="text-base md:text-lg max-w-4xl" style={{ color: "var(--text-muted)" }}>
                 Each part of the programme is registered separately through Humanitix. The links below make it easy to move from this guide to the relevant event pages.
               </p>
@@ -655,7 +654,7 @@ export default function EpicAIConferencePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               FAQ
             </div>
-            <h2 className="text-3xl font-bold mb-10">Useful details</h2>
+            <h2 className="text-3xl font-bold mb-10" style={{ color: "#0f172a" }}>Useful details</h2>
             <div className="space-y-4">
               {faq.map((item) => (
                 <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
