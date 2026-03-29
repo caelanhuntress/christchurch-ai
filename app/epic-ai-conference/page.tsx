@@ -557,7 +557,7 @@ export default function EpicAIConferencePage() {
         <section id="programme" className="px-6 py-14 border-y" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-              Full Programme
+              Four Consecutive Events
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#004aad" }}>Full-day AI conference in Christchurch</h2>
             <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
@@ -576,7 +576,7 @@ export default function EpicAIConferencePage() {
                       <div className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: "var(--accent)" }}>
                         {event.label}
                       </div>
-                      <div className="text-2xl font-bold mb-1">{event.time}</div>
+                      <div className="text-2xl font-bold mb-1" style={{ color: "#0f172a" }}>{event.time}</div>
                     </div>
                     <div>
                       <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>{event.title}</h3>
@@ -721,7 +721,7 @@ export default function EpicAIConferencePage() {
             <div className="space-y-4">
               {faq.map((item) => (
                 <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: "#0f172a" }}>{item.question}</h3>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: "#000000" }}>{item.question}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                     {item.answer}
                   </p>
