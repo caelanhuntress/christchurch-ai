@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
+import Image from "next/image";
 import Link from "next/link";
+
+const pageTheme = {
+  "--background": "#f8fafc",
+  "--foreground": "#111827",
+  "--accent": "#004AAD",
+  "--muted": "#eef2f7",
+  "--border": "#d6deea",
+  "--text-muted": "#4b5563",
+} as CSSProperties;
 
 const dayEvents = [
   {
@@ -8,10 +19,11 @@ const dayEvents = [
     time: "9:00 AM – 11:45 AM",
     title: "EPIC AI Conference — AM Workshops",
     href: "https://events.humanitix.com/epic-ai-conference-am",
+    image: "/images/epic-ai-conference/epic-ai-am.png",
     description:
       "The morning workshop block is designed for people who want practical experience, not just theory. Across five fast, hands-on sessions, attendees explore how AI can support communication, workflow design, nonprofit impact, and visual creation.",
     details:
-      "Hosted by the Christchurch AI Meetup Group as part of TechWeek26, this session brings together local and international practitioners for a compact morning of experimentation and applied learning. It is suited to professionals, founders, operators, and curious learners who want methods they can use straight away.",
+      "Hosted by the Christchurch AI Meetup Group as part of TechWeekNZ, the EPIC AI Conference brings together local and international practitioners for a compact, high-value morning of experimentation and applied learning. Whether you’re just getting started, or already using AI at work, these sessions will give you fresh ways to think about what the tools can do, where they fit, and how to use them more effectively.",
   },
   {
     slug: "coffee-and-jam",
@@ -30,10 +42,11 @@ const dayEvents = [
     time: "1:30 PM – 5:00 PM",
     title: "EPIC AI Conference — PM Presentations",
     href: "https://events.humanitix.com/epic-ai-conference-pm",
+    image: "/images/epic-ai-conference/epic-ai-pm.png",
     description:
-      "The afternoon session brings together practitioners working at the edge of AI implementation, risk, infrastructure, and strategy. These are grounded presentations from people thinking deeply about what happens when AI moves from prototype to production, from possibility to governance, and from technical novelty to social consequence.",
+      "The afternoon speaker session of the EPIC AI Conference brings together practitioners working at the edge of AI implementation, risk, infrastructure, and strategy.",
     details:
-      "Across four sessions, attendees hear perspectives on operational excellence, AI safety, privacy-preserving infrastructure, and the wider future AI may unlock. It is designed for professionals who want stronger mental models, sharper questions, and a clearer sense of what matters next.",
+      "These are not abstract future-gazing talks. They are grounded presentations from people thinking deeply about what happens when AI moves from prototype to production, from possibility to governance, and from technical novelty to social consequence. Across four sessions, attendees hear perspectives on operational excellence, AI safety, privacy-preserving infrastructure, and the long-term future AI may unlock.",
   },
   {
     slug: "leadership-panel",
@@ -41,10 +54,11 @@ const dayEvents = [
     time: "5:30 PM – 7:00 PM",
     title: "Leadership in the Age of AI",
     href: "https://events.humanitix.com/epic-ai-conference-panel",
+    image: "/images/epic-ai-conference/epic-ai-panel.png",
     description:
-      "The closing panel widens the lens from tools and implementation to leadership, responsibility, trust, and change. It asks what strong leadership looks like when technology changes faster than organisations do, and when the quality of judgment matters as much as the quality of tools.",
+      "The closing panel widens the lens from tools and implementation to leadership, responsibility, trust, and change.",
     details:
-      "Designed for executives, founders, team leaders, managers, consultants, and professionals, the panel explores capability, culture, adoption, and decision-making in an AI-shaped world. It closes the day with a live conversation about the human choices that shape how AI lands inside teams and institutions.",
+      "After a full programme of workshops and presentations, this is where the conversation turns to leadership, responsibility, and the human decisions that shape how AI actually lands inside teams and institutions.",
   },
 ] as const;
 
@@ -55,7 +69,7 @@ const amSpeakers = [
     session: "AM Workshops · 9:00–9:30am",
     talk: "Create Your Own AI Coach to Learn Anything",
     bio:
-      "Caelan Huntress opens the day with a workshop on using conversational AI as a partner for learning, reflection, and growth. Framed around coaching as a meta-skill, the session focuses on asking better questions and shaping your AI thinking partner around the goals that matter most to each learner.",
+      "Caelan Huntress opens the day with an interactive workshop on using conversational AI as a partner for learning, reflection, and growth. As LLMs become more conversational, asking better questions shapes your AI thinking partner around the goals you care about and the way you learn best.",
   },
   {
     name: "Hannah Hardy-Jones",
@@ -71,7 +85,7 @@ const amSpeakers = [
     session: "AM Workshops · 10:00–10:30am",
     talk: "Mapping AI Opportunities in Your Organisation",
     bio:
-      "Steve Fox introduces a practical framework for identifying where AI can create value in real workflows. Using a simple sliding scale from manual to fully automated, he guides participants through breaking work into tasks, assessing where AI fits, and identifying where human oversight still matters.",
+      "Steve Fox introduces a practical framework for identifying where AI can create new value in real workflows. Using a simple sliding scale from manual to fully automated, he guides participants through breaking work into tasks, assessing where AI fits, identifying where human oversight still matters, and estimating the cost and opportunity impact of each change.",
   },
   {
     name: "Lois McClintock",
@@ -79,7 +93,7 @@ const amSpeakers = [
     session: "AM Workshops · 10:30–11:00am",
     talk: "AI for Good: Empowering Nonprofits",
     bio:
-      "Lois McClintock explores how nonprofits can use AI to increase impact, free up volunteer time, and improve operations without requiring large budgets or complex systems. Her session includes practical examples across strategy, social media, fundraising, and policy support.",
+      "Lois McClintock explores how nonprofits can use AI to increase impact, free up volunteer time, and improve operations without needing large budgets or complex systems. Her session includes practical examples from nonprofit work including strategy, social media, fundraising, and policy support.",
   },
   {
     name: "Arthur Machado",
@@ -87,7 +101,7 @@ const amSpeakers = [
     session: "AM Workshops · 11:00–11:30am",
     talk: "Filmmaking Frameworks for High-Impact AI Visuals",
     bio:
-      "Arthur Machado brings a visual storytelling lens to AI image generation, encouraging attendees to think like directors rather than technicians. His workshop focuses on creating stronger prompts and better creative assets, from hero images to product mockups.",
+      "Arthur Machado shares a practical visual storytelling framework for prompting better creative assets, from hero images to product mockups. His session encourages attendees to think like directors rather than technicians when working with AI-generated visuals.",
   },
 ] as const;
 
@@ -98,7 +112,7 @@ const pmSpeakers = [
     session: "PM Presentations · 1:30–2:15pm",
     talk: "When Code Gets Cheap, Operational Excellence Wins",
     bio:
-      "Varsha Das examines what happens when AI makes software faster and cheaper to build, but does not remove the hard part. Drawing on real production incidents and the realities of running AI systems at scale, her talk explores why reliability, recovery, and trust become the real differentiators once code generation is abundant.",
+      "Varsha Das explores why operational excellence becomes the real differentiator when code generation is abundant. Drawing on real production incidents and the realities of running AI systems at scale, she unpacks the failure modes that appear under real load and the patterns that separate demos from dependable services.",
   },
   {
     name: "Emma Humphrey",
@@ -106,7 +120,7 @@ const pmSpeakers = [
     session: "PM Presentations · 2:30–3:15pm",
     talk: "AI Self Defence: Risks and Solutions",
     bio:
-      "Emma Humphrey draws on experience from AI implementation in the UK Home Office to explore cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement. Her session helps attendees move beyond hype into more mature thinking about AI governance and organisational risk.",
+      "Emma Humphrey brings experience from AI implementation in the UK Home Office to explore cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement. Her session helps attendees move beyond hype into more mature thinking about AI governance and risk.",
   },
   {
     name: "Dr Chandranil Chakraborttii",
@@ -114,7 +128,7 @@ const pmSpeakers = [
     session: "PM Presentations · 3:30–4:15pm",
     talk: "Ghost Vectors: Securing AI Privacy Without Sacrificing System Performance",
     bio:
-      "Dr Chandranil Chakraborttii explores privacy risks in vector databases, including how deleted or updated data can leave behind structural traces. His session looks at privacy-by-design approaches that improve both compliance and system performance in modern AI systems.",
+      "Dr Chandranil Chakraborttii examines how ‘ghost vectors’ can expose supposedly removed information, why conventional deletion methods fail in high-dimensional environments, and what architects can do instead. Attendees gain insight into privacy-by-design approaches that improve both compliance and performance.",
   },
   {
     name: "Caelan Huntress",
@@ -122,7 +136,7 @@ const pmSpeakers = [
     session: "PM Presentations · 4:30–5:00pm",
     talk: "The Case for a Superabundant Future",
     bio:
-      "To close the afternoon, Caelan Huntress zooms out from present-day implementation into the larger human story. Drawing on recent writing from Dario Amodei and Peter Diamandis, this talk explores the idea that AI may not just change how we work, but could also reshape what it means to be human — for the better.",
+      "To close the afternoon, Caelan Huntress zooms out from present-day implementation into the larger human story. Drawing on recent writings from Dario Amodei and Peter Diamandis, this talk explores the idea that AI may not just change how we work, but could also change what it means to be human — for the better.",
   },
 ] as const;
 
@@ -131,7 +145,7 @@ const panelists = [
     name: "Anya Anderson",
     role: "Founder and CEO, RedSeed",
     bio:
-      "Anya Anderson leads RedSeed, a corporate training platform focused on creating coaching cultures and high-performing teams. She brings a leadership development perspective to the conversation about trust, capability, and organisational change.",
+      "Anya Anderson leads RedSeed, a corporate training platform that creates a coaching culture to build high-performing teams. She brings a leadership development perspective to the conversation about trust, capability, and organisational change.",
   },
   {
     name: "Julie Ryan",
@@ -143,23 +157,14 @@ const panelists = [
     name: "Brad Fraser",
     role: "Head of AI Solutions & CEO, Agentic Intelligence",
     bio:
-      "Brad Fraser works with organisations moving beyond experimentation into real capability building. His contribution focuses on adoption, solution design, and what meaningful AI implementation looks like beyond surface-level hype.",
+      "Brad Fraser helps organisations move beyond experimentation into real capability building. His contribution focuses on adoption, solution design, and what meaningful AI implementation looks like beyond surface-level hype.",
   },
   {
     name: "Tom Sweeney",
     role: "Serial Founder and Director",
     bio:
-      "Tom Sweeney brings a founder and systems perspective shaped by companies that leverage both human capital and operational systems to achieve strong business outcomes. His voice adds breadth to the discussion about leadership, performance, and navigating uncertainty with discipline.",
+      "Tom Sweeney brings a founder and systems perspective shaped by companies that leverage systems and human capital to achieve strong business outcomes. His voice adds breadth to the discussion about leadership, performance, and navigating uncertainty with discipline.",
   },
-] as const;
-
-const techweekThemes = [
-  "innovation, inspiration and impact across Aotearoa",
-  "connecting innovators with communities across the motu",
-  "ideas, people and opportunities that help shape New Zealand’s future",
-  "digital foundations and skills",
-  "social good",
-  "responsible governance",
 ] as const;
 
 const faq = [
@@ -186,12 +191,12 @@ const faq = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "EPIC AI Conference Christchurch | TechWeek26 at EPIC Innovation",
+  title: "EPIC AI Conference Christchurch | TechWeekNZ at EPIC Innovation",
   description:
-    "A full-day TechWeek26 programme guide for the EPIC AI Conference in Christchurch, including workshops, Coffee & Jam, afternoon presentations, and the Leadership in the Age of AI panel.",
+    "A full-day TechWeekNZ programme guide for the EPIC AI Conference in Christchurch, including workshops, Coffee & Jam, afternoon presentations, and the Leadership in the Age of AI panel.",
   keywords: [
     "EPIC AI Conference Christchurch",
-    "TechWeek26 Christchurch",
+    "TechWeekNZ Christchurch",
     "Christchurch AI community",
     "EPIC Innovation AI event",
     "AI workshops Christchurch",
@@ -199,13 +204,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://christchurch-ai.com/epic-ai-conference" },
   openGraph: {
-    title: "EPIC AI Conference Christchurch | TechWeek26",
+    title: "EPIC AI Conference Christchurch | TechWeekNZ",
     description:
       "A community-focused guide to a full day of AI workshops, networking, presentations, and leadership discussion at EPIC Innovation in Christchurch.",
     url: "https://christchurch-ai.com/epic-ai-conference",
     siteName: "Christchurch AI",
     locale: "en_NZ",
     type: "website",
+    images: ["https://christchurch-ai.com/images/epic-ai-conference/epic-ai-am.png"],
   },
 };
 
@@ -238,7 +244,7 @@ const pageSchema = {
   "@type": "WebPage",
   name: "EPIC AI Conference Christchurch",
   description:
-    "A TechWeek26 programme page for the EPIC AI Conference in Christchurch, bringing together workshops, networking, presentations, and the closing leadership panel.",
+    "A TechWeekNZ programme page for the EPIC AI Conference in Christchurch, bringing together workshops, networking, presentations, and the closing leadership panel.",
   url: "https://christchurch-ai.com/epic-ai-conference",
   publisher: {
     "@type": "Organization",
@@ -249,7 +255,7 @@ const pageSchema = {
 
 function RsvpBlock() {
   return (
-    <div className="rounded-3xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+    <div className="rounded-3xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
       <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-4" style={{ color: "var(--accent)" }}>
         Registration Links
       </div>
@@ -260,7 +266,7 @@ function RsvpBlock() {
             href={event.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-4 rounded-2xl text-sm font-semibold text-center border transition-all hover:bg-white/5"
+            className="px-5 py-4 rounded-2xl text-sm font-semibold text-center border transition-all hover:bg-slate-50"
             style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
           >
             {event.label}
@@ -285,7 +291,7 @@ function SpeakerCard({
   bio: string;
 }) {
   return (
-    <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+    <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
       <div>
         <div
           className="aspect-[4/5] w-full rounded-2xl border flex items-center justify-center text-center text-xs uppercase tracking-[0.18em] px-4"
@@ -325,7 +331,7 @@ function PanelistCard({
   bio: string;
 }) {
   return (
-    <div className="rounded-2xl border p-5 h-full" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+    <div className="rounded-2xl border p-5 h-full" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
       <div
         className="aspect-[4/5] w-full rounded-2xl border flex items-center justify-center text-center text-xs uppercase tracking-[0.18em] px-4 mb-4"
         style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--muted)" }}
@@ -345,15 +351,23 @@ function PanelistCard({
   );
 }
 
+function SectionImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative aspect-[16/6] w-full overflow-hidden rounded-3xl border mb-6" style={{ borderColor: "var(--border)" }}>
+      <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} />
+    </div>
+  );
+}
+
 export default function EpicAIConferencePage() {
   return (
-    <div className="min-h-screen" style={{ background: "var(--background)" }}>
+    <div className="min-h-screen" style={pageTheme}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
 
       <nav
         className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-        style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}
+        style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.92)" }}
       >
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>
           Christchurch AI
@@ -361,7 +375,7 @@ export default function EpicAIConferencePage() {
         <a
           href="#registration"
           className="px-4 py-2 rounded-full text-sm font-medium border"
-          style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
+          style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "#ffffff" }}
         >
           Event Links
         </a>
@@ -369,42 +383,41 @@ export default function EpicAIConferencePage() {
 
       <main>
         <section className="px-6 py-20 md:py-24">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.25fr_0.75fr] gap-10 items-start">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
             <div>
               <div
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-xs font-semibold uppercase tracking-[0.2em] mb-6"
-                style={{ borderColor: "var(--border)", color: "var(--accent)", background: "rgba(0,74,173,0.08)" }}
+                style={{ borderColor: "var(--border)", color: "var(--accent)", background: "#ffffff" }}
               >
-                TechWeek26 · EPIC Innovation · Christchurch · Thursday 21 May
+                TechWeekNZ · EPIC Innovation · Christchurch · Thursday 21 May
               </div>
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] mb-6">
                 EPIC AI Conference
                 <br />
-                as a TechWeek26 day in Christchurch
+                an all-day TechWeek26 event in Christchurch
               </h1>
               <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "var(--text-muted)" }}>
-                This page brings together the full programme for a day of workshops, community conversation, presentations,
-                and leadership dialogue at EPIC Innovation. It is framed as part of <strong className="text-white">TechWeek26</strong>,
+                The EPIC AI conference is a day of workshops, community conversation, presentations,
+                and leadership dialogue at EPIC Innovation. This event is part of <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=epic-26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>TechWeekNZ</a>,
                 Aotearoa New Zealand’s national festival of tech and innovation.
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "var(--text-muted)" }}>
-                The spirit of the day is closely aligned with the language TechWeek uses for the festival itself:
-                <strong className="text-white"> innovation, inspiration and impact across Aotearoa</strong>; bringing together
-                <strong className="text-white"> ideas, people and opportunities</strong>; and connecting innovators with communities
+                The spirit of the day is shaped by the themes of this year&apos;s TechWeek festival:
+                <strong style={{ color: "var(--foreground)" }}> innovation, inspiration and impact across Aotearoa</strong>; bringing together
+                <strong style={{ color: "var(--foreground)" }}> ideas, people and opportunities</strong>; and connecting innovators with communities
                 across the motu to help shape New Zealand’s future.
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "var(--text-muted)" }}>
-                Across the programme, the emphasis is on local capability, shared learning, practical experimentation,
-                thoughtful discussion, and the wider Christchurch AI community. The result is less a single headline talk than
-                a full-day conversation about how AI is being explored, applied, and led in Aotearoa.
+                Throughout the day, the emphasis is on local capability, shared learning, practical experimentation,
+                thoughtful discussion, and the wider Christchurch AI community. This will collect and share insights about how AI is being explored, applied, and led in Aotearoa.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
+                  { stat: "14+", label: "speakers, panelists, founders, and facilitators" },
                   { stat: "4", label: "linked events across one shared TechWeek day" },
                   { stat: "1", label: "community hub at EPIC Innovation" },
-                  { stat: "14+", label: "speakers, panelists, founders, and facilitators" },
                 ].map((item) => (
-                  <div key={item.label} className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                  <div key={item.label} className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
                     <div className="text-3xl font-bold mb-2" style={{ color: "var(--accent)" }}>
                       {item.stat}
                     </div>
@@ -416,40 +429,46 @@ export default function EpicAIConferencePage() {
               </div>
             </div>
 
-            <aside className="rounded-3xl border p-6 md:p-7 lg:sticky lg:top-24" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <aside className="rounded-3xl border p-6 md:p-7 lg:sticky lg:top-24" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-                TechWeek Context
+                TechWeek26
               </div>
-              <h2 className="text-2xl font-bold mb-4">A local expression of a national festival</h2>
+              <h2 className="text-2xl font-bold mb-4">The Art of the Possible</h2>
               <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                <p>
-                  TechWeek describes itself as a festival designed to connect tech with all corners of society.
-                  This programme fits that shape: workshops, community networking, implementation talks, and leadership discussion.
-                </p>
-                <p>
-                  The wider themes named by TechWeek26 include <strong className="text-white">digital foundations and skills</strong>,
-                  <strong className="text-white"> social good</strong>, and <strong className="text-white">responsible governance</strong>.
-                  Those ideas run clearly through the sessions across the day.
-                </p>
+                <p>The future isn’t something that happens to us — it’s something we create.</p>
+                <p>Techweek26 turns imagination into execution: ideas you can trust, actions you can take, and outcomes that make a difference.</p>
+                <p>As AI is moving from optional to operational, we use events like the EPIC AI Conference to increase our collective momentum as a community.</p>
               </div>
               <div className="mt-6 pt-6 border-t" style={{ borderColor: "var(--border)" }}>
-                <div className="text-sm font-semibold text-white mb-3">Theme language reflected here</div>
-                <ul className="space-y-3 text-sm" style={{ color: "var(--text-muted)" }}>
-                  {techweekThemes.map((theme) => (
-                    <li key={theme}>• {theme}</li>
-                  ))}
-                </ul>
+                <div className="flex items-start gap-4">
+                  <Image
+                    src="/images/epic-ai-conference/kelly-anne-findlay.png"
+                    alt="Kelly-Anne Findlay"
+                    width={64}
+                    height={64}
+                    className="rounded-full border"
+                    style={{ borderColor: "var(--border)" }}
+                  />
+                  <div>
+                    <p className="text-sm leading-relaxed italic" style={{ color: "var(--text-muted)" }}>
+                      “kelly-Anne findlayLearnt so much about how much AI has advanced in the last 12 months. Also how to use it more efficiently for some tasks. Great presenters, and fantastic that it was interactive by using it in the course. Easy to go back and see what we learnt to reference it and show other staff members.”
+                    </p>
+                    <p className="text-sm font-semibold mt-3" style={{ color: "var(--foreground)" }}>
+                      – Kelly-Anne Findlay
+                    </p>
+                  </div>
+                </div>
               </div>
             </aside>
           </div>
         </section>
 
         <section className="px-6 pb-10">
-          <div className="max-w-6xl mx-auto rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+          <div className="max-w-6xl mx-auto rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Why this day matters
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-5">A celebration of Christchurch’s AI community within TechWeek26</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-5">A celebration of Christchurch’s AI community within TechWeekNZ</h2>
             <div className="space-y-4 text-base leading-relaxed max-w-4xl" style={{ color: "var(--text-muted)" }}>
               <p>
                 Rather than treating AI as a single topic or a narrow industry vertical, the EPIC AI Conference brings together different parts of the local ecosystem in one place: educators, founders, nonprofit voices, infrastructure thinkers, AI safety practitioners, startup builders, and leaders responsible for real teams and real decisions.
@@ -471,40 +490,43 @@ export default function EpicAIConferencePage() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">The shape of the day</h2>
             <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
-              From morning skill-building to evening leadership reflection, the programme unfolds as a day-long community gathering at EPIC. Each event stands on its own, but together they create a fuller picture of how AI is being explored and discussed in Christchurch during TechWeek26.
+              From morning skill-building to evening leadership reflection, the programme unfolds as a day-long community gathering at EPIC. Each event stands on its own, but together they create a fuller picture of how AI is being explored and discussed in Christchurch during TechWeekNZ.
             </p>
             <div className="grid gap-5">
               {dayEvents.map((event) => (
                 <div
                   key={event.slug}
-                  className="rounded-3xl border p-6 md:p-7 grid lg:grid-cols-[180px_1fr_auto] gap-6 items-start"
-                  style={{ borderColor: "var(--border)", background: "var(--background)" }}
+                  className="rounded-3xl border overflow-hidden"
+                  style={{ borderColor: "var(--border)", background: "#ffffff" }}
                 >
-                  <div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: "var(--accent)" }}>
-                      {event.label}
+                  {"image" in event && event.image ? <SectionImage src={event.image} alt={event.title} /> : null}
+                  <div className="p-6 md:p-7 grid lg:grid-cols-[180px_1fr_auto] gap-6 items-start">
+                    <div>
+                      <div className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: "var(--accent)" }}>
+                        {event.label}
+                      </div>
+                      <div className="text-2xl font-bold mb-1">{event.time}</div>
                     </div>
-                    <div className="text-2xl font-bold mb-1">{event.time}</div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-3">{event.title}</h3>
-                    <p className="leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
-                      {event.description}
-                    </p>
-                    <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                      {event.details}
-                    </p>
-                  </div>
-                  <div className="lg:w-[210px] w-full">
-                    <a
-                      href={event.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full text-center px-5 py-4 rounded-2xl font-semibold text-sm border transition-all hover:bg-white/5"
-                      style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
-                    >
-                      View event / RSVP
-                    </a>
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-bold mb-3">{event.title}</h3>
+                      <p className="leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
+                        {event.description}
+                      </p>
+                      <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                        {event.details}
+                      </p>
+                    </div>
+                    <div className="lg:w-[210px] w-full">
+                      <a
+                        href={event.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full text-center px-5 py-4 rounded-2xl font-semibold text-sm border transition-all hover:bg-slate-50"
+                        style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
+                      >
+                        View event / RSVP
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -514,25 +536,25 @@ export default function EpicAIConferencePage() {
 
         <section className="px-6 py-16 md:py-20">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
-            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 Themes through the day
               </div>
               <h2 className="text-3xl font-bold mb-5">How the programme maps to TechWeek values</h2>
               <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
-                  <strong className="text-white">Digital foundations and skills</strong> show up most clearly in the morning workshops, where attendees build practical confidence and test real applications of AI.
+                  <strong style={{ color: "var(--foreground)" }}>Digital foundations and skills</strong> show up most clearly in the morning workshops, where attendees build practical confidence and test real applications of AI.
                 </p>
                 <p>
-                  <strong className="text-white">Social good</strong> appears in conversations about nonprofit use, community impact, and the role of trustworthy systems in public life.
+                  <strong style={{ color: "var(--foreground)" }}>Social good</strong> appears in conversations about nonprofit use, community impact, and the role of trustworthy systems in public life.
                 </p>
                 <p>
-                  <strong className="text-white">Responsible governance</strong> runs through the afternoon talks and the closing panel, especially in discussions of risk, privacy, safety, procurement, leadership, and organisational trust.
+                  <strong style={{ color: "var(--foreground)" }}>Responsible governance</strong> runs through the afternoon talks and the closing panel, especially in discussions of risk, privacy, safety, procurement, leadership, and organisational trust.
                 </p>
               </div>
             </div>
 
-            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 Community emphasis
               </div>
@@ -565,6 +587,7 @@ export default function EpicAIConferencePage() {
                   Morning workshops
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">AM Workshops · 9:00 AM to 11:45 AM</h3>
+                <SectionImage src="/images/epic-ai-conference/epic-ai-am.png" alt="EPIC AI Conference AM Workshops" />
                 <div className="grid gap-5">
                   {amSpeakers.map((speaker, index) => (
                     <SpeakerCard key={`${speaker.name}-${index}`} {...speaker} />
@@ -577,6 +600,7 @@ export default function EpicAIConferencePage() {
                   Afternoon presentations
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">PM Presentations · 1:30 PM to 5:00 PM</h3>
+                <SectionImage src="/images/epic-ai-conference/epic-ai-pm.png" alt="EPIC AI Conference PM Presentations" />
                 <div className="grid gap-5">
                   {pmSpeakers.map((speaker, index) => (
                     <SpeakerCard key={`${speaker.name}-${index}`} {...speaker} />
@@ -584,11 +608,12 @@ export default function EpicAIConferencePage() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+              <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Evening panel
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">Leadership Panel · 5:30 PM to 7:00 PM</h3>
+                <SectionImage src="/images/epic-ai-conference/epic-ai-panel.png" alt="EPIC AI Conference Leadership Panel" />
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {panelists.map((panelist) => (
                     <PanelistCard key={panelist.name} {...panelist} />
@@ -622,7 +647,7 @@ export default function EpicAIConferencePage() {
             <h2 className="text-3xl font-bold mb-10">Useful details</h2>
             <div className="space-y-4">
               {faq.map((item) => (
-                <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+                <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
                   <h3 className="text-lg font-semibold mb-2">{item.question}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                     {item.answer}
@@ -634,11 +659,11 @@ export default function EpicAIConferencePage() {
         </section>
       </main>
 
-      <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+      <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "#ffffff" }}>
         <Link href="/" style={{ color: "var(--accent)" }} className="font-semibold">
           Christchurch AI
         </Link>{" "}
-        · TechWeek26 programme page for EPIC Innovation, Christchurch, New Zealand
+        · TechWeekNZ programme page for EPIC Innovation, Christchurch, New Zealand
       </footer>
     </div>
   );
