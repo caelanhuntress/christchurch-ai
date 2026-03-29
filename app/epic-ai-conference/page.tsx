@@ -466,18 +466,29 @@ export default function EpicAIConferencePage() {
         <section className="px-6 pb-10">
           <div className="max-w-6xl mx-auto rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-              Why this day matters
+              Thursday, 21 May, 2026 @ EPIC Innovation, 100 Manchester St, Christchurch
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-5">A celebration of Christchurch’s AI community within TechWeekNZ</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-5">A celebration of Christchurch’s AI community at TechWeek26</h2>
             <div className="space-y-4 text-base leading-relaxed max-w-4xl" style={{ color: "var(--text-muted)" }}>
               <p>
-                Rather than treating AI as a single topic or a narrow industry vertical, the EPIC AI Conference brings together different parts of the local ecosystem in one place: educators, founders, nonprofit voices, infrastructure thinkers, AI safety practitioners, startup builders, and leaders responsible for real teams and real decisions.
+                The EPIC AI Conference brings together different parts of the local ecosystem in one place: educators, founders, nonprofit voices, infrastructure thinkers, AI safety practitioners, startup builders, and leaders responsible for real teams and real decisions.
               </p>
               <p>
-                That breadth matters. The workshops focus on skills and experimentation. Coffee & Jam expands the conversation into Christchurch’s founder and innovation scene. The afternoon presentations move into operational, ethical, and technical questions. The closing panel turns to leadership, trust, and the human side of adoption.
+                That breadth allows us to gain a holistic view of the multifaceted Artificial Intelligence community. The morning workshops focus on skills and experimentation. Lunchtime Coffee & Jam expands the conversation into Christchurch’s founder and innovation scene. The afternoon presentations move into operational, ethical, and technical questions. The evening panel examines the evolution of leadership, trust, and the human side of adoption.
               </p>
+              <div className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                <ol className="space-y-2 text-sm md:text-base" style={{ color: "var(--text-muted)" }}>
+                  <li>1. <strong style={{ color: "var(--foreground)" }}>AM Workshops</strong> — 9–11:45am — <a href="https://events.humanitix.com/epic-ai-conference-am" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
+                  <li>2. <strong style={{ color: "var(--foreground)" }}>Lunchtime Coffee &amp; Jam</strong> — 12–1:15pm — <a href="https://events.humanitix.com/ministry-of-awesome-coffee-and-jam-371" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
+                  <li>3. <strong style={{ color: "var(--foreground)" }}>PM Presentations</strong> — 1:30–5pm — <a href="https://events.humanitix.com/epic-ai-conference-pm" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
+                  <li>4. <strong style={{ color: "var(--foreground)" }}>Evening Panel</strong> — 5:30–7pm — <a href="https://events.humanitix.com/epic-ai-conference-panel" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
+                </ol>
+                <p className="text-sm md:text-base mt-4" style={{ color: "var(--text-muted)" }}>
+                  RSVP for the entire day, or only the sessions you want. Free to attend. Tickets are limited; please only RSVP to events you can commit to attending.
+                </p>
+              </div>
               <p>
-                Seen as a whole, the day reflects TechWeek’s wider purpose: not just showcasing tools, but creating a space where communities can learn together, share capability, and think seriously about the future they want to build.
+                Seen as a whole, the day reflects TechWeek’s wider purpose: creating a space where communities can learn together, share capability, and think seriously about the future they want to build.
               </p>
             </div>
           </div>
