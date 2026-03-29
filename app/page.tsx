@@ -520,7 +520,14 @@ export default function Home() {
                     Led by <a href="https://caelanhuntress.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Caelan Huntress</a>, founder of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>.
                   </p>
                 </div>
-                <div className="lg:w-[320px] rounded-2xl border p-6 flex-shrink-0" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                <div className="lg:w-[320px] flex-shrink-0">
+                  <img
+                    src="https://images.humanitix.com/i/4f5ffbf8-5d91-41bb-b984-7a9cfffed983.png@responsive-1250.webp"
+                    alt="AI Roadmap Workshop featured image"
+                    className="w-full rounded-2xl border mb-4"
+                    style={{ borderColor: "var(--border)" }}
+                  />
+                  <div className="rounded-2xl border p-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
                   <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Book Your Spot</div>
                   <div className="space-y-3 text-sm mb-6" style={{ color: "var(--text-muted)" }}>
                     <p>Part of New Zealand&apos;s national festival of technology and innovation.</p>
@@ -535,6 +542,7 @@ export default function Home() {
                   >
                     View on Humanitix →
                   </a>
+                  </div>
                 </div>
               </div>
             </div>
