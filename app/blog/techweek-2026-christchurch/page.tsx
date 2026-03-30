@@ -50,7 +50,7 @@ export default function Post() {
             the same venue where we run our monthly meetups — and it will be our biggest event of the year.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What Is TechWeek?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What Is TechWeek?</h2>
           <p>
             TechWeek NZ runs every May and draws thousands of attendees to hundreds of events around the country.
             Events are independently organised under the TechWeek banner — which means the Christchurch AI conference
@@ -62,7 +62,7 @@ export default function Post() {
             Less hype. More signal.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What to Expect</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What to Expect</h2>
           <ul className="list-disc list-inside space-y-2 ml-2">
             <li><strong className="text-white">Multiple speakers</strong> across a full afternoon/evening programme</li>
             <li><strong className="text-white">Live demos</strong> — AI tools in action, not slides about AI tools</li>
@@ -71,7 +71,7 @@ export default function Post() {
             <li><strong className="text-white">Free to attend</strong> — as always, Christchurch AI events are open and free</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">When and Where</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>When and Where</h2>
           <div className="rounded-2xl border p-5 space-y-3" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
             <div className="flex gap-3">
               <span>📅</span>
@@ -96,7 +96,7 @@ export default function Post() {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Call For Speakers</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Call For Speakers</h2>
           <p>
             Speaker applications are open now. We are looking for people working in AI who have something
             concrete to share — a project, a finding, a hard lesson, a live demo.
@@ -133,7 +133,7 @@ export default function Post() {
             </a>
           </div>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Stay in the Loop</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Stay in the Loop</h2>
           <p>
             Full programme details, registration links, and speaker announcements will be shared through our
             Meetup group as they are confirmed. The best way to stay updated is to join the community.

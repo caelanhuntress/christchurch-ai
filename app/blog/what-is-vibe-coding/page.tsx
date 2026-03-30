@@ -57,7 +57,7 @@ export default function WhatIsVibeCoding() {
             "build things with technology."
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Old Way vs the New Way</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The Old Way vs the New Way</h2>
 
           <p>
             Traditional software development requires you to think like a computer: precise syntax,
@@ -77,7 +77,7 @@ export default function WhatIsVibeCoding() {
             gets built depends heavily on the clarity of your brief.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What You Can Actually Build</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What You Can Actually Build</h2>
 
           <p>
             The range is larger than most people expect. In a single session, working vibe coders
@@ -97,7 +97,7 @@ export default function WhatIsVibeCoding() {
             trying to solve and being able to describe it clearly.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Claude Is Particularly Good at This</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Claude Is Particularly Good at This</h2>
 
           <p>
             Several AI models support vibe coding, but{" "}
@@ -117,7 +117,7 @@ export default function WhatIsVibeCoding() {
             you test it and give feedback → Claude refines → repeat until it does what you need.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What Vibe Coding Isn't</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What Vibe Coding Isn't</h2>
 
           <p>
             It's worth being clear about limitations. Vibe coding works well for:
@@ -142,11 +142,11 @@ export default function WhatIsVibeCoding() {
             vibe coding is now a completely viable approach.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">See It Live in Christchurch</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>See It Live in Christchurch</h2>
 
           <p>
             At our{" "}
-            <Link href="/vibe-coding-april-2026" className="text-white underline">
+            <Link href="/vibe-coding-april-2026" className="underline" style={{ color: "#004aad" }}>
               April 6 meetup
             </Link>
             , Caelan Huntress will demonstrate vibe coding with Claude live — building something
@@ -162,7 +162,7 @@ export default function WhatIsVibeCoding() {
           </p>
 
           <div className="mt-10 p-6 rounded-lg border" style={{ borderColor: "var(--accent)", background: "rgba(0,74,173,0.08)" }}>
-            <p className="font-bold text-white mb-2">Vibe Coding & Web App Development with AI</p>
+            <p className="font-bold mb-2" style={{ color: "#004aad" }}>Vibe Coding & Web App Development with AI</p>
             <p className="text-sm mb-1">Monday 6 April 2026 — 5:30 PM, EPIC Innovation Centre</p>
             <p className="text-sm mb-4">Greg Dickson + Caelan Huntress — Free to attend</p>
             <Link href="/vibe-coding-april-2026"

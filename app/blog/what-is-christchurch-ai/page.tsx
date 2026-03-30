@@ -35,9 +35,9 @@ export default function Post() {
         <h1 className="text-4xl font-bold mb-6 leading-tight">What Is Christchurch AI? Canterbury's Monthly AI Meetup Explained</h1>
         <div className="space-y-6 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <p>If you have heard about the <strong className="text-white">Christchurch Artificial Intelligence</strong> meetup and wondered what it actually is, this is your guide.</p>
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Short Version</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The Short Version</h2>
           <p>Christchurch AI is a <strong className="text-white">free monthly meetup</strong> for anyone interested in artificial intelligence. We meet at <strong className="text-white">EPIC Innovation Centre</strong> in Christchurch's CBD for regular monthly events. Each event features two speakers, drinks, and time to connect with the people building and thinking about AI in Canterbury.</p>
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Comes?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Who Comes?</h2>
           <ul className="list-disc list-inside space-y-2 ml-2">
             <li><strong className="text-white">Business leaders</strong> exploring practical AI adoption</li>
             <li><strong className="text-white">Developers and engineers</strong> building with LLMs and automation tools</li>
@@ -46,14 +46,14 @@ export default function Post() {
             <li><strong className="text-white">Marketers and communicators</strong> navigating AI in their industries</li>
             <li><strong className="text-white">Curious beginners</strong> who just want to understand what is going on</li>
           </ul>
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What Happens at an Event?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What Happens at an Event?</h2>
           <ul className="list-disc list-inside space-y-2 ml-2">
             <li><strong className="text-white">5:30 to 6:00 PM</strong> — Drinks and networking</li>
             <li><strong className="text-white">6:00 to 6:45 PM</strong> — First speaker</li>
             <li><strong className="text-white">6:45 to 7:30 PM</strong> — Second speaker</li>
             <li><strong className="text-white">7:30 to 8:00 PM</strong> — Open Q&A and more networking</li>
           </ul>
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Runs It?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Who Runs It?</h2>
           <p>The meetup is organised by <strong className="text-white">Caelan Huntress</strong> of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>, which sponsors drinks at every event, keeping it free for everyone. The group connects with the <strong className="text-white">AI Forum NZ</strong> and <strong className="text-white">Canterbury Tech</strong> networks.</p>
           <div className="mt-12 rounded-2xl border p-6 text-center" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
             <div className="font-bold text-white text-lg mb-2">Next Meetup: Monday 4 May 2026</div>

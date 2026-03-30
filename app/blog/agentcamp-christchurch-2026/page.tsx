@@ -46,7 +46,7 @@ export default function Post() {
 
           <p>
             AgentCamp is part of the{" "}
-            <a href="https://globalai.community/agentcamp" target="_blank" rel="noopener noreferrer" className="text-white underline">
+            <a href="https://globalai.community/agentcamp" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: "#004aad" }}>
               Global AI Community's AgentCamp series
             </a>{" "}
             — free events running in cities worldwide from February to June 2026. The Christchurch event was organised by{" "}
@@ -54,7 +54,7 @@ export default function Post() {
             continuing the tradition he established with Code Camp Christchurch.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Day in Brief</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The Day in Brief</h2>
 
           <p>
             Twelve speakers took the stage across the full day, including six Microsoft MVPs spanning Power Platform,
@@ -65,7 +65,7 @@ export default function Post() {
           <p>
             One of the day's talks — <em>Context Engineering: The Key to Agentic Design</em> — was delivered by{" "}
             <strong className="text-white">Caelan Huntress</strong>, who organises the{" "}
-            <Link href="/" className="text-white underline">Christchurch AI monthly meetup</Link>. The talk argued that
+            <Link href="/" className="underline" style={{ color: "#004aad" }}>Christchurch AI monthly meetup</Link>. The talk argued that
             as AI agents become more capable, the limiting factor isn't the model — it's how well operators structure
             the information, instructions, and context that agents work with.
           </p>
@@ -75,7 +75,7 @@ export default function Post() {
             the context those tools work within."
           </blockquote>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Key Themes</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Key Themes</h2>
 
           <p>
             A few themes ran through multiple sessions across the day:
@@ -104,7 +104,7 @@ export default function Post() {
             </li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What This Means for Christchurch's AI Scene</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What This Means for Christchurch's AI Scene</h2>
 
           <p>
             A sold-out event with 100 attendees on a Saturday is a signal: Christchurch has a serious, growing AI
@@ -114,17 +114,17 @@ export default function Post() {
 
           <p>
             AgentCamp sits in a different part of the ecosystem to the monthly{" "}
-            <Link href="/" className="text-white underline">Christchurch AI meetup</Link> — it skews more toward
+            <Link href="/" className="underline" style={{ color: "#004aad" }}>Christchurch AI meetup</Link> — it skews more toward
             developers and Microsoft stack practitioners, while our meetup tends to include more business leaders,
             educators, and sector-specific practitioners. Both serve the same underlying goal: helping Canterbury's
             AI community learn, connect, and build.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Get Involved</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Get Involved</h2>
 
           <p>
             If you were at AgentCamp and want to stay connected with Canterbury's broader AI community, the{" "}
-            <Link href="/" className="text-white underline">Christchurch AI monthly meetup</Link> runs at
+            <Link href="/" className="underline" style={{ color: "#004aad" }}>Christchurch AI monthly meetup</Link> runs at
             <strong className="text-white">EPIC Innovation Centre</strong> as a regular monthly event.
             Our next event is <strong className="text-white">Monday 4 May 2026</strong>.
           </p>
@@ -133,15 +133,15 @@ export default function Post() {
             We're also calling for speakers for our <strong className="text-white">TechWeek 2026 AI Conference</strong>{" "}
             at EPIC Innovation. If you've got something worth sharing with Canterbury's AI community,{" "}
             <a href="https://sessionize.com/christchurch-ai-techweek-conference/" target="_blank" rel="noopener noreferrer"
-              className="text-white underline">submit a talk proposal</a>.
+              className="underline" style={{ color: "#004aad" }}>submit a talk proposal</a>.
           </p>
 
           <div className="mt-10 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>
               Follow the conversation:{" "}
-              <a href="https://twitter.com/search?q=%23AgentCamp&src=hashtag_click" target="_blank" rel="noopener noreferrer" className="text-white underline">#AgentCamp</a>{" "}
+              <a href="https://twitter.com/search?q=%23AgentCamp&src=hashtag_click" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: "#004aad" }}>#AgentCamp</a>{" "}
               ·{" "}
-              <a href="https://twitter.com/search?q=%23GlobalAICommunity&src=hashtag_click" target="_blank" rel="noopener noreferrer" className="text-white underline">#GlobalAICommunity</a>
+              <a href="https://twitter.com/search?q=%23GlobalAICommunity&src=hashtag_click" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: "#004aad" }}>#GlobalAICommunity</a>
             </p>
           </div>
 

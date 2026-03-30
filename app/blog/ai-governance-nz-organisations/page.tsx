@@ -52,7 +52,7 @@ export default function AIGovernanceBlog() {
             Here's a practical take on what it actually means and why it matters.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What AI Governance Actually Is</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What AI Governance Actually Is</h2>
           <p>
             At its core, AI governance is the set of policies, processes, and accountability
             structures that determine <em>how</em> AI is used in your organisation — and who's
@@ -67,7 +67,7 @@ export default function AIGovernanceBlog() {
             <li>Are we compliant with the NZ Privacy Act when using AI on client data?</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Why a Policy Document Isn't Enough</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Why a Policy Document Isn't Enough</h2>
           <p>
             Many organisations respond to AI governance concerns by writing a policy. That's a start,
             but governance that only exists on paper tends to fail in practice. People don't read
@@ -80,7 +80,7 @@ export default function AIGovernanceBlog() {
             itself, not left to individual judgement in the moment.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Three Governance Failures We See Most</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The Three Governance Failures We See Most</h2>
 
           <div className="space-y-4">
             <div className="border-l-4 pl-4" style={{ borderColor: "var(--accent)" }}>
@@ -103,7 +103,7 @@ export default function AIGovernanceBlog() {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">A Starting Framework for NZ Organisations</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>A Starting Framework for NZ Organisations</h2>
           <p>You don't need a 40-page governance framework to start. Three foundations get most organisations most of the way:</p>
           <ol className="list-decimal list-inside space-y-3 ml-2">
             <li><strong className="text-white">Approved tools list</strong> — a clear, maintained list of which AI tools staff can use and for what purposes. Updated quarterly as the landscape changes.</li>
@@ -111,10 +111,10 @@ export default function AIGovernanceBlog() {
             <li><strong className="text-white">Review requirements</strong> — for which categories of AI output require human review before action. Not everything needs review; being specific about what does keeps governance practical.</li>
           </ol>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Go Deeper at Our May Meetup</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Go Deeper at Our May Meetup</h2>
           <p>
             At our{" "}
-            <Link href="/ai-governance-may-2026" className="text-white underline">May 4 meetup</Link>,
+            <Link href="/ai-governance-may-2026" className="underline" style={{ color: "#004aad" }}>May 4 meetup</Link>,
             Todd Bowman will present practical best practices for AI governance implementation —
             drawn from real organisational deployments. Alongside that, Dr Elsamari Botha will
             challenge the narrow definition of AI literacy and present a multi-dimensional framework
@@ -126,7 +126,7 @@ export default function AIGovernanceBlog() {
           </p>
 
           <div className="mt-10 p-6 rounded-lg border" style={{ borderColor: "var(--accent)", background: "rgba(0,74,173,0.08)" }}>
-            <p className="font-bold text-white mb-2">The AI Tension — Implementation vs Existential Risk</p>
+            <p className="font-bold mb-2" style={{ color: "#004aad" }}>The AI Tension — Implementation vs Existential Risk</p>
             <p className="text-sm mb-1">Monday 4 May 2026 — 5:30 PM, EPIC Innovation Centre</p>
             <p className="text-sm mb-4">Dr Elsamari Botha + Hazel Shanks — Free to attend</p>
             <Link href="/ai-governance-may-2026"

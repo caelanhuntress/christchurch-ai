@@ -48,7 +48,7 @@ export default function Post() {
             writing better prompts — they're engineering better <strong className="text-white">context</strong>.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What's the Difference?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What's the Difference?</h2>
           <p>
             A prompt is what you ask. Context is everything the AI knows before you ask it.
           </p>
@@ -63,7 +63,7 @@ export default function Post() {
             A mediocre prompt with rich, well-structured context often produces excellent output.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What Context Engineering Actually Involves</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What Context Engineering Actually Involves</h2>
 
           <div className="space-y-4 rounded-2xl border p-6 my-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
             <div>
@@ -94,7 +94,7 @@ export default function Post() {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Practical Technique: Context Documents</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The Practical Technique: Context Documents</h2>
           <p>
             The most effective AI operators build <strong className="text-white">context documents</strong> —
             reusable files containing everything the AI needs to know about a project, client, or domain.
@@ -109,7 +109,7 @@ export default function Post() {
             starting from scratch every time. The other is building on prepared context.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Why This Is the Skill That Matters</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Why This Is the Skill That Matters</h2>
           <p>
             Most organisations disappointed with AI are experiencing the <strong className="text-white">operator problem</strong>:
             they have capable tools and people who haven't learned to use them effectively.
@@ -125,7 +125,7 @@ export default function Post() {
             AI like a search engine are wondering why it doesn't seem that useful.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Start Here</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Start Here</h2>
           <p>
             Pick one recurring task you do with AI — a document type you produce regularly, a
             kind of research you often need, a communication format you write repeatedly.
@@ -147,7 +147,7 @@ export default function Post() {
 
         <div className="mt-16 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
           <div className="rounded-2xl border p-6 mb-8 text-center" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-            <div className="font-bold text-white mb-2">Hear more on this topic</div>
+            <div className="font-bold mb-2" style={{ color: "#004aad" }}>Hear more on this topic</div>
             <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>
               Caelan Huntress spoke on context engineering at Agent Camp 2026.
               Come to the next Christchurch AI meetup to continue the conversation.

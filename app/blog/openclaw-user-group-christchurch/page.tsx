@@ -49,7 +49,7 @@ export default function Post() {
             it — and why it might be the most useful hour you spend on AI this month.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What Is OpenClaw?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What Is OpenClaw?</h2>
           <p>
             OpenClaw is a personal AI assistant that runs on your own hardware — a dedicated
             device in your home or office, not a cloud service. It connects to AI models like
@@ -69,7 +69,7 @@ export default function Post() {
             productivity of AI without the data exposure of consumer cloud tools.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What&apos;s a User Group?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What&apos;s a User Group?</h2>
           <p>
             A user group is an informal gathering of people using the same tool — to share what
             they&apos;ve discovered, troubleshoot together, swap workflows, and collectively get more
@@ -87,7 +87,7 @@ export default function Post() {
             working, and what questions are common.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Should Come</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Who Should Come</h2>
           <p>You&apos;ll get the most from this if you:</p>
           <ul className="list-disc list-inside space-y-2 ml-2">
             <li>Already have OpenClaw installed and have been using it (even a little)</li>
@@ -100,7 +100,7 @@ export default function Post() {
             Most users interact with it entirely through conversation.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What to Expect on the Day</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What to Expect on the Day</h2>
           <p>
             Format is deliberately loose for this first session. Expect:
           </p>
@@ -115,7 +115,7 @@ export default function Post() {
             EPIC Innovation Centre has good coffee nearby.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Bigger Picture</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The Bigger Picture</h2>
           <p>
             The Christchurch AI community has grown fast. Monthly meetups at EPIC regularly draw
             40–60 people. AgentCamp sold out at 100 in weeks. There&apos;s a TechWeek AI conference

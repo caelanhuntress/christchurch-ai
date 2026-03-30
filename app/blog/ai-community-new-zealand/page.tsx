@@ -36,23 +36,23 @@ export default function Post() {
         <div className="space-y-6 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <p>New Zealand's artificial intelligence ecosystem has matured significantly over the past few years. From government strategy to grassroots meetups, the country is developing its own distinct approach to AI — one that emphasises responsibility, practicality, and local context. Christchurch plays an important role in that story.</p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The National Landscape</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The National Landscape</h2>
           <p>New Zealand's AI community is anchored by the <strong className="text-white">AI Forum NZ</strong>, the country's peak body for artificial intelligence. The Forum brings together researchers, businesses, and government agencies, and publishes regular reports on AI adoption, governance, and opportunity across the country.</p>
           <p>At a government level, New Zealand has been developing an AI strategy that focuses on responsible adoption — positioning the country as a place where AI is used thoughtfully, with particular attention to Treaty of Waitangi obligations and Maori data sovereignty.</p>
           <p>Nationally, AI activity is concentrated in Auckland and Wellington, but the South Island — and Christchurch in particular — has a growing and increasingly confident presence.</p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What Makes Christchurch Different</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What Makes Christchurch Different</h2>
           <p>Canterbury's AI scene has a few characteristics that make it distinct from the larger northern cities.</p>
           <p><strong className="text-white">It is more practical than theoretical.</strong> The Christchurch community tends to attract people who are building things, implementing AI in real organisations, or trying to solve specific problems. The conversations are grounded.</p>
           <p><strong className="text-white">It has strong academic foundations.</strong> The University of Canterbury has a well-regarded AI research group, and Lincoln University contributes expertise in agricultural and environmental AI applications. That research base feeds into the local practitioner community.</p>
           <p><strong className="text-white">It has produced globally significant companies.</strong> Christchurch-based companies like Custom D — whose AI platform Caitlyn won two regional AWS Partner Awards in 2025 — are building world-class AI technology from the South Island. That kind of success creates local confidence and ambition.</p>
           <p><strong className="text-white">The community is deliberately inclusive.</strong> The Christchurch AI meetup is free, open to everyone, and explicitly welcomes people at all levels of AI knowledge. That access-first approach means the community grows faster and stays more connected to the real world.</p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Christchurch AI in the National Network</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Christchurch AI in the National Network</h2>
           <p>The <strong className="text-white">Christchurch Artificial Intelligence</strong> meetup connects directly to the national AI ecosystem. Our events draw speakers from across New Zealand — researchers, founders, and practitioners who bring national and international perspectives to local audiences.</p>
           <p>We are also connected to <strong className="text-white">Canterbury Tech</strong>, the regional technology community organisation, and to the broader AI Forum NZ network. When significant AI events happen nationally — the Aotearoa AI Summit, TechWeek, major research publications — they tend to generate discussion and follow-up conversation in our community.</p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">The Opportunity Ahead</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>The Opportunity Ahead</h2>
           <p>New Zealand is well positioned in the global AI landscape — small enough to move quickly, trusted enough to be taken seriously, and with a culture that values both innovation and responsibility. Christchurch, as the South Island's largest city and a growing tech hub, has a real opportunity to become a reference point for how AI is done well at a community level.</p>
           <p>That is what the Christchurch AI meetup is working towards: building a community that is informed, connected, and ready to make the most of what AI makes possible — in Canterbury and beyond.</p>
 

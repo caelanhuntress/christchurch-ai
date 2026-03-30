@@ -46,7 +46,7 @@ export default function Post() {
             what we look for in speakers, and how to apply.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Why Speak at Christchurch AI?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Why Speak at Christchurch AI?</h2>
           <p>
             The Christchurch AI meetup runs as a <strong className="text-white">monthly event</strong> at
             EPIC Innovation Centre. Our audience is a mix of business leaders, developers, researchers, and curious
@@ -63,7 +63,7 @@ export default function Post() {
             <li>Drinks — we sponsor every event, so it is genuinely social</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">What We Look For</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What We Look For</h2>
           <p>
             We are not looking for polished keynote performers. We are looking for people with something
             real to say. Here are the three types of talks that go down best:
@@ -96,7 +96,7 @@ export default function Post() {
             <li>Talks that require the audience to already be experts</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Talk Format</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Talk Format</h2>
           <p>
             Talks run <strong className="text-white">20 to 30 minutes</strong> including Q&amp;A. Slides are optional —
             some of our best talks have been whiteboard sessions, live tool demos, or straight conversation.
@@ -106,7 +106,7 @@ export default function Post() {
             and framing. We want you to succeed.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">TechWeek 2026</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>TechWeek 2026</h2>
           <p>
             We are also running a <strong className="text-white">Christchurch AI event during TechWeek 2026</strong>.
             This is a larger-format conference with a public programme — a higher-profile opportunity for speakers
@@ -116,7 +116,7 @@ export default function Post() {
             Speaker applications for TechWeek go through Sessionize, the same platform we use for all our events.
           </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">How to Apply</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>How to Apply</h2>
           <p>
             We use <strong className="text-white">Sessionize</strong> to collect and review speaker submissions.
             It takes about 10 minutes to submit a proposal.
@@ -148,7 +148,7 @@ export default function Post() {
             </a>
           </div>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Questions?</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Questions?</h2>
           <p>
             If you are not sure whether your topic is a good fit, reach out before submitting.
             You can find us on{" "}
