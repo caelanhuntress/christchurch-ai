@@ -38,3 +38,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
 }
+
+/* In light mode, many content pages still use Tailwind's text-white utility
+   for emphasis. Override that utility sitewide so emphasized text remains
+   readable against light backgrounds while keeping dark mode unchanged. */
+body.theme-light .text-white {
+  color: var(--foreground) !important;
+}
