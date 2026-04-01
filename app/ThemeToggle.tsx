@@ -14,7 +14,7 @@ export default function ThemeToggle() {
     if (typeof window === "undefined") return;
 
     const stored = window.localStorage.getItem(STORAGE_KEY) as Theme | null;
-    const initial: Theme = stored === "light" || stored === "dark" ? stored : "dark";
+    const initial: Theme = stored === "light" || stored === "dark" ? stored : "light";
 
     setTheme(initial);
     document.body.classList.remove("theme-light", "theme-dark");

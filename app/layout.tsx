@@ -96,7 +96,7 @@ export default function RootLayout({
             src="https://px.ads.linkedin.com/collect/?pid=8740850&fmt=gif" />
         </noscript>
       </head>
-      <body>{children}</body>
+      <body className="theme-light">{children}</body>
     </html>
   );
 }
