@@ -378,12 +378,12 @@ export default function Home() {
                 />
                 <div className="mt-4">
                   <h3 className="text-2xl font-bold mb-1">Caelan Huntress</h3>
-                  <div className="text-sm" style={{ color: "var(--accent)" }}>AI Trainer · Public Speaker · Founder, AI Coaching Academy</div>
+                  <div className="text-sm leading-relaxed" style={{ color: "var(--accent)" }}>
+                    AI Trainer · Public Speaker<br />Founder, AI Coaching Academy
+                  </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-1">Caelan Huntress</h3>
-                <div className="text-sm mb-4" style={{ color: "var(--accent)" }}>AI Trainer · Public Speaker · Founder, AI Coaching Academy</div>
                 <div className="space-y-3 text-sm leading-relaxed mb-6" style={{ color: "var(--text-muted)" }}>
                   <p>Caelan started his career as an acrobat in the circus. Now he teaches ambitious professionals how to become great AI operators — combining the skills of a theatrical performer and technical geek to make education genuinely engaging.</p>
                   <p>Classically educated at St John's College in Santa Fe (Great Books programme), he sees the fast-moving world of technology through the lens of the humanities. After a decade as a digital nomad, he now calls Christchurch home.</p>
