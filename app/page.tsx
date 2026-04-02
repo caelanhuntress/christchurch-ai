@@ -142,11 +142,11 @@ export default function Home() {
           style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.95)" }}>
           <div className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</div>
           <div className="flex items-center gap-6 text-sm" style={{ color: "var(--text-muted)" }}>
-            <a href="#events" className="hover:text-white transition-colors">Events</a>
-            <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#speak" className="hover:text-white transition-colors">Speak</a>
-            <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <a href="#events" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Events</a>
+            <a href="#about" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">About</a>
+            <a href="#speak" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Speak</a>
+            <Link href="/past-events" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Past Events</Link>
+            <Link href="/blog" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Blog</Link>
             <ThemeToggle />
             <a
               href="https://meetup.com/christchurch-ai"
