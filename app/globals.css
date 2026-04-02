@@ -46,17 +46,24 @@ body.theme-light .text-white {
   color: var(--foreground) !important;
 }
 
-/* In light mode, dark photo-backed sections need their text forced light */
-body.theme-light .dark-photo-section,
-body.theme-light .dark-photo-section h2,
-body.theme-light .dark-photo-section h3,
-body.theme-light .dark-photo-section .font-semibold,
-body.theme-light .dark-photo-section .font-bold,
-body.theme-light .dark-photo-section .text-sm,
-body.theme-light .dark-photo-section .text-xs,
-body.theme-light .dark-photo-section p,
-body.theme-light .dark-photo-section li,
-body.theme-light .dark-photo-section a {
+/* In light mode, dark photo-backed sections need light wrapper text,
+   but inner white cards should keep their normal dark text. */
+body.theme-light .dark-photo-section {
+  color: #f5f0f3;
+}
+
+body.theme-light .dark-photo-section > h1,
+body.theme-light .dark-photo-section > h2,
+body.theme-light .dark-photo-section > h3,
+body.theme-light .dark-photo-section > p,
+body.theme-light .dark-photo-section > a,
+body.theme-light .dark-photo-section > ul,
+body.theme-light .dark-photo-section > ol,
+body.theme-light .dark-photo-section > div > h1,
+body.theme-light .dark-photo-section > div > h2,
+body.theme-light .dark-photo-section > div > h3,
+body.theme-light .dark-photo-section > div > p,
+body.theme-light .dark-photo-section > div > a {
   color: #f5f0f3 !important;
 }
 
@@ -64,7 +71,9 @@ body.theme-light .dark-photo-section [style*="color: var(--accent)"] {
   color: var(--accent) !important;
 }
 
-body.theme-light .dark-photo-section [style*="color: var(--text-muted)"] {
+body.theme-light .dark-photo-section > p[style*="color: var(--text-muted)"],
+body.theme-light .dark-photo-section > div > p[style*="color: var(--text-muted)"],
+body.theme-light .dark-photo-section > div > ul[style*="color: var(--text-muted)"] {
   color: #d6cdd2 !important;
 }
 
