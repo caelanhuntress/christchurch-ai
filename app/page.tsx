@@ -229,7 +229,7 @@ export default function Home() {
                       <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "var(--accent)" }}>
                         {event.month} 2026
                       </div>
-                      <h3 className="text-xl font-bold text-white">{event.title}</h3>
+                      <h3 className="text-xl font-bold homepage-photo-title">{event.title}</h3>
                     </div>
                   </div>
                 </div>
