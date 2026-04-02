@@ -46,6 +46,11 @@ body.theme-light .text-white {
   color: var(--foreground) !important;
 }
 
+/* In light mode, links should hover blue instead of white */
+body.theme-light a:hover {
+  color: #004aad !important;
+}
+
 /* In light mode, dark photo-backed sections need light wrapper text,
    but inner white cards should keep their normal dark text. */
 body.theme-light .dark-photo-section {
