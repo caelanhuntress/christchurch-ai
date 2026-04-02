@@ -16,7 +16,7 @@ const pageTheme = {
 const dayEvents = [
   {
     slug: "am-workshops",
-    label: "Morning workshops",
+    label: "AM Workshops",
     time: "9:00 AM – 11:45 AM",
     title: "EPIC AI Conference — AM Workshops",
     href: "https://events.humanitix.com/epic-ai-conference-am",
@@ -28,7 +28,7 @@ const dayEvents = [
   },
   {
     slug: "coffee-and-jam",
-    label: "Community lunch",
+    label: "Coffee & Jam.",
     time: "12:00 PM – 1:15 PM",
     title: "Ministry of Awesome: Coffee & Jam",
     href: "https://events.humanitix.com/ministry-of-awesome-coffee-and-jam-371",
@@ -41,7 +41,7 @@ const dayEvents = [
   },
   {
     slug: "pm-presentations",
-    label: "Afternoon presentations",
+    label: "PM Presentations",
     time: "1:30 PM – 5:00 PM",
     title: "EPIC AI Conference — PM Presentations",
     href: "https://events.humanitix.com/epic-ai-conference-pm",
@@ -53,7 +53,7 @@ const dayEvents = [
   },
   {
     slug: "leadership-panel",
-    label: "Evening panel",
+    label: "Evening Panel",
     time: "5:30 PM – 7:00 PM",
     title: "Leadership in the Age of AI",
     href: "https://events.humanitix.com/epic-ai-conference-panel",
