@@ -449,13 +449,13 @@ export default function Home() {
               </ul>
             </div>
             <a
-              href="https://airtable.com/appQyJddzvOGyNk4P/pag8cOvHrSNIpE2vd/form"
+              href="https://christchurch-ai.com/blog/ai-speaker-christchurch"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
               style={{ background: "var(--accent)", color: "#ffffff" }}
             >
-              Submit an Expression of Interest →
+              Christchurch AI Speaking Expression of Interest →
             </a>
           </div>
         </section>
