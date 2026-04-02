@@ -26,9 +26,8 @@ export default function Post() {
       <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
         style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}>
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</Link>
-        <a href="https://sessionize.com/christchurch-ai-techweek-conference/" target="_blank" rel="noopener noreferrer"
-          className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#ffffff" }}>
-          Submit a Talk →
+        <a href="#apply" className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#ffffff" }}>
+          Speaking Expression of Interest →
         </a>
       </nav>
       <article className="max-w-2xl mx-auto px-6 py-20">
@@ -113,13 +112,13 @@ export default function Post() {
             who want broader visibility across the NZ tech ecosystem.
           </p>
           <p>
-            Speaker applications for TechWeek go through Sessionize, the same platform we use for all our events.
+            Speaker applications for Christchurch AI events and related conference opportunities go through our expression of interest form.
           </p>
 
           <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>How to Apply</h2>
           <p>
-            We use <strong className="text-white">Sessionize</strong> to collect and review speaker submissions.
-            It takes about 10 minutes to submit a proposal.
+            We use a simple <strong className="text-white">speaker expression of interest form</strong> to collect and review submissions.
+            It only takes a few minutes to complete.
           </p>
           <p>
             Tell us:
@@ -131,21 +130,33 @@ export default function Post() {
             <li>Whether you have spoken publicly before (not required — everyone starts somewhere)</li>
           </ul>
 
-          <div className="mt-10 rounded-2xl border p-8 text-center" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-            <div className="text-2xl font-bold text-white mb-3">Ready to apply?</div>
-            <p className="text-sm mb-6">
-              Submit your speaker proposal through Sessionize. We review all applications and
+          <div id="apply" className="mt-10 rounded-2xl border p-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="text-2xl font-bold text-white mb-3 text-center">Ready to apply?</div>
+            <p className="text-sm mb-6 text-center">
+              Submit your Christchurch AI speaking expression of interest below. We review all submissions and
               get back to you within two weeks.
             </p>
-            <a
-              href="https://sessionize.com/christchurch-ai-techweek-conference/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
-              style={{ background: "var(--accent)", color: "#ffffff" }}
-            >
-              Submit a Talk on Sessionize →
-            </a>
+            <div className="rounded-xl overflow-hidden" style={{ background: "#ffffff" }}>
+              <iframe
+                src="https://airtable.com/embed/appQyJddzvOGyNk4P/pag8cOvHrSNIpE2vd/form"
+                width="100%"
+                height="1180"
+                frameBorder="0"
+                style={{ background: "transparent", border: 0 }}
+                title="Christchurch AI Speaking Expression of Interest"
+              />
+            </div>
+            <div className="mt-4 text-center text-sm" style={{ color: "var(--text-muted)" }}>
+              If the embedded form doesn’t load for you, use this direct link:{" "}
+              <a
+                href="https://airtable.com/appQyJddzvOGyNk4P/pag8cOvHrSNIpE2vd/form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white transition-colors"
+              >
+                Christchurch AI Speaking Expression of Interest
+              </a>
+            </div>
           </div>
 
           <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Questions?</h2>
