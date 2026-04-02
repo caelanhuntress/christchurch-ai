@@ -51,6 +51,14 @@ body.theme-light a:hover {
   color: #004aad !important;
 }
 
+/* Exception: buttons with the blue brand background should keep white text on hover */
+body.theme-light a[style*="background: var(--accent)"]:hover,
+body.theme-light a[style*="background: #004aad"]:hover,
+body.theme-light a[style*="background:#004aad"]:hover,
+body.theme-light a.hover\:bg-\[\#004aad\]:hover {
+  color: #ffffff !important;
+}
+
 /* In light mode, dark photo-backed sections need light wrapper text,
    but inner white cards should keep their normal dark text. */
 body.theme-light .dark-photo-section {
