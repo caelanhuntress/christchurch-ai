@@ -214,6 +214,11 @@ const faq = [
       "The programme is centred on EPIC Innovation, 78–100 Manchester Street in Christchurch. Coffee & Jam is also hosted at EPIC, making it easy to move through the day as a continuous community event.",
   },
   {
+    question: "What is the cost?",
+    answer:
+      "The Workshops, Speakers, and Panel are $10 each. RSVP for only those parts you want to attend, or for the whole day for $30.",
+  },
+  {
     question: "What is the overall shape of the day?",
     answer:
       "The day begins with hands-on workshops, moves into a lunchtime networking session, continues with presentations on implementation and strategy, and closes with a leadership panel about trust, capability, and adoption.",
@@ -558,7 +563,7 @@ export default function EpicAIConferencePage() {
                   <li>4. <strong style={{ color: "var(--foreground)" }}>Evening Panel</strong> — 5:30–7pm — <a href="https://events.humanitix.com/epic-ai-conference-panel" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
                 </ol>
                 <p className="text-sm md:text-base mt-4" style={{ color: "var(--text-muted)" }}>
-                  RSVP for the entire day, or only the sessions you want. Free to attend. Tickets are limited; please only RSVP to events you can commit to attending.
+                  RSVP for the entire day, or only the sessions you want. Tickets are $10 each for Workshops, Speakers, and Panel ($30 for the whole day).
                 </p>
               </div>
               <p>
