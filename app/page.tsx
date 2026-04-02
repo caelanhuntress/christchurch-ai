@@ -225,10 +225,12 @@ export default function Home() {
                   />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(15,23,42,0.75) 0%, transparent 60%)" }} />
                   <div className="absolute bottom-0 left-0 p-6">
-                    <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "var(--accent)" }}>
-                      {event.month} 2026
+                    <div className="theme-light-overlay rounded-xl px-4 py-3 md:px-5 md:py-4">
+                      <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "var(--accent)" }}>
+                        {event.month} 2026
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{event.title}</h3>
                     </div>
-                    <h3 className="text-xl font-bold text-white">{event.title}</h3>
                   </div>
                 </div>
 

@@ -45,3 +45,14 @@ body {
 body.theme-light .text-white {
   color: var(--foreground) !important;
 }
+
+/* Light-mode overlay card for text placed directly on top of photography */
+body.theme-light .theme-light-overlay {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(2px);
+}
+
+/* Keep true photo-overlay headings white even in light mode */
+body.theme-light .theme-light-overlay .text-white {
+  color: #ffffff !important;
+}
