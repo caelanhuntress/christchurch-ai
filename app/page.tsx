@@ -293,7 +293,7 @@ export default function Home() {
                             style={{ borderColor: "var(--border)", background: "var(--background)" }}>
                             <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Speaker</div>
                             <div className="font-bold mb-1">{talk.speaker}</div>
-                            <div className="text-xs leading-relaxed mb-2" style={{ color: "var(--foreground)" }}>{talk.title}</div>
+                            <div className="text-xs leading-relaxed mb-2 text-white">{talk.title}</div>
                             <div className="text-xs" style={{ color: "var(--text-muted)" }}>{talk.bio}</div>
                           </div>
                         ))}
