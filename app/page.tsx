@@ -479,7 +479,7 @@ export default function Home() {
         <section className="px-6 py-20 border-t dark-photo-section" style={{ borderColor: "var(--border)", background: "#14080E" }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Featured Workshop</div>
-            <div className="rounded-3xl border p-8 md:p-10" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+            <div className="rounded-3xl border p-8 md:p-10 light-card" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
                 <div className="max-w-2xl">
                   <div className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 border"
@@ -497,7 +497,7 @@ export default function Home() {
                       "Leave with a practical AI roadmap",
                       "Ideal for business owners, managers, and knowledge workers",
                     ].map((item) => (
-                      <div key={item} className="rounded-2xl border px-4 py-3"
+                      <div key={item} className="rounded-2xl border px-4 py-3 light-card"
                         style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--muted)" }}>
                         {item}
                       </div>
@@ -514,7 +514,7 @@ export default function Home() {
                     className="w-full rounded-2xl border mb-4"
                     style={{ borderColor: "var(--border)" }}
                   />
-                  <div className="rounded-2xl border p-6" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                  <div className="rounded-2xl border p-6 light-card" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
                   <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Book Your Spot</div>
                   <div className="space-y-3 text-sm mb-6" style={{ color: "var(--text-muted)" }}>
                     <p>Part of New Zealand&apos;s national festival of technology and innovation.</p>

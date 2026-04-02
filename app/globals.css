@@ -77,6 +77,29 @@ body.theme-light .dark-photo-section > div > ul[style*="color: var(--text-muted)
   color: #d6cdd2 !important;
 }
 
+/* Light cards nested inside dark sections should keep dark text in light mode */
+body.theme-light .dark-photo-section .light-card,
+body.theme-light .dark-photo-section .light-card h1,
+body.theme-light .dark-photo-section .light-card h2,
+body.theme-light .dark-photo-section .light-card h3,
+body.theme-light .dark-photo-section .light-card p,
+body.theme-light .dark-photo-section .light-card li,
+body.theme-light .dark-photo-section .light-card a,
+body.theme-light .dark-photo-section .light-card .text-sm,
+body.theme-light .dark-photo-section .light-card .text-xs,
+body.theme-light .dark-photo-section .light-card .font-semibold,
+body.theme-light .dark-photo-section .light-card .font-bold {
+  color: var(--foreground) !important;
+}
+
+body.theme-light .dark-photo-section .light-card [style*="color: var(--text-muted)"] {
+  color: var(--text-muted) !important;
+}
+
+body.theme-light .dark-photo-section .light-card [style*="color: var(--accent)"] {
+  color: var(--accent) !important;
+}
+
 /* Homepage event titles that sit directly on photos must stay white */
 .homepage-photo-title {
   color: #ffffff !important;
