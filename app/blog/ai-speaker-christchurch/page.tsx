@@ -64,7 +64,8 @@ export default function Post() {
 
           <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>What We Look For</h2>
           <p>
-            We are not looking for polished keynote performers. We are looking for people with something
+            We are not looking for polished keynote performers. We already feature some of the {" "}
+            <a href="https://caelanhuntress.com/speaking/?utm_source=chchai&utm_medium=post&utm_campaign=beaspeaker" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">best AI speakers in NZ</a>. We are looking for people with something
             real to say. Here are the three types of talks that go down best:
           </p>
 
@@ -97,7 +98,7 @@ export default function Post() {
 
           <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>Talk Format</h2>
           <p>
-            Talks run <strong className="text-white">20 to 30 minutes</strong> including Q&amp;A. Slides are optional —
+            Talks run <strong className="text-white">25 to 45 minutes</strong> including Q&amp;A. Slides are optional —
             some of our best talks have been whiteboard sessions, live tool demos, or straight conversation.
           </p>
           <p>
@@ -105,15 +106,6 @@ export default function Post() {
             and framing. We want you to succeed.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>TechWeek 2026</h2>
-          <p>
-            We are also running a <strong className="text-white">Christchurch AI event during TechWeek 2026</strong>.
-            This is a larger-format conference with a public programme — a higher-profile opportunity for speakers
-            who want broader visibility across the NZ tech ecosystem.
-          </p>
-          <p>
-            Speaker applications for Christchurch AI events and related conference opportunities go through our expression of interest form.
-          </p>
 
           <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#004aad" }}>How to Apply</h2>
           <p>
