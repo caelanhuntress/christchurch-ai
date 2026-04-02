@@ -431,7 +431,7 @@ export default function Home() {
                   desc: "Real-world AI in your industry — what's working, what's not, what you've learned.",
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-2xl border p-5"
+                <div key={item.title} className="rounded-2xl border p-5 light-card"
                   style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
                   <div className="text-2xl mb-3">{item.emoji}</div>
                   <div className="font-semibold mb-2 text-sm">{item.title}</div>
@@ -439,7 +439,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="rounded-2xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="rounded-2xl border p-6 mb-8 light-card" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-sm font-semibold mb-3">Talk format</div>
               <ul className="text-sm space-y-2" style={{ color: "var(--text-muted)" }}>
                 <li>⏱ <strong className="text-white">25–45 minutes</strong> including Q&A</li>

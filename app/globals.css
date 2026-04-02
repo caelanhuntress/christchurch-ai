@@ -100,6 +100,11 @@ body.theme-light .dark-photo-section .light-card [style*="color: var(--accent)"]
   color: var(--accent) !important;
 }
 
+body.theme-light .dark-photo-section .light-card .text-white,
+body.theme-light .dark-photo-section .light-card strong.text-white {
+  color: var(--foreground) !important;
+}
+
 /* Homepage event titles that sit directly on photos must stay white */
 .homepage-photo-title {
   color: #ffffff !important;
