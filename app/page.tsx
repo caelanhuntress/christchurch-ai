@@ -145,6 +145,7 @@ export default function Home() {
             <a href="#events" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Events</a>
             <a href="#about" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">About</a>
             <a href="#speak" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Speak</a>
+            <Link href="/epic-ai-conference" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Conference</Link>
             <Link href="/past-events" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Past Events</Link>
             <Link href="/blog" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Blog</Link>
             <ThemeToggle />
@@ -422,9 +423,9 @@ export default function Home() {
               style={{ maxHeight: "380px" }}
             />
           </div>
-          <div className="px-6 py-20 max-w-3xl mx-auto">
+          <div className="px-6 py-20 max-w-3xl mx-auto" style={{ background: "#14080E" }}>
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Get Involved</div>
-            <h2 className="text-3xl font-bold mb-4">Call For Speakers</h2>
+            <h2 className="text-3xl font-bold mb-4 text-white">Call For Speakers</h2>
             <p className="text-base leading-relaxed mb-8" style={{ color: "var(--text-muted)" }}>
               We're always looking for people doing interesting things with AI to share their work with the
               Christchurch community. Whether you're building something, researching something, or have hard-won
@@ -493,7 +494,7 @@ export default function Home() {
         </section>
 
         {/* Featured Workshop */}
-        <section className="px-6 py-20 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+        <section className="px-6 py-20 border-t" style={{ borderColor: "var(--border)", background: "#14080E" }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Featured Workshop</div>
             <div className="rounded-3xl border p-8 md:p-10" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
@@ -503,7 +504,7 @@ export default function Home() {
                     style={{ borderColor: "var(--border)", color: "var(--accent)", background: "rgba(74,222,128,0.05)" }}>
                     TechWeek26 · Humanitix Event
                   </div>
-                  <h2 className="text-3xl font-bold mb-4">AI Roadmap Workshop</h2>
+                  <h2 className="text-3xl font-bold mb-4 text-white">AI Roadmap Workshop</h2>
                   <p className="text-base leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>
                     Curious about AI but not sure where to start? This hands-on workshop helps professionals turn AI curiosity into a practical plan — mapping workflows, identifying high-value opportunities, and prioritising experiments you can begin immediately.
                   </p>
