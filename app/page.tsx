@@ -225,7 +225,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(15,23,42,0.75) 0%, transparent 60%)" }} />
                   <div className="absolute bottom-0 left-0 p-6">
-                    <div className="theme-light-overlay rounded-xl px-4 py-3 md:px-5 md:py-4">
+                    <div>
                       <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "var(--accent)" }}>
                         {event.month} 2026
                       </div>
@@ -425,7 +425,7 @@ export default function Home() {
               style={{ maxHeight: "380px" }}
             />
           </div>
-          <div className="px-6 py-20 max-w-3xl mx-auto" style={{ background: "#14080E" }}>
+          <div className="px-6 py-20 max-w-3xl mx-auto dark-photo-section" style={{ background: "#14080E" }}>
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Get Involved</div>
             <h2 className="text-3xl font-bold mb-4 text-white">Call For Speakers</h2>
             <p className="text-base leading-relaxed mb-8" style={{ color: "var(--text-muted)" }}>
@@ -496,7 +496,7 @@ export default function Home() {
         </section>
 
         {/* Featured Workshop */}
-        <section className="px-6 py-20 border-t" style={{ borderColor: "var(--border)", background: "#14080E" }}>
+        <section className="px-6 py-20 border-t dark-photo-section" style={{ borderColor: "var(--border)", background: "#14080E" }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Featured Workshop</div>
             <div className="rounded-3xl border p-8 md:p-10" style={{ borderColor: "var(--border)", background: "var(--background)" }}>

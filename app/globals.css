@@ -46,13 +46,24 @@ body.theme-light .text-white {
   color: var(--foreground) !important;
 }
 
-/* Light-mode overlay card for text placed directly on top of photography */
-body.theme-light .theme-light-overlay {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(2px);
+/* In light mode, dark photo-backed sections need their text forced light */
+body.theme-light .dark-photo-section,
+body.theme-light .dark-photo-section h2,
+body.theme-light .dark-photo-section h3,
+body.theme-light .dark-photo-section .font-semibold,
+body.theme-light .dark-photo-section .font-bold,
+body.theme-light .dark-photo-section .text-sm,
+body.theme-light .dark-photo-section .text-xs,
+body.theme-light .dark-photo-section p,
+body.theme-light .dark-photo-section li,
+body.theme-light .dark-photo-section a {
+  color: #f5f0f3 !important;
 }
 
-/* Keep true photo-overlay headings white even in light mode */
-body.theme-light .theme-light-overlay .text-white {
-  color: #ffffff !important;
+body.theme-light .dark-photo-section [style*="color: var(--accent)"] {
+  color: var(--accent) !important;
+}
+
+body.theme-light .dark-photo-section [style*="color: var(--text-muted)"] {
+  color: #d6cdd2 !important;
 }
