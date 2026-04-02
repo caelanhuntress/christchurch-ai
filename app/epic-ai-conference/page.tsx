@@ -470,18 +470,18 @@ export default function EpicAIConferencePage() {
                 <br />
                 an all-day TechWeek26 event in Christchurch
               </h1>
-              <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "#ffffff" }}>
+              <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "var(--foreground)" }}>
                 The EPIC AI conference is a day of workshops, community conversation, presentations,
                 and leadership dialogue at <a href="https://epicinnovation.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>EPIC Innovation</a>. This event is part of <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=epic-26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>TechWeekNZ</a>,
                 Aotearoa New Zealand’s national festival of tech and innovation.
               </p>
-              <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "#ffffff" }}>
+              <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "var(--foreground)" }}>
                 The spirit of the day is shaped by the themes of this year&apos;s TechWeek festival:
-                <strong style={{ color: "#ffffff" }}> innovation, inspiration and impact across Aotearoa</strong>; bringing together
-                <strong style={{ color: "#ffffff" }}> ideas, people and opportunities</strong>; and connecting innovators with communities
+                <strong style={{ color: "var(--foreground)" }}> innovation, inspiration and impact across Aotearoa</strong>; bringing together
+                <strong style={{ color: "var(--foreground)" }}> ideas, people and opportunities</strong>; and connecting innovators with communities
                 across the motu to help shape New Zealand’s future.
               </p>
-              <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "#ffffff" }}>
+              <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "var(--foreground)" }}>
                 Throughout the day, the emphasis is on local capability, shared learning, practical experimentation,
                 thoughtful discussion, and the wider Christchurch AI community. This will collect and share insights about how AI is being explored, applied, and led in Aotearoa.
               </p>
