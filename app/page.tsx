@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
+import SiteHeader from "./components/SiteHeader";
 
 const EVENTS = [
   {
@@ -138,28 +139,7 @@ export default function Home() {
       <div className="min-h-screen" style={{ background: "var(--background)" }}>
 
         {/* Nav */}
-        <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-          style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.95)" }}>
-          <div className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</div>
-          <div className="flex items-center gap-6 text-sm" style={{ color: "var(--text-muted)" }}>
-            <a href="#events" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Events</a>
-            <a href="#about" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">About</a>
-            <a href="#speak" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Speak</a>
-            <Link href="/epic-ai-conference" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Conference</Link>
-            <Link href="/past-events" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Past Events</Link>
-            <Link href="/blog" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Blog</Link>
-            <ThemeToggle />
-            <a
-              href="https://meetup.com/christchurch-ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:opacity-90"
-              style={{ background: "var(--accent)", color: "#ffffff" }}
-            >
-              Join Free →
-            </a>
-          </div>
-        </nav>
+        <SiteHeader homeMode />
 
         {/* Hero */}
         <section className="px-6 py-24 text-center max-w-4xl mx-auto">

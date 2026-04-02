@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import SiteHeader from "../components/SiteHeader";
 
 const PAST_EVENTS = [
   {
@@ -31,20 +32,7 @@ const PAST_EVENTS = [
 export default function PastEventsPage() {
   return (
     <div className="min-h-screen" style={{ background: "var(--background)" }}>
-      <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50"
-        style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.95)" }}>
-        <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</Link>
-        <div className="flex items-center gap-6 text-sm" style={{ color: "var(--text-muted)" }}>
-          <Link href="/#events" className="hover:text-black transition-colors">Events</Link>
-          <Link href="/past-events" className="hover:text-black transition-colors font-semibold" style={{ color: "var(--foreground)" }}>Past Events</Link>
-          <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
-          <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
-            className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:opacity-90"
-            style={{ background: "var(--accent)", color: "#ffffff" }}>
-            Join Free →
-          </a>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Archive</div>

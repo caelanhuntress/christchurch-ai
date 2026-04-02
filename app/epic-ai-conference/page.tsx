@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
 
 const pageTheme = {
   "--background": "#f8fafc",
@@ -452,21 +453,7 @@ export default function EpicAIConferencePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
 
-      <nav
-        className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-        style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.92)" }}
-      >
-        <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>
-          Christchurch AI
-        </Link>
-        <a
-          href="#registration"
-          className="px-4 py-2 rounded-full text-sm font-medium border"
-          style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "#ffffff" }}
-        >
-          Event Links
-        </a>
-      </nav>
+      <SiteHeader />
 
       <main>
         <section className="px-6 py-20 md:py-24">

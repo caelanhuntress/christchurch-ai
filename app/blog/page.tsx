@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Blog — Christchurch AI",
@@ -73,17 +74,7 @@ const posts = [
 export default function BlogIndex() {
   return (
     <div className="min-h-screen" style={{ background: "var(--background)" }}>
-      <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
-        style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}>
-        <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>
-          Christchurch AI
-        </Link>
-        <Link href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
-          className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:opacity-90"
-          style={{ background: "var(--accent)", color: "#ffffff" }}>
-          Join Free →
-        </Link>
-      </nav>
+      <SiteHeader />
 
       <div className="max-w-3xl mx-auto px-6 py-20">
         <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
