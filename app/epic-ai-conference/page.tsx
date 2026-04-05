@@ -300,7 +300,7 @@ const pageSchema = {
 
 function RsvpBlock() {
   return (
-    <div className="rounded-3xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+    <div className="rounded-3xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-4" style={{ color: "var(--accent)" }}>
         Registration Links
       </div>
@@ -347,7 +347,7 @@ function SpeakerCard({
   linkedin?: string;
 }) {
   return (
-    <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+    <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       <div>
         {image ? (
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border" style={{ borderColor: "var(--border)" }}>
@@ -404,7 +404,7 @@ function PanelistCard({
   companyUrl?: string;
 }) {
   return (
-    <div className="rounded-2xl border p-5 h-full" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+    <div className="rounded-2xl border p-5 h-full" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       {image ? (
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border mb-4" style={{ borderColor: "var(--border)" }}>
           <Image src={image} alt={name} fill style={{ objectFit: "cover" }} />
@@ -466,7 +466,7 @@ export default function EpicAIConferencePage() {
             <div>
               <div
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-xs font-semibold uppercase tracking-[0.2em] mb-6"
-                style={{ borderColor: "var(--border)", color: "var(--accent)", background: "#ffffff" }}
+                style={{ borderColor: "var(--border)", color: "var(--accent)", background: "var(--background)" }}
               >
                 TechWeekNZ · EPIC Innovation · Christchurch · Thursday 21 May
               </div>
@@ -496,7 +496,7 @@ export default function EpicAIConferencePage() {
                   { stat: "4", label: "linked events across one shared TechWeek day" },
                   { stat: "1", label: "community hub at EPIC Innovation" },
                 ].map((item) => (
-                  <div key={item.label} className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+                  <div key={item.label} className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
                     <div className="text-3xl font-bold mb-2" style={{ color: "var(--accent)" }}>
                       {item.stat}
                     </div>
@@ -508,7 +508,7 @@ export default function EpicAIConferencePage() {
               </div>
             </div>
 
-            <aside className="rounded-3xl border p-6 md:p-7 lg:sticky lg:top-24" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+            <aside className="rounded-3xl border p-6 md:p-7 lg:sticky lg:top-24" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 TechWeek26
               </div>
@@ -543,7 +543,7 @@ export default function EpicAIConferencePage() {
         </section>
 
         <section className="px-6 pb-10">
-          <div className="max-w-6xl mx-auto rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+          <div className="max-w-6xl mx-auto rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Thursday, 21 May, 2026 @ EPIC Innovation, 100 Manchester St, Christchurch
             </div>
@@ -588,7 +588,7 @@ export default function EpicAIConferencePage() {
                 <div
                   key={event.slug}
                   className="rounded-3xl border overflow-hidden"
-                  style={{ borderColor: "var(--border)", background: "#ffffff" }}
+                  style={{ borderColor: "var(--border)", background: "var(--background)" }}
                 >
                   <div className="p-6 md:p-7 grid lg:grid-cols-[180px_1fr_auto] gap-6 items-start">
                     <div>
@@ -637,7 +637,7 @@ export default function EpicAIConferencePage() {
 
         <section className="px-6 py-16 md:py-20">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
-            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 Themes through the day
               </div>
@@ -655,7 +655,7 @@ export default function EpicAIConferencePage() {
               </div>
             </div>
 
-            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                 Community emphasis
               </div>
@@ -707,7 +707,7 @@ export default function EpicAIConferencePage() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+              <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Evening panel
                 </div>
@@ -749,7 +749,7 @@ export default function EpicAIConferencePage() {
             <h2 className="text-3xl font-bold mb-10" style={{ color: "#004aad" }}>Useful details</h2>
             <div className="space-y-4">
               {faq.map((item) => (
-                <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "#ffffff" }}>
+                <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
                   <h3 className="text-lg font-semibold mb-2" style={{ color: "#000000" }}>{item.question}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                     {item.question === "Where do I go to continue building my AI Literacy?" ? (
@@ -767,7 +767,7 @@ export default function EpicAIConferencePage() {
         </section>
       </main>
 
-      <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "#ffffff" }}>
+      <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--background)" }}>
         <div>
           <Link href="/" style={{ color: "var(--accent)" }} className="font-semibold">
             Christchurch AI
