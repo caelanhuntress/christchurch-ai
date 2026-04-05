@@ -5,12 +5,12 @@ import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 
 const pageTheme = {
-  "--background": "#f8fafc",
-  "--foreground": "#111827",
-  "--accent": "#004AAD",
-  "--muted": "#eef2f7",
-  "--border": "#d6deea",
-  "--text-muted": "#4b5563",
+  "--background": "var(--background)",
+  "--foreground": "var(--foreground)",
+  "--accent": "var(--accent)",
+  "--muted": "var(--muted)",
+  "--border": "var(--border)",
+  "--text-muted": "var(--text-muted)",
 } as CSSProperties;
 
 const dayEvents = [
