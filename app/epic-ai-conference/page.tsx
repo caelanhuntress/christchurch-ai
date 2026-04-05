@@ -595,7 +595,7 @@ export default function EpicAIConferencePage() {
                       <div className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: "var(--accent)" }}>
                         {event.label}
                       </div>
-                      <div className="text-2xl font-bold mb-1" style={{ color: "#0f172a" }}>{event.time}</div>
+                      <div className="text-2xl font-bold mb-1" style={{ color: "var(--foreground)" }}>{event.time}</div>
                     </div>
                     <div>
                       <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>
