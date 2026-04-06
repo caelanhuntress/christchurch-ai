@@ -143,6 +143,8 @@ export default function AprilEventPage() {
             <ul className="space-y-3 text-sm" style={{ color: "var(--text-muted)" }}>
               <li>→ <a href="https://www.youtube.com/live/wfVaB71ZXCo?si=phsA05BXwxVwfOuK&t=175" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Watch the full YouTube replay</a></li>
               <li>→ <a href="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-0426.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Download Caelan's slides (PDF)</a></li>
+              <li>→ Demo site from Greg's workflow: <a href="https://yt.pipehq.co.nz/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">yt.pipehq.co.nz</a></li>
+              <li>→ Demo site from Caelan + Puck's live build: <a href="https://demo.openclaws.nz/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">demo.openclaws.nz</a></li>
               <li>→ <a href="https://ai-coaching.academy/events/prompt-like-a-pro-practical-ai-techniques" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">Prompt Like a Pro — practical AI techniques workshop</a></li>
               <li>→ <a href="https://join.ai-coaching.academy/founders" target="_blank" rel="noopener noreferrer" className="underline hover:text-black transition-colors">AI Coaching Academy Founders plan</a></li>
             </ul>
