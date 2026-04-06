@@ -4,6 +4,14 @@ import SiteHeader from "../components/SiteHeader";
 
 const PAST_EVENTS = [
   {
+    slug: "april-ai-meetup-vibe-coding-web-apps-2026",
+    title: "Vibe Coding & Web App Development with AI",
+    date: "Monday, 6 April 2026",
+    speakers: ["Greg Dickson", "Caelan Huntress"],
+    image: "/images/past-event-march-2026.jpg",
+    description: "Greg Dickson on turning SOPs into working web apps with Manis, plus Caelan Huntress on vibe coding with Claude, agents, skills, and live app demos.",
+  },
+  {
     slug: "ai-image-video-generation-march-2026",
     title: "AI Multimedia: Image Generation & Video Generation",
     date: "Monday, 2 March 2026",
