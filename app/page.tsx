@@ -5,29 +5,6 @@ import SiteHeader from "./components/SiteHeader";
 
 const EVENTS = [
   {
-    month: "April",
-    date: "Monday, 6 April 2026",
-    time: "5:30 – 8:00 PM NZST",
-    title: "Vibe Coding & Web App Development with AI",
-    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
-    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
-    meetupUrl: "https://www.meetup.com/christchurch-ai/events/313137130/",
-    pageUrl: "/vibe-coding-april-2026",
-    image: "/images/event-april-2026.jpg",
-    talks: [
-      {
-        speaker: "Greg Dickson",
-        title: "From SOP to Web App (No Developers Required)",
-        bio: "How non-developers can transform Standard Operating Procedures into fully functional web applications — no coding experience needed.",
-      },
-      {
-        speaker: "Caelan Huntress",
-        title: "Vibe Coding with Claude",
-        bio: "Build software by describing what you want instead of writing code. Express your ideas naturally and watch them become working software.",
-      },
-    ],
-  },
-  {
     month: "May",
     date: "Monday, 4 May 2026",
     time: "5:30 – 8:00 PM NZST",
@@ -50,29 +27,6 @@ const EVENTS = [
       },
     ],
   },
-  {
-    month: "April",
-    date: "Two Tuesdays each month",
-    time: "12:00 – 1:00 PM NZST",
-    title: "OpenClaw User Group",
-    venue: "EPIC Innovation, 76/106 Manchester Street, Christchurch",
-    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
-    meetupUrl: "https://www.meetup.com/christchurch-ai/",
-    image: "/images/openclaw-user-group.jpg",
-    sessions: [
-      {
-        label: "Session 1",
-        time: "Tue, Apr 7 · 12:00 PM NZST",
-        href: "https://www.meetup.com/christchurch-ai/events/314023251/",
-      },
-      {
-        label: "Session 2",
-        time: "Tue, Apr 21 · 12:00 PM NZST",
-        href: "https://www.meetup.com/christchurch-ai/events/314023274/",
-      },
-    ],
-    description: "A casual OpenClaw lunch meetup for people running the open-source AI agent on their own machine or VPS. Share best practices, ideas, resources, and the occasional show-and-tell at EPIC Innovation.",
-  },
 ];
 
 const PAST_TALKS = [
@@ -90,18 +44,6 @@ export default function Home() {
     "location": { "@type": "Place", "name": "EPIC Innovation Centre, Christchurch, New Zealand" },
     "sameAs": ["https://meetup.com/christchurch-ai"],
     "sponsor": { "@type": "Organization", "name": "AI Coaching Academy", "url": "https://ai-coaching.academy" },
-  };
-
-  const aprilSchema = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Christchurch AI Meetup — April 2026: Vibe Coding & Web App Development with AI",
-    "startDate": "2026-04-06T17:30:00+12:00",
-    "endDate": "2026-04-06T20:00:00+12:00",
-    "location": { "@type": "Place", "name": "EPIC Innovation Centre", "address": { "@type": "PostalAddress", "streetAddress": "78-100 Manchester St", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
-    "organizer": { "@type": "Organization", "name": "Christchurch Artificial Intelligence", "url": "https://christchurch-ai.com" },
-    "isAccessibleForFree": true,
-    "url": "https://www.meetup.com/christchurch-ai/events/313137130/",
   };
 
   const maySchema = {
@@ -132,7 +74,6 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aprilSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(maySchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredWorkshopSchema) }} />
 
@@ -219,12 +160,6 @@ export default function Home() {
                   <p className="text-sm mb-5" style={{ color: "var(--text-muted)" }}>
                     {event.date} · {event.time}
                   </p>
-                  {"description" in event && event.description ? (
-                    <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>
-                      {event.description}
-                    </p>
-                  ) : null}
-
                   <div className="flex items-start gap-3 mb-4">
                     <span className="text-lg">📍</span>
                     <div>
@@ -239,47 +174,22 @@ export default function Home() {
                   <div className="flex items-start gap-3 mb-6">
                     <span className="text-lg">🍺</span>
                     <div className="text-xs" style={{ color: "var(--text-muted)" }}>
-                      {"sessions" in event && event.sessions ? (
-                        <>
-                          Casual lunch meetup · Bring a bag lunch if you're hungry · OpenClaw show &amp; tell welcome<br />
-                          Sponsored by <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer"
-                            className="underline hover:text-white transition-colors">OpenClaws</a>
-                        </>
-                      ) : (
-                        <>
-                          Drinks & networking 5:30–6:00 PM · Talks 6:00–7:30 PM · Open Q&A until 8:00 PM<br />
-                          Sponsored by <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer"
-                            className="underline hover:text-white transition-colors">AI Coaching Academy</a>
-                        </>
-                      )}
+                      Drinks & networking 5:30–6:00 PM · Talks 6:00–7:30 PM · Open Q&amp;A until 8:00 PM<br />
+                      Sponsored by <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer"
+                        className="underline hover:text-white transition-colors">AI Coaching Academy</a>
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4 mb-6">
-                    {"sessions" in event && event.sessions
-                      ? event.sessions.map((session) => (
-                          <a
-                            key={session.href}
-                            href={session.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-xl border p-4 block transition-all hover:border-blue-500"
-                            style={{ borderColor: "var(--border)", background: "var(--background)" }}
-                          >
-                            <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Upcoming time</div>
-                            <div className="font-bold mb-1">{session.time}</div>
-                            <div className="text-xs" style={{ color: "var(--text-muted)" }}>RSVP on Meetup →</div>
-                          </a>
-                        ))
-                      : event.talks.map((talk) => (
-                          <div key={talk.speaker} className="rounded-xl border p-4"
-                            style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-                            <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Speaker</div>
-                            <div className="font-bold mb-1">{talk.speaker}</div>
-                            <div className="text-xs leading-relaxed mb-2 text-white">{talk.title}</div>
-                            <div className="text-xs" style={{ color: "var(--text-muted)" }}>{talk.bio}</div>
-                          </div>
-                        ))}
+                    {event.talks.map((talk) => (
+                      <div key={talk.speaker} className="rounded-xl border p-4"
+                        style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+                        <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--accent)" }}>Speaker</div>
+                        <div className="font-bold mb-1">{talk.speaker}</div>
+                        <div className="text-xs leading-relaxed mb-2 text-white">{talk.title}</div>
+                        <div className="text-xs" style={{ color: "var(--text-muted)" }}>{talk.bio}</div>
+                      </div>
+                    ))}
                   </div>
 
                   <div className="flex items-center gap-3 flex-wrap">
