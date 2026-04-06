@@ -37,6 +37,12 @@ export default function AprilEventPage() {
         </nav>
 
         <article className="max-w-3xl mx-auto px-6 py-16">
+          <img
+            src="https://secure.meetupstatic.com/photos/event/8/3/7/d/highres_532593661.webp?w=1080"
+            alt="April 2026 Christchurch AI meetup at EPIC Innovation"
+            className="w-full rounded-2xl mb-10"
+            style={{ border: "1px solid var(--border)" }}
+          />
           <div className="flex items-center gap-2 text-sm mb-8" style={{ color: "var(--text-muted)" }}>
             <Link href="/" className="hover:text-black transition-colors">Home</Link>
             <span>/</span>
