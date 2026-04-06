@@ -8,7 +8,7 @@ const PAST_EVENTS = [
     title: "Vibe Coding & Web App Development with AI",
     date: "Monday, 6 April 2026",
     speakers: ["Greg Dickson", "Caelan Huntress"],
-    image: "/images/past-event-march-2026.jpg",
+    image: "https://secure.meetupstatic.com/photos/event/8/3/7/d/highres_532593661.webp?w=1080",
     description: "Greg Dickson on turning SOPs into working web apps with Manis, plus Caelan Huntress on vibe coding with Claude, agents, skills, and live app demos.",
   },
   {
