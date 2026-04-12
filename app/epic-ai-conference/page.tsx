@@ -677,10 +677,7 @@ export default function EpicAIConferencePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Speakers & Panelists
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#004aad" }}>Profiles across the day</h2>
-            <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
-              These speaker sections are intentionally longer and more editorial, so visitors can understand not just the names on the programme, but the kind of experience, perspective, and conversation each person brings into the room. Image areas are left as placeholders for headshots to be added later.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-10" style={{ color: "#004aad" }}>Profiles across the day</h2>
 
             <div className="space-y-12">
               <div>
