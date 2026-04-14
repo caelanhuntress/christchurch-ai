@@ -107,6 +107,15 @@ export default function Home() {
               Upcoming Events ↓
             </a>
           </div>
+          <div className="mt-8 rounded-2xl border p-5 max-w-3xl mx-auto"
+            style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
+              Featured TechWeek event
+            </div>
+            <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              Looking for the <Link href="/epic-ai-conference" className="underline font-semibold" style={{ color: "var(--accent)" }}>EPIC AI Conference Christchurch</Link>? See the full TechWeek programme, speaker lineup, and registration links for the all-day AI conference at EPIC Innovation.
+            </p>
+          </div>
         </section>
 
         {/* Stats */}
