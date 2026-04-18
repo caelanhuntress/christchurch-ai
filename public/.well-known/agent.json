@@ -1,0 +1,10 @@
+{
+  "name": "Christchurch AI",
+  "description": "Christchurch AI is a community for people in Canterbury who are building with, thinking about, and curious about artificial intelligence.",
+  "url": "https://christchurch-ai.com",
+  "documentation_url": "https://christchurch-ai.com/llms.txt",
+  "provider": {
+    "organization": "Christchurch AI",
+    "url": "https://christchurch-ai.com"
+  }
+}

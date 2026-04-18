@@ -32,6 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en-NZ">
       <head>
+        <link rel="alternate" type="text/markdown" href="https://christchurch-ai.com/llms.txt" title="LLMs.txt for Christchurch AI" />
+        <link rel="agent-manifest" href="https://christchurch-ai.com/.well-known/agent.json" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6KY137HZWN"
           strategy="afterInteractive"
