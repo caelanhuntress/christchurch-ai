@@ -15,5 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/vibe-coding-april-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/past-events`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/blog/epic-ai-conference-christchurch`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
 }

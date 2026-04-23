@@ -52,6 +52,12 @@ const posts = [
     excerpt: "Looking for the EPIC AI Conference in Christchurch? Start here for the full programme, speaker lineup, venue details, and direct registration links.",
   },
   {
+    slug: "epic-ai-conference-christchurch",
+    title: "EPIC AI Conference Christchurch: Full TechWeek Guide",
+    date: "April 2026",
+    excerpt: "Looking for the EPIC AI Conference in Christchurch? Start here for the full programme, speaker lineup, venue details, and direct registration links.",
+  },
+  {
     slug: "ai-speaker-christchurch",
     title: "How to Speak at an AI Event in Christchurch",
     date: "March 2026",
