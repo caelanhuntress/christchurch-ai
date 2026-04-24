@@ -260,29 +260,77 @@ export const metadata: Metadata = {
   },
 };
 
-const eventSchema = dayEvents.map((event) => ({
-  "@context": "https://schema.org",
-  "@type": "Event",
-  name: event.title,
-  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  eventStatus: "https://schema.org/EventScheduled",
-  location: {
-    "@type": "Place",
-    name: "EPIC Innovation Centre",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "78-100 Manchester Street",
-      addressLocality: "Christchurch",
-      addressRegion: "Canterbury",
-      addressCountry: "NZ",
+const eventSchedule = {
+  "am-workshops": {
+    startDate: "2026-05-21T09:00:00+12:00",
+    endDate: "2026-05-21T11:45:00+12:00",
+    image: "https://christchurch-ai.com/images/epic-ai-conference/epic-ai-am.png",
+    description:
+      "Hands-on AI workshops at the EPIC AI Conference in Christchurch, part of TechWeekNZ, covering learning, meeting intelligence, workflow design, nonprofit impact, and creative AI.",
+    organizer: { name: "Christchurch AI", url: "https://christchurch-ai.com" },
+    performer: [{ "@type": "Person", name: "Caelan Huntress" }, { "@type": "Person", name: "Hannah Hardy-Jones" }, { "@type": "Person", name: "Steve Fox" }, { "@type": "Person", name: "Lois McClintock" }, { "@type": "Person", name: "Arthur Machado" }],
+  },
+  "coffee-and-jam": {
+    startDate: "2026-05-21T12:00:00+12:00",
+    endDate: "2026-05-21T13:15:00+12:00",
+    image: "https://christchurch-ai.com/images/epic-ai-conference/chchai-tw26-bg.png",
+    description:
+      "Ministry of Awesome Coffee and Jam at EPIC Innovation during TechWeekNZ, connecting Christchurch founders, innovators, and the AI community over lunch.",
+    organizer: { name: "Ministry of Awesome", url: "https://ministryofawesome.com/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26" },
+    performer: [{ "@type": "Organization", name: "Ministry of Awesome" }],
+  },
+  "pm-presentations": {
+    startDate: "2026-05-21T13:30:00+12:00",
+    endDate: "2026-05-21T17:00:00+12:00",
+    image: "https://christchurch-ai.com/images/epic-ai-conference/epic-ai-pm.png",
+    description:
+      "Afternoon presentations at the EPIC AI Conference in Christchurch, featuring talks on operations, AI safety, privacy, and the future of AI adoption.",
+    organizer: { name: "Christchurch AI", url: "https://christchurch-ai.com" },
+    performer: [{ "@type": "Person", name: "Varsha Das" }, { "@type": "Person", name: "Emma Humphrey" }, { "@type": "Person", name: "Dr Chandranil Chakraborttii" }, { "@type": "Person", name: "Caelan Huntress" }],
+  },
+  "leadership-panel": {
+    startDate: "2026-05-21T17:30:00+12:00",
+    endDate: "2026-05-21T19:00:00+12:00",
+    image: "https://christchurch-ai.com/images/epic-ai-conference/epic-ai-panel.png",
+    description:
+      "Leadership in the Age of AI panel discussion at the EPIC AI Conference in Christchurch, focused on trust, organisational change, and leadership in an AI-driven world.",
+    organizer: { name: "Christchurch AI", url: "https://christchurch-ai.com" },
+    performer: [{ "@type": "Person", name: "Anya Anderson" }, { "@type": "Person", name: "Julie Ryan" }, { "@type": "Person", name: "Brad Fraser" }, { "@type": "Person", name: "Tom Sweeney" }],
+  },
+} as const;
+
+const eventSchema = dayEvents.map((event) => {
+  const schedule = eventSchedule[event.slug];
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.title,
+    startDate: schedule.startDate,
+    endDate: schedule.endDate,
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    description: schedule.description,
+    image: schedule.image,
+    location: {
+      "@type": "Place",
+      name: "EPIC Innovation Centre",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "78-100 Manchester Street",
+        addressLocality: "Christchurch",
+        addressRegion: "Canterbury",
+        addressCountry: "NZ",
+      },
     },
-  },
-  url: event.href,
-  organizer: {
-    "@type": "Organization",
-    name: event.slug === "coffee-and-jam" ? "Ministry of Awesome" : "Christchurch AI",
-  },
-}));
+    url: event.href,
+    organizer: {
+      "@type": "Organization",
+      name: schedule.organizer.name,
+      url: schedule.organizer.url,
+    },
+    performer: schedule.performer,
+  };
+});
 
 const pageSchema = {
   "@context": "https://schema.org",
