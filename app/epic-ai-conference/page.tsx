@@ -235,6 +235,11 @@ const faq = [
   },
 ] as const;
 
+const socialImage = {
+  url: "https://christchurch-ai.com/images/epic-ai-conference/chchai-tw26-bg.png",
+  alt: "EPIC AI Conference Christchurch TechWeek26 background",
+};
+
 export const metadata: Metadata = {
   title: "EPIC AI Conference Christchurch | TechWeekNZ at EPIC Innovation",
   description:
@@ -256,7 +261,14 @@ export const metadata: Metadata = {
     siteName: "Christchurch AI",
     locale: "en_NZ",
     type: "website",
-    images: ["https://christchurch-ai.com/images/epic-ai-conference/epic-ai-am.png"],
+    images: [socialImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EPIC AI Conference Christchurch | TechWeekNZ",
+    description:
+      "A community-focused guide to a full day of AI workshops, networking, presentations, and leadership discussion at EPIC Innovation in Christchurch.",
+    images: [socialImage.url],
   },
 };
 
