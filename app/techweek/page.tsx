@@ -330,7 +330,7 @@ function EventSection({
           </div>
 
           <div className={reverse ? "lg:order-1" : ""}>
-            <div className="relative aspect-[2/1] w-full overflow-hidden rounded-3xl border" style={{ borderColor: "var(--border)" }}>
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-3xl border" style={{ borderColor: "var(--border)" }}>
               <Image
                 src={event.image}
                 alt={event.title}
