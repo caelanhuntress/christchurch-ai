@@ -371,10 +371,10 @@ export default function TechWeekPage() {
                 TechWeek events
               </h1>
               <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "var(--foreground)" }}>
-                Looking for TechWeek Christchurch events? This page brings together the full Christchurch AI programme — from online sessions on OpenClaw, agent management, governance, and coaching through to the EPIC AI Conference day and the closing AI Roadmap Workshop.
+                Looking for TechWeek Christchurch events? This page brings together the full Christchurch AI programme — from online sessions on OpenClaw, agent management, governance, and coaching through to the EPIC AI Conference day and the closing AI Roadmap Workshop. It sits inside the wider <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=techweekpage&utm_campaign=caelanhuntress" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">Techweek NZ festival programme</a>, so you can explore the national schedule as well as the Christchurch AI lineup.
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "var(--foreground)" }}>
-                It is designed as a practical guide to TechWeek events in Christchurch, following the week in chronological order so people can scan the programme, compare formats, and jump straight to the RSVP link that fits them.
+                It is designed as a practical guide to TechWeek events in Christchurch, following the week in chronological order so people can scan the programme, compare formats, and jump straight to the RSVP link that fits them. If you want to go deeper on the people and projects behind these sessions, you can also explore <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">AI Coaching Academy</a>, <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">OpenClaws NZ AI assistant installation</a>, and <a href="https://caelanhuntress.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">Caelan Huntress</a>.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
@@ -402,7 +402,7 @@ export default function TechWeekPage() {
               <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>Some sessions are built for leaders. Some are for hands-on practitioners. Some are simply for curious people who want a better room to think in.</p>
                 <p>The through-line across these TechWeek events in Christchurch is practical capability: better operators, better questions, stronger communities, and a clearer sense of how AI belongs in real work.</p>
-                <p>If you want the flagship in-person day, start with the EPIC AI Conference on Thursday. If you want focused online sessions or a practical workshop, the rest of the Christchurch TechWeek programme has those covered too.</p>
+                <p>If you want the flagship in-person day, start with the EPIC AI Conference on Thursday. If you want focused online sessions or a practical workshop, the rest of the Christchurch TechWeek programme has those covered too — or browse the <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=techweekpage&utm_campaign=caelanhuntress" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">official Techweek NZ event schedule</a> for the wider national festival.</p>
               </div>
               <div className="mt-6 pt-6 border-t" style={{ borderColor: "var(--border)" }}>
                 <a
@@ -428,7 +428,7 @@ export default function TechWeekPage() {
                 The week starts online with OpenClaw office hours and a session on managing AI agents, moves into governance and leadership, then expands into a full in-person conference day at EPIC with workshops, founder networking, talks, and a closing panel.
               </p>
               <p>
-                Friday and Saturday shift back into smaller-format practical sessions: one designed for reflection and coaching, the other for turning AI interest into a concrete roadmap for adoption. If you are searching for Christchurch tech events during TechWeek26, this page is the fastest way to see the full AI-focused run sheet.
+                Friday and Saturday shift back into smaller-format practical sessions: one designed for reflection and coaching, the other for turning AI interest into a concrete roadmap for adoption. If you are searching for Christchurch tech events during TechWeek26, this page is the fastest way to see the full AI-focused run sheet. For the in-depth conference breakdown, jump to the <a href="https://christchurch-ai.com/epic-ai-conference" style={{ color: "var(--accent)" }} className="font-semibold">EPIC AI Conference programme</a>, and for the broader local community behind these sessions, visit the <Link href="/" style={{ color: "var(--accent)" }} className="font-semibold">Christchurch AI homepage</Link>.
               </p>
             </div>
           </div>
