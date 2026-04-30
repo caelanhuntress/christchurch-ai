@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/epic-ai-conference`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${base}/techweek`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${base}/epic-innovation-ai-events`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/ai-governance-may-2026`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/ai-meetup-christchurch`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
