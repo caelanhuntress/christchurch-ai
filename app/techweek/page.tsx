@@ -330,8 +330,15 @@ function EventSection({
           </div>
 
           <div className={reverse ? "lg:order-1" : ""}>
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-3xl border" style={{ borderColor: "var(--border)" }}>
-              <Image src={event.image} alt={event.title} fill style={{ objectFit: "cover" }} />
+            <div className="relative aspect-[2/1] w-full overflow-hidden rounded-3xl border" style={{ borderColor: "var(--border)" }}>
+              <Image
+                src={event.image}
+                alt={event.title}
+                fill
+                quality={95}
+                sizes="(min-width: 1280px) 42vw, (min-width: 1024px) 45vw, 100vw"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
             </div>
           </div>
         </div>
