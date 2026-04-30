@@ -144,7 +144,7 @@ const events = [
     title: "AI Roadmap Workshop",
     href: "https://events.humanitix.com/ai-roadmap-workshop-0526",
     buttonLabel: "RSVP",
-    image: "/images/techweek/ai-roadmap-workshop.jpg",
+    image: "/images/techweek/ai-roadmap-workshop.png",
     date: "Saturday 23 May 2026",
     time: "10:00am–12:00pm",
     venue: "EPIC Innovation, Christchurch",
