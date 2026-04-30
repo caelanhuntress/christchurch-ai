@@ -32,7 +32,7 @@ export default function SiteHeader({ homeMode = false }: SiteHeaderProps) {
             href="https://meetup.com/christchurch-ai"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-5 py-2 rounded-full font-semibold text-sm transition-all hover:opacity-90"
+            className="light-mode-accent-link inline-block px-5 py-2 rounded-full font-semibold text-sm transition-all hover:opacity-90"
             style={{ background: "var(--accent)", color: "#ffffff" }}
           >
             Join Free →

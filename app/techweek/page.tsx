@@ -156,23 +156,29 @@ const events = [
   },
 ] as const;
 
+const leadInEvents = events.slice(0, 3);
+const thursdayEvents = events.slice(3, 7);
+const closingEvents = events.slice(7);
+
 export const metadata: Metadata = {
-  title: "TechWeek 2026 | Christchurch AI Events",
+  title: "TechWeek Christchurch 2026 | Christchurch TechWeek Events",
   description:
-    "All Christchurch AI TechWeek 2026 events in one place: online sessions, the EPIC AI Conference day, Coffee & Jam, and hands-on workshops with direct RSVP links.",
+    "Browse TechWeek Christchurch events in one place, including Christchurch AI online sessions, the EPIC AI Conference day, Coffee & Jam, and practical AI workshops across Ōtautahi.",
   keywords: [
-    "Christchurch AI TechWeek",
-    "TechWeek Christchurch AI events",
-    "EPIC AI Conference",
-    "AI Roadmap Workshop",
-    "AI Governance New Zealand",
-    "Managing AI Agents",
+    "techweek christchurch",
+    "techweek events in christchurch",
+    "christchurch techweek events",
+    "christchurch ai techweek",
+    "christchurch tech events may 2026",
+    "epic ai conference christchurch",
+    "ai events christchurch",
+    "techweek nz christchurch",
   ],
   alternates: { canonical: "https://christchurch-ai.com/techweek" },
   openGraph: {
-    title: "Christchurch AI TechWeek 2026",
+    title: "TechWeek Christchurch 2026 | Christchurch AI Events",
     description:
-      "A single landing page for every Christchurch AI TechWeek event, from OpenClaw office hours to the EPIC AI Conference and closing workshop.",
+      "A guide to TechWeek Christchurch events from Christchurch AI, including online sessions, the EPIC AI Conference programme, and closing workshops in Ōtautahi.",
     url: "https://christchurch-ai.com/techweek",
     siteName: "Christchurch AI",
     locale: "en_NZ",
@@ -181,9 +187,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christchurch AI TechWeek 2026",
+    title: "TechWeek Christchurch 2026 | Christchurch AI Events",
     description:
-      "All Christchurch AI TechWeek events in one place, with images, descriptions, dates, and RSVP links.",
+      "TechWeek events in Christchurch, with AI sessions, EPIC conference details, dates, venues, and RSVP links in one place.",
     images: [socialImage.url],
   },
 };
@@ -257,9 +263,9 @@ const eventSchema = events.map((event) => ({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Christchurch AI TechWeek 2026",
+  name: "TechWeek Christchurch 2026 | Christchurch AI",
   description:
-    "A landing page for Christchurch AI's TechWeek 2026 programme, including online sessions, the EPIC AI Conference day, and workshops.",
+    "A Christchurch AI landing page for TechWeek Christchurch 2026, covering online events, the EPIC AI Conference day, and practical workshops in Ōtautahi.",
   url: "https://christchurch-ai.com/techweek",
   publisher: {
     "@type": "Organization",
@@ -271,12 +277,21 @@ const pageSchema = {
 function EventSection({
   event,
   reverse,
+  background,
+  withTopBorder = true,
+  className = "px-6 py-14 md:py-18",
 }: {
   event: (typeof events)[number];
   reverse?: boolean;
+  background?: string;
+  withTopBorder?: boolean;
+  className?: string;
 }) {
   return (
-    <section className="px-6 py-14 md:py-18 border-t" style={{ borderColor: "var(--border)", background: reverse ? "var(--muted)" : "var(--background)" }}>
+    <section
+      className={`${className} ${withTopBorder ? "border-t" : ""}`.trim()}
+      style={{ borderColor: "var(--border)", background: background ?? (reverse ? "var(--muted)" : "var(--background)") }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className={`grid gap-8 lg:gap-10 items-center ${reverse ? "lg:grid-cols-[1.05fr_0.95fr]" : "lg:grid-cols-[0.95fr_1.05fr]"}`}>
           <div className={reverse ? "lg:order-2" : ""}>
@@ -349,15 +364,15 @@ export default function TechWeekPage() {
                 TechWeek events
               </h1>
               <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "var(--foreground)" }}>
-                Every Christchurch AI TechWeek event in one place — from online sessions on OpenClaw, agent management, governance, and coaching through to the full EPIC AI Conference day and the closing AI Roadmap Workshop.
+                Looking for TechWeek Christchurch events? This page brings together the full Christchurch AI programme — from online sessions on OpenClaw, agent management, governance, and coaching through to the EPIC AI Conference day and the closing AI Roadmap Workshop.
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "var(--foreground)" }}>
-                This page follows the full programme in chronological order so people can scan the week, see what each event is about, and jump straight to the RSVP link that fits them.
+                It is designed as a practical guide to TechWeek events in Christchurch, following the week in chronological order so people can scan the programme, compare formats, and jump straight to the RSVP link that fits them.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
-                  { stat: "9", label: "TechWeek events across one Christchurch AI programme" },
-                  { stat: "4", label: "EPIC conference sessions on Thursday 21 May" },
+                  { stat: "9", label: "TechWeek Christchurch events across one Christchurch AI programme" },
+                  { stat: "4", label: "EPIC conference sessions grouped into one Thursday Christchurch event day" },
                   { stat: "2", label: "online workshops and strategy sessions after the conference day" },
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
@@ -379,13 +394,13 @@ export default function TechWeekPage() {
               <h2 className="text-2xl font-bold mb-4" style={{ color: "#004aad" }}>One week, multiple ways in</h2>
               <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>Some sessions are built for leaders. Some are for hands-on practitioners. Some are simply for curious people who want a better room to think in.</p>
-                <p>The through-line is practical capability: better operators, better questions, stronger communities, and a clearer sense of how AI belongs in real work.</p>
-                <p>If you want the flagship in-person day, start with the EPIC AI Conference on Thursday. If you want focused online sessions or a practical workshop, the rest of the week has those covered too.</p>
+                <p>The through-line across these TechWeek events in Christchurch is practical capability: better operators, better questions, stronger communities, and a clearer sense of how AI belongs in real work.</p>
+                <p>If you want the flagship in-person day, start with the EPIC AI Conference on Thursday. If you want focused online sessions or a practical workshop, the rest of the Christchurch TechWeek programme has those covered too.</p>
               </div>
               <div className="mt-6 pt-6 border-t" style={{ borderColor: "var(--border)" }}>
                 <a
                   href="https://christchurch-ai.com/epic-ai-conference"
-                  className="inline-block px-6 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
+                  className="light-mode-accent-link inline-block px-6 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
                   style={{ background: "var(--accent)", color: "#ffffff" }}
                 >
                   View conference page →
@@ -400,20 +415,62 @@ export default function TechWeekPage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Programme overview
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-5" style={{ color: "#004aad" }}>Christchurch AI across TechWeek</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-5" style={{ color: "#004aad" }}>TechWeek events in Christchurch, mapped out</h2>
             <div className="space-y-4 text-base leading-relaxed max-w-4xl" style={{ color: "var(--text-muted)" }}>
               <p>
                 The week starts online with OpenClaw office hours and a session on managing AI agents, moves into governance and leadership, then expands into a full in-person conference day at EPIC with workshops, founder networking, talks, and a closing panel.
               </p>
               <p>
-                Friday and Saturday shift back into smaller-format practical sessions: one designed for reflection and coaching, the other for turning AI interest into a concrete roadmap for adoption.
+                Friday and Saturday shift back into smaller-format practical sessions: one designed for reflection and coaching, the other for turning AI interest into a concrete roadmap for adoption. If you are searching for Christchurch tech events during TechWeek26, this page is the fastest way to see the full AI-focused run sheet.
               </p>
             </div>
           </div>
         </section>
 
-        {events.map((event, index) => (
+        {leadInEvents.map((event, index) => (
           <EventSection key={event.slug} event={event} reverse={index % 2 === 1} />
+        ))}
+
+        <section className="px-6 py-16 border-t" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+          <div
+            className="max-w-6xl mx-auto rounded-[2rem] border overflow-hidden"
+            style={{
+              borderColor: "var(--border)",
+              background: "color-mix(in srgb, var(--muted) 84%, var(--accent) 16%)",
+            }}
+          >
+            <div className="px-6 md:px-8 py-8 md:py-10 border-b" style={{ borderColor: "var(--border)" }}>
+              <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
+                Thursday 21 May · EPIC conference day
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#004aad" }}>
+                One in-person TechWeek Christchurch event, four connected sessions
+              </h2>
+              <div className="space-y-4 text-base leading-relaxed max-w-4xl" style={{ color: "var(--text-muted)" }}>
+                <p>
+                  These four Thursday sessions work best as one continuous Christchurch TechWeek experience at EPIC: practical workshops in the morning, founder networking over lunch, implementation-focused presentations in the afternoon, and a closing panel on leadership and trust.
+                </p>
+                <p>
+                  If you are prioritising one flagship day among TechWeek events in Christchurch, this is it.
+                </p>
+              </div>
+            </div>
+
+            {thursdayEvents.map((event, index) => (
+              <EventSection
+                key={event.slug}
+                event={event}
+                reverse={index % 2 === 1}
+                background="transparent"
+                withTopBorder={index !== 0}
+                className="px-6 md:px-8 py-12 md:py-14"
+              />
+            ))}
+          </div>
+        </section>
+
+        {closingEvents.map((event, index) => (
+          <EventSection key={event.slug} event={event} reverse={index % 2 === 0} />
         ))}
       </main>
 
