@@ -199,12 +199,12 @@ export default function Home() {
             {EVENTS.map((event, idx) => (
               <div key={event.month} className="rounded-2xl border overflow-hidden" style={{ borderColor: "var(--border)" }}>
                 {/* Event image */}
-                <div className="relative w-full" style={{ height: "240px" }}>
+                <div className="relative w-full" style={{ height: "360px" }}>
                   <Image
                     src={event.image}
                     alt={`${event.month} 2026 Christchurch AI Meetup — ${event.title}`}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "cover", objectPosition: "center top" }}
                     priority={idx === 0}
                   />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(15,23,42,0.75) 0%, transparent 60%)" }} />
