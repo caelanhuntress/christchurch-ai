@@ -27,6 +27,52 @@ const EVENTS = [
       },
     ],
   },
+  {
+    month: "June",
+    date: "Monday, 8 June 2026",
+    time: "5:30 – 8:00 PM NZST",
+    title: "Agent Management & Engineering Habits",
+    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
+    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
+    meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554727/",
+    pageUrl: "/agent-management-june-2026",
+    image: "/june-agent-management-2026.svg",
+    talks: [
+      {
+        speaker: "Caelan Huntress",
+        title: "Agent Management: The Next High-Value Skillset",
+        bio: "How to scope agentic projects, manage autonomous systems, and build the evaluation habits that make agents useful in real work.",
+      },
+      {
+        speaker: "Blake Burgess",
+        title: "Agent Habits with an Engineer's Mindset",
+        bio: "A practical walkthrough of local vs cloud agents, harnesses, models, and the habits that help engineers work well with them.",
+      },
+    ],
+  },
+  {
+    month: "July",
+    date: "Monday, 13 July 2026",
+    time: "5:30 – 8:00 PM NZST",
+    title: "AI in Healthcare & Agri-Food Industries",
+    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
+    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
+    meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554735/",
+    pageUrl: "/ai-healthcare-agrifood-july-2026",
+    image: "/july-healthcare-agrifood-2026.svg",
+    talks: [
+      {
+        speaker: "Rowena Woolgar",
+        title: "AI Is Not Neutral: Designing Healthcare AI for Real Work, Real Risk",
+        bio: "A grounded look at safe healthcare AI delivery across clinical, administrative, and system-level contexts.",
+      },
+      {
+        speaker: "Dr Harold Mayaba",
+        title: "AI in Agri-Food: Real Opportunities and Smarter Growth",
+        bio: "How AI, market intelligence, and consumer behaviour can create practical advantage in New Zealand's agri-food sector.",
+      },
+    ],
+  },
 ];
 
 const PAST_TALKS = [

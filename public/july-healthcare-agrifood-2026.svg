@@ -1,0 +1,20 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#08111f"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1330" cy="200" r="240" fill="#16a34a" fill-opacity="0.24"/>
+  <circle cx="250" cy="760" r="320" fill="#004aad" fill-opacity="0.34"/>
+  <rect x="88" y="88" width="1424" height="724" rx="36" fill="#0b1526" fill-opacity="0.72" stroke="#1f2937"/>
+  <text x="140" y="180" fill="#4ade80" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="3">CHRISTCHURCH AI · JULY 2026</text>
+  <text x="140" y="315" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700">AI in Healthcare &amp;</text>
+  <text x="140" y="405" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700">Agri-Food Industries</text>
+  <text x="140" y="500" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="36">Rowena Woolgar · Dr Harold Mayaba</text>
+  <text x="140" y="558" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="30">Monday 13 July 2026 · 5:30–8:00 PM · EPIC Innovation Centre</text>
+  <rect x="140" y="632" width="560" height="96" rx="48" fill="#004aad"/>
+  <text x="190" y="692" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Industry-specific AI adoption</text>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+</svg>
