@@ -107,19 +107,18 @@ export default function Home() {
               Upcoming Events ↓
             </a>
           </div>
-          <div className="mt-8 rounded-2xl border p-5 max-w-3xl mx-auto"
+          <div className="mt-8 rounded-2xl border p-5 max-w-3xl mx-auto text-left"
             style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-            <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
-              Featured TechWeek event
+            <div className="aspect-[16/7] w-full overflow-hidden rounded-xl border mb-4"
+              style={{ borderColor: "var(--border)" }}>
+              <img
+                src="https://www.dropbox.com/scl/fi/msas8w10tri0367bqiecj/chchai-tw26-bg.png?rlkey=hk9hr6enanm7gvrafd5lhlx60&raw=1"
+                alt="Christchurch AI TechWeek 2026 featured event"
+                className="h-full w-full object-cover"
+              />
             </div>
-            <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              Looking for the <Link href="/epic-ai-conference" className="underline font-semibold" style={{ color: "var(--accent)" }}>EPIC AI Conference Christchurch</Link>? See the full TechWeek programme, speaker lineup, and registration links for the all-day AI conference at EPIC Innovation.
-            </p>
-          </div>
-          <div className="mt-8 rounded-2xl border p-5 max-w-3xl mx-auto"
-            style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
             <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
-              Featured TechWeek event
+              Featured Techweek Event - Thursday, 21 May, 2026
             </div>
             <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
               Looking for the <Link href="/epic-ai-conference" className="underline font-semibold" style={{ color: "var(--accent)" }}>EPIC AI Conference Christchurch</Link>? See the full TechWeek programme, speaker lineup, and registration links for the all-day AI conference at EPIC Innovation.
