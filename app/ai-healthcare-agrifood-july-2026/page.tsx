@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "July AI Meetup — AI in Healthcare & Agri-Food Industries",
     description: "Rowena Woolgar and Dr Harold Mayaba at Christchurch AI — Monday 13 July 2026 at EPIC Innovation Centre.",
-    images: ["https://christchurch-ai.com/july-healthcare-agrifood-2026.svg"],
+    images: ["https://christchurch-ai.com/chchai-0726.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "July AI Meetup — AI in Healthcare & Agri-Food Industries",
     description: "Christchurch AI meetup — Rowena Woolgar and Dr Harold Mayaba, Monday 13 July 2026.",
-    images: ["https://christchurch-ai.com/july-healthcare-agrifood-2026.svg"],
+    images: ["https://christchurch-ai.com/chchai-0726.png"],
   },
   alternates: { canonical: "https://christchurch-ai.com/ai-healthcare-agrifood-july-2026" },
 };
@@ -98,7 +98,7 @@ export default function AIHealthcareAgrifoodJuly2026() {
         </div>
 
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-          <img src="/july-healthcare-agrifood-2026.svg" alt="Christchurch AI July 2026 featured speakers Rowena Woolgar and Dr Harold Mayaba" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+          <img src="/chchai-0726.png" alt="Christchurch AI July 2026 featured speakers Rowena Woolgar and Dr Harold Mayaba" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
 
           <p>
             Generic AI advice only takes you so far. The real adoption work happens inside specific industries,

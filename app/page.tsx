@@ -36,7 +36,7 @@ const EVENTS = [
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554727/",
     pageUrl: "/agent-management-june-2026",
-    image: "/june-agent-management-2026.svg",
+    image: "/chchai-0626.png",
     talks: [
       {
         speaker: "Caelan Huntress",
@@ -59,7 +59,7 @@ const EVENTS = [
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554735/",
     pageUrl: "/ai-healthcare-agrifood-july-2026",
-    image: "/july-healthcare-agrifood-2026.svg",
+    image: "/chchai-0726.png",
     talks: [
       {
         speaker: "Rowena Woolgar",
