@@ -183,22 +183,54 @@ export default function AIGovernanceMay2026() {
             </p>
           </div>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Should Come</h2>
-          <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>Business leaders responsible for AI strategy and implementation</li>
-            <li>People interested in AI governance, safety, and existential risk</li>
-            <li>Educators and trainers building AI literacy programmes</li>
-            <li>Anyone curious about what’s at stake as AI capabilities continue to accelerate</li>
-            <li>The curious — implementation and risk affect every serious AI user</li>
-          </ul>
+          <div className="space-y-5">
+            <p>
+              The event argued that AI success depends less on better prompts and more on building the leadership,
+              governance, coordination, and judgment systems that make powerful tools safe, shared, and strategically useful.
+            </p>
 
-          <h2 className="text-2xl font-bold text-white mt-10 mb-4">Format</h2>
-          <p>
-            Doors open at <strong className="text-white">5:30 PM</strong> for networking.
-            Talks begin at <strong className="text-white">6:00 PM</strong>.
-            Q&A and further networking until <strong className="text-white">8:00 PM</strong>.
-            Free to attend — no ticket required on the door.
-          </p>
+            <div>
+              <h2 className="text-2xl font-bold text-white mt-10 mb-4">
+                Key takeaways from Dr Elsamari Botha’s presentation, Beyond Prompting: Multi-Dimensional AI Literacy and New Operating Models for the AI Era
+              </h2>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li>AI adoption is failing because organisations are optimising individuals, not systems</li>
+                <li>Frontier firms treat AI as institutional capability</li>
+                <li>Big difference between AI as personal productivity and AI as organisational infrastructure</li>
+                <li>One person’s insight becomes everybody’s baseline.</li>
+                <li>Governance must be tied to value, not compliance theatre</li>
+                <li>The missing layer is coordination</li>
+                <li>AI literacy is too narrow; AI fluency needs judgment</li>
+              </ul>
+            </div>
+
+            <div>
+              <p>
+                The second speaker of the evening, Hazel Shanks, asked the question: What if the biggest risk isn’t misuse—but success?
+              </p>
+              <p className="mt-3">
+                Hazel introduced The Doom Thesis, an overview of Eliezer Yudkowsky’s book, “If Anyone Builds It, Everyone Dies”.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-white mt-10 mb-4">The doom thesis rests on three big claims:</h2>
+              <ol className="list-decimal list-inside space-y-2 ml-2">
+                <li>Intelligence is real and powerful. Humans dominate the planet because intelligence beats other advantages.</li>
+                <li>AI capabilities are still scaling rapidly. She argued there is no obvious wall yet, with benchmarks and task horizons continuing to rise.</li>
+                <li>AI systems are grown, not crafted. We train models through optimisation, but do not fully understand what is happening inside them.</li>
+              </ol>
+            </div>
+
+            <p>
+              I’ll be giving my rebuttal to the Doom Thesis during TechWeek at the EPIC AI Conference in my presentation <strong className="text-white">The Case for a Superabundant Future.</strong>{" "}
+              You can see the agenda for the full-day conference on Thursday, 21 May at{" "}
+              <Link href="/epic-ai-conference" className="underline" style={{ color: "var(--accent)" }}>
+                the EPIC AI Conference page
+              </Link>
+              .
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-wrap gap-3">
             <a
