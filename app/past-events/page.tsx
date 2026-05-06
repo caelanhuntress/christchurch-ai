@@ -4,6 +4,15 @@ import SiteHeader from "../components/SiteHeader";
 
 const PAST_EVENTS = [
   {
+    slug: "ai-governance-may-2026",
+    href: "/ai-governance-may-2026",
+    title: "The AI Tension — Implementation vs Existential Risk",
+    date: "Monday, 4 May 2026",
+    speakers: ["Dr Elsamari Botha", "Hazel Shanks"],
+    image: "/chchai-0526-2.png",
+    description: "Replay, slides, and recap from Christchurch AI’s May meetup on AI literacy, governance, coordination, and the debate around the Doom Thesis.",
+  },
+  {
     slug: "april-ai-meetup-vibe-coding-web-apps-2026",
     title: "Vibe Coding & Web App Development with AI",
     date: "Monday, 6 April 2026",
@@ -51,7 +60,7 @@ export default function PastEventsPage() {
 
         <div className="space-y-8">
           {PAST_EVENTS.map((event) => (
-            <Link key={event.slug} href={`/past-events/${event.slug}`}
+            <Link key={event.slug} href={event.href ?? `/past-events/${event.slug}`}
               className="group block rounded-2xl border overflow-hidden hover:border-blue-300 transition-all"
               style={{ borderColor: "var(--border)" }}>
               <div className="flex flex-col md:flex-row">
