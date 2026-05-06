@@ -5,29 +5,6 @@ import SiteHeader from "./components/SiteHeader";
 
 const EVENTS = [
   {
-    month: "May",
-    date: "Monday, 4 May 2026",
-    time: "5:30 – 8:00 PM NZST",
-    title: "The AI Tension — Implementation vs Existential Risk",
-    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
-    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
-    meetupUrl: "https://meetup.com/christchurch-ai",
-    pageUrl: "/ai-governance-may-2026",
-    image: "/chchai-0526-2.png",
-    talks: [
-      {
-        speaker: "Dr Elsamari Botha",
-        title: "Beyond Prompting: Multi-Dimensional AI Literacy and New Operating Models for the AI Era",
-        bio: "AI is already being deployed across industries — but implementation is not just technical. It’s organisational, ethical, and strategic.",
-      },
-      {
-        speaker: "Hazel Shanks",
-        title: "The Doom Thesis — Why ‘If Anyone Builds It, Everyone Dies’",
-        bio: "What if the biggest risk isn’t misuse — but success? Hazel introduces the existential-risk case for advanced AI.",
-      },
-    ],
-  },
-  {
     month: "June",
     date: "Monday, 8 June 2026",
     time: "5:30 – 8:00 PM NZST",
@@ -92,16 +69,16 @@ export default function Home() {
     "sponsor": { "@type": "Organization", "name": "AI Coaching Academy", "url": "https://ai-coaching.academy" },
   };
 
-  const maySchema = {
+  const nextMeetupSchema = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Christchurch AI Meetup — May 2026: The AI Tension — Implementation vs Existential Risk",
-    "startDate": "2026-05-04T17:30:00+12:00",
-    "endDate": "2026-05-04T20:00:00+12:00",
+    "name": "Christchurch AI Meetup — June 2026: Agent Management & Engineering Habits",
+    "startDate": "2026-06-08T17:30:00+12:00",
+    "endDate": "2026-06-08T20:00:00+12:00",
     "location": { "@type": "Place", "name": "EPIC Innovation Centre", "address": { "@type": "PostalAddress", "streetAddress": "78-100 Manchester St", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
     "organizer": { "@type": "Organization", "name": "Christchurch Artificial Intelligence", "url": "https://christchurch-ai.com" },
     "isAccessibleForFree": true,
-    "url": "https://meetup.com/christchurch-ai",
+    "url": "https://www.meetup.com/christchurch-ai/events/314554727/",
   };
 
   const featuredWorkshopSchema = {
@@ -120,7 +97,7 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(maySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nextMeetupSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredWorkshopSchema) }} />
 
       <div className="min-h-screen" style={{ background: "var(--background)" }}>

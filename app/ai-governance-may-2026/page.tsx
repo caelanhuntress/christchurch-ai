@@ -26,7 +26,7 @@ const schema = {
   "description": "Dr Elsamari Botha on multi-dimensional AI literacy frameworks and Hazel Shanks on The Doom Thesis at the Christchurch AI monthly meetup.",
   "startDate": "2026-05-04T17:30:00+12:00",
   "endDate": "2026-05-04T20:00:00+12:00",
-  "eventStatus": "https://schema.org/EventScheduled",
+  "eventStatus": "https://schema.org/EventCompleted",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "isAccessibleForFree": true,
   "location": {
@@ -69,7 +69,7 @@ export default function AIGovernanceMay2026() {
         <Link href="/" className="text-sm mb-8 inline-block" style={{ color: "var(--text-muted)" }}>← Back to Home</Link>
 
         <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--accent)" }}>
-          Monthly Meetup — May 2026
+          Monthly Meetup Replay — May 2026
         </div>
 
         <h1 className="text-4xl font-bold mb-4 leading-tight">
@@ -100,6 +100,42 @@ export default function AIGovernanceMay2026() {
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
 
           <img src="/chchai-0526-2.png" alt="Christchurch AI May 2026 featured speakers Dr Elsamari Botha and Hazel Shanks" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+
+          <div className="rounded-xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
+              Watch the Replay
+            </div>
+            <div className="aspect-video w-full overflow-hidden rounded-lg border mb-5" style={{ borderColor: "var(--border)" }}>
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/G2ttxNmDnQo"
+                title="Christchurch AI May 2026 replay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://youtu.be/G2ttxNmDnQo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 rounded-lg font-semibold text-sm text-white"
+                style={{ background: "var(--accent)" }}
+              >
+                Watch on YouTube →
+              </a>
+              <a
+                href="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-0526.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 rounded-lg font-semibold text-sm border"
+                style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
+              >
+                Download the Slides →
+              </a>
+            </div>
+          </div>
 
           <p>
             Artificial intelligence is advancing rapidly, and with it comes a growing tension:
@@ -164,11 +200,24 @@ export default function AIGovernanceMay2026() {
             Free to attend — no ticket required on the door.
           </p>
 
-          <div className="mt-10">
-            <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
+          <div className="mt-10 flex flex-wrap gap-3">
+            <a
+              href="https://youtu.be/G2ttxNmDnQo"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-lg font-bold text-white text-lg"
-              style={{ background: "var(--accent)" }}>
-              RSVP on Meetup — It's Free →
+              style={{ background: "var(--accent)" }}
+            >
+              Watch the Replay →
+            </a>
+            <a
+              href="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-0526.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 rounded-lg font-bold text-lg border"
+              style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
+            >
+              Download the Slides →
             </a>
           </div>
 
