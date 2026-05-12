@@ -77,14 +77,14 @@ const amSpeakers = [
       "Caelan Huntress opens the day with an interactive workshop on using conversational AI as a partner for learning, reflection, and growth. As LLMs become more conversational, asking better questions shapes your AI thinking partner around the goals you care about and the way you learn best.",
   },
   {
-    name: "Hannah Hardy-Jones",
+    name: "Siena Brody-Heine",
     role: "Workshop speaker",
     session: "AM Workshops · 9:30–10:00am",
     talk: "Transform Meetings into Actionable Insights",
-    image: "/images/epic-ai-conference/headshots/hannah-hardy-jones.jpg",
-    linkedin: "https://nz.linkedin.com/in/hannah-hardy-jones-63b3b238",
+    image: "/images/epic-ai-conference/headshots/siena-brody-heine.jpg",
+    linkedin: "https://www.linkedin.com/in/siena-brody-heine/",
     bio:
-      "Hannah Hardy-Jones demonstrates how AI can turn conversation into useful outputs, insights, actions, and communications. Her session treats meetings and spoken exchanges as one of the most valuable and underused resources in any organisation.",
+      "Siena Brody-Heine demonstrates how AI can turn conversation into useful outputs, insights, actions, and communications. Her session treats meetings and spoken exchanges as one of the most valuable and underused resources in any organisation.",
   },
   {
     name: "Steve Fox",
@@ -280,7 +280,7 @@ const eventSchedule = {
     description:
       "Hands-on AI workshops at the EPIC AI Conference in Christchurch, part of TechWeekNZ, covering learning, meeting intelligence, workflow design, nonprofit impact, and creative AI.",
     organizer: { name: "Christchurch AI", url: "https://christchurch-ai.com" },
-    performer: [{ "@type": "Person", name: "Caelan Huntress" }, { "@type": "Person", name: "Hannah Hardy-Jones" }, { "@type": "Person", name: "Steve Fox" }, { "@type": "Person", name: "Lois McClintock" }, { "@type": "Person", name: "Arthur Machado" }],
+    performer: [{ "@type": "Person", name: "Caelan Huntress" }, { "@type": "Person", name: "Siena Brody-Heine" }, { "@type": "Person", name: "Steve Fox" }, { "@type": "Person", name: "Lois McClintock" }, { "@type": "Person", name: "Arthur Machado" }],
   },
   "coffee-and-jam": {
     startDate: "2026-05-21T12:00:00+12:00",
