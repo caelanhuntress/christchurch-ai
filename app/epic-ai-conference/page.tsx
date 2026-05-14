@@ -200,7 +200,7 @@ const panelists = [
     companyName: "ChristchurchNZ",
     companyUrl: "https://www.christchurchnz.com/",
     bio:
-      "Alison Adams leads ChristchurchNZ, the city’s economic development agency, with a background spanning more than two decades across senior public and private sector leadership. Her contribution to the panel brings a city-shaping perspective on growth, collaboration, and what responsible AI adoption can mean for Christchurch’s future.",
+      "Alison Adams leads ChristchurchNZ, the city’s economic development agency, with a background spanning more than two decades across senior leadership. Her contribution to the panel brings a city-shaping perspective on growth, collaboration, and responsible AI adoption for Christchurch.",
   },
 ] as const;
 
