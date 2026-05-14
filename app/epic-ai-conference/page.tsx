@@ -111,7 +111,7 @@ const amSpeakers = [
     role: "Workshop speaker",
     session: "AM Workshops · 11:00–11:30am",
     talk: "Find Your Tribe: A Micro-Hackathon",
-    image: "https://cdn.prod.website-files.com/65996f88e94344098dbd3f3f/68edd5c662d9c1fccfc25356_Dan.webp",
+    image: "/images/epic-ai-conference/headshots/dan-randow.webp",
     linkedin: "https://www.linkedin.com/in/danrandow/",
     bio:
       "Dan Randow closes the morning with a fast-moving micro-hackathon that turns the room's AI ideas into small teams in under thirty minutes. Participants pitch a spark, find collaborators chasing the same thread, and head into Coffee & Jam with a developed idea — and people with whom you can build.",
@@ -193,12 +193,14 @@ const panelists = [
       "Brad Fraser helps organisations move beyond experimentation into real capability building. His contribution focuses on adoption, solution design, and what meaningful AI implementation looks like beyond surface-level hype.",
   },
   {
-    name: "Tom Sweeney",
-    role: "Serial Founder and Director",
-    image: "/images/epic-ai-conference/headshots/tom-sweeney.jpg",
-    linkedin: "https://www.linkedin.com/in/tomsweeney/",
+    name: "Alison Adams",
+    role: "CEO, ChristchurchNZ",
+    image: "/images/epic-ai-conference/headshots/alison-adams.jpg",
+    linkedin: "https://www.linkedin.com/in/ali-adams-3531a256/",
+    companyName: "ChristchurchNZ",
+    companyUrl: "https://www.christchurchnz.com/",
     bio:
-      "Tom Sweeney brings a founder and systems perspective shaped by companies that leverage systems and human capital to achieve strong business outcomes. His voice adds breadth to the discussion about leadership, performance, and navigating uncertainty with discipline.",
+      "Alison Adams leads ChristchurchNZ, the city’s economic development agency, with a background spanning more than two decades across senior public and private sector leadership. Her contribution to the panel brings a city-shaping perspective on growth, collaboration, and what responsible AI adoption can mean for Christchurch’s future.",
   },
 ] as const;
 
@@ -307,7 +309,7 @@ const eventSchedule = {
     description:
       "Leadership in the Age of AI panel discussion at the EPIC AI Conference in Christchurch, focused on trust, organisational change, and leadership in an AI-driven world.",
     organizer: { name: "Christchurch AI", url: "https://christchurch-ai.com" },
-    performer: [{ "@type": "Person", name: "Anya Anderson" }, { "@type": "Person", name: "Julie Ryan" }, { "@type": "Person", name: "Brad Fraser" }, { "@type": "Person", name: "Tom Sweeney" }],
+    performer: [{ "@type": "Person", name: "Anya Anderson" }, { "@type": "Person", name: "Julie Ryan" }, { "@type": "Person", name: "Brad Fraser" }, { "@type": "Person", name: "Alison Adams" }],
   },
 } as const;
 
