@@ -22,7 +22,7 @@ const dayEvents = [
     href: "https://events.humanitix.com/epic-ai-conference-am",
     image: "/images/epic-ai-conference/epic-ai-am.png",
     description:
-      "The morning workshop block is designed for people who want practical experience, not just theory. Across five fast, hands-on sessions, attendees explore how AI can support communication, workflow design, nonprofit impact, and visual creation.",
+      "The morning workshop block is designed for people who want practical experience, not just theory. Across five fast, hands-on sessions, attendees explore how AI can support communication, workflow design, nonprofit impact, and collaborative idea-building.",
     details:
       "Hosted by the Christchurch AI Meetup Group as part of TechWeekNZ, the EPIC AI Conference brings together local and international practitioners for a compact, high-value morning of experimentation and applied learning. Whether you’re just getting started, or already using AI at work, these sessions will give you fresh ways to think about what the tools can do, where they fit, and how to use them more effectively.",
   },
@@ -47,9 +47,9 @@ const dayEvents = [
     href: "https://events.humanitix.com/epic-ai-conference-pm",
     image: "/images/epic-ai-conference/epic-ai-pm.png",
     description:
-      "The afternoon speaker session of the EPIC AI Conference brings together practitioners working at the edge of AI implementation, risk, infrastructure, and strategy.",
+      "The afternoon speaker session of the EPIC AI Conference brings together practitioners working across creative AI, implementation, risk, infrastructure, and strategy.",
     details:
-      "These are not abstract future-gazing talks. They are grounded presentations from people thinking deeply about what happens when AI moves from prototype to production, from possibility to governance, and from technical novelty to social consequence. Across four sessions, attendees hear perspectives on operational excellence, AI safety, privacy-preserving infrastructure, and the long-term future AI may unlock.",
+      "These are not abstract future-gazing talks. They are grounded presentations from people thinking deeply about what happens when AI moves from prototype to production, from possibility to governance, and from technical novelty to social consequence. Across four sessions, attendees hear perspectives on creative practice, AI safety, privacy-preserving infrastructure, and the long-term future AI may unlock.",
   },
   {
     slug: "leadership-panel",
@@ -107,27 +107,27 @@ const amSpeakers = [
       "Lois McClintock explores how nonprofits can use AI to increase impact, free up volunteer time, and improve operations without needing large budgets or complex systems. Her session includes practical examples from nonprofit work including strategy, social media, fundraising, and policy support.",
   },
   {
-    name: "Arthur Machado",
+    name: "Dan Randow",
     role: "Workshop speaker",
     session: "AM Workshops · 11:00–11:30am",
-    talk: "Filmmaking Frameworks for High-Impact AI Visuals",
-    image: "/images/epic-ai-conference/headshots/arthur-machado.jpg",
-    linkedin: "https://nz.linkedin.com/in/arthurmachado1",
+    talk: "Find Your Tribe: A Micro-Hackathon",
+    image: "https://cdn.prod.website-files.com/65996f88e94344098dbd3f3f/68edd5c662d9c1fccfc25356_Dan.webp",
+    linkedin: "https://www.linkedin.com/in/danrandow/",
     bio:
-      "Arthur Machado shares a practical visual storytelling framework for prompting better creative assets, from hero images to product mockups. His session encourages attendees to think like directors rather than technicians when working with AI-generated visuals.",
+      "Dan Randow closes the morning with a fast-moving micro-hackathon that turns the room's AI ideas into small teams in under thirty minutes. Participants pitch a spark, find collaborators chasing the same thread, and head into Coffee & Jam with a developed idea — and people with whom you can build.",
   },
 ] as const;
 
 const pmSpeakers = [
   {
-    name: "Varsha Das",
+    name: "Arthur Machado",
     role: "Presentation speaker",
     session: "PM Presentations · 1:30–2:15pm",
-    talk: "When Code Gets Cheap, Operational Excellence Wins",
-    image: "/images/epic-ai-conference/headshots/varsha-das.jpg",
-    linkedin: "https://in.linkedin.com/in/varsha-das-se",
+    talk: "Filmmaking Frameworks for High-Impact AI Visuals",
+    image: "/images/epic-ai-conference/headshots/arthur-machado.jpg",
+    linkedin: "https://nz.linkedin.com/in/arthurmachado1",
     bio:
-      "Varsha Das explores why operational excellence becomes the real differentiator when code generation is abundant. Drawing on real production incidents and the realities of running AI systems at scale, she unpacks the failure modes that appear under real load and the patterns that separate demos from dependable services.",
+      "Arthur Machado shares a practical visual storytelling framework for prompting better creative assets, from hero images to product mockups. His session encourages attendees to think like directors rather than technicians when working with AI-generated visuals.",
   },
   {
     name: "Emma Humphrey",
@@ -278,9 +278,9 @@ const eventSchedule = {
     endDate: "2026-05-21T11:45:00+12:00",
     image: "https://christchurch-ai.com/images/epic-ai-conference/epic-ai-am.png",
     description:
-      "Hands-on AI workshops at the EPIC AI Conference in Christchurch, part of TechWeekNZ, covering learning, meeting intelligence, workflow design, nonprofit impact, and creative AI.",
+      "Hands-on AI workshops at the EPIC AI Conference in Christchurch, part of TechWeekNZ, covering learning, meeting intelligence, workflow design, nonprofit impact, and collaborative idea-building.",
     organizer: { name: "Christchurch AI", url: "https://christchurch-ai.com" },
-    performer: [{ "@type": "Person", name: "Caelan Huntress" }, { "@type": "Person", name: "Siena Brody-Heine" }, { "@type": "Person", name: "Steve Fox" }, { "@type": "Person", name: "Lois McClintock" }, { "@type": "Person", name: "Arthur Machado" }],
+    performer: [{ "@type": "Person", name: "Caelan Huntress" }, { "@type": "Person", name: "Siena Brody-Heine" }, { "@type": "Person", name: "Steve Fox" }, { "@type": "Person", name: "Lois McClintock" }, { "@type": "Person", name: "Dan Randow" }],
   },
   "coffee-and-jam": {
     startDate: "2026-05-21T12:00:00+12:00",
@@ -296,9 +296,9 @@ const eventSchedule = {
     endDate: "2026-05-21T17:00:00+12:00",
     image: "https://christchurch-ai.com/images/epic-ai-conference/epic-ai-pm.png",
     description:
-      "Afternoon presentations at the EPIC AI Conference in Christchurch, featuring talks on operations, AI safety, privacy, and the future of AI adoption.",
+      "Afternoon presentations at the EPIC AI Conference in Christchurch, featuring talks on creative AI, AI safety, privacy, and the future of AI adoption.",
     organizer: { name: "Christchurch AI", url: "https://christchurch-ai.com" },
-    performer: [{ "@type": "Person", name: "Varsha Das" }, { "@type": "Person", name: "Emma Humphrey" }, { "@type": "Person", name: "Dr Chandranil Chakraborttii" }, { "@type": "Person", name: "Caelan Huntress" }],
+    performer: [{ "@type": "Person", name: "Arthur Machado" }, { "@type": "Person", name: "Emma Humphrey" }, { "@type": "Person", name: "Dr Chandranil Chakraborttii" }, { "@type": "Person", name: "Caelan Huntress" }],
   },
   "leadership-panel": {
     startDate: "2026-05-21T17:30:00+12:00",
