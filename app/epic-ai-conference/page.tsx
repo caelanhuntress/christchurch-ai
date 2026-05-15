@@ -110,11 +110,11 @@ const amSpeakers = [
     name: "Dan Randow",
     role: "Workshop speaker",
     session: "AM Workshops · 11:00–11:30am",
-    talk: "Find Your Tribe: A Micro-Hackathon",
+    talk: "Ideas into Action: A Micro-Hackathon",
     image: "/images/epic-ai-conference/headshots/dan-randow.webp",
     linkedin: "https://www.linkedin.com/in/danrandow/",
     bio:
-      "Dan Randow closes the morning with a fast-moving micro-hackathon that turns the room's AI ideas into small teams in under thirty minutes. Participants pitch a spark, find collaborators chasing the same thread, and head into Coffee & Jam with a developed idea — and people with whom you can build.",
+      "Dan Randow closes the morning with a fast-moving micro-hackathon that turns the room's AI ideas into action in under thirty minutes. Participants pitch ideas, develop them in teams – and everyone walks into lunch with actionable inspiration.",
   },
 ] as const;
 
