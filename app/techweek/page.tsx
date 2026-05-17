@@ -37,7 +37,7 @@ const events = [
   {
     slug: "managing-ai-agents",
     title: "Managing AI Agents: The Next High-Value Skill Set",
-    href: "https://events.humanitix.com/managing-ai-agents-tw26",
+    href: "https://ai-coaching.academy/events/managing-ai-agents-the-next-high-value-skill-set",
     buttonLabel: "RSVP",
     image: "/images/techweek/managing-ai-agents.png",
     date: "Monday 18 May 2026",
