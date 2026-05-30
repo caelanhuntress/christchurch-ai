@@ -382,7 +382,7 @@ function SpeakerCard({
   const showRole = !hiddenRoles.has(role);
 
   return (
-    <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+    <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[180px_minmax(0,1fr)_minmax(0,1fr)] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       <div>
         {image ? (
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border" style={{ borderColor: "var(--border)" }}>
@@ -421,13 +421,22 @@ function SpeakerCard({
         <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
           {bio}
         </p>
+        {slidesHref ? (
+          <a
+            href={slidesHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex w-full items-center justify-center rounded-xl border px-4 py-3 text-center text-sm font-semibold transition-all hover:!text-white hover:!bg-[#004aad]"
+            style={{ borderColor: "var(--border)", color: "#004aad", background: "var(--muted)" }}
+          >
+            {slidesLabel ?? "Slides"}
+          </a>
+        ) : null}
       </div>
       <ReplayPanel
         title={talk}
         speaker={name}
         replayEmbedUrl={replayEmbedUrl}
-        slidesHref={slidesHref}
-        slidesLabel={slidesLabel}
       />
     </div>
   );
@@ -437,14 +446,10 @@ function ReplayPanel({
   title,
   speaker,
   replayEmbedUrl,
-  slidesHref,
-  slidesLabel = "Slides",
 }: {
   title: string;
   speaker: string;
   replayEmbedUrl?: string;
-  slidesHref?: string;
-  slidesLabel?: string;
 }) {
   const isCaelan = speaker === "Caelan Huntress";
 
@@ -481,17 +486,6 @@ function ReplayPanel({
           </div>
         </div>
       )}
-      {slidesHref ? (
-        <a
-          href={slidesHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full rounded-xl border px-4 py-3 text-center text-sm font-semibold transition-all hover:!text-white hover:!bg-[#004aad]"
-          style={{ borderColor: "var(--border)", color: "#004aad", background: "var(--background)" }}
-        >
-          {slidesLabel}
-        </a>
-      ) : null}
     </div>
   );
 }
