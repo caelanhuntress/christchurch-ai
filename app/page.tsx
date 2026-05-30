@@ -57,6 +57,9 @@ const PAST_TALKS = [
   { speaker: "Blake Harkness", topic: "AI in the Real World", month: "2025" },
 ];
 
+const SHOW_HERO_FEATURED_CONFERENCE = false;
+const SHOW_FEATURED_WORKSHOP = false;
+
 export default function Home() {
   const orgSchema = {
     "@context": "https://schema.org",
@@ -98,7 +101,9 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nextMeetupSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredWorkshopSchema) }} />
+      {SHOW_FEATURED_WORKSHOP && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredWorkshopSchema) }} />
+      )}
 
       <div className="min-h-screen" style={{ background: "var(--background)" }}>
 
@@ -130,23 +135,25 @@ export default function Home() {
               Upcoming Events ↓
             </a>
           </div>
-          <div className="mt-8 rounded-2xl border p-5 max-w-3xl mx-auto text-left"
-            style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-            <div className="aspect-[16/7] w-full overflow-hidden rounded-xl border mb-4"
-              style={{ borderColor: "var(--border)" }}>
-              <img
-                src="https://www.dropbox.com/scl/fi/msas8w10tri0367bqiecj/chchai-tw26-bg.png?rlkey=hk9hr6enanm7gvrafd5lhlx60&raw=1"
-                alt="Christchurch AI TechWeek 2026 featured event"
-                className="h-full w-full object-cover"
-              />
+          {SHOW_HERO_FEATURED_CONFERENCE && (
+            <div className="mt-8 rounded-2xl border p-5 max-w-3xl mx-auto text-left"
+              style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+              <div className="aspect-[16/7] w-full overflow-hidden rounded-xl border mb-4"
+                style={{ borderColor: "var(--border)" }}>
+                <img
+                  src="https://www.dropbox.com/scl/fi/msas8w10tri0367bqiecj/chchai-tw26-bg.png?rlkey=hk9hr6enanm7gvrafd5lhlx60&raw=1"
+                  alt="Christchurch AI TechWeek 2026 featured event"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
+                Featured Techweek Event - Thursday, 21 May, 2026
+              </div>
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                Looking for the <Link href="/epic-ai-conference" className="underline font-semibold" style={{ color: "var(--accent)" }}>EPIC AI Conference Christchurch</Link>? See the full TechWeek programme, speaker lineup, and registration links for the all-day AI conference at EPIC Innovation.
+              </p>
             </div>
-            <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
-              Featured Techweek Event - Thursday, 21 May, 2026
-            </div>
-            <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              Looking for the <Link href="/epic-ai-conference" className="underline font-semibold" style={{ color: "var(--accent)" }}>EPIC AI Conference Christchurch</Link>? See the full TechWeek programme, speaker lineup, and registration links for the all-day AI conference at EPIC Innovation.
-            </p>
-          </div>
+          )}
         </section>
 
         {/* Stats */}
@@ -426,65 +433,83 @@ export default function Home() {
         </section>
 
         {/* Featured Workshop */}
-        <section className="px-6 py-20 border-t dark-photo-section" style={{ borderColor: "var(--border)", background: "#14080E" }}>
-          <div className="max-w-4xl mx-auto">
-            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Featured Workshop</div>
-            <div className="rounded-3xl border p-8 md:p-10 light-card" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
-                <div className="max-w-2xl">
-                  <div className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 border"
-                    style={{ borderColor: "var(--border)", color: "var(--accent)", background: "rgba(74,222,128,0.05)" }}>
-                    TechWeek26 · Humanitix Event
+        {SHOW_FEATURED_WORKSHOP && (
+          <section className="px-6 py-20 border-t dark-photo-section" style={{ borderColor: "var(--border)", background: "#14080E" }}>
+            <div className="max-w-4xl mx-auto">
+              <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Featured Workshop</div>
+              <div className="rounded-3xl border p-8 md:p-10 light-card" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+                  <div className="max-w-2xl">
+                    <div className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 border"
+                      style={{ borderColor: "var(--border)", color: "var(--accent)", background: "rgba(74,222,128,0.05)" }}>
+                      Temporary Promo · Humanitix Event
+                    </div>
+                    <h2 className="text-3xl font-bold mb-4 text-white">AI Roadmap Workshop</h2>
+                    <div className="flex flex-wrap gap-3 mb-5 text-sm">
+                      {[
+                        "Saturday, 21 May 2026",
+                        "10:00–12:00",
+                        "EPIC Innovation",
+                        "$200 per person",
+                      ].map((item) => (
+                        <div
+                          key={item}
+                          className="px-4 py-2 rounded-full border"
+                          style={{ borderColor: "var(--border)", background: "var(--muted)", color: "var(--foreground)" }}
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-base leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>
+                      Curious about AI but not sure where to start? This hands-on workshop helps professionals turn AI curiosity into a practical plan — mapping workflows, identifying high-value opportunities, and prioritising experiments you can begin immediately.
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-4 mb-6 text-sm">
+                      {[
+                        "Map your workflow and spot AI leverage points",
+                        "Prioritise quick wins and strategic opportunities",
+                        "Leave with a practical AI roadmap",
+                        "Ideal for business owners, managers, and knowledge workers",
+                      ].map((item) => (
+                        <div key={item} className="rounded-2xl border px-4 py-3 light-card"
+                          style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--muted)" }}>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                      Led by <a href="https://caelanhuntress.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Caelan Huntress</a>, founder of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>.
+                    </p>
                   </div>
-                  <h2 className="text-3xl font-bold mb-4 text-white">AI Roadmap Workshop</h2>
-                  <p className="text-base leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>
-                    Curious about AI but not sure where to start? This hands-on workshop helps professionals turn AI curiosity into a practical plan — mapping workflows, identifying high-value opportunities, and prioritising experiments you can begin immediately.
-                  </p>
-                  <div className="grid sm:grid-cols-2 gap-4 mb-6 text-sm">
-                    {[
-                      "Map your workflow and spot AI leverage points",
-                      "Prioritise quick wins and strategic opportunities",
-                      "Leave with a practical AI roadmap",
-                      "Ideal for business owners, managers, and knowledge workers",
-                    ].map((item) => (
-                      <div key={item} className="rounded-2xl border px-4 py-3 light-card"
-                        style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--muted)" }}>
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                    Led by <a href="https://caelanhuntress.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Caelan Huntress</a>, founder of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>.
-                  </p>
-                </div>
-                <div className="lg:w-[320px] flex-shrink-0">
-                  <img
-                    src="https://images.humanitix.com/i/4f5ffbf8-5d91-41bb-b984-7a9cfffed983.png@responsive-1250.webp"
-                    alt="AI Roadmap Workshop featured image"
-                    className="w-full rounded-2xl border mb-4"
-                    style={{ borderColor: "var(--border)" }}
-                  />
-                  <div className="rounded-2xl border p-6 light-card" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-                  <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Book Your Spot</div>
-                  <div className="space-y-3 text-sm mb-6" style={{ color: "var(--text-muted)" }}>
-                    <p>Part of New Zealand&apos;s national festival of technology and innovation.</p>
-                    <p>Built for people who want a practical AI workshop, not just another tool demo.</p>
-                  </div>
-                  <a
-                    href="https://events.humanitix.com/ai-roadmap-workshop-0526"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block w-full text-center px-6 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
-                    style={{ background: "var(--accent)", color: "#ffffff" }}
-                  >
-                    View on Humanitix →
-                  </a>
+                  <div className="lg:w-[320px] flex-shrink-0">
+                    <img
+                      src="https://www.dropbox.com/scl/fi/jy5cne7fgbflj84vv6qbw/ai-roadmap-workshop-featured.png?rlkey=m60qmvqbjoo0ansxtn58lf342&raw=1"
+                      alt="AI Roadmap Workshop featured image"
+                      className="w-full rounded-2xl border mb-4"
+                      style={{ borderColor: "var(--border)" }}
+                    />
+                    <div className="rounded-2xl border p-6 light-card" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                    <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Book Your Spot</div>
+                    <div className="space-y-3 text-sm mb-6" style={{ color: "var(--text-muted)" }}>
+                      <p>Saturday, 21 May 2026 · 10:00–12:00 at EPIC Innovation.</p>
+                      <p>$200 per person · built for people who want a practical AI workshop, not just another tool demo.</p>
+                    </div>
+                    <a
+                      href="https://events.humanitix.com/ai-roadmap-workshop-0526"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block w-full text-center px-6 py-4 rounded-full font-semibold text-base transition-all hover:opacity-90"
+                      style={{ background: "var(--accent)", color: "#ffffff" }}
+                    >
+                      View on Humanitix →
+                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* CTA */}
         <section className="px-6 py-20 text-center border-t" style={{ borderColor: "var(--border)" }}>
