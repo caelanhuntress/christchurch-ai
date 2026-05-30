@@ -382,7 +382,7 @@ function SpeakerCard({
   const showRole = !hiddenRoles.has(role);
 
   return (
-    <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[180px_minmax(0,1fr)_minmax(0,1fr)] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+    <div className="epic-speaker-card rounded-3xl border p-5 md:p-6 grid gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       <div>
         {image ? (
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border" style={{ borderColor: "var(--border)" }}>
@@ -433,11 +433,13 @@ function SpeakerCard({
           </a>
         ) : null}
       </div>
-      <ReplayPanel
-        title={talk}
-        speaker={name}
-        replayEmbedUrl={replayEmbedUrl}
-      />
+      <div className="epic-speaker-replay">
+        <ReplayPanel
+          title={talk}
+          speaker={name}
+          replayEmbedUrl={replayEmbedUrl}
+        />
+      </div>
     </div>
   );
 }
@@ -559,6 +561,31 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
 export default function EpicAIConferencePage() {
   return (
     <div className="min-h-screen" style={pageTheme}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .epic-speaker-card {
+          grid-template-columns: 118px minmax(0, 1fr);
+        }
+
+        .epic-speaker-replay {
+          grid-column: 1 / -1;
+        }
+
+        @media (min-width: 640px) {
+          .epic-speaker-card {
+            grid-template-columns: 160px minmax(0, 1fr);
+          }
+        }
+
+        @media (min-width: 1100px) {
+          .epic-speaker-card {
+            grid-template-columns: 180px minmax(0, 1fr) minmax(0, 1fr);
+          }
+
+          .epic-speaker-replay {
+            grid-column: auto;
+          }
+        }
+      ` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
 
