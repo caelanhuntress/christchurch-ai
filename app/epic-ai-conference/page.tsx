@@ -20,6 +20,7 @@ const dayEvents = [
     time: "9:00 AM – 11:45 AM",
     title: "EPIC AI Conference — AM Workshops",
     href: "https://events.humanitix.com/epic-ai-conference-am",
+    replayHref: "#am-workshops-replays",
     image: "/images/epic-ai-conference/epic-ai-am.png",
     description:
       "The morning workshop block is designed for people who want practical experience, not just theory. Across five fast, hands-on sessions, attendees explore how AI can support communication, workflow design, nonprofit impact, and collaborative idea-building.",
@@ -32,6 +33,7 @@ const dayEvents = [
     time: "12:00 PM – 1:15 PM",
     title: "Ministry of Awesome: Coffee & Jam",
     href: "https://events.humanitix.com/ministry-of-awesome-coffee-and-jam-371",
+    replayHref: null,
     companyName: "Ministry of Awesome",
     companyUrl: "https://ministryofawesome.com/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
     description:
@@ -45,6 +47,7 @@ const dayEvents = [
     time: "1:30 PM – 5:00 PM",
     title: "EPIC AI Conference — PM Presentations",
     href: "https://events.humanitix.com/epic-ai-conference-pm",
+    replayHref: "#pm-presentations-replays",
     image: "/images/epic-ai-conference/epic-ai-pm.png",
     description:
       "The afternoon speaker session of the EPIC AI Conference brings together practitioners working across creative AI, implementation, risk, infrastructure, and strategy.",
@@ -57,6 +60,7 @@ const dayEvents = [
     time: "5:30 PM – 7:00 PM",
     title: "Leadership in the Age of AI",
     href: "https://events.humanitix.com/epic-ai-conference-panel",
+    replayHref: "#leadership-panel-replay",
     image: "/images/epic-ai-conference/epic-ai-panel.png",
     description:
       "The closing panel widens the lens from tools and implementation to leadership, responsibility, trust, and change.",
@@ -206,9 +210,9 @@ const panelists = [
 
 const faq = [
   {
-    question: "Do I need to register separately for each event?",
+    question: "Where are the replays and slides?",
     answer:
-      "Yes. Each session has its own Humanitix registration page, so this page acts as a guide to the full programme while keeping the direct event links in one place.",
+      "Replay and slide areas are now linked from the programme above. Individual YouTube and slide links will be added as they are ready.",
   },
   {
     question: "Where is the conference happening?",
@@ -216,9 +220,9 @@ const faq = [
       "The programme is centred on EPIC Innovation, 78–100 Manchester Street in Christchurch. Coffee & Jam is also hosted at EPIC, making it easy to move through the day as a continuous community event.",
   },
   {
-    question: "What is the cost?",
+    question: "Are live event tickets still available?",
     answer:
-      "The Workshops, Speakers, and Panel are $10 each. RSVP for only those parts you want to attend, or for the whole day for $30.",
+      "No. The live TechWeek event has passed, so this page is being converted into a replay and resource hub for the conference.",
   },
   {
     question: "What is the overall shape of the day?",
@@ -364,25 +368,23 @@ function RsvpBlock() {
   return (
     <div className="rounded-3xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-4" style={{ color: "var(--accent)" }}>
-        Registration Links
+        Replay Links
       </div>
-      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
-        {dayEvents.map((event) => (
+      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
+        {dayEvents.filter((event) => event.replayHref).map((event) => (
           <div key={event.slug} className="group">
             <div className="text-xs font-semibold uppercase tracking-[0.12em] mb-2 text-center" style={{ color: "#0f172a" }}>
               {event.time}
             </div>
             <a
-              href={event.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={event.replayHref ?? undefined}
               className="block px-5 py-4 rounded-2xl text-sm font-semibold text-center border transition-all hover:!text-white hover:!bg-[#004aad]"
               style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
             >
               {event.label}
             </a>
-            <p className="text-xs mt-2 opacity-0 transition-opacity group-hover:opacity-100" style={{ color: '#ca8a04' }}>
-              To attend the whole day, please RSVP to all 4 events individually
+            <p className="text-xs mt-2 opacity-0 transition-opacity group-hover:opacity-100 text-center" style={{ color: '#ca8a04' }}>
+              Jump to replays and slides
             </p>
           </div>
         ))}
@@ -399,6 +401,8 @@ function SpeakerCard({
   bio,
   image,
   linkedin,
+  replayEmbedUrl,
+  slidesHref,
 }: {
   name: string;
   role: string;
@@ -407,9 +411,11 @@ function SpeakerCard({
   bio: string;
   image?: string;
   linkedin?: string;
+  replayEmbedUrl?: string;
+  slidesHref?: string;
 }) {
   return (
-    <div className="rounded-3xl border p-5 md:p-6 grid md:grid-cols-[160px_1fr] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+    <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[150px_minmax(0,1fr)_320px] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       <div>
         {image ? (
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border" style={{ borderColor: "var(--border)" }}>
@@ -431,6 +437,9 @@ function SpeakerCard({
           {session}
         </div>
         <h3 className="text-2xl font-bold mb-1" style={{ color: "#004aad" }}>{name}</h3>
+        <p className="text-sm mb-3" style={{ color: "var(--foreground)" }}>
+          {role}
+        </p>
         <p className="text-sm font-semibold mb-3" style={{ color: "var(--accent)" }}>
           {talk}
         </p>
@@ -444,6 +453,82 @@ function SpeakerCard({
           </a>
         ) : null}
       </div>
+      <ReplayPanel
+        title={talk}
+        speaker={name}
+        replayEmbedUrl={replayEmbedUrl}
+        slidesHref={slidesHref}
+      />
+    </div>
+  );
+}
+
+function ReplayPanel({
+  title,
+  speaker,
+  replayEmbedUrl,
+  slidesHref,
+}: {
+  title: string;
+  speaker: string;
+  replayEmbedUrl?: string;
+  slidesHref?: string;
+}) {
+  const isCaelan = speaker === "Caelan Huntress";
+
+  return (
+    <div className="rounded-2xl border p-4 flex flex-col gap-3" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+      {replayEmbedUrl ? (
+        <iframe
+          className="aspect-video w-full rounded-xl border"
+          style={{ borderColor: "var(--border)" }}
+          src={replayEmbedUrl}
+          title={`${title} replay`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      ) : (
+        <div
+          className="aspect-video w-full rounded-xl border flex flex-col items-center justify-center text-center px-5"
+          style={{
+            borderColor: isCaelan ? "#004aad" : "var(--border)",
+            color: isCaelan ? "#004aad" : "var(--text-muted)",
+            background: isCaelan
+              ? "linear-gradient(135deg, rgba(0,74,173,0.12), rgba(255,255,255,0.82))"
+              : "var(--background)",
+          }}
+        >
+          <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full" style={{ background: isCaelan ? "#004aad" : "var(--muted)", color: isCaelan ? "#ffffff" : "var(--accent)" }}>
+            <span className="ml-0.5 text-lg" aria-hidden="true">▶</span>
+          </div>
+          <div className="text-xs font-semibold uppercase tracking-[0.18em]">
+            YouTube replay
+          </div>
+          <div className="mt-1 text-sm font-semibold">
+            {isCaelan ? "Caelan replay placeholder" : "Replay coming soon"}
+          </div>
+        </div>
+      )}
+      {slidesHref ? (
+        <a
+          href={slidesHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full rounded-xl border px-4 py-3 text-center text-sm font-semibold transition-all hover:!text-white hover:!bg-[#004aad]"
+          style={{ borderColor: "var(--border)", color: "#004aad", background: "var(--background)" }}
+        >
+          Slides
+        </a>
+      ) : (
+        <button
+          type="button"
+          disabled
+          className="w-full cursor-not-allowed rounded-xl border px-4 py-3 text-sm font-semibold opacity-70"
+          style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--background)" }}
+        >
+          Slides
+        </button>
+      )}
     </div>
   );
 }
@@ -619,14 +704,11 @@ export default function EpicAIConferencePage() {
               </p>
               <div className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
                 <ol className="space-y-2 text-sm md:text-base" style={{ color: "var(--text-muted)" }}>
-                  <li>1. <strong style={{ color: "var(--foreground)" }}>AM Workshops</strong> — 9–11:45am — <a href="https://events.humanitix.com/epic-ai-conference-am" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
-                  <li>2. <strong style={{ color: "var(--foreground)" }}>Lunchtime Coffee &amp; Jam</strong> — 12–1:15pm — <a href="https://events.humanitix.com/ministry-of-awesome-coffee-and-jam-371" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
-                  <li>3. <strong style={{ color: "var(--foreground)" }}>PM Presentations</strong> — 1:30–5pm — <a href="https://events.humanitix.com/epic-ai-conference-pm" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
-                  <li>4. <strong style={{ color: "var(--foreground)" }}>Evening Panel</strong> — 5:30–7pm — <a href="https://events.humanitix.com/epic-ai-conference-panel" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>RSVP here</a></li>
+                  <li>1. <strong style={{ color: "var(--foreground)" }}>AM Workshops</strong> — 9–11:45am — <a href="#am-workshops-replays" style={{ color: "var(--accent)" }}>Replays here</a></li>
+                  <li>2. <strong style={{ color: "var(--foreground)" }}>Lunchtime Coffee &amp; Jam</strong> — 12–1:15pm</li>
+                  <li>3. <strong style={{ color: "var(--foreground)" }}>PM Presentations</strong> — 1:30–5pm — <a href="#pm-presentations-replays" style={{ color: "var(--accent)" }}>Replays here</a></li>
+                  <li>4. <strong style={{ color: "var(--foreground)" }}>Evening Panel</strong> — 5:30–7pm — <a href="#leadership-panel-replay" style={{ color: "var(--accent)" }}>Replays here</a></li>
                 </ol>
-                <p className="text-sm md:text-base mt-4" style={{ color: "var(--text-muted)" }}>
-                  RSVP for the entire day, or only the sessions you want. Tickets are $10 each for Workshops, Speakers, and Panel ($30 for the whole day).
-                </p>
               </div>
               <p>
                 Seen as a whole, the day reflects TechWeek’s wider purpose: creating a space where communities can learn together, share capability, and think seriously about the future they want to build.
@@ -675,20 +757,15 @@ export default function EpicAIConferencePage() {
                       </p>
                     </div>
                     <div className="lg:w-[210px] w-full">
-                      <div className="group">
+                      {event.replayHref ? (
                         <a
-                          href={event.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href={event.replayHref}
                           className="block w-full text-center px-5 py-4 rounded-2xl font-semibold text-sm border transition-all hover:!text-white hover:!bg-[#004aad]"
                           style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
                         >
-                          Register
+                          Replay
                         </a>
-                        <p className="text-xs mt-2 opacity-0 transition-opacity group-hover:opacity-100" style={{ color: '#ca8a04' }}>
-                          To attend the whole day, please RSVP to all 4 events individually
-                        </p>
-                      </div>
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -742,7 +819,7 @@ export default function EpicAIConferencePage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-10" style={{ color: "#004aad" }}>Profiles across the day</h2>
 
             <div className="space-y-12">
-              <div>
+              <div id="am-workshops-replays" className="scroll-mt-28">
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Morning workshops
                 </div>
@@ -754,7 +831,7 @@ export default function EpicAIConferencePage() {
                 </div>
               </div>
 
-              <div>
+              <div id="pm-presentations-replays" className="scroll-mt-28">
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Afternoon presentations
                 </div>
@@ -766,7 +843,7 @@ export default function EpicAIConferencePage() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+              <div id="leadership-panel-replay" className="rounded-3xl border p-6 md:p-7 scroll-mt-28" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
                   Evening panel
                 </div>
@@ -775,6 +852,9 @@ export default function EpicAIConferencePage() {
                   <br />
                   <span className="text-xs font-semibold uppercase tracking-[0.22em]" style={{ color: "var(--accent)" }}>Featuring:</span>
                 </h3>
+                <div className="mb-6 max-w-xl">
+                  <ReplayPanel title="Leadership in the Age of AI" speaker="Evening Panel" />
+                </div>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {panelists.map((panelist) => (
                     <PanelistCard key={panelist.name} {...panelist} />
@@ -785,15 +865,15 @@ export default function EpicAIConferencePage() {
           </div>
         </section>
 
-        <section id="registration" className="px-6 py-16">
+        <section id="replays" className="px-6 py-16">
           <div className="max-w-6xl mx-auto grid gap-6">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-                Registration
+                Replays
               </div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: "#004aad" }}>Event links for the full day</h2>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: "#004aad" }}>Replay links for the full day</h2>
               <p className="text-base md:text-lg max-w-4xl" style={{ color: "var(--text-muted)" }}>
-                Each part of the programme is registered separately through Humanitix. The links below make it easy to move from this guide to the relevant event pages.
+                Jump straight to the replay and slide areas for each conference session.
               </p>
             </div>
             <RsvpBlock />
