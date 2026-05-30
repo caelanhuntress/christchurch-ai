@@ -77,6 +77,8 @@ const amSpeakers = [
     talk: "Create Your Own AI Coach to Learn Anything",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
     linkedin: "https://nz.linkedin.com/in/caelanhuntress",
+    replayEmbedUrl: "https://www.youtube.com/embed/nlGFkmon9Ws",
+    slidesHref: "https://www.dropbox.com/scl/fi/914drnpjgmlkfcdjp4u6p/EPIC-1-coaching.pdf?rlkey=guqxd0jax4n8xowshy31zpv3f&dl=0",
     bio:
       "Caelan Huntress opens the day with an interactive workshop on using conversational AI as a partner for learning, reflection, and growth. As LLMs become more conversational, asking better questions shapes your AI thinking partner around the goals you care about and the way you learn best.",
   },
@@ -87,6 +89,9 @@ const amSpeakers = [
     talk: "Transform Meetings into Actionable Insights",
     image: "/images/epic-ai-conference/headshots/siena-brody-heine.jpg",
     linkedin: "https://www.linkedin.com/in/siena-brody-heine/",
+    replayEmbedUrl: "https://www.youtube.com/embed/21T-7moxzAI",
+    slidesHref: "https://contentedai.com/?utm_source=tw26&utm_medium=replay&utm_campaign=caelanhuntress",
+    slidesLabel: "Try Contented",
     bio:
       "Siena Brody-Heine demonstrates how AI can turn conversation into useful outputs, insights, actions, and communications. Her session treats meetings and spoken exchanges as one of the most valuable and underused resources in any organisation.",
   },
@@ -97,6 +102,8 @@ const amSpeakers = [
     talk: "Mapping AI Opportunities in Your Organisation",
     image: "/images/epic-ai-conference/headshots/steve-fox.png",
     linkedin: "https://nz.linkedin.com/in/stevefoxnz",
+    replayEmbedUrl: "https://www.youtube.com/embed/-rQBTSNulXQ",
+    slidesHref: "https://www.dropbox.com/scl/fi/lr43m3v11k8f0b7ilrx9w/Mapping-workflows-_-Steve-Fox_Tech-Week-Final__PDF.pdf?rlkey=pgrnb9tfy2tccvtxe1wensbio&dl=0",
     bio:
       "Steve Fox introduces a practical framework for identifying where AI can create new value in real workflows. Using a simple sliding scale from manual to fully automated, he guides participants through breaking work into tasks, assessing where AI fits, identifying where human oversight still matters, and estimating the cost and opportunity impact of each change.",
   },
@@ -107,6 +114,8 @@ const amSpeakers = [
     talk: "AI for Good: Empowering Nonprofits",
     image: "/images/epic-ai-conference/headshots/lois-mcclintock.jpg",
     linkedin: "https://nz.linkedin.com/in/lois-mcclintock",
+    replayEmbedUrl: "https://www.youtube.com/embed/5PLNPkkHpXY",
+    slidesHref: "https://www.dropbox.com/scl/fi/i08swmeybufjpdse7lgrz/AI-For-Good-Empowering-Not-For-Profits.pdf?rlkey=5a21g4birocsyvbhmi14xffm1&dl=0",
     bio:
       "Lois McClintock explores how nonprofits can use AI to increase impact, free up volunteer time, and improve operations without needing large budgets or complex systems. Her session includes practical examples from nonprofit work including strategy, social media, fundraising, and policy support.",
   },
@@ -117,6 +126,7 @@ const amSpeakers = [
     talk: "Ideas into Action: A Micro-Hackathon",
     image: "/images/epic-ai-conference/headshots/dan-randow.webp",
     linkedin: "https://www.linkedin.com/in/danrandow/",
+    replayEmbedUrl: "https://www.youtube.com/embed/IFaUrzKMx0w",
     bio:
       "Dan Randow closes the morning with a fast-moving micro-hackathon that turns the room's AI ideas into action in under thirty minutes. Participants pitch ideas, develop them in teams – and everyone walks into lunch with actionable inspiration.",
   },
@@ -130,6 +140,8 @@ const pmSpeakers = [
     talk: "Filmmaking Frameworks for High-Impact AI Visuals",
     image: "/images/epic-ai-conference/headshots/arthur-machado.jpg",
     linkedin: "https://nz.linkedin.com/in/arthurmachado1",
+    replayEmbedUrl: "https://www.youtube.com/embed/A2XFmXw_OTk",
+    slidesHref: "https://www.dropbox.com/scl/fi/tq1xdd0ft7norowg8pofc/Odd-Global-Prompt-Like-a-Director-Techweek-Workshop-Public-Version.pdf?rlkey=wc08atp96t0tiw53puh4m92se&dl=0",
     bio:
       "Arthur Machado shares a practical visual storytelling framework for prompting better creative assets, from hero images to product mockups. His session encourages attendees to think like directors rather than technicians when working with AI-generated visuals.",
   },
@@ -140,6 +152,9 @@ const pmSpeakers = [
     talk: "AI Self Defence: Risks and Solutions",
     image: "/images/epic-ai-conference/headshots/emma-humphrey.jpg",
     linkedin: "https://www.linkedin.com/in/emma-humphrey17/",
+    replayEmbedUrl: "https://www.youtube.com/embed/crwlTwgsiQg",
+    slidesHref: "https://internationalaisafetyreport.org/publication/2026-report-extended-summary-policymakers",
+    slidesLabel: "AI Safety Report",
     bio:
       "Emma Humphrey brings experience from AI implementation in the UK Home Office to explore cybercrime, misinformation, bias, digital trust, safety engineering, and responsible procurement. Her session helps attendees move beyond hype into more mature thinking about AI governance and risk.",
   },
@@ -150,6 +165,8 @@ const pmSpeakers = [
     talk: "Ghost Vectors: Securing AI Privacy Without Sacrificing System Performance",
     image: "/images/epic-ai-conference/headshots/chandranil-chakraborttii.jpg",
     linkedin: "https://www.linkedin.com/in/chandranil-chakraborttii-a7552ba2/",
+    replayEmbedUrl: "https://www.youtube.com/embed/dqhnIIsyprE",
+    slidesHref: "https://www.dropbox.com/scl/fi/c8hzlngotrf6gs3o03sd4/Ghost_Vectors_Christchurch_TechWeek26_Final.pdf?rlkey=4mvn3onn3zbk073xumomfjsuy&dl=0",
     bio:
       "Dr Chandranil Chakraborttii examines how ‘ghost vectors’ can expose supposedly removed information, why conventional deletion methods fail in high-dimensional environments, and what architects can do instead. Attendees gain insight into privacy-by-design approaches that improve both compliance and performance.",
   },
@@ -160,6 +177,8 @@ const pmSpeakers = [
     talk: "The Case for a Superabundant Future",
     image: "/images/epic-ai-conference/headshots/caelan-huntress.jpg",
     linkedin: "https://nz.linkedin.com/in/caelanhuntress",
+    replayEmbedUrl: "https://www.youtube.com/embed/4x7HQ51J78s",
+    slidesHref: "https://www.dropbox.com/scl/fi/hdu3osm0zgcp5cvrjzcca/EPIC-2-superabundance.pdf?rlkey=h14comnjrhlwrscjr9hvs4m7z&dl=0",
     bio:
       "To close the afternoon, Caelan Huntress zooms out from present-day implementation into the larger human story. Drawing on recent writings from Dario Amodei and Peter Diamandis, this talk explores the idea that AI may not just change how we work, but could also change what it means to be human — for the better.",
   },
@@ -403,6 +422,7 @@ function SpeakerCard({
   linkedin,
   replayEmbedUrl,
   slidesHref,
+  slidesLabel,
 }: {
   name: string;
   role: string;
@@ -413,6 +433,7 @@ function SpeakerCard({
   linkedin?: string;
   replayEmbedUrl?: string;
   slidesHref?: string;
+  slidesLabel?: string;
 }) {
   return (
     <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[150px_minmax(0,1fr)_320px] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
@@ -458,6 +479,7 @@ function SpeakerCard({
         speaker={name}
         replayEmbedUrl={replayEmbedUrl}
         slidesHref={slidesHref}
+        slidesLabel={slidesLabel}
       />
     </div>
   );
@@ -468,11 +490,13 @@ function ReplayPanel({
   speaker,
   replayEmbedUrl,
   slidesHref,
+  slidesLabel = "Slides",
 }: {
   title: string;
   speaker: string;
   replayEmbedUrl?: string;
   slidesHref?: string;
+  slidesLabel?: string;
 }) {
   const isCaelan = speaker === "Caelan Huntress";
 
@@ -517,18 +541,9 @@ function ReplayPanel({
           className="w-full rounded-xl border px-4 py-3 text-center text-sm font-semibold transition-all hover:!text-white hover:!bg-[#004aad]"
           style={{ borderColor: "var(--border)", color: "#004aad", background: "var(--background)" }}
         >
-          Slides
+          {slidesLabel}
         </a>
-      ) : (
-        <button
-          type="button"
-          disabled
-          className="w-full cursor-not-allowed rounded-xl border px-4 py-3 text-sm font-semibold opacity-70"
-          style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--background)" }}
-        >
-          Slides
-        </button>
-      )}
+      ) : null}
     </div>
   );
 }
