@@ -831,6 +831,28 @@ export default function EpicAIConferencePage() {
             </div>
           </div>
         </section>
+
+        <section className="px-6 py-16 border-t" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+          <div className="max-w-4xl mx-auto grid gap-5">
+            <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "#004aad" }}>
+                Use NotebookLM to extract the best insights
+              </h2>
+              <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                You can add the links above to a NotebookLM with a free Google account, and create an Audio Overview, or chat about specific presentations and concepts. If you&apos;d like to use a pre-populated NotebookLM, <a href="https://notebooklm.google.com/notebook/8fd27f90-1a5a-4dea-84c7-3691848abc96" target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>click here</a>.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border p-6 md:p-7" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "#004aad" }}>
+                Where do I go to continue building my AI Literacy?
+              </h2>
+              <p className="text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                Join the <a href="https://www.meetup.com/christchurch-ai/" target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>Christchurch Artificial Intelligence Meetup Group</a>, to be notified of future events. Join the <a href="https://ai-coaching.academy/" target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>AI Coaching Academy</a> for practical games and activities to build your AI literacy, and to join a community of ambitious professionals practicing the tools of the future.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "var(--background)" }}>
