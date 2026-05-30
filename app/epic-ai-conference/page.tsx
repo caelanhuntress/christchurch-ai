@@ -227,39 +227,6 @@ const panelists = [
   },
 ] as const;
 
-const faq = [
-  {
-    question: "Where are the replays and slides?",
-    answer:
-      "Replay and slide areas are now linked from the programme above. Individual YouTube and slide links will be added as they are ready.",
-  },
-  {
-    question: "Where is the conference happening?",
-    answer:
-      "The programme is centred on EPIC Innovation, 78–100 Manchester Street in Christchurch. Coffee & Jam is also hosted at EPIC, making it easy to move through the day as a continuous community event.",
-  },
-  {
-    question: "Are live event tickets still available?",
-    answer:
-      "No. The live TechWeek event has passed, so this page is being converted into a replay and resource hub for the conference.",
-  },
-  {
-    question: "What is the overall shape of the day?",
-    answer:
-      "The day begins with hands-on workshops, moves into a lunchtime networking session, continues with presentations on implementation and strategy, and closes with a leadership panel about trust, capability, and adoption.",
-  },
-  {
-    question: "Who is the day for?",
-    answer:
-      "Professionals, founders, operators, managers, community builders, nonprofit teams, consultants, and curious learners who want to engage with AI in a grounded, practical, community-minded way.",
-  },
-  {
-    question: "Where do I go to continue building my AI Literacy?",
-    answer:
-      "Join the Christchurch Artificial Intelligence Meetup Group to be notified of future events. Join the AI Coaching Academy for practical games and activities to build your AI literacy, and to join a community of ambitious professionals practicing the tools of the future.",
-  },
-] as const;
-
 const socialImage = {
   url: "https://christchurch-ai.com/images/epic-ai-conference/chchai-tw26-bg.png",
   alt: "EPIC AI Conference Christchurch TechWeek26 background",
@@ -383,35 +350,6 @@ const pageSchema = {
   },
 };
 
-function RsvpBlock() {
-  return (
-    <div className="rounded-3xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-      <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-4" style={{ color: "var(--accent)" }}>
-        Replay Links
-      </div>
-      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
-        {dayEvents.filter((event) => event.replayHref).map((event) => (
-          <div key={event.slug} className="group">
-            <div className="text-xs font-semibold uppercase tracking-[0.12em] mb-2 text-center" style={{ color: "#0f172a" }}>
-              {event.time}
-            </div>
-            <a
-              href={event.replayHref ?? undefined}
-              className="block px-5 py-4 rounded-2xl text-sm font-semibold text-center border transition-all hover:!text-white hover:!bg-[#004aad]"
-              style={{ borderColor: "var(--border)", color: "var(--foreground)", background: "var(--muted)" }}
-            >
-              {event.label}
-            </a>
-            <p className="text-xs mt-2 opacity-0 transition-opacity group-hover:opacity-100 text-center" style={{ color: '#ca8a04' }}>
-              Jump to replays and slides
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function SpeakerCard({
   name,
   role,
@@ -435,7 +373,13 @@ function SpeakerCard({
   slidesHref?: string;
   slidesLabel?: string;
 }) {
-  const showRole = role !== "Workshop speaker";
+  const hiddenRoles = new Set([
+    "Workshop speaker",
+    "Presentation speaker",
+    "AI Safety ANZ · Presentation speaker",
+    "Founder, AI Coaching Academy · Organiser, Christchurch AI Meetup Group",
+  ]);
+  const showRole = !hiddenRoles.has(role);
 
   return (
     <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
@@ -871,8 +815,12 @@ export default function EpicAIConferencePage() {
                   <br />
                   <span className="text-xs font-semibold uppercase tracking-[0.22em]" style={{ color: "var(--accent)" }}>Featuring:</span>
                 </h3>
-                <div className="mb-6 max-w-xl">
-                  <ReplayPanel title="Leadership in the Age of AI" speaker="Evening Panel" />
+                <div className="mx-auto mb-8 max-w-3xl">
+                  <ReplayPanel
+                    title="Leadership in the Age of AI"
+                    speaker="Evening Panel"
+                    replayEmbedUrl="https://www.youtube.com/embed/SerVNqYKHhA"
+                  />
                 </div>
                 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
                   {panelists.map((panelist) => (
@@ -880,46 +828,6 @@ export default function EpicAIConferencePage() {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="replays" className="px-6 py-16">
-          <div className="max-w-6xl mx-auto grid gap-6">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-                Replays
-              </div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: "#004aad" }}>Replay links for the full day</h2>
-              <p className="text-base md:text-lg max-w-4xl" style={{ color: "var(--text-muted)" }}>
-                Jump straight to the replay and slide areas for each conference session.
-              </p>
-            </div>
-            <RsvpBlock />
-          </div>
-        </section>
-
-        <section className="px-6 py-16 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-          <div className="max-w-4xl mx-auto">
-            <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-              FAQ
-            </div>
-            <h2 className="text-3xl font-bold mb-10" style={{ color: "#004aad" }}>Useful details</h2>
-            <div className="space-y-4">
-              {faq.map((item) => (
-                <div key={item.question} className="rounded-2xl border p-5 md:p-6" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: "#000000" }}>{item.question}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                    {item.question === "Where do I go to continue building my AI Literacy?" ? (
-                      <>
-                        Join the <a href="https://www.meetup.com/christchurch-ai/" target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>Christchurch Artificial Intelligence Meetup Group</a>, to be notified of future events. Join the <a href="https://ai-coaching.academy/" target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>AI Coaching Academy</a> for practical games and activities to build your AI literacy, and to join a community of ambitious professionals practicing the tools of the future.
-                      </>
-                    ) : (
-                      item.answer
-                    )}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
