@@ -435,8 +435,10 @@ function SpeakerCard({
   slidesHref?: string;
   slidesLabel?: string;
 }) {
+  const showRole = role !== "Workshop speaker";
+
   return (
-    <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[150px_minmax(0,1fr)_320px] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+    <div className="rounded-3xl border p-5 md:p-6 grid lg:grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)] gap-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
       <div>
         {image ? (
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border" style={{ borderColor: "var(--border)" }}>
@@ -452,27 +454,29 @@ function SpeakerCard({
             Placeholder
           </div>
         )}
+        {linkedin ? (
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 mt-3 w-full rounded-xl border px-3 py-2 text-sm font-semibold transition-all hover:!text-white hover:!bg-[#004aad]" style={{ borderColor: "var(--border)", color: "#004aad", background: "var(--muted)" }} aria-label={`${name} LinkedIn`}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6.26V17H8.34M7.3 9.8A1.2 1.2 0 1 0 7.3 7.4A1.2 1.2 0 0 0 7.3 9.8M17.74 17V13.53C17.74 11.67 16.74 10.57 15.12 10.57C13.81 10.57 13.22 11.29 12.89 11.79V10.67H10.81C10.84 11.41 10.81 17 10.81 17H12.89V13.46C12.89 13.27 12.9 13.08 12.96 12.95C13.11 12.57 13.45 12.18 14.02 12.18C14.77 12.18 15.07 12.75 15.07 13.58V17H17.74Z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        ) : null}
       </div>
       <div>
         <div className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: "var(--accent)" }}>
           {session}
         </div>
         <h3 className="text-2xl font-bold mb-1" style={{ color: "#004aad" }}>{name}</h3>
-        <p className="text-sm mb-3" style={{ color: "var(--foreground)" }}>
-          {role}
-        </p>
+        {showRole ? (
+          <p className="text-sm mb-3" style={{ color: "var(--foreground)" }}>
+            {role}
+          </p>
+        ) : null}
         <p className="text-sm font-semibold mb-3" style={{ color: "var(--accent)" }}>
           {talk}
         </p>
         <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
           {bio}
         </p>
-        {linkedin ? (
-          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4" style={{ color: "#004aad" }} aria-label={`${name} LinkedIn`}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6.26V17H8.34M7.3 9.8A1.2 1.2 0 1 0 7.3 7.4A1.2 1.2 0 0 0 7.3 9.8M17.74 17V13.53C17.74 11.67 16.74 10.57 15.12 10.57C13.81 10.57 13.22 11.29 12.89 11.79V10.67H10.81C10.84 11.41 10.81 17 10.81 17H12.89V13.46C12.89 13.27 12.9 13.08 12.96 12.95C13.11 12.57 13.45 12.18 14.02 12.18C14.77 12.18 15.07 12.75 15.07 13.58V17H17.74Z"/></svg>
-            <span className="text-sm font-semibold">LinkedIn</span>
-          </a>
-        ) : null}
       </div>
       <ReplayPanel
         title={talk}
