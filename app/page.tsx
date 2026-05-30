@@ -506,7 +506,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div><span style={{ color: "var(--accent)" }} className="font-semibold">Christchurch AI</span> · Monthly meetups at EPIC Innovation, Canterbury, New Zealand</div>
+            <div><span style={{ color: "var(--accent)" }} className="font-semibold">Christchurch AI</span> · Monthly meetups at EPIC Innovation Centre, Canterbury, New Zealand</div>
             <div className="flex items-center gap-6">
               <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Meetup</a>
               <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
