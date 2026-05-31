@@ -800,7 +800,7 @@ export default function EpicAIConferencePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Speakers & Panelists
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-10" style={{ color: "#004aad" }}>Profiles across the day</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-10" style={{ color: "#004aad" }}>Replay library across the day</h2>
 
             <div className="space-y-12">
               <div id="am-workshops-replays" className="scroll-mt-28">
