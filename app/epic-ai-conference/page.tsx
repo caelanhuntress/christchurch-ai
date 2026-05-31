@@ -13,6 +13,8 @@ const pageTheme = {
   "--text-muted": "var(--text-muted)",
 } as CSSProperties;
 
+const replayPageUtm = "utm_source=chchai&utm_medium=replay-page&utm_campaign=techweek26";
+
 const dayEvents = [
   {
     slug: "am-workshops",
@@ -24,8 +26,11 @@ const dayEvents = [
     image: "/images/epic-ai-conference/epic-ai-am.png",
     description:
       "The morning workshop block is designed for people who want practical experience, not just theory. Across five fast, hands-on sessions, attendees explore how AI can support communication, workflow design, nonprofit impact, and collaborative idea-building.",
-    details:
-      "Hosted by the Christchurch AI Meetup Group as part of TechWeekNZ, the EPIC AI Conference brings together local and international practitioners for a compact, high-value morning of experimentation and applied learning. Whether you’re just getting started, or already using AI at work, these sessions will give you fresh ways to think about what the tools can do, where they fit, and how to use them more effectively.",
+    details: (
+      <>
+        Hosted by the <a href={`https://www.meetup.com/christchurch-ai/?${replayPageUtm}`} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>Christchurch AI Meetup Group</a> as part of <a href={`https://techweek.co.nz/?${replayPageUtm}`} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>TechWeekNZ</a>, the EPIC AI Conference at <a href={`https://epicinnovation.co.nz/?${replayPageUtm}`} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad", fontWeight: 700 }}>EPIC Innovation</a> brings together local and international practitioners for a compact, high-value morning of experimentation and applied learning. Whether you’re just getting started, or already using AI at work, these sessions will give you fresh ways to think about what the tools can do, where they fit, and how to use them more effectively.
+      </>
+    ),
   },
   {
     slug: "coffee-and-jam",
@@ -35,7 +40,7 @@ const dayEvents = [
     href: "https://events.humanitix.com/ministry-of-awesome-coffee-and-jam-371",
     replayHref: null,
     companyName: "Ministry of Awesome",
-    companyUrl: "https://ministryofawesome.com/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26",
+    companyUrl: `https://ministryofawesome.com/coffee-and-jam/?${replayPageUtm}`,
     description:
       "Coffee & Jam is Christchurch’s longest-running founder meetup: a lunchtime tradition where the Ōtautahi startup community comes together to connect, learn from founders across different stages, and collaborate on ideas that help startups thrive.",
     details:
@@ -592,124 +597,12 @@ export default function EpicAIConferencePage() {
       <SiteHeader />
 
       <main>
-        <section className="px-6 py-20 md:py-24">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
-            <div>
-              <div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-xs font-semibold uppercase tracking-[0.2em] mb-6"
-                style={{ borderColor: "var(--border)", color: "var(--accent)", background: "var(--background)" }}
-              >
-                TechWeekNZ · EPIC Innovation · Christchurch · Thursday 21 May
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.05] mb-6">
-                EPIC AI Conference
-                <br />
-                an all-day TechWeek26 event in Christchurch
-              </h1>
-              <p className="text-lg md:text-xl leading-relaxed max-w-3xl mb-6" style={{ color: "var(--foreground)" }}>
-                The EPIC AI conference is a day of workshops, community conversation, presentations,
-                and leadership dialogue at <a href="https://epicinnovation.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=tw26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>EPIC Innovation</a>. This event is part of <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=landingpage&utm_campaign=epic-26" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", fontWeight: 700 }}>TechWeekNZ</a>,
-                Aotearoa New Zealand’s national festival of tech and innovation.
-              </p>
-              <p className="text-lg leading-relaxed max-w-3xl mb-6" style={{ color: "var(--foreground)" }}>
-                The spirit of the day is shaped by the themes of this year&apos;s TechWeek festival:
-                <strong style={{ color: "var(--foreground)" }}> innovation, inspiration and impact across Aotearoa</strong>; bringing together
-                <strong style={{ color: "var(--foreground)" }}> ideas, people and opportunities</strong>; and connecting innovators with communities
-                across the motu to help shape New Zealand’s future.
-              </p>
-              <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "var(--foreground)" }}>
-                Throughout the day, the emphasis is on local capability, shared learning, practical experimentation,
-                thoughtful discussion, and the wider Christchurch AI community. This will collect and share insights about how AI is being explored, applied, and led in Aotearoa.
-              </p>
-              <div className="grid sm:grid-cols-3 gap-4">
-                {[
-                  { stat: "14+", label: "speakers, panelists, founders, and facilitators" },
-                  { stat: "4", label: "linked events across one shared TechWeek day" },
-                  { stat: "1", label: "community hub at EPIC Innovation" },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-                    <div className="text-3xl font-bold mb-2" style={{ color: "var(--accent)" }}>
-                      {item.stat}
-                    </div>
-                    <div className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                      {item.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <aside className="rounded-3xl border p-6 md:p-7 lg:sticky lg:top-24" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-              <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-                TechWeek26
-              </div>
-              <h2 className="text-2xl font-bold mb-4" style={{ color: "#004aad" }}>The Art of the Possible</h2>
-              <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                <p>The future isn’t something that happens to us — it’s something we create.</p>
-                <p>Techweek26 turns imagination into execution: ideas you can trust, actions you can take, and outcomes that make a difference.</p>
-                <p>As AI is moving from optional to operational, we use events like the EPIC AI Conference to increase our collective momentum as a community.</p>
-              </div>
-              <div className="mt-6 pt-6 border-t" style={{ borderColor: "var(--border)" }}>
-                <div className="flex items-start gap-4">
-                  <Image
-                    src="/images/epic-ai-conference/kelly-anne-findlay.png"
-                    alt="Kelly-Anne Findlay"
-                    width={64}
-                    height={64}
-                    className="rounded-full border"
-                    style={{ borderColor: "var(--border)" }}
-                  />
-                  <div>
-                    <p className="text-sm leading-relaxed italic" style={{ color: "var(--text-muted)" }}>
-                      “Learnt so much about how much AI has advanced in the last 12 months. Also how to use it more efficiently for some tasks. Great presenters, and fantastic that it was interactive by using it in the course. Easy to go back and see what we learnt to reference it and show other staff members.”
-                    </p>
-                    <p className="text-sm font-semibold mt-3" style={{ color: "var(--foreground)" }}>
-                      – Kelly-Anne Findlay
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </section>
-
-        <section className="px-6 pb-10">
-          <div className="max-w-6xl mx-auto rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-            <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-              Thursday, 21 May, 2026 @ EPIC Innovation, 100 Manchester St, Christchurch
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-5" style={{ color: "#004aad" }}>A celebration of Christchurch’s AI community at TechWeek26</h2>
-            <div className="space-y-4 text-base leading-relaxed max-w-4xl" style={{ color: "var(--text-muted)" }}>
-              <p>
-                The EPIC AI Conference brings together different parts of the local ecosystem in one place: educators, founders, nonprofit voices, infrastructure thinkers, AI safety practitioners, startup builders, and leaders responsible for real teams and real decisions.
-              </p>
-              <p>
-                That breadth allows us to gain a holistic view of the multifaceted Artificial Intelligence community. The morning workshops focus on skills and experimentation. Lunchtime Coffee & Jam expands the conversation into Christchurch’s founder and innovation scene. The afternoon presentations move into operational, ethical, and technical questions. The evening panel examines the evolution of leadership, trust, and the human side of adoption.
-              </p>
-              <div className="rounded-2xl border p-5" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-                <ol className="space-y-2 text-sm md:text-base" style={{ color: "var(--text-muted)" }}>
-                  <li>1. <strong style={{ color: "var(--foreground)" }}>AM Workshops</strong> — 9–11:45am — <a href="#am-workshops-replays" style={{ color: "var(--accent)" }}>Replays here</a></li>
-                  <li>2. <strong style={{ color: "var(--foreground)" }}>Lunchtime Coffee &amp; Jam</strong> — 12–1:15pm</li>
-                  <li>3. <strong style={{ color: "var(--foreground)" }}>PM Presentations</strong> — 1:30–5pm — <a href="#pm-presentations-replays" style={{ color: "var(--accent)" }}>Replays here</a></li>
-                  <li>4. <strong style={{ color: "var(--foreground)" }}>Evening Panel</strong> — 5:30–7pm — <a href="#leadership-panel-replay" style={{ color: "var(--accent)" }}>Replays here</a></li>
-                </ol>
-              </div>
-              <p>
-                Seen as a whole, the day reflects TechWeek’s wider purpose: creating a space where communities can learn together, share capability, and think seriously about the future they want to build.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section id="programme" className="px-6 py-14 border-y" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-              Four Consecutive Events
+              Thursday, 21 May, 2026 @ EPIC Innovation, 100 Manchester St, Christchurch, New Zealand.
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#004aad" }}>Full-day AI conference in Christchurch</h2>
-            <p className="text-base md:text-lg max-w-4xl mb-10" style={{ color: "var(--text-muted)" }}>
-              From morning skill-building to evening leadership reflection, the programme unfolds as a day-long community gathering at EPIC. Each event stands on its own, but together they create a fuller picture of how AI is being explored and discussed in Christchurch during TechWeekNZ.
-            </p>
             <SectionImage src="/images/epic-ai-conference/chchai-tw26-bg.png" alt="Christchurch AI TechWeek26 background" />
             <div className="grid gap-5">
               {dayEvents.map((event) => (
@@ -727,8 +620,10 @@ export default function EpicAIConferencePage() {
                     </div>
                     <div>
                       <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>
-                        {"companyName" in event && event.companyName && event.companyUrl ? (
-                          <a href={event.companyUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad" }}>{event.title}</a>
+                        {event.slug === "coffee-and-jam" ? (
+                          <>
+                            Ministry of Awesome: <a href={`https://ministryofawesome.com/coffee-and-jam/?${replayPageUtm}`} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad" }}>Coffee &amp; Jam</a>
+                          </>
                         ) : (
                           event.title
                         )}
@@ -758,49 +653,12 @@ export default function EpicAIConferencePage() {
           </div>
         </section>
 
-        <section className="px-6 py-16 md:py-20">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
-            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-              <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-                Themes through the day
-              </div>
-              <h2 className="text-3xl font-bold mb-5" style={{ color: "#004aad" }}>How the programme maps to TechWeek values</h2>
-              <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                <p>
-                  <strong style={{ color: "var(--foreground)" }}>Digital foundations and skills</strong> show up most clearly in the morning workshops, where attendees build practical confidence and test real applications of AI.
-                </p>
-                <p>
-                  <strong style={{ color: "var(--foreground)" }}>Social good</strong> appears in conversations about nonprofit use, community impact, and the role of trustworthy systems in public life.
-                </p>
-                <p>
-                  <strong style={{ color: "var(--foreground)" }}>Responsible governance</strong> runs through the afternoon talks and the closing panel, especially in discussions of risk, privacy, safety, procurement, leadership, and organisational trust.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-              <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-                Community emphasis
-              </div>
-              <h2 className="text-3xl font-bold mb-5" style={{ color: "#004aad" }}>Christchurch, not just content</h2>
-              <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                <p>
-                  The day is rooted in Christchurch’s local innovation network: Christchurch AI as organiser, EPIC as venue, Ministry of Awesome at lunchtime, and a programme that makes room for founders, advisors, operators, and community-minded practitioners.
-                </p>
-                <p>
-                  That local grounding gives the event a different tone from a generic conference. It becomes a place to meet people, compare approaches, share capability, and build the kinds of relationships that help ideas travel beyond a single stage session.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="speakers" className="px-6 py-16 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
-              Speakers & Panelists
+              Event Replays & Resources
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-10" style={{ color: "#004aad" }}>Replay library across the day</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-10" style={{ color: "#004aad" }}>Workshop Recordings and Slides</h2>
 
             <div className="space-y-12">
               <div id="am-workshops-replays" className="scroll-mt-28">
@@ -848,6 +706,43 @@ export default function EpicAIConferencePage() {
                     <PanelistCard key={panelist.name} {...panelist} />
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-16 md:py-20">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
+            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+              <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
+                Themes through the day
+              </div>
+              <h2 className="text-3xl font-bold mb-5" style={{ color: "#004aad" }}>How the programme maps to TechWeek values</h2>
+              <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                <p>
+                  <strong style={{ color: "var(--foreground)" }}>Digital foundations and skills</strong> show up most clearly in the morning workshops, where attendees build practical confidence and test real applications of AI.
+                </p>
+                <p>
+                  <strong style={{ color: "var(--foreground)" }}>Social good</strong> appears in conversations about nonprofit use, community impact, and the role of trustworthy systems in public life.
+                </p>
+                <p>
+                  <strong style={{ color: "var(--foreground)" }}>Responsible governance</strong> runs through the afternoon talks and the closing panel, especially in discussions of risk, privacy, safety, procurement, leadership, and organisational trust.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border p-7 md:p-8" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+              <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
+                Community emphasis
+              </div>
+              <h2 className="text-3xl font-bold mb-5" style={{ color: "#004aad" }}>Christchurch, not just content</h2>
+              <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                <p>
+                  The day is rooted in Christchurch’s local innovation network: Christchurch AI as organiser, EPIC as venue, Ministry of Awesome at lunchtime, and a programme that makes room for founders, advisors, operators, and community-minded practitioners.
+                </p>
+                <p>
+                  That local grounding gives the event a different tone from a generic conference. It becomes a place to meet people, compare approaches, share capability, and build the kinds of relationships that help ideas travel beyond a single stage session.
+                </p>
               </div>
             </div>
           </div>
