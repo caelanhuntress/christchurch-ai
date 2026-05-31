@@ -10,73 +10,106 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "techweek",
+    href: "/techweek",
+    title: "TechWeek Christchurch 2026: Christchurch AI Programme",
+    date: "May 2026",
+    excerpt: "A practical guide to TechWeek events in Christchurch, following the week in chronological order so people can scan the programme, compare formats, and jump straight to the replay or event link that fits them.",
+  },
+  {
+    slug: "ai-christchurch",
+    href: "/ai-christchurch",
+    title: "AI in Christchurch: Canterbury's Artificial Intelligence Community",
+    date: "May 2026",
+    excerpt: "Everything happening in AI in Christchurch, New Zealand: monthly meetups, TechWeek events, speakers, and the Canterbury AI community around EPIC Innovation Centre.",
+  },
+  {
+    slug: "ai-meetup-christchurch",
+    href: "/ai-meetup-christchurch",
+    title: "AI Meetup Christchurch: Monthly Events at EPIC Innovation",
+    date: "May 2026",
+    excerpt: "A guide to the Christchurch AI meetup: free monthly events at EPIC Innovation Centre with speakers, demos, networking, and practical conversations about AI in real work.",
+  },
+  {
+    slug: "epic-innovation-ai-events",
+    href: "/epic-innovation-ai-events",
+    title: "AI Events at EPIC Innovation Centre Christchurch",
+    date: "May 2026",
+    excerpt: "EPIC Innovation Centre hosts the monthly Christchurch AI meetup and gives Canterbury's tech and AI community a place to gather, learn, and connect.",
+  },
+  {
     slug: "ai-governance-nz-organisations",
+    href: "/blog/ai-governance-nz-organisations",
     title: "AI Governance in NZ: What It Actually Means for Your Organisation",
     date: "8 March 2026",
     excerpt: "AI governance isn't just a policy document. What effective governance looks like in practice for NZ organisations — and the three failures we see most.",
   },
   {
     slug: "openclaw-user-group-christchurch",
+    href: "/blog/openclaw-user-group-christchurch",
     title: "OpenClaw User Group Christchurch: What It Is and What to Expect",
     date: "March 2026",
     excerpt: "The first OpenClaw User Group in Christchurch meets March 24 at EPIC Innovation. What OpenClaw is, who it's for, and what you'll get from an hour with other Canterbury users.",
   },
   {
     slug: "what-is-vibe-coding",
+    href: "/blog/what-is-vibe-coding",
     title: "What Is Vibe Coding? Building Software by Conversation",
     date: "8 March 2026",
     excerpt: "Vibe coding means building software by describing what you want in plain language. No syntax, no debugging — just clear thinking and AI. A practical intro ahead of our April 6 meetup.",
   },
   {
     slug: "agentcamp-christchurch-2026",
+    href: "/blog/agentcamp-christchurch-2026",
     title: "AgentCamp Christchurch 2026 — What We Learned",
     date: "7 March 2026",
     excerpt: "100 attendees, 12 speakers, 6 Microsoft MVPs — a recap of AgentCamp Christchurch and what it means for Canterbury's AI scene.",
   },
   {
     slug: "context-engineering-ai",
+    href: "/blog/context-engineering-ai",
     title: "Context Engineering: Why It Matters More Than Prompting",
     date: "March 2026",
     excerpt: "Context engineering is the AI skill separating average users from power operators. What it is, why it beats prompting alone, and how to start today.",
   },
   {
     slug: "techweek-2026-christchurch",
+    href: "/blog/techweek-2026-christchurch",
     title: "TechWeek 2026 Christchurch — AI Conference at EPIC Innovation",
     date: "March 2026",
     excerpt: "Christchurch AI is hosting an official TechWeek 2026 event. Find out what's on, how to attend, and how to apply to speak at Canterbury's biggest AI event of the year.",
   },
   {
     slug: "epic-ai-conference-christchurch",
-    title: "EPIC AI Conference Christchurch: Full TechWeek Guide",
-    date: "April 2026",
-    excerpt: "Looking for the EPIC AI Conference in Christchurch? Start here for the full programme, speaker lineup, venue details, and direct registration links.",
-  },
-  {
-    slug: "epic-ai-conference-christchurch",
+    href: "/blog/epic-ai-conference-christchurch",
     title: "EPIC AI Conference Christchurch: Full TechWeek Guide",
     date: "April 2026",
     excerpt: "Looking for the EPIC AI Conference in Christchurch? Start here for the full programme, speaker lineup, venue details, and direct registration links.",
   },
   {
     slug: "ai-speaker-christchurch",
+    href: "/blog/ai-speaker-christchurch",
     title: "How to Speak at an AI Event in Christchurch",
     date: "March 2026",
     excerpt: "Want to share your AI work with Canterbury's tech community? Here's how to apply to speak at the Christchurch AI meetup and TechWeek 2026.",
   },
   {
     slug: "what-is-christchurch-ai",
+    href: "/blog/what-is-christchurch-ai",
     title: "What Is Christchurch AI? Canterbury's Monthly AI Meetup Explained",
     date: "March 2026",
     excerpt: "Everything you need to know about Christchurch's AI community — who comes, what happens, and why it's become the best room in Canterbury for AI conversations.",
   },
   {
     slug: "ai-events-christchurch",
+    href: "/blog/ai-events-christchurch",
     title: "AI Events in Christchurch: Your Guide to the Local Scene",
     date: "March 2026",
     excerpt: "A guide to AI meetups, conferences, and events happening in Christchurch and Canterbury — from monthly gatherings to TechWeek.",
   },
   {
     slug: "ai-community-new-zealand",
+    href: "/blog/ai-community-new-zealand",
     title: "The NZ AI Community: How Christchurch Fits Into the National Picture",
     date: "March 2026",
     excerpt: "New Zealand's AI ecosystem is growing fast. Here's how Christchurch's community connects to the national picture — and what makes Canterbury's scene unique.",
@@ -99,7 +132,7 @@ export default function BlogIndex() {
 
         <div className="space-y-8">
           {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}
+            <Link key={post.slug} href={post.href}
               className="block rounded-2xl border p-6 transition-all hover:border-blue-600"
               style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
               <div className="text-xs mb-2" style={{ color: "var(--text-muted)" }}>{post.date}</div>

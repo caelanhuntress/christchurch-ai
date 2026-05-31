@@ -24,7 +24,6 @@ export default function SiteHeader({ homeMode = false }: SiteHeaderProps) {
           <Link href="/epic-ai-conference" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">TW26 Conference</Link>
           <Link href="/past-events" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Past Events</Link>
           <Link href="/blog" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">Blog</Link>
-          <Link href="/techweek" className="hover:text-white hover:bg-[#004aad] hover:rounded-full px-3 py-2 transition-all">TechWeekNZ</Link>
         </nav>
 
         <div className="flex items-center gap-3">
