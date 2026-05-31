@@ -22,8 +22,8 @@ const events = [
   {
     slug: "openclaw-office-hours",
     title: "OpenClaw Open Office Hours",
-    href: "https://www.meetup.com/christchurch-ai/events/314520648/",
-    buttonLabel: "RSVP on Meetup",
+    href: "https://join.ai-coaching.academy/openclaws",
+    buttonLabel: "Join the Next Open office Hours",
     image: "/images/techweek/openclaw-office-hours.png",
     date: "Monday 18 May 2026",
     time: "8:00–9:00am",
@@ -37,8 +37,8 @@ const events = [
   {
     slug: "managing-ai-agents",
     title: "Managing AI Agents: The Next High-Value Skill Set",
-    href: "https://ai-coaching.academy/events/managing-ai-agents-the-next-high-value-skill-set",
-    buttonLabel: "RSVP",
+    href: "https://ai-coaching.academy/posts/free-community-events-18-may-2026-replay-managing-ai-agents-the-next-high-value-skill-set",
+    buttonLabel: "Replay",
     image: "/images/techweek/managing-ai-agents.png",
     date: "Monday 18 May 2026",
     time: "4:30–5:30pm",
@@ -52,8 +52,8 @@ const events = [
   {
     slug: "ai-governance",
     title: "AI Governance & The Future of Work in New Zealand",
-    href: "https://events.humanitix.com/ai-governance-tw26",
-    buttonLabel: "RSVP",
+    href: "https://ai-coaching.academy/posts/free-community-events-20-may-2026-replay-ai-governance-and-the-future-of-work-in-new-zealand",
+    buttonLabel: "Replay",
     image: "/images/techweek/ai-governance.png",
     date: "Wednesday 20 May 2026",
     time: "10:00–11:00am",
@@ -67,8 +67,8 @@ const events = [
   {
     slug: "epic-am",
     title: "EPIC AI Conference — AM Workshops",
-    href: "https://events.humanitix.com/epic-ai-conference-am",
-    buttonLabel: "RSVP",
+    href: "https://christchurch-ai.com/epic-ai-conference",
+    buttonLabel: "Replay",
     image: "/images/epic-ai-conference/epic-ai-am.png",
     date: "Thursday 21 May 2026",
     time: "9:00–11:45am",
@@ -97,8 +97,8 @@ const events = [
   {
     slug: "epic-pm",
     title: "EPIC AI Conference — PM Presentations",
-    href: "https://events.humanitix.com/epic-ai-conference-pm",
-    buttonLabel: "RSVP",
+    href: "https://christchurch-ai.com/epic-ai-conference",
+    buttonLabel: "Replay",
     image: "/images/epic-ai-conference/epic-ai-pm.png",
     date: "Thursday 21 May 2026",
     time: "1:30–5:00pm",
@@ -112,8 +112,8 @@ const events = [
   {
     slug: "epic-panel",
     title: "EPIC AI Conference — Evening Panel",
-    href: "https://events.humanitix.com/epic-ai-conference-panel",
-    buttonLabel: "RSVP",
+    href: "https://christchurch-ai.com/epic-ai-conference",
+    buttonLabel: "Replay",
     image: "/images/epic-ai-conference/epic-ai-panel.png",
     date: "Thursday 21 May 2026",
     time: "5:30–7:00pm",
@@ -127,8 +127,8 @@ const events = [
   {
     slug: "ai-coaching-power-hour",
     title: "AI Coaching Power Hour",
-    href: "https://events.humanitix.com/ai-coaching-power-hour-tw26",
-    buttonLabel: "RSVP",
+    href: "https://join.ai-coaching.academy/campus",
+    buttonLabel: "Join an Upcoming Event",
     image: "/images/techweek/ai-coaching-power-hour.png",
     date: "Friday 22 May 2026",
     time: "10:00–11:00am",
@@ -142,7 +142,7 @@ const events = [
   {
     slug: "ai-roadmap-workshop",
     title: "AI Roadmap Workshop",
-    href: "https://events.humanitix.com/ai-roadmap-workshop-0526",
+    href: "https://join.ai-coaching.academy/roadmap",
     buttonLabel: "RSVP",
     image: "/images/techweek/ai-roadmap-workshop.png",
     date: "Saturday 23 May 2026",
@@ -189,7 +189,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TechWeek Christchurch 2026 | Christchurch AI Events",
     description:
-      "TechWeek events in Christchurch, with AI sessions, EPIC conference details, dates, venues, and RSVP links in one place.",
+      "TechWeek events in Christchurch, with AI sessions, EPIC conference details, dates, venues, and replay links in one place.",
     images: [socialImage.url],
   },
 };
@@ -374,7 +374,7 @@ export default function TechWeekPage() {
                 Looking for TechWeek Christchurch events? This page brings together the full Christchurch AI programme — from online sessions on OpenClaw, agent management, governance, and coaching through to the EPIC AI Conference day and the closing AI Roadmap Workshop. It sits inside the wider <a href="https://techweek.co.nz/?utm_source=chchai&utm_medium=techweekpage&utm_campaign=caelanhuntress" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">Techweek NZ festival programme</a>, so you can explore the national schedule as well as the Christchurch AI lineup.
               </p>
               <p className="text-lg leading-relaxed max-w-3xl mb-10" style={{ color: "var(--foreground)" }}>
-                It is designed as a practical guide to TechWeek events in Christchurch, following the week in chronological order so people can scan the programme, compare formats, and jump straight to the RSVP link that fits them. If you want to go deeper on the people and projects behind these sessions, you can also explore <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">AI Coaching Academy</a>, <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">OpenClaws NZ AI assistant installation</a>, and <a href="https://caelanhuntress.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">Caelan Huntress</a>.
+                It is designed as a practical guide to TechWeek events in Christchurch, following the week in chronological order so people can scan the programme, compare formats, and jump straight to the replay or event link that fits them. If you want to go deeper on the people and projects behind these sessions, you can also explore <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">AI Coaching Academy</a>, <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">OpenClaws NZ AI assistant installation</a>, and <a href="https://caelanhuntress.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="font-semibold">Caelan Huntress</a>.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
