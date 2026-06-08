@@ -602,7 +602,7 @@ export default function EpicAIConferencePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] mb-3" style={{ color: "var(--accent)" }}>
               Thursday, 21 May, 2026 @ EPIC Innovation, 100 Manchester St, Christchurch, New Zealand.
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#004aad" }}>Full-day AI conference in Christchurch</h2>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#004aad" }}>Full-day AI conference in Christchurch</h1>
             <SectionImage src="/images/epic-ai-conference/chchai-tw26-bg.png" alt="Christchurch AI TechWeek26 background" />
             <div className="grid gap-5">
               {dayEvents.map((event) => (
