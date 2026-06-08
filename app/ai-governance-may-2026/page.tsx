@@ -99,7 +99,7 @@ export default function AIGovernanceMay2026() {
 
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
 
-          <img src="/chchai-0526-2.png" alt="Christchurch AI May 2026 featured speakers Dr Elsamari Botha and Hazel Shanks" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+          <img src="/chchai-0526-2.webp" alt="Christchurch AI May 2026 featured speakers Dr Elsamari Botha and Hazel Shanks" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
 
           <div className="rounded-xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>

@@ -13,7 +13,7 @@ const EVENTS = [
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554727/",
     pageUrl: "/agent-management-june-2026",
-    image: "/chchai-0626.png",
+    image: "/chchai-0626.webp",
     talks: [
       {
         speaker: "Caelan Huntress",
@@ -36,7 +36,7 @@ const EVENTS = [
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554735/",
     pageUrl: "/ai-healthcare-agrifood-july-2026",
-    image: "/chchai-0726.png",
+    image: "/chchai-0726.webp",
     talks: [
       {
         speaker: "Rowena Woolgar",
@@ -309,7 +309,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-shrink-0">
                 <Image
-                  src="/images/caelan-huntress.png"
+                  src="/images/caelan-huntress.webp"
                   alt="Caelan Huntress — AI Trainer and Public Speaker"
                   width={220}
                   height={220}
@@ -354,7 +354,7 @@ export default function Home() {
           {/* Featured image */}
           <div className="w-full overflow-hidden" style={{ maxHeight: "380px" }}>
             <Image
-              src="/images/chchai-tw26-bg.png"
+              src="/images/chchai-tw26-bg.webp"
               alt="Christchurch AI TechWeek 2026 — Call For Speakers"
               width={1600}
               height={600}

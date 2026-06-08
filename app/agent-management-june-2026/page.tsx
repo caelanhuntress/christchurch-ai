@@ -98,7 +98,7 @@ export default function AgentManagementJune2026() {
         </div>
 
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-          <img src="/chchai-0626.png" alt="Christchurch AI June 2026 featured speakers Caelan Huntress and Blake Burgess" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+          <img src="/chchai-0626.webp" alt="Christchurch AI June 2026 featured speakers Caelan Huntress and Blake Burgess" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
 
           <p>
             The bottleneck has moved. Agents can now take action on your behalf, and the people who know how to manage them well will pull ahead.

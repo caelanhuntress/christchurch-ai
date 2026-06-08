@@ -98,7 +98,7 @@ export default function AIHealthcareAgrifoodJuly2026() {
         </div>
 
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
-          <img src="/chchai-0726.png" alt="Christchurch AI July 2026 featured speakers Rowena Woolgar and Dr Harold Mayaba" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+          <img src="/chchai-0726.webp" alt="Christchurch AI July 2026 featured speakers Rowena Woolgar and Dr Harold Mayaba" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
 
           <p>
             Generic AI advice only takes you so far. The real adoption work happens inside specific industries,

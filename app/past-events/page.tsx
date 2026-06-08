@@ -28,7 +28,7 @@ const PAST_EVENTS = [
     title: "The AI Tension — Implementation vs Existential Risk",
     date: "Monday, 4 May 2026",
     speakers: ["Dr Elsamari Botha", "Hazel Shanks"],
-    image: "/chchai-0526-2.png",
+    image: "/chchai-0526-2.webp",
     description: "Replay, slides, and recap from Christchurch AI’s May meetup on AI literacy, governance, coordination, and the debate around the Doom Thesis.",
   },
   {
