@@ -1,6 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import SiteHeader from "../components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "Past AI Events in Christchurch | Christchurch AI",
+  description:
+    "Browse recordings, slides, and recaps from past Christchurch AI meetups at EPIC Innovation, including sessions on governance, vibe coding, AI media, and context engineering.",
+  alternates: {
+    canonical: "https://christchurch-ai.com/past-events",
+  },
+  openGraph: {
+    title: "Past AI Events in Christchurch | Christchurch AI",
+    description:
+      "Recordings, slides, and summaries from previous Christchurch AI meetups in Canterbury, New Zealand.",
+    url: "https://christchurch-ai.com/past-events",
+    siteName: "Christchurch AI",
+    locale: "en_NZ",
+    type: "website",
+  },
+};
 
 const PAST_EVENTS = [
   {
