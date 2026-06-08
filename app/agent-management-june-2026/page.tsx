@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "June AI Meetup — Agent Management & Engineering Habits | Christchurch AI",
-  description: "Christchurch AI meetup June 2026: Caelan Huntress on agent management and Blake Burgess on engineering habits for working with AI agents.",
+  description: "Replay from Christchurch AI June 2026: Caelan Huntress on agent management and Blake Burgess on engineering habits for working with AI agents.",
   keywords: ["Christchurch AI June 2026", "AI agents Christchurch", "Caelan Huntress", "Blake Burgess", "agent management", "AI meetup Christchurch"],
   openGraph: {
     title: "June AI Meetup — Agent Management & Engineering Habits",
@@ -26,7 +26,7 @@ const schema = {
   description: "Caelan Huntress on agent management as a high-value skill set and Blake Burgess on engineering habits for working with AI agents.",
   startDate: "2026-06-08T17:30:00+12:00",
   endDate: "2026-06-08T20:00:00+12:00",
-  eventStatus: "https://schema.org/EventScheduled",
+  eventStatus: "https://schema.org/EventCompleted",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   isAccessibleForFree: true,
   location: {
@@ -49,6 +49,12 @@ const schema = {
     { "@type": "Person", name: "Caelan Huntress" },
     { "@type": "Person", name: "Blake Burgess" }
   ],
+  recordedIn: {
+    "@type": "VideoObject",
+    name: "Christchurch AI June 2026 replay — Agent Management & Engineering Habits",
+    embedUrl: "https://www.youtube.com/embed/RfBq04FxUbI?start=1",
+    url: "https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s"
+  },
   url: "https://christchurch-ai.com/agent-management-june-2026"
 };
 
@@ -59,9 +65,9 @@ export default function AgentManagementJune2026() {
       <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
         style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}>
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</Link>
-        <a href="https://www.meetup.com/christchurch-ai/events/314554727/" target="_blank" rel="noopener noreferrer"
+        <a href="https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s" target="_blank" rel="noopener noreferrer"
           className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#ffffff" }}>
-          RSVP Free →
+          Watch Replay →
         </a>
       </nav>
 
@@ -69,7 +75,7 @@ export default function AgentManagementJune2026() {
         <Link href="/" className="text-sm mb-8 inline-block" style={{ color: "var(--text-muted)" }}>← Back to Home</Link>
 
         <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--accent)" }}>
-          Monthly Meetup — June 2026
+          Monthly Meetup Replay — June 2026
         </div>
 
         <h1 className="text-4xl font-bold mb-4 leading-tight">
@@ -93,12 +99,37 @@ export default function AgentManagementJune2026() {
           </div>
           <div className="flex items-center gap-2">
             <span>🎟</span>
-            <span><strong className="text-white">Free</strong> — RSVP on Meetup</span>
+            <span><strong className="text-white">Free</strong> — replay now available</span>
           </div>
         </div>
 
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <img src="/chchai-0626.webp" alt="Christchurch AI June 2026 featured speakers Caelan Huntress and Blake Burgess" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+
+          <div className="rounded-xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
+              Watch the Replay
+            </div>
+            <div className="aspect-video w-full overflow-hidden rounded-lg border mb-5" style={{ borderColor: "var(--border)" }}>
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/RfBq04FxUbI?start=1"
+                title="Christchurch AI June 2026 replay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <a
+              href="https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 rounded-lg font-semibold text-sm text-white"
+              style={{ background: "var(--accent)" }}
+            >
+              Watch on YouTube →
+            </a>
+          </div>
 
           <p>
             The bottleneck has moved. Agents can now take action on your behalf, and the people who know how to manage them well will pull ahead.
@@ -156,19 +187,19 @@ export default function AgentManagementJune2026() {
           </p>
 
           <div className="mt-10">
-            <a href="https://www.meetup.com/christchurch-ai/events/314554727/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s" target="_blank" rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-lg font-bold text-white text-lg"
               style={{ background: "var(--accent)" }}>
-              RSVP on Meetup — It&apos;s Free →
+              Watch the June Replay →
             </a>
           </div>
 
           <div className="mt-12 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
-            <p className="font-semibold text-white mb-3">Also Coming Up</p>
+            <p className="font-semibold text-white mb-3">More Events</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/ai-governance-may-2026" className="text-white underline">
-                  May 4 — The AI Tension: Implementation vs Existential Risk
+                  May 4 replay — The AI Tension: Implementation vs Existential Risk
                 </Link>
               </li>
               <li>

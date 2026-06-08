@@ -23,6 +23,15 @@ export const metadata: Metadata = {
 
 const PAST_EVENTS = [
   {
+    slug: "agent-management-june-2026",
+    href: "/agent-management-june-2026",
+    title: "Agent Management & Engineering Habits",
+    date: "Monday, 8 June 2026",
+    speakers: ["Caelan Huntress", "Blake Burgess"],
+    image: "/chchai-0626.webp",
+    description: "Replay from Christchurch AI's June meetup on managing AI agents, agentic project scoping, evaluation habits, and practical engineering workflows.",
+  },
+  {
     slug: "ai-governance-may-2026",
     href: "/ai-governance-may-2026",
     title: "The AI Tension — Implementation vs Existential Risk",

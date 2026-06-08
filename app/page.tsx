@@ -12,6 +12,7 @@ const EVENTS = [
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554727/",
+    replayUrl: "https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s",
     pageUrl: "/agent-management-june-2026",
     image: "/chchai-0626.webp",
     talks: [
@@ -81,7 +82,9 @@ export default function Home() {
     "location": { "@type": "Place", "name": "EPIC Innovation Centre", "address": { "@type": "PostalAddress", "streetAddress": "78-100 Manchester St", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
     "organizer": { "@type": "Organization", "name": "Christchurch Artificial Intelligence", "url": "https://christchurch-ai.com" },
     "isAccessibleForFree": true,
-    "url": "https://www.meetup.com/christchurch-ai/events/314554727/",
+    "eventStatus": "https://schema.org/EventCompleted",
+    "recordedIn": { "@type": "VideoObject", "embedUrl": "https://www.youtube.com/embed/RfBq04FxUbI?start=1" },
+    "url": "https://christchurch-ai.com/agent-management-june-2026",
   };
 
   const featuredWorkshopSchema = {
@@ -240,10 +243,10 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-3 flex-wrap">
-                    <a href={event.meetupUrl} target="_blank" rel="noopener noreferrer"
+                    <a href={event.replayUrl ?? event.meetupUrl} target="_blank" rel="noopener noreferrer"
                       className="inline-block px-6 py-3 rounded-full font-semibold text-sm transition-all hover:opacity-90"
                       style={{ background: "var(--accent)", color: "#ffffff" }}>
-                      RSVP on Meetup — Free
+                      {event.replayUrl ? "Watch Replay" : "RSVP on Meetup — Free"}
                     </a>
                     {event.pageUrl && (
                       <Link href={event.pageUrl}
