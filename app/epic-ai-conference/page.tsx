@@ -619,7 +619,7 @@ export default function EpicAIConferencePage() {
                       <div className="text-2xl font-bold mb-1" style={{ color: "var(--foreground)" }}>{event.time}</div>
                     </div>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>
+                      <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#004aad" }}>
                         {event.slug === "coffee-and-jam" ? (
                           <>
                             Ministry of Awesome: <a href={`https://ministryofawesome.com/coffee-and-jam/?${replayPageUtm}`} target="_blank" rel="noopener noreferrer" style={{ color: "#004aad" }}>Coffee &amp; Jam</a>
@@ -627,7 +627,7 @@ export default function EpicAIConferencePage() {
                         ) : (
                           event.title
                         )}
-                      </h3>
+                      </h2>
                       <p className="leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>
                         {event.description}
                       </p>
