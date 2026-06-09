@@ -19,6 +19,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://christchurch-ai.com/agent-management-june-2026" },
 };
 
+const presentation1SlidesUrl = "https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-0626.pdf";
+const presentation2SlidesUrl = "https://github.com/blbu/agent-habits-june-2026";
+
+const resourceButtonClass = "chch-resource-button inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+const largeResourceButtonClass = "chch-resource-button inline-flex items-center justify-center px-8 py-4 rounded-lg font-bold text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "Event",
@@ -120,15 +126,32 @@ export default function AgentManagementJune2026() {
                 allowFullScreen
               />
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 rounded-lg font-semibold text-sm text-white"
-              style={{ background: "var(--accent)" }}
-            >
-              Watch on YouTube →
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--primary`}
+              >
+                Watch on YouTube →
+              </a>
+              <a
+                href={presentation1SlidesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--secondary`}
+              >
+                Presentation 1 Slides →
+              </a>
+              <a
+                href={presentation2SlidesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--secondary`}
+              >
+                Presentation 2 Resources →
+              </a>
+            </div>
           </div>
 
           <p>
@@ -153,6 +176,16 @@ export default function AgentManagementJune2026() {
               Caelan will unpack what AI agents are, how they differ from simple chat tools, which skills matter when agents start taking action,
               what tools can be used to build agent harnesses, and why context engineering and performance evaluation are becoming core capabilities.
             </p>
+            <div className="mt-5">
+              <a
+                href={presentation1SlidesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--secondary`}
+              >
+                Download Presentation 1 Slides →
+              </a>
+            </div>
           </div>
 
           <div className="border rounded-lg p-6" style={{ borderColor: "var(--border)" }}>
@@ -169,6 +202,16 @@ export default function AgentManagementJune2026() {
               Expect a grounded engineer&apos;s perspective on harnesses, models, and where agents fit into existing workflows without rebuilding everything.
               You&apos;ll leave with practical habits and hooks you can start using straight away.
             </p>
+            <div className="mt-5">
+              <a
+                href={presentation2SlidesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--secondary`}
+              >
+                View Presentation 2 Resources →
+              </a>
+            </div>
           </div>
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Should Come</h2>
@@ -186,11 +229,30 @@ export default function AgentManagementJune2026() {
             Sponsored by <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: "var(--accent)" }}>AI Coaching Academy</a>.
           </p>
 
-          <div className="mt-10">
-            <a href="https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s" target="_blank" rel="noopener noreferrer"
-              className="inline-block px-8 py-4 rounded-lg font-bold text-white text-lg"
-              style={{ background: "var(--accent)" }}>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <a
+              href="https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${largeResourceButtonClass} chch-resource-button--primary`}
+            >
               Watch the June Replay →
+            </a>
+            <a
+              href={presentation1SlidesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${largeResourceButtonClass} chch-resource-button--secondary`}
+            >
+              Presentation 1 Slides →
+            </a>
+            <a
+              href={presentation2SlidesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${largeResourceButtonClass} chch-resource-button--secondary`}
+            >
+              Presentation 2 Resources →
             </a>
           </div>
 
