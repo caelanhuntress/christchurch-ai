@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import SiteHeader from "../components/SiteHeader";
+import { getEventHref, getPastEvents } from "../data/events";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Past AI Events in Christchurch | Christchurch AI",
@@ -21,60 +24,9 @@ export const metadata: Metadata = {
   },
 };
 
-const PAST_EVENTS = [
-  {
-    slug: "agent-management-june-2026",
-    href: "/agent-management-june-2026",
-    title: "Agent Management & Engineering Habits",
-    date: "Monday, 8 June 2026",
-    speakers: ["Caelan Huntress", "Blake Burgess"],
-    image: "/chchai-0626.webp",
-    description: "Replay from Christchurch AI's June meetup on managing AI agents, agentic project scoping, evaluation habits, and practical engineering workflows.",
-  },
-  {
-    slug: "ai-governance-may-2026",
-    href: "/ai-governance-may-2026",
-    title: "The AI Tension — Implementation vs Existential Risk",
-    date: "Monday, 4 May 2026",
-    speakers: ["Dr Elsamari Botha", "Hazel Shanks"],
-    image: "/chchai-0526-2.webp",
-    description: "Replay, slides, and recap from Christchurch AI’s May meetup on AI literacy, governance, coordination, and the debate around the Doom Thesis.",
-  },
-  {
-    slug: "april-ai-meetup-vibe-coding-web-apps-2026",
-    title: "Vibe Coding & Web App Development with AI",
-    date: "Monday, 6 April 2026",
-    speakers: ["Greg Dickson", "Caelan Huntress"],
-    image: "/images/past-event-april-2026.webp",
-    description: "Greg Dickson on turning SOPs into working web apps with Manis, plus Caelan Huntress on vibe coding with Claude, agents, skills, and live app demos.",
-  },
-  {
-    slug: "ai-image-video-generation-march-2026",
-    title: "AI Multimedia: Image Generation & Video Generation",
-    date: "Monday, 2 March 2026",
-    speakers: ["Caelan Huntress", "Arthur Machado"],
-    image: "/images/past-event-march-2026.jpg",
-    description: "A hands-on exploration of AI image and video generation — from Ghibli-style transformations to live demos with Sora, Gemini, and ChatGPT.",
-  },
-  {
-    slug: "ai-data-testing-coaching-feb-2026",
-    title: "AI & Data Testing + Create a Coaching Relationship with AI",
-    date: "Monday, 2 February 2026",
-    speakers: ["Hamish Watson", "Caelan Huntress"],
-    image: "/images/past-event-feb-2026.jpg",
-    description: "Hamish Watson on why good AI requires good data, plus Caelan Huntress on building a genuine coaching relationship with AI — including personality profiles and the coaching container.",
-  },
-  {
-    slug: "ai-reasoning-context-engineering-dec-2025",
-    title: "AI Reasoning & Context Engineering",
-    date: "Monday, 1 December 2025",
-    speakers: ["Andy Masters", "Caelan Huntress"],
-    image: "/images/past-event-dec-2025.jpg",
-    description: "Andy Masters on tiny recursive reasoning models and the festive Christmas tree packing Kaggle challenge — with live audience participation. Plus Caelan Huntress on context engineering and the PILLARS framework.",
-  },
-];
-
 export default function PastEventsPage() {
+  const pastEvents = getPastEvents();
+
   return (
     <div className="min-h-screen" style={{ background: "var(--background)" }}>
       <SiteHeader />
@@ -87,8 +39,8 @@ export default function PastEventsPage() {
         </p>
 
         <div className="space-y-8">
-          {PAST_EVENTS.map((event) => (
-            <Link key={event.slug} href={event.href ?? `/past-events/${event.slug}`}
+          {pastEvents.map((event) => (
+            <Link key={event.slug} href={getEventHref(event)}
               className="group block rounded-2xl border overflow-hidden hover:border-blue-300 transition-all"
               style={{ borderColor: "var(--border)" }}>
               <div className="flex flex-col md:flex-row">
@@ -100,7 +52,7 @@ export default function PastEventsPage() {
                   <h2 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">{event.title}</h2>
                   <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>{event.description}</p>
                   <div className="text-xs" style={{ color: "var(--text-muted)" }}>
-                    {event.speakers.join(" · ")}
+                    {event.talks.map((talk) => talk.speaker).join(" · ")}
                   </div>
                 </div>
               </div>

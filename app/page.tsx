@@ -1,67 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import ThemeToggle from "./ThemeToggle";
 import SiteHeader from "./components/SiteHeader";
+import { getEventHref, getEventSchema, getUpcomingEvents } from "./data/events";
 
-const EVENTS = [
-  {
-    month: "June",
-    date: "Monday, 8 June 2026",
-    time: "5:30 – 8:00 PM NZST",
-    title: "Agent Management & Engineering Habits",
-    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
-    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
-    meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554727/",
-    replayUrl: "https://www.youtube.com/watch?v=RfBq04FxUbI&t=1s",
-    pageUrl: "/agent-management-june-2026",
-    image: "/chchai-0626.webp",
-    talks: [
-      {
-        speaker: "Caelan Huntress",
-        title: "Agent Management: The Next High-Value Skillset",
-        bio: "How to scope agentic projects, manage autonomous systems, and build the evaluation habits that make agents useful in real work.",
-      },
-      {
-        speaker: "Blake Burgess",
-        title: "Agent Habits with an Engineer's Mindset",
-        bio: "A practical walkthrough of local vs cloud agents, harnesses, models, and the habits that help engineers work well with them.",
-      },
-    ],
-  },
-  {
-    month: "July",
-    date: "Monday, 13 July 2026",
-    time: "5:30 – 8:00 PM NZST",
-    title: "AI in Healthcare & Agri-Food Industries",
-    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
-    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
-    meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554735/",
-    pageUrl: "/ai-healthcare-agrifood-july-2026",
-    image: "/chchai-0726.webp",
-    talks: [
-      {
-        speaker: "Rowena Woolgar",
-        title: "AI Is Not Neutral: Designing Healthcare AI for Real Work, Real Risk",
-        bio: "A grounded look at safe healthcare AI delivery across clinical, administrative, and system-level contexts.",
-      },
-      {
-        speaker: "Dr Harold Mayaba",
-        title: "AI in Agri-Food: Real Opportunities and Smarter Growth",
-        bio: "How AI, market intelligence, and consumer behaviour can create practical advantage in New Zealand's agri-food sector.",
-      },
-    ],
-  },
-];
-
-const PAST_TALKS = [
-  { speaker: "Dan Randow", topic: "Collective Intelligence & AI", month: "September 2025" },
-  { speaker: "Blake Harkness", topic: "AI in the Real World", month: "2025" },
-];
+export const revalidate = 3600;
 
 const SHOW_HERO_FEATURED_CONFERENCE = false;
 const SHOW_FEATURED_WORKSHOP = false;
 
 export default function Home() {
+  const now = new Date();
+  const upcomingEvents = getUpcomingEvents(now);
+  const nextMeetup = upcomingEvents[0];
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -71,20 +21,6 @@ export default function Home() {
     "location": { "@type": "Place", "name": "EPIC Innovation Centre, Christchurch, New Zealand" },
     "sameAs": ["https://meetup.com/christchurch-ai"],
     "sponsor": { "@type": "Organization", "name": "AI Coaching Academy", "url": "https://ai-coaching.academy" },
-  };
-
-  const nextMeetupSchema = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Christchurch AI Meetup — June 2026: Agent Management & Engineering Habits",
-    "startDate": "2026-06-08T17:30:00+12:00",
-    "endDate": "2026-06-08T20:00:00+12:00",
-    "location": { "@type": "Place", "name": "EPIC Innovation Centre", "address": { "@type": "PostalAddress", "streetAddress": "78-100 Manchester St", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
-    "organizer": { "@type": "Organization", "name": "Christchurch Artificial Intelligence", "url": "https://christchurch-ai.com" },
-    "isAccessibleForFree": true,
-    "eventStatus": "https://schema.org/EventCompleted",
-    "recordedIn": { "@type": "VideoObject", "embedUrl": "https://www.youtube.com/embed/RfBq04FxUbI?start=1" },
-    "url": "https://christchurch-ai.com/agent-management-june-2026",
   };
 
   const featuredWorkshopSchema = {
@@ -103,7 +39,9 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nextMeetupSchema) }} />
+      {nextMeetup && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getEventSchema(nextMeetup, now)) }} />
+      )}
       {SHOW_FEATURED_WORKSHOP && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuredWorkshopSchema) }} />
       )}
@@ -183,13 +121,32 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12">Upcoming Meetups</h2>
 
           <div className="space-y-16">
-            {EVENTS.map((event, idx) => (
+            {upcomingEvents.length === 0 && (
+              <div className="rounded-2xl border p-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+                <p className="text-sm mb-5" style={{ color: "var(--text-muted)" }}>
+                  The next Christchurch AI meetup is being scheduled now. Join the Meetup group for the first announcement, or browse the replay archive.
+                </p>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 rounded-full font-semibold text-sm transition-all hover:opacity-90"
+                    style={{ background: "var(--accent)", color: "#ffffff" }}>
+                    Join on Meetup
+                  </a>
+                  <Link href="/past-events"
+                    className="inline-block px-6 py-3 rounded-full font-semibold text-sm border transition-all hover:opacity-90"
+                    style={{ borderColor: "var(--accent)", color: "var(--accent)" }}>
+                    Browse Past Events →
+                  </Link>
+                </div>
+              </div>
+            )}
+            {upcomingEvents.map((event, idx) => (
               <div key={event.month} className="rounded-2xl border overflow-hidden" style={{ borderColor: "var(--border)" }}>
                 {/* Event image */}
                 <div className="relative w-full" style={{ height: "360px" }}>
                   <Image
                     src={event.image}
-                    alt={`${event.month} 2026 Christchurch AI Meetup — ${event.title}`}
+                    alt={`${event.month} ${event.year} Christchurch AI Meetup — ${event.title}`}
                     fill
                     style={{ objectFit: "cover", objectPosition: "center top" }}
                     priority={idx === 0}
@@ -198,7 +155,7 @@ export default function Home() {
                   <div className="absolute bottom-0 left-0 p-6">
                     <div>
                       <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "var(--accent)" }}>
-                        {event.month} 2026
+                        {event.month} {event.year}
                       </div>
                       <h3 className="text-xl font-bold homepage-photo-title">{event.title}</h3>
                     </div>
@@ -248,8 +205,8 @@ export default function Home() {
                       style={{ background: "var(--accent)", color: "#ffffff" }}>
                       {event.replayUrl ? "Watch Replay" : "RSVP on Meetup — Free"}
                     </a>
-                    {event.pageUrl && (
-                      <Link href={event.pageUrl}
+                    {getEventHref(event) && (
+                      <Link href={getEventHref(event)}
                         className="inline-block px-6 py-3 rounded-full font-semibold text-sm border transition-all hover:opacity-90"
                         style={{ borderColor: "var(--accent)", color: "var(--accent)" }}>
                         Event Details →
