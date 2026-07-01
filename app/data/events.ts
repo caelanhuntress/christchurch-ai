@@ -185,6 +185,35 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
       },
     ],
   },
+  {
+    slug: "ai-marketing-comms-august-2026",
+    month: "August",
+    year: 2026,
+    date: "Monday, 10 August 2026",
+    time: "5:30 - 8:00 PM NZST",
+    startDate: "2026-08-10T17:30:00+12:00",
+    endDate: "2026-08-10T20:00:00+12:00",
+    title: "Marketing & Comms with AI",
+    description:
+      "Simon Rush and Nic Hendrie from Trimble on accelerating marketing strategy with AI, plus Caelan Huntress on building an AI Brand Voice Kit.",
+    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
+    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
+    meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554734/",
+    pageUrl: "/ai-marketing-comms-august-2026",
+    image: "/chchai-0826.jpeg",
+    talks: [
+      {
+        speaker: "Simon Rush & Nic Hendrie",
+        title: "Accelerating Marketing Strategy with AI",
+        bio: "How Trimble uses a Vertex AI-connected workflow to turn campaign briefs into research, strategy, tactical plans, QA, and review support.",
+      },
+      {
+        speaker: "Caelan Huntress",
+        title: "Build an AI Brand Voice Kit: Clone Your Voice with AI",
+        bio: "How to capture tone, rhythm, vocabulary, structure, and personality so AI can write in a consistent, recognisable brand voice.",
+      },
+    ],
+  },
 ];
 
 export function getUpcomingEvents(now = new Date()) {
