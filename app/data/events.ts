@@ -170,6 +170,7 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554735/",
+    replayUrl: "https://youtu.be/xT9iYNeiqvE",
     pageUrl: "/ai-healthcare-agrifood-july-2026",
     image: "/chchai-0726.webp",
     talks: [

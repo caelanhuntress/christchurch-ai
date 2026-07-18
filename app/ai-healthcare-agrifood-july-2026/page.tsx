@@ -3,21 +3,28 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "July AI Meetup — AI in Healthcare & Agri-Food Industries | Christchurch AI",
-  description: "Christchurch AI meetup July 2026: Rowena Woolgar on healthcare AI and Dr Harold Mayaba on AI in agri-food and market intelligence.",
+  description: "Replay and slides from Christchurch AI July 2026: Rowena Woolgar on healthcare AI and Dr Harold Mayaba on AI in agri-food and market intelligence.",
   keywords: ["Christchurch AI July 2026", "healthcare AI Christchurch", "agri-food AI NZ", "Rowena Woolgar", "Harold Mayaba", "AI meetup Christchurch"],
   openGraph: {
     title: "July AI Meetup — AI in Healthcare & Agri-Food Industries",
-    description: "Rowena Woolgar and Dr Harold Mayaba at Christchurch AI — Monday 13 July 2026 at EPIC Innovation Centre.",
+    description: "Replay and slides from Rowena Woolgar and Dr Harold Mayaba at Christchurch AI — Monday 13 July 2026 at EPIC Innovation Centre.",
     images: ["https://christchurch-ai.com/chchai-0726.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "July AI Meetup — AI in Healthcare & Agri-Food Industries",
-    description: "Christchurch AI meetup — Rowena Woolgar and Dr Harold Mayaba, Monday 13 July 2026.",
+    description: "Christchurch AI replay — Rowena Woolgar and Dr Harold Mayaba, Monday 13 July 2026.",
     images: ["https://christchurch-ai.com/chchai-0726.png"],
   },
   alternates: { canonical: "https://christchurch-ai.com/ai-healthcare-agrifood-july-2026" },
 };
+
+const replayUrl = "https://youtu.be/xT9iYNeiqvE";
+const replayEmbedUrl = "https://www.youtube.com/embed/xT9iYNeiqvE";
+const slidesUrl = "https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-0726.pdf";
+
+const resourceButtonClass = "chch-resource-button inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+const largeResourceButtonClass = "chch-resource-button inline-flex items-center justify-center px-8 py-4 rounded-lg font-bold text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
 
 const schema = {
   "@context": "https://schema.org",
@@ -26,7 +33,7 @@ const schema = {
   description: "Rowena Woolgar on healthcare AI delivery and Dr Harold Mayaba on AI in agri-food and market intelligence at Christchurch AI.",
   startDate: "2026-07-13T17:30:00+12:00",
   endDate: "2026-07-13T20:00:00+12:00",
-  eventStatus: "https://schema.org/EventScheduled",
+  eventStatus: "https://schema.org/EventCompleted",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   isAccessibleForFree: true,
   location: {
@@ -49,6 +56,12 @@ const schema = {
     { "@type": "Person", name: "Rowena Woolgar" },
     { "@type": "Person", name: "Dr Harold Mayaba" }
   ],
+  recordedIn: {
+    "@type": "VideoObject",
+    name: "Christchurch AI July 2026 replay — AI in Healthcare & Agri-Food Industries",
+    embedUrl: replayEmbedUrl,
+    url: replayUrl
+  },
   url: "https://christchurch-ai.com/ai-healthcare-agrifood-july-2026"
 };
 
@@ -59,9 +72,9 @@ export default function AIHealthcareAgrifoodJuly2026() {
       <nav className="border-b px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm"
         style={{ borderColor: "var(--border)", background: "rgba(20,8,14,0.9)" }}>
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>Christchurch AI</Link>
-        <a href="https://www.meetup.com/christchurch-ai/events/314554735/" target="_blank" rel="noopener noreferrer"
+        <a href={replayUrl} target="_blank" rel="noopener noreferrer"
           className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "var(--accent)", color: "#ffffff" }}>
-          RSVP Free →
+          Watch Replay →
         </a>
       </nav>
 
@@ -69,7 +82,7 @@ export default function AIHealthcareAgrifoodJuly2026() {
         <Link href="/" className="text-sm mb-8 inline-block" style={{ color: "var(--text-muted)" }}>← Back to Home</Link>
 
         <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--accent)" }}>
-          Monthly Meetup — July 2026
+          Monthly Meetup Replay — July 2026
         </div>
 
         <h1 className="text-4xl font-bold mb-4 leading-tight">
@@ -93,12 +106,46 @@ export default function AIHealthcareAgrifoodJuly2026() {
           </div>
           <div className="flex items-center gap-2">
             <span>🎟</span>
-            <span><strong className="text-white">Free</strong> — RSVP on Meetup</span>
+            <span><strong className="text-white">Free</strong> — replay and slides now available</span>
           </div>
         </div>
 
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <img src="/chchai-0726.webp" alt="Christchurch AI July 2026 featured speakers Rowena Woolgar and Dr Harold Mayaba" className="w-full rounded-xl border mb-8" style={{ borderColor: "var(--border)" }} />
+
+          <div className="rounded-xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
+              Watch the Replay
+            </div>
+            <div className="aspect-video w-full overflow-hidden rounded-lg border mb-5" style={{ borderColor: "var(--border)" }}>
+              <iframe
+                className="h-full w-full"
+                src={replayEmbedUrl}
+                title="Christchurch AI July 2026 replay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={replayUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--primary`}
+              >
+                Watch on YouTube →
+              </a>
+              <a
+                href={slidesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--secondary`}
+              >
+                Download Slides →
+              </a>
+            </div>
+          </div>
 
           <p>
             Generic AI advice only takes you so far. The real adoption work happens inside specific industries,
@@ -157,25 +204,36 @@ export default function AIHealthcareAgrifoodJuly2026() {
             Sponsored by <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: "var(--accent)" }}>AI Coaching Academy</a>.
           </p>
 
-          <div className="mt-10">
-            <a href="https://www.meetup.com/christchurch-ai/events/314554735/" target="_blank" rel="noopener noreferrer"
-              className="inline-block px-8 py-4 rounded-lg font-bold text-white text-lg"
-              style={{ background: "var(--accent)" }}>
-              RSVP on Meetup — It&apos;s Free →
+          <div className="mt-10 flex flex-wrap gap-3">
+            <a
+              href={replayUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${largeResourceButtonClass} chch-resource-button--primary`}
+            >
+              Watch the July Replay →
+            </a>
+            <a
+              href={slidesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${largeResourceButtonClass} chch-resource-button--secondary`}
+            >
+              Download Slides →
             </a>
           </div>
 
           <div className="mt-12 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
-            <p className="font-semibold text-white mb-3">Also Coming Up</p>
+            <p className="font-semibold text-white mb-3">More Events</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/ai-governance-may-2026" className="text-white underline">
-                  May 4 — The AI Tension: Implementation vs Existential Risk
+                <Link href="/agent-management-june-2026" className="text-white underline">
+                  June 8 replay — Agent Management &amp; Engineering Habits
                 </Link>
               </li>
               <li>
-                <Link href="/agent-management-june-2026" className="text-white underline">
-                  June 8 — Agent Management &amp; Engineering Habits
+                <Link href="/ai-marketing-comms-august-2026" className="text-white underline">
+                  August 10 — Marketing &amp; Comms with AI
                 </Link>
               </li>
             </ul>
