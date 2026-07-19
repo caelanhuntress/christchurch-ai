@@ -159,6 +159,12 @@ body.theme-light .dark-photo-section .light-card strong.text-white {
   color: #ffffff !important;
 }
 
+.chch-july-replay-button:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--accent) !important;
+}
+
 .chch-resource-button--secondary {
   background: var(--muted);
   color: #ffffff !important;

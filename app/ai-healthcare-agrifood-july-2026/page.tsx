@@ -209,7 +209,7 @@ export default function AIHealthcareAgrifoodJuly2026() {
               href={replayUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${largeResourceButtonClass} chch-resource-button--primary`}
+              className={`${largeResourceButtonClass} chch-resource-button--primary chch-july-replay-button`}
             >
               Watch the July Replay →
             </a>
