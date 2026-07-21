@@ -3,38 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Roadmap Workshop - Christchurch AI",
+  title: "AI Roadmap Workshop for Smart Websites Clients | Christchurch",
   description:
-    "A practical two-hour AI strategy workshop for Smart Websites clients, facilitated by Caelan Huntress and the AI Coaching Academy.",
+    "Build a practical 90-day AI strategy for your business in this two-hour Christchurch workshop from Smart Websites and the AI Coaching Academy.",
   alternates: { canonical: "https://christchurch-ai.com/smart-roadmap" },
   openGraph: {
-    title: "AI Roadmap Workshop - Christchurch AI",
+    title: "Build Your 90-Day AI Roadmap",
     description:
-      "Identify valuable AI opportunities, choose priorities, and build a practical 90-day roadmap for your business.",
+      "Identify your best AI opportunities, choose your priorities, and leave with a practical three-month implementation plan.",
     url: "https://christchurch-ai.com/smart-roadmap",
     siteName: "Christchurch AI",
     locale: "en_NZ",
     type: "website",
   },
-};
-
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "AI Roadmap Workshop",
-  description:
-    "A practical two-hour strategy workshop for Smart Websites clients to identify valuable AI opportunities and build a 90-day roadmap.",
-  url: "https://christchurch-ai.com/smart-roadmap",
-  publisher: {
-    "@type": "Organization",
-    name: "Christchurch AI",
-    url: "https://christchurch-ai.com",
-  },
-  about: [
-    "Artificial intelligence strategy",
-    "AI roadmap planning",
-    "Business workflow improvement",
-  ],
 };
 
 const aiOpportunities = [
@@ -95,6 +76,130 @@ const audience = [
   "Consultants and service providers",
   "Anyone responsible for improving how work gets done",
 ];
+
+const workshopDetails = [
+  ["Duration", "Two hours"],
+  ["Venue", "EPIC Innovation"],
+  ["Address", "100 Manchester Street, Christchurch Central City"],
+  ["Format", "In-person, hands-on workshop"],
+  ["Bring", "A laptop and a real workflow you want to improve"],
+];
+
+const sessions = [
+  {
+    label: "Morning Session",
+    date: "Monday, 10 August 2026",
+    time: "10:00 am-12:00 pm",
+    venue: "EPIC Innovation, Christchurch",
+    button: "Register for Monday, 10 August",
+    shortButton: "Monday, 10 August - 10:00 am",
+    href: "https://events.humanitix.com/ai-roadmap-workshop-0826-1",
+    startDate: "2026-08-10T10:00:00+12:00",
+    endDate: "2026-08-10T12:00:00+12:00",
+  },
+  {
+    label: "Afternoon Session",
+    date: "Friday, 21 August 2026",
+    time: "3:00 pm-5:00 pm",
+    venue: "EPIC Innovation, Christchurch",
+    button: "Register for Friday, 21 August",
+    shortButton: "Friday, 21 August - 3:00 pm",
+    href: "https://events.humanitix.com/ai-roadmap-workshop-0826-2",
+    startDate: "2026-08-21T15:00:00+12:00",
+    endDate: "2026-08-21T17:00:00+12:00",
+  },
+];
+
+const faqs = [
+  {
+    question: "Do I need experience using AI?",
+    answer:
+      "No. The workshop is suitable for complete beginners as well as people already using tools such as ChatGPT, Copilot, Claude, or Gemini.",
+  },
+  {
+    question: "Is this a technical workshop?",
+    answer:
+      "No coding is required. The session focuses on business strategy, workflows, priorities, and practical implementation.",
+  },
+  {
+    question: "Will we be shown AI tools?",
+    answer:
+      "Tools may be used to demonstrate ideas, but the central outcome is your roadmap: where AI can help your business and what you should do during the next three months.",
+  },
+  {
+    question: "What should I bring?",
+    answer:
+      "Bring a laptop, a willingness to experiment, and a real task or workflow that you would like to improve.",
+  },
+  {
+    question: "Will I leave with something practical?",
+    answer:
+      "Yes. You will develop a prioritised shortlist of AI opportunities and organise your selected experiments into a practical 90-day roadmap.",
+  },
+  {
+    question: "Where is the workshop?",
+    answer:
+      "Both sessions are held at EPIC Innovation, 100 Manchester Street, Christchurch Central City.",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      name: "AI Roadmap Workshop",
+      description:
+        "A practical two-hour strategy workshop for Smart Websites clients to identify valuable AI opportunities and build a 90-day roadmap.",
+      url: "https://christchurch-ai.com/smart-roadmap",
+      publisher: {
+        "@type": "Organization",
+        name: "Christchurch AI",
+        url: "https://christchurch-ai.com",
+      },
+      about: [
+        "Artificial intelligence strategy",
+        "AI roadmap planning",
+        "Business workflow improvement",
+      ],
+    },
+    ...sessions.map((session) => ({
+      "@type": "Event",
+      name: `AI Roadmap Workshop - ${session.label}`,
+      startDate: session.startDate,
+      endDate: session.endDate,
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
+      url: session.href,
+      location: {
+        "@type": "Place",
+        name: "EPIC Innovation",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "100 Manchester Street",
+          addressLocality: "Christchurch Central City",
+          addressRegion: "Canterbury",
+          addressCountry: "NZ",
+        },
+      },
+      organizer: {
+        "@type": "Organization",
+        name: "Smart Websites and the AI Coaching Academy",
+      },
+    })),
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+  ],
+};
 
 function SmartMark() {
   return (
@@ -360,41 +465,145 @@ export default function SmartRoadmapPage() {
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight text-[#082263] md:text-5xl">
               AI educator, business coach, and founder of the AI Coaching Academy.
             </h2>
-            <p className="text-lg leading-relaxed text-[#4c5b68]">
-              Caelan helps professionals use AI as a practical operating capability,
-              not just a collection of tools. This workshop turns that approach into a
-              focused roadmap Smart Websites clients can apply inside their own businesses.
-            </p>
+            <div className="space-y-5 text-lg leading-relaxed text-[#4c5b68]">
+              <p>
+                He helps professionals and organisations develop practical AI capability
+                through guided experimentation, strategic planning, and real-world application.
+              </p>
+              <p>
+                His workshops focus on helping people use AI to think faster, create smarter,
+                improve everyday workflows, and make better decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f3f8fc] px-6 py-20">
+        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[0.95fr_1.05fr] md:items-start">
+          <SectionIntro
+            eyebrow="Co-hosted workshop"
+            title="Smart Websites and the AI Coaching Academy."
+            copy="Smart Websites and the AI Coaching Academy have created this workshop to help Smart Websites clients prepare for the next stage of digital business."
+          />
+          <div className="bg-white p-8 shadow-sm">
+            <div className="space-y-5 text-lg leading-relaxed text-[#4c5b68]">
+              <p>
+                Your website is one part of your digital presence. AI can influence how you
+                create content, serve customers, manage information, make decisions, and
+                operate behind the scenes.
+              </p>
+              <p className="font-bold text-[#082263]">
+                This workshop will help you connect those possibilities to a focused business plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro
+            eyebrow="Workshop details"
+            title="Two focused hours at EPIC Innovation."
+          />
+          <div className="grid gap-4 md:grid-cols-5">
+            {workshopDetails.map(([label, value]) => (
+              <div key={label} className="border-t-4 border-[#64bc6c] bg-[#f5fbff] p-5">
+                <p className="mb-2 text-xs font-black uppercase tracking-[0.22em] text-[#0c71c3]">
+                  {label}
+                </p>
+                <p className="text-lg font-black leading-snug text-[#082263]">{value}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section id="dates" className="bg-[#082263] px-6 py-20 text-[#ffffff]">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-[#e0cd00]">
-            Workshop dates
-          </p>
-          <h2 className="text-3xl font-black uppercase leading-tight md:text-5xl">
-            Choose a session when dates are released.
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#ffffff]/76">
-            This section is ready for the final date-selection options. For now, register
-            your interest and Smart Websites can follow up with available workshop times.
-          </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {["Morning session", "Afternoon session", "Team session"].map((dateOption) => (
-              <div key={dateOption} className="border border-[#ffffff]/18 bg-[#ffffff]/8 p-5">
-                <p className="text-lg font-black uppercase text-[#ffffff]">{dateOption}</p>
-                <p className="mt-2 text-sm font-semibold text-[#ffffff]/66">Dates to be confirmed</p>
-              </div>
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-[#e0cd00]">
+              Choose your workshop date
+            </p>
+            <h2 className="text-3xl font-black uppercase leading-tight md:text-5xl">
+              Select the session that works best for you.
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#ffffff]/76">
+              Registration opens on Humanitix in a new browser tab.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {sessions.map((session) => (
+              <article
+                key={session.label}
+                className="border border-[#ffffff]/18 bg-[#ffffff]/8 p-8 shadow-2xl shadow-black/20"
+              >
+                <p className="mb-4 text-sm font-black uppercase tracking-[0.26em] text-[#e0cd00]">
+                  {session.label}
+                </p>
+                <h3 className="text-3xl font-black uppercase leading-tight text-[#ffffff]">
+                  {session.date}
+                </h3>
+                <p className="mt-4 text-xl font-black text-[#ffffff]">{session.time}</p>
+                <p className="mt-2 text-base font-semibold text-[#ffffff]/72">{session.venue}</p>
+                <a
+                  href={session.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-block rounded-full bg-[#e0cd00] px-7 py-4 text-sm font-black uppercase tracking-wide text-[#082263] shadow-xl shadow-black/25 transition hover:bg-[#ffffff] hover:text-[#005da0]"
+                >
+                  {session.button}
+                </a>
+              </article>
             ))}
           </div>
-          <a
-            href="mailto:caelan@christchurch-ai.com?subject=AI%20Roadmap%20Workshop%20dates"
-            className="mt-10 inline-block rounded-full bg-[#e0cd00] px-8 py-4 text-base font-black uppercase tracking-wide text-[#082263] shadow-xl shadow-black/25 transition hover:bg-[#ffffff] hover:text-[#005da0]"
-          >
-            Register Interest
-          </a>
+        </div>
+      </section>
+
+      <section className="bg-[#0c71c3] px-6 py-20 text-center text-[#ffffff]">
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-[#e0cd00]">
+            Clearer AI direction
+          </p>
+          <h2 className="text-3xl font-black uppercase leading-tight md:text-5xl">
+            Give your business a clearer AI direction.
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-xl font-bold leading-relaxed text-[#ffffff]/84">
+            Two focused hours could save you months of scattered experimentation.
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#ffffff]/74">
+            Choose your workshop date and leave with a practical AI strategy for the next 90 days.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            {sessions.map((session) => (
+              <a
+                key={session.shortButton}
+                href={session.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-[#e0cd00] px-7 py-4 text-sm font-black uppercase tracking-wide text-[#082263] shadow-xl shadow-black/20 transition hover:bg-[#ffffff] hover:text-[#005da0]"
+              >
+                {session.shortButton}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <SectionIntro eyebrow="FAQ" title="Frequently asked questions." />
+          <div className="grid gap-5 md:grid-cols-2">
+            {faqs.map((faq) => (
+              <article key={faq.question} className="border border-[#0c71c3]/18 bg-[#f5fbff] p-6">
+                <h3 className="mb-3 text-xl font-black uppercase leading-snug text-[#005da0]">
+                  {faq.question}
+                </h3>
+                <p className="text-base leading-relaxed text-[#4c5b68]">{faq.answer}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
