@@ -431,18 +431,29 @@ export default function SmartRoadmapPage() {
             />
             <CheckList items={audience} />
           </div>
-          <div className="bg-white p-8 shadow-sm">
-            <h3 className="mb-5 text-2xl font-black uppercase text-[#005da0]">
-              No technical or coding experience is required.
-            </h3>
-            <div className="space-y-5 text-lg leading-relaxed text-[#4c5b68]">
-              <p>
-                Beginners will receive a clear process for getting started.
-              </p>
-              <p>
-                People already using tools such as ChatGPT, Microsoft Copilot, Claude,
-                or Gemini will learn how to use them more deliberately and strategically.
-              </p>
+          <div className="space-y-6">
+            <div className="bg-white p-8 shadow-sm">
+              <h3 className="mb-5 text-2xl font-black uppercase text-[#005da0]">
+                No technical or coding experience is required.
+              </h3>
+              <div className="space-y-5 text-lg leading-relaxed text-[#4c5b68]">
+                <p>
+                  Beginners will receive a clear process for getting started.
+                </p>
+                <p>
+                  People already using tools such as ChatGPT, Microsoft Copilot, Claude,
+                  or Gemini will learn how to use them more deliberately and strategically.
+                </p>
+              </div>
+            </div>
+            <div className="relative aspect-[603/462] overflow-hidden border-b-8 border-[#64bc6c] bg-[#005da0] shadow-sm">
+              <Image
+                src="/images/smart-roadmap/caelan-speaking-ctech.webp"
+                alt="Caelan Huntress facilitating a workshop at Canterbury Tech"
+                fill
+                unoptimized
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -450,9 +461,17 @@ export default function SmartRoadmapPage() {
 
       <section className="bg-white px-6 py-20">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-center">
-          <div className="flex items-center justify-center bg-[#005da0] p-10 text-[#ffffff]">
-            <div className="text-center">
-              <SmartMark />
+          <div className="overflow-hidden bg-[#005da0] text-[#ffffff] shadow-sm">
+            <div className="relative aspect-[4/5] bg-[#082263]">
+              <Image
+                src="/images/smart-roadmap/caelan-solarpunk.webp"
+                alt="Illustrated portrait of Caelan Huntress"
+                fill
+                unoptimized
+                className="object-cover object-[center_30%]"
+              />
+            </div>
+            <div className="px-8 py-9 text-center">
               <p className="mt-5 text-sm font-black uppercase tracking-[0.3em] text-[#e0cd00]">
                 Facilitated by
               </p>
@@ -608,10 +627,7 @@ export default function SmartRoadmapPage() {
       </section>
 
       <footer className="bg-[#061947] px-6 py-8 text-sm text-[#ffffff]">
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-3 sm:flex-row">
-          <p>
-            Copyright <strong>Christchurch AI</strong>
-          </p>
+        <div className="mx-auto flex max-w-6xl justify-center sm:justify-end">
           <Link href="/" className="font-semibold text-[#ffffff]/75 transition hover:text-[#e0cd00]">
             Back to Christchurch AI
           </Link>
