@@ -215,6 +215,35 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
       },
     ],
   },
+  {
+    slug: "making-ai-work-september-2026",
+    month: "September",
+    year: 2026,
+    date: "Monday, 14 September 2026",
+    time: "5:30 - 8:00 PM NZST",
+    startDate: "2026-09-14T17:30:00+12:00",
+    endDate: "2026-09-14T20:00:00+12:00",
+    title: "Making AI Work: from Judgment to Implementation",
+    description:
+      "Pamela Simpson on human judgement, expertise, and trust in AI-enabled workplaces, plus Caelan Huntress on onboarding AI agents and building practical implementation systems.",
+    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
+    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
+    meetupUrl: "https://www.meetup.com/christchurch-ai/events/315884707/",
+    pageUrl: "/making-ai-work-september-2026",
+    image: "/chchai-0926.jpeg",
+    talks: [
+      {
+        speaker: "Pamela Simpson",
+        title: "Human Judgement in an AI World",
+        bio: "How professionals can preserve expertise, accountability, and sound judgement as AI changes how organisations decide what to trust.",
+      },
+      {
+        speaker: "Caelan Huntress",
+        title: "AI Implementation in Business",
+        bio: "How to onboard AI agents, transfer business workflows, assess readiness, and ship an internal AI working group.",
+      },
+    ],
+  },
 ];
 
 export function getUpcomingEvents(now = new Date()) {
