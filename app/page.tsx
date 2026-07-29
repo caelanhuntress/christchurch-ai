@@ -62,7 +62,7 @@ export default function Home() {
             <span style={{ color: "var(--accent)" }}>in Christchurch</span>
           </h1>
           <p className="text-lg mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: "var(--text-muted)" }}>
-            Canterbury's monthly gathering for people building with, thinking about, and curious about AI.
+            Canterbury&apos;s monthly gathering for people building with, thinking about, and curious about AI.
             Speakers, demos, drinks, and real conversations — at EPIC Innovation, every month.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -223,7 +223,7 @@ export default function Home() {
         <section id="about" className="px-6 py-20 border-t" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
           <div className="max-w-3xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>About</div>
-            <h2 className="text-3xl font-bold mb-6">Christchurch's AI Community</h2>
+            <h2 className="text-3xl font-bold mb-6">Christchurch&apos;s AI Community</h2>
             <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
               <p>The <strong className="text-white">Christchurch Artificial Intelligence</strong> meetup brings together developers, business leaders, researchers, and curious minds to explore what is happening in AI — practically, ethically, and locally.</p>
               <p>We host <strong className="text-white">monthly meetups</strong> at <strong className="text-white">EPIC Innovation Centre</strong>. Each event features two speakers, drinks, and time to connect with the people building the future of AI in Canterbury and beyond.</p>
@@ -286,7 +286,7 @@ export default function Home() {
               <div>
                 <div className="space-y-3 text-sm leading-relaxed mb-6" style={{ color: "var(--text-muted)" }}>
                   <p>Caelan started his career as an acrobat in the circus. Now he teaches ambitious professionals how to become great AI operators — combining the skills of a theatrical performer and technical geek to make education genuinely engaging.</p>
-                  <p>Classically educated at St John's College in Santa Fe (Great Books programme), he sees the fast-moving world of technology through the lens of the humanities. After a decade as a digital nomad, he now calls Christchurch home.</p>
+                  <p>Classically educated at St John&apos;s College in Santa Fe (Great Books programme), he sees the fast-moving world of technology through the lens of the humanities. After a decade as a digital nomad, he now calls Christchurch home.</p>
                   <p>He is the founder of the <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">AI Coaching Academy</a>, author of <em>Marketing Yourself</em>, and the organiser of the Christchurch AI Meetup.</p>
                 </div>
                 <div className="flex flex-wrap gap-3">
@@ -326,9 +326,9 @@ export default function Home() {
             <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>Get Involved</div>
             <h2 className="text-3xl font-bold mb-4 text-white">Call For Speakers</h2>
             <p className="text-base leading-relaxed mb-8" style={{ color: "var(--text-muted)" }}>
-              We're always looking for people doing interesting things with AI to share their work with the
-              Christchurch community. Whether you're building something, researching something, or have hard-won
-              lessons to share — we'd love to hear from you.
+              We&apos;re always looking for people doing interesting things with AI to share their work with the
+              Christchurch community. Whether you&apos;re building something, researching something, or have hard-won
+              lessons to share — we&apos;d love to hear from you.
             </p>
             <div className="grid md:grid-cols-3 gap-5 mb-10">
               {[
@@ -492,11 +492,12 @@ export default function Home() {
         <footer className="px-6 py-8 border-t text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div><span style={{ color: "var(--accent)" }} className="font-semibold">Christchurch AI</span> · Monthly meetups at EPIC Innovation Centre, Canterbury, New Zealand</div>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               <a href="https://meetup.com/christchurch-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Meetup</a>
               <Link href="/past-events" className="hover:text-white transition-colors">Past Events</Link>
               <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
               <a href="https://ai-coaching.academy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">AI Coaching Academy</a>
+              <a href="https://agent-agency.team" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">AI Agent Teams</a>
               <a href="https://openclaws.nz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">OpenClaws</a>
             </div>
           </div>
