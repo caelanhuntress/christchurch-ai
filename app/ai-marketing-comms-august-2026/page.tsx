@@ -91,13 +91,13 @@ export default function AIMarketingCommsAugust2026() {
           Christchurch AI
         </Link>
         <a
-          href={replayUrl}
+          href={slidesUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 rounded-full text-sm font-medium"
           style={{ background: "var(--accent)", color: "#ffffff" }}
         >
-          Watch Replay →
+          Download The Slides →
         </a>
       </nav>
 
@@ -184,7 +184,7 @@ export default function AIMarketingCommsAugust2026() {
                 rel="noopener noreferrer"
                 className={`${resourceButtonClass} chch-resource-button--secondary`}
               >
-                Download Slides →
+                Download The Slides →
               </a>
             </div>
           </div>
@@ -275,7 +275,7 @@ export default function AIMarketingCommsAugust2026() {
               rel="noopener noreferrer"
               className={`${largeResourceButtonClass} chch-resource-button--secondary`}
             >
-              Download Slides →
+              Download The Slides →
             </a>
           </div>
 
