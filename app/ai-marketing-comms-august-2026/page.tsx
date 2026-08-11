@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "August AI Meetup - Marketing & Comms with AI | Christchurch AI",
   description:
-    "Christchurch AI meetup August 2026: Simon Rush and Nic Hendrie from Trimble on AI marketing strategy, plus Caelan Huntress on building an AI Brand Voice Kit.",
+    "Replay and slides from Christchurch AI August 2026: Simon Rush and Nic Hendrie from Trimble on AI marketing strategy, plus Caelan Huntress on building an AI Brand Voice Kit.",
   keywords: [
     "Christchurch AI August 2026",
     "marketing AI Christchurch",
@@ -17,18 +17,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: "August AI Meetup - Marketing & Comms with AI",
     description:
-      "Simon Rush, Nic Hendrie, and Caelan Huntress at Christchurch AI - Monday 10 August 2026 at EPIC Innovation Centre.",
+      "Replay and slides from Simon Rush, Nic Hendrie, and Caelan Huntress at Christchurch AI - Monday 10 August 2026 at EPIC Innovation Centre.",
     images: ["https://christchurch-ai.com/chchai-0826.jpeg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "August AI Meetup - Marketing & Comms with AI",
     description:
-      "Christchurch AI meetup - Trimble marketing strategy with AI plus Caelan Huntress on AI Brand Voice Kits.",
+      "Christchurch AI replay - Trimble marketing strategy with AI plus Caelan Huntress on AI Brand Voice Kits.",
     images: ["https://christchurch-ai.com/chchai-0826.jpeg"],
   },
   alternates: { canonical: "https://christchurch-ai.com/ai-marketing-comms-august-2026" },
 };
+
+const replayUrl = "https://youtu.be/bg-7g-ZdyWc";
+const replayEmbedUrl = "https://www.youtube.com/embed/bg-7g-ZdyWc";
+const slidesUrl = "https://ai-coaching-academy.s3.amazonaws.com/slides/2026/chchai-0826.pdf";
+
+const resourceButtonClass = "chch-resource-button inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+const largeResourceButtonClass = "chch-resource-button inline-flex items-center justify-center px-8 py-4 rounded-lg font-bold text-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
 
 const schema = {
   "@context": "https://schema.org",
@@ -38,7 +45,7 @@ const schema = {
     "Simon Rush and Nic Hendrie from Trimble share how enterprise marketing teams can accelerate campaign strategy with AI, followed by Caelan Huntress on building an AI Brand Voice Kit.",
   startDate: "2026-08-10T17:30:00+12:00",
   endDate: "2026-08-10T20:00:00+12:00",
-  eventStatus: "https://schema.org/EventScheduled",
+  eventStatus: "https://schema.org/EventCompleted",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   isAccessibleForFree: true,
   image: "https://christchurch-ai.com/chchai-0826.jpeg",
@@ -63,6 +70,12 @@ const schema = {
     { "@type": "Person", name: "Nic Hendrie" },
     { "@type": "Person", name: "Caelan Huntress" },
   ],
+  recordedIn: {
+    "@type": "VideoObject",
+    name: "Christchurch AI August 2026 replay - Marketing & Comms with AI",
+    embedUrl: replayEmbedUrl,
+    url: replayUrl,
+  },
   url: "https://christchurch-ai.com/ai-marketing-comms-august-2026",
 };
 
@@ -78,13 +91,13 @@ export default function AIMarketingCommsAugust2026() {
           Christchurch AI
         </Link>
         <a
-          href="https://www.meetup.com/christchurch-ai/events/314554734/"
+          href={replayUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 rounded-full text-sm font-medium"
           style={{ background: "var(--accent)", color: "#ffffff" }}
         >
-          RSVP Free →
+          Watch Replay →
         </a>
       </nav>
 
@@ -94,7 +107,7 @@ export default function AIMarketingCommsAugust2026() {
         </Link>
 
         <div className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--accent)" }}>
-          Monthly Meetup - August 2026
+          Monthly Meetup Replay - August 2026
         </div>
 
         <h1 className="text-4xl font-bold mb-4 leading-tight">
@@ -126,7 +139,7 @@ export default function AIMarketingCommsAugust2026() {
           <div className="flex items-center gap-2">
             <span>🎟</span>
             <span>
-              <strong className="text-white">Free</strong> - RSVP on Meetup
+              <strong className="text-white">Free</strong> - replay and slides now available
             </span>
           </div>
         </div>
@@ -141,6 +154,40 @@ export default function AIMarketingCommsAugust2026() {
             style={{ borderColor: "var(--border)" }}
             priority
           />
+
+          <div className="rounded-xl border p-6 mb-8" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+            <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
+              Watch the Replay
+            </div>
+            <div className="aspect-video w-full overflow-hidden rounded-lg border mb-5" style={{ borderColor: "var(--border)" }}>
+              <iframe
+                className="h-full w-full"
+                src={replayEmbedUrl}
+                title="Christchurch AI August 2026 replay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={replayUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--primary`}
+              >
+                Watch on YouTube →
+              </a>
+              <a
+                href={slidesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${resourceButtonClass} chch-resource-button--secondary`}
+              >
+                Download Slides →
+              </a>
+            </div>
+          </div>
 
           <p>
             AI is changing how marketing and communications teams plan campaigns, write content, review
@@ -213,24 +260,36 @@ export default function AIMarketingCommsAugust2026() {
             .
           </p>
 
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="https://www.meetup.com/christchurch-ai/events/314554734/"
+              href={replayUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 rounded-lg font-bold text-white text-lg"
-              style={{ background: "var(--accent)" }}
+              className={`${largeResourceButtonClass} chch-resource-button--primary`}
             >
-              RSVP on Meetup - It&apos;s Free →
+              Watch the August Replay →
+            </a>
+            <a
+              href={slidesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${largeResourceButtonClass} chch-resource-button--secondary`}
+            >
+              Download Slides →
             </a>
           </div>
 
           <div className="mt-12 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
-            <p className="font-semibold text-white mb-3">Also Coming Up</p>
+            <p className="font-semibold text-white mb-3">More Events</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/ai-healthcare-agrifood-july-2026" className="text-white underline">
-                  July 13 - AI in Healthcare &amp; Agri-Food Industries
+                  July 13 replay - AI in Healthcare &amp; Agri-Food Industries
+                </Link>
+              </li>
+              <li>
+                <Link href="/making-ai-work-september-2026" className="text-white underline">
+                  September 14 - Making AI Work: from Judgment to Implementation
                 </Link>
               </li>
             </ul>

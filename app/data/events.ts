@@ -196,10 +196,11 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
     endDate: "2026-08-10T20:00:00+12:00",
     title: "Marketing & Comms with AI",
     description:
-      "Simon Rush and Nic Hendrie from Trimble on accelerating marketing strategy with AI, plus Caelan Huntress on building an AI Brand Voice Kit.",
+      "Replay and slides from Christchurch AI's August meetup: Simon Rush and Nic Hendrie from Trimble on accelerating marketing strategy with AI, plus Caelan Huntress on building an AI Brand Voice Kit.",
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/314554734/",
+    replayUrl: "https://youtu.be/bg-7g-ZdyWc",
     pageUrl: "/ai-marketing-comms-august-2026",
     image: "/chchai-0826.jpeg",
     talks: [
