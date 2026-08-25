@@ -110,7 +110,7 @@ export default function DecEventPage() {
                   Where most people think of AI capability as a function of the model itself, context engineering flips the perspective: the <strong className="text-black">operator is the bottleneck</strong>. The same model, given richer, better-structured context, produces categorically different results. Learning to craft that context is the core skill of the proficient AI operator.
                 </p>
                 <p>
-                  Caelan introduced his <strong className="text-black">PILLARS framework</strong> — a structured approach to prompt construction that ensures AI has everything it needs to perform at its best: Persona, Intent, Length, Language, Audience, Restrictions, and Style. He demonstrated how applying this framework transforms vague, generic responses into targeted, actionable outputs.
+                  Caelan introduced his <strong className="text-black">PILLARS framework</strong> — a structured approach to prompt construction that ensures AI has everything it needs to perform at its best: Persona, Intent, Layout, Limits, Audience, Requirements, and Style. He demonstrated how applying this framework transforms vague, generic responses into targeted, actionable outputs.
                 </p>
                 <p>
                   The session also previewed the 2026 calendar — including the February meetup on AI data testing and coaching with AI — and introduced the AI Coaching Power Hours running through January: free weekly Zoom sessions for hands-on AI practice.
@@ -124,7 +124,7 @@ export default function DecEventPage() {
               <li>🤏 <strong className="text-black">Tiny models can beat giants</strong> — a 7M parameter recursive reasoning model outperforms Gemini on abstract logic by reasoning in native token space, not English</li>
               <li>🔁 <strong className="text-black">Recursion over hierarchy</strong> — the "Less is More" paper showed that simplifying HRMs to recursive models doubled performance with a fraction of the parameters</li>
               <li>🏗️ <strong className="text-black">Context is the product</strong> — the quality of AI output is a function of the context you give it, not just the model you use</li>
-              <li>🎯 <strong className="text-black">PILLARS framework</strong> — Persona, Intent, Length, Language, Audience, Restrictions, Style — a repeatable structure for prompts that actually work</li>
+              <li>🎯 <strong className="text-black">PILLARS framework</strong> — Persona, Intent, Layout, Limits, Audience, Requirements, Style — a repeatable structure for prompts that actually work</li>
             </ul>
           </div>
 
