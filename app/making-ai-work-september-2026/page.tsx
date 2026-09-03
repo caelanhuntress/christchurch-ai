@@ -5,27 +5,27 @@ import Link from "next/link";
 const meetupUrl = "https://www.meetup.com/christchurch-ai/events/315884707/";
 
 export const metadata: Metadata = {
-  title: "September AI Meetup - Making AI Work | Christchurch AI",
+  title: "September AI Meetup - Making AI Work: Judgment, Experiments, & ROI | Christchurch AI",
   description:
-    "Christchurch AI meetup September 2026: Pamela Simpson on human judgement in an AI world, plus Caelan Huntress on practical AI implementation in business.",
+    "Christchurch AI meetup September 2026: Pamela Simpson on human judgement in an AI world, plus Dan Randow on disciplined AI experiments, risk, and time to ROI.",
   keywords: [
     "Christchurch AI September 2026",
-    "AI implementation Christchurch",
+    "AI experiments Christchurch",
     "human judgement AI",
-    "AI agents business",
+    "AI ROI",
     "AI meetup Christchurch",
   ],
   openGraph: {
-    title: "September AI Meetup - Making AI Work",
+    title: "September AI Meetup - Making AI Work: Judgment, Experiments, & ROI",
     description:
-      "Pamela Simpson and Caelan Huntress at Christchurch AI - Monday 14 September 2026 at EPIC Innovation Centre.",
+      "Pamela Simpson and Dan Randow at Christchurch AI - Monday 14 September 2026 at EPIC Innovation Centre.",
     images: ["https://christchurch-ai.com/chchai-0926.jpeg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "September AI Meetup - Making AI Work",
+    title: "September AI Meetup - Making AI Work: Judgment, Experiments, & ROI",
     description:
-      "Christchurch AI meetup - human judgement in an AI world plus practical AI implementation in business.",
+      "Christchurch AI meetup - human judgement in an AI world plus practical AI experiments at work.",
     images: ["https://christchurch-ai.com/chchai-0926.jpeg"],
   },
   alternates: { canonical: "https://christchurch-ai.com/making-ai-work-september-2026" },
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "September AI Meetup - Making AI Work: from Judgment to Implementation",
+  name: "September AI Meetup - Making AI Work: Judgment, Experiments, & ROI",
   description:
-    "Pamela Simpson shares research on human judgement, expertise, accountability, and trust in AI-enabled workplaces, followed by Caelan Huntress on onboarding AI agents, transferring workflows, and launching an internal AI working group.",
+    "Pamela Simpson shares research on human judgement, expertise, accountability, and trust in AI-enabled workplaces, followed by Dan Randow with an interactive simulation on strategic AI experiments, evidence, risk, and time to ROI.",
   startDate: "2026-09-14T17:30:00+12:00",
   endDate: "2026-09-14T20:00:00+12:00",
   eventStatus: "https://schema.org/EventScheduled",
@@ -61,7 +61,7 @@ const schema = {
   },
   performer: [
     { "@type": "Person", name: "Pamela Simpson" },
-    { "@type": "Person", name: "Caelan Huntress" },
+    { "@type": "Person", name: "Dan Randow" },
   ],
   url: "https://christchurch-ai.com/making-ai-work-september-2026",
   sameAs: meetupUrl,
@@ -99,7 +99,7 @@ export default function MakingAiWorkSeptember2026() {
         </div>
 
         <h1 className="text-4xl font-bold mb-4 leading-tight">
-          Making AI Work: <br />from Judgment to Implementation
+          Making AI Work: <br />Judgment, Experiments, &amp; ROI
         </h1>
 
         <div className="flex flex-col gap-2 mb-10 text-sm" style={{ color: "var(--text-muted)" }}>
@@ -135,19 +135,20 @@ export default function MakingAiWorkSeptember2026() {
         <div className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <Image
             src="/chchai-0926.jpeg"
-            alt="Christchurch AI September 2026 Making AI Work event"
-            width={1672}
-            height={941}
+            alt="Christchurch AI September 2026 Making AI Work: Judgment, Experiments, and ROI event"
+            width={1670}
+            height={939}
             className="w-full rounded-xl border mb-8"
             style={{ borderColor: "var(--border)" }}
             priority
           />
 
           <p>
-            September&apos;s Christchurch AI meetup explores how organisations can balance human
-            judgement with practical AI implementation. Pamela Simpson will look at expertise,
-            accountability, and trust in AI-enabled workplaces, while Caelan Huntress will show how
-            businesses can onboard AI agents into repeatable work.
+            September&apos;s Christchurch AI meetup explores how organisations can combine human
+            judgement with disciplined AI experimentation. Pamela Simpson will look at expertise,
+            accountability, and trust in AI-enabled workplaces, while Dan Randow will put those
+            questions into practice through an interactive simulation about choosing AI experiments
+            and measuring what matters.
           </p>
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-6">The Talks</h2>
@@ -159,12 +160,13 @@ export default function MakingAiWorkSeptember2026() {
             <h3 className="text-xl font-bold text-white mb-2">Human Judgement in an AI World</h3>
             <p className="text-sm font-semibold text-white mb-3">Pamela Simpson - DBA Candidate, University of Otago</p>
             <p>
-              Pamela Simpson will share early insights from research with subject-matter experts across
-              professional, corporate, and government sectors in New Zealand.
+              Pamela Simpson will share initial insights from her research with 43 subject-matter experts
+              across professional, corporate, and government sectors in New Zealand.
             </p>
             <p className="mt-3">
-              The session explores how people decide what to trust, what counts as expertise, and how
-              organisations can preserve epistemic integrity as AI becomes part of knowledge work.
+              The session explores the human side of AI adoption: how people decide what to trust,
+              what counts as expertise, and how organisations can preserve epistemic integrity,
+              professional standards, accountability, and trust.
             </p>
           </div>
 
@@ -172,24 +174,26 @@ export default function MakingAiWorkSeptember2026() {
             <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
               Talk 2
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">AI Implementation in Business</h3>
-            <p className="text-sm font-semibold text-white mb-3">Caelan Huntress - AI Coaching Academy</p>
+            <h3 className="text-xl font-bold text-white mb-2">AI Experiments at Work: Reducing Risk and Time to ROI</h3>
+            <p className="text-sm font-semibold text-white mb-3">Dan Randow</p>
             <p>
-              Caelan Huntress will unpack what it means to teach AI agents how a business actually works:
-              workflows, standards, rules, decisions, exceptions, and institutional knowledge.
+              Dan Randow will facilitate an interactive simulation of a leadership team inside a typical
+              New Zealand organisation. Participants will compare competing AI investments, debate their
+              alignment with strategy, and choose a small portfolio of experiments to pursue.
             </p>
             <p className="mt-3">
-              The talk covers agent onboarding, workflow handoff, AI readiness, and how to assemble an
-              internal AI working group that can test use cases and share lessons across an organisation.
+              The leadership team will also decide what each experiment should measure, so the room can
+              watch decisions take shape in real time as participants weigh value, uncertainty, risk,
+              evidence, and competing priorities.
             </p>
           </div>
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">Who Should Come</h2>
           <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>Business owners, leaders, consultants, and operations teams implementing AI at work</li>
+            <li>Business owners, leaders, managers, consultants, and technologists deciding where to invest in AI</li>
             <li>Professionals thinking seriously about trust, expertise, and accountability with AI</li>
-            <li>Teams moving from isolated experiments into repeatable AI-enabled workflows</li>
-            <li>Builders and AI practitioners interested in responsible adoption inside organisations</li>
+            <li>Teams moving beyond disconnected pilots towards strategic AI experimentation</li>
+            <li>People who want clearer evidence before committing more time, money, or attention to AI</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-white mt-10 mb-4">Format</h2>
@@ -225,8 +229,8 @@ export default function MakingAiWorkSeptember2026() {
             <p className="font-semibold text-white mb-3">Also Coming Up</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/ai-marketing-comms-august-2026" className="text-white underline">
-                  August 10 - Marketing &amp; Comms with AI
+                <Link href="/building-with-ai-october-2026" className="text-white underline">
+                  October 12 - Building with AI: Speed, Structure &amp; Scale
                 </Link>
               </li>
             </ul>
