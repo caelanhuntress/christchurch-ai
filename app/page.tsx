@@ -12,9 +12,6 @@ export default function Home() {
   const now = new Date();
   const upcomingEvents = getUpcomingEvents(now);
   const nextMeetup = upcomingEvents[0];
-  const featuredEvent = upcomingEvents.find(
-    (event) => event.slug === "building-with-ai-october-2026",
-  );
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -115,64 +112,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        {featuredEvent && (
-          <section className="border-y px-6 py-14" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
-            <div className="max-w-5xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
-                  Featured October Meetup
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">{featuredEvent.title}</h2>
-                <p className="text-base leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>
-                  {featuredEvent.description}
-                </p>
-                <div className="flex flex-wrap gap-3 mb-6 text-sm" style={{ color: "var(--text-muted)" }}>
-                  <span className="rounded-full border px-4 py-2" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-                    {featuredEvent.date}
-                  </span>
-                  <span className="rounded-full border px-4 py-2" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-                    {featuredEvent.time}
-                  </span>
-                  <span className="rounded-full border px-4 py-2" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
-                    EPIC Innovation Centre
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 flex-wrap">
-                  <a
-                    href={featuredEvent.meetupUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 rounded-full font-semibold text-sm transition-all hover:opacity-90"
-                    style={{ background: "var(--accent)", color: "#ffffff" }}
-                  >
-                    RSVP on Meetup - Free
-                  </a>
-                  <Link
-                    href={getEventHref(featuredEvent)}
-                    className="inline-block px-6 py-3 rounded-full font-semibold text-sm border transition-all hover:opacity-90"
-                    style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
-                  >
-                    Event Details
-                  </Link>
-                </div>
-              </div>
-              <Link
-                href={getEventHref(featuredEvent)}
-                className="relative block aspect-[16/9] overflow-hidden rounded-2xl border"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <Image
-                  src={featuredEvent.image}
-                  alt={`${featuredEvent.month} ${featuredEvent.year} Christchurch AI Meetup - ${featuredEvent.title}`}
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "center top" }}
-                  sizes="(min-width: 1024px) 42vw, 100vw"
-                />
-              </Link>
-            </div>
-          </section>
-        )}
 
         {/* Events */}
         <section id="events" className="px-6 py-20 max-w-4xl mx-auto">
