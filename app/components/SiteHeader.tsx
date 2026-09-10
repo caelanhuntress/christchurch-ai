@@ -39,6 +39,16 @@ export default function SiteHeader({ homeMode = false }: SiteHeaderProps) {
           </a>
         </div>
       </div>
+
+      <div className="md:hidden max-w-6xl mx-auto px-6 pb-3">
+        <Link
+          href="/past-events"
+          className="block w-full rounded-full px-4 py-2 text-center text-sm font-semibold transition-all hover:opacity-90"
+          style={{ background: "var(--accent)", color: "#ffffff" }}
+        >
+          Past Events
+        </Link>
+      </div>
     </header>
   );
 }
