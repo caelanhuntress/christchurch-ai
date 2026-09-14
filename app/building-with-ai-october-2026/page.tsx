@@ -235,7 +235,7 @@ export default function BuildingWithAiOctober2026() {
             <p className="font-semibold text-white mb-3">Also Coming Up</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/making-ai-work-september-2026" className="text-white underline">
+                <Link href="/past-events/making-ai-work-september-2026" className="text-white underline">
                   September 14 - Making AI Work: Judgment, Experiments, &amp; ROI
                 </Link>
               </li>

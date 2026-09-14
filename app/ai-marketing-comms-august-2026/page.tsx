@@ -288,7 +288,7 @@ export default function AIMarketingCommsAugust2026() {
                 </Link>
               </li>
               <li>
-                <Link href="/making-ai-work-september-2026" className="text-white underline">
+                <Link href="/past-events/making-ai-work-september-2026" className="text-white underline">
                   September 14 - Making AI Work: from Judgment to Implementation
                 </Link>
               </li>

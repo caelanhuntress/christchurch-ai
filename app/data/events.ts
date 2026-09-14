@@ -226,11 +226,11 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
     endDate: "2026-09-14T20:00:00+12:00",
     title: "Making AI Work: Judgment, Experiments, & ROI",
     description:
-      "Pamela Simpson on human judgement, expertise, and trust in AI-enabled workplaces, plus Dan Randow on reducing risk and time to ROI through disciplined AI experiments.",
+      "Slides and event highlights from Pamela Simpson on human judgement and trust in AI-enabled workplaces, plus Dan Randow on disciplined AI experiments and ROI.",
     venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
     mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
     meetupUrl: "https://www.meetup.com/christchurch-ai/events/315884707/",
-    pageUrl: "/making-ai-work-september-2026",
+    pageUrl: "/past-events/making-ai-work-september-2026",
     image: "/chchai-0926.jpeg",
     talks: [
       {
