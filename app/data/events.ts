@@ -274,6 +274,34 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
       },
     ],
   },
+  {
+    slug: "ai-public-sector-private-business-november-2026",
+    month: "November",
+    year: 2026,
+    date: "Monday, 9 November 2026",
+    time: "5:30 - 8:00 PM NZDT",
+    startDate: "2026-11-09T17:30:00+13:00",
+    endDate: "2026-11-09T20:00:00+13:00",
+    title: "AI in Public Sector & Private Business",
+    description:
+      "Cr Joe Davies on learning with AI in public through Environment Canterbury's AI Working Group, plus Blake Harkness on running an AI-powered back office across two businesses.",
+    venue: "EPIC Innovation Centre, 78-100 Manchester St, Christchurch",
+    mapsUrl: "https://maps.google.com/?q=EPIC+Innovation+Christchurch",
+    meetupUrl: "https://www.meetup.com/christchurch-ai/events/316823655/",
+    image: "https://secure.meetupstatic.com/photos/event/4/6/c/6/600_536418118.jpeg",
+    talks: [
+      {
+        speaker: "Cr Joe Davies",
+        title: "AI in the Council Chamber: Learning in Public",
+        bio: "How a council AI Working Group can turn personal experimentation into useful public discussion and recommendations.",
+      },
+      {
+        speaker: "Blake Harkness",
+        title: "How I Run My Businesses on AI",
+        bio: "A practical tour of AI builds across marketing, accounting, web development, sales, and content.",
+      },
+    ],
+  },
 ];
 
 export function getUpcomingEvents(now = new Date()) {
@@ -328,7 +356,9 @@ export function getEventSchema(event: CommunityEvent, now = new Date()) {
       name: talk.speaker,
     })),
     isAccessibleForFree: true,
-    url: `https://christchurch-ai.com${getEventHref(event)}`,
+    url: event.pageUrl
+      ? `https://christchurch-ai.com${event.pageUrl}`
+      : event.meetupUrl ?? `https://christchurch-ai.com${getEventHref(event)}`,
     ...(event.replayUrl
       ? {
           recordedIn: {

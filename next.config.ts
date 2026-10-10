@@ -6,6 +6,14 @@ const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: projectRoot,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "secure.meetupstatic.com",
+      },
+    ],
+  },
   turbopack: {
     root: projectRoot,
   },

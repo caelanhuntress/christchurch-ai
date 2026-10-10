@@ -205,7 +205,7 @@ export default function Home() {
                       style={{ background: "var(--accent)", color: "#ffffff" }}>
                       {event.replayUrl ? "Watch Replay" : "RSVP on Meetup — Free"}
                     </a>
-                    {getEventHref(event) && (
+                    {event.pageUrl && (
                       <Link href={getEventHref(event)}
                         className="inline-block px-6 py-3 rounded-full font-semibold text-sm border transition-all hover:opacity-90"
                         style={{ borderColor: "var(--accent)", color: "var(--accent)" }}>
