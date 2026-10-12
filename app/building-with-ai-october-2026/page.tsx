@@ -78,15 +78,6 @@ export default function BuildingWithAiOctober2026() {
         <Link href="/" className="font-bold text-lg tracking-tight" style={{ color: "var(--accent)" }}>
           Christchurch AI
         </Link>
-        <a
-          href={meetupUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 rounded-full text-sm font-medium"
-          style={{ background: "var(--accent)", color: "#ffffff" }}
-        >
-          RSVP Free →
-        </a>
       </nav>
 
       <article className="max-w-2xl mx-auto px-6 py-20">
@@ -219,17 +210,44 @@ export default function BuildingWithAiOctober2026() {
             .
           </p>
 
-          <div className="mt-10">
-            <a
-              href={meetupUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 rounded-lg font-bold text-white text-lg"
-              style={{ background: "var(--accent)" }}
-            >
-              RSVP on Meetup - It&apos;s Free →
-            </a>
-          </div>
+          <section className="mt-10 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
+            <h2 className="text-2xl font-bold text-white mb-4">Resources</h2>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-1026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                  style={{ color: "var(--accent)" }}
+                >
+                  Slides →
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/resources/atlas-chchai-1026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                  style={{ color: "var(--accent)" }}
+                >
+                  Joshua&apos;s Reader&apos;s Guide →
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ai-coaching-academy.s3.amazonaws.com/whitepapers/ai-working-group.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                  style={{ color: "var(--accent)" }}
+                >
+                  AI Working Group Whitepaper →
+                </a>
+              </li>
+            </ul>
+          </section>
 
           <div className="mt-12 pt-8 border-t" style={{ borderColor: "var(--border)" }}>
             <p className="font-semibold text-white mb-3">Also Coming Up</p>
