@@ -215,6 +215,17 @@ export default function BuildingWithAiOctober2026() {
             <ul className="space-y-3">
               <li>
                 <a
+                  href="https://youtu.be/CZckwavebbk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                  style={{ color: "var(--accent)" }}
+                >
+                  Event replay →
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-1026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
