@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/epic-innovation-ai-events`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/ai-governance-may-2026`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/past-events/making-ai-work-september-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/past-events/ai-public-sector-private-business-november-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/ai-meetup-christchurch`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/ai-christchurch`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/openclaw-user-group-march-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
