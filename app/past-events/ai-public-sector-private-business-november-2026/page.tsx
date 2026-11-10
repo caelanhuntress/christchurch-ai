@@ -4,6 +4,8 @@ import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 
 const eventUrl = "https://www.meetup.com/christchurch-ai/events/316823655/";
+const slidesUrl =
+  "https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-1126.pdf";
 const pageUrl =
   "https://christchurch-ai.com/past-events/ai-public-sector-private-business-november-2026";
 
@@ -102,6 +104,25 @@ export default function November2026PastEventPage() {
             priority
           />
         </div>
+
+        <section className="rounded-2xl border p-6 mb-10" style={{ borderColor: "var(--border)", background: "var(--muted)" }}>
+          <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
+            Event resource
+          </div>
+          <h2 className="text-2xl font-bold mb-3">Download the slides</h2>
+          <p className="mb-5" style={{ color: "var(--text-muted)" }}>
+            Revisit the presentations from the November meetup, covering AI in the public sector and practical AI-powered business operations.
+          </p>
+          <a
+            href={slidesUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 rounded-full font-semibold transition-opacity hover:opacity-90"
+            style={{ background: "var(--accent)", color: "#ffffff" }}
+          >
+            Download the November slides →
+          </a>
+        </section>
 
         <section className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <p>
