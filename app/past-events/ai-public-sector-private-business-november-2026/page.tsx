@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 const eventUrl = "https://www.meetup.com/christchurch-ai/events/316823655/";
 const slidesUrl =
   "https://ai-coaching-academy.s3-ap-southeast-2.amazonaws.com/slides/2026/chchai-1126.pdf";
+const videoUrl = "https://www.youtube.com/embed/IGwPnW6WFCY";
 const pageUrl =
   "https://christchurch-ai.com/past-events/ai-public-sector-private-business-november-2026";
 
@@ -122,6 +123,20 @@ export default function November2026PastEventPage() {
           >
             Download the November slides →
           </a>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold mb-4" style={{ color: "var(--foreground)" }}>Watch the event replay</h2>
+          <div className="relative w-full overflow-hidden rounded-2xl" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              src={videoUrl}
+              title="AI in Public Sector & Private Business — Christchurch AI November 2026"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+              style={{ border: "none" }}
+            />
+          </div>
         </section>
 
         <section className="space-y-8 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
